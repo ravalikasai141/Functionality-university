@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversation_Summary__c</fullName>
+    <description>Please summarise the content of your conversation with the client. Be as specific as possible: detail the programmes discussed, competitor information collected, information about the client&apos;s structure and upcoming internal changes, and any other information you think might be commercially useful</description>
+    <externalId>false</externalId>
+    <label>Conversation Summary</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

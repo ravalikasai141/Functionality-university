@@ -1,0 +1,26 @@
+<template>
+    <template lwc:if={error}>
+        <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+            <h2>{error}</h2>
+        </div>
+    </template>
+    <template lwc:if={datesMisaligned}>
+        <div class="slds-notify slds-notify_alert slds-m-bottom_small slds-p-vertical_small" role="alert">
+            <span class="slds-assistive-text">Product and Opportunity Date mismatch</span>
+            <h2 class="header-padding">
+                There is a difference between the start or end dates on this application and the start or end dates on
+                the product. If this is not intended a product date change may have occurred.
+            </h2>
+            <div>
+                <div class="slds-notify__close">
+                    <lightning-button
+                        label="Review Dates"
+                        title="Review Dates"
+                        class="button-border"
+                        onclick={handleUpdateClick}
+                    ></lightning-button>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

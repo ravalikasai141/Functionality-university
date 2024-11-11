@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <description>Set Booking field Automatic Credit Triggered to true. Would ideally be done after, but this is read by Booking Line PBs to avoid triggering RR reversal for automated credit scenarios and Booking Lines get triggered before that point, so this needs to be done first.</description>
+        <name>Mark_Booking_as_Credited</name>
+        <label>Mark Booking as Credited</label>
+        <locationX>874</locationX>
+        <locationY>123</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Automatic_Credit_Triggered__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_In_Advance_Criteria</name>
+        <label>Check In Advance Criteria</label>
+        <locationX>696</locationX>
+        <locationY>52</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ok_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BPP_Cancellation_Terms__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inside</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Booking_Line_Usage.TECH_InvoiceStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Posted</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Mark_Booking_as_Credited</targetReference>
+            </connector>
+            <label>Ok</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_In_Arrears_Criteria</name>
+        <label>Check In Arrears Criteria</label>
+        <locationX>693</locationX>
+        <locationY>196</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ok</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Booking_Line_Usage.TECH_InvoiceStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Posted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.BPP_Instance_End_Date__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Mark_Booking_as_Credited</targetReference>
+            </connector>
+            <label>Ok</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>What_s_the_Billing_Type</name>
+        <label>What&apos;s the Billing Type?</label>
+        <locationX>499</locationX>
+        <locationY>126</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Arrears</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.BPP_Billing_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Arrears</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_In_Arrears_Criteria</targetReference>
+            </connector>
+            <label>In Arrears</label>
+        </rules>
+        <rules>
+            <name>In_Advance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.BPP_Billing_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Advance</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_In_Advance_Criteria</targetReference>
+            </connector>
+            <label>In Advance</label>
+        </rules>
+    </decisions>
+    <description>Before save update to set Booking field Automatic Credit Triggered to true. Would ideally be done after, but this is read by Booking Line PBs to avoid triggering RR reversal for automated credit scenarios and Booking Lines get triggered before that point, so this needs to be done first.</description>
+    <interviewLabel>4C_BPP AutomatedCreditNotePrep {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>4C_BPP AutomatedCreditNotePrep</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Booking_Line_Usage</name>
+        <label>Get Booking Line Usage</label>
+        <locationX>381</locationX>
+        <locationY>123</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>What_s_the_Billing_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Booking__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>blng__Usage__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>27</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Get_Booking_Line_Usage</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </filters>
+        <object>Booking__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>CreditNoteLinesToCreate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>blng__CreditNoteLine__c</objectType>
+    </variables>
+    <variables>
+        <name>TempCreditNoteLineRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>blng__CreditNoteLine__c</objectType>
+    </variables>
+</Flow>

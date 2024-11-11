@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Address_Verification</fullName>
+    <availability>online</availability>
+    <description>for QAS implementation</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Mailing Address Verification</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/resource/1250693978000/experianqas__jquery132min&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/1250699255000/experianqas__thickbox31js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/1252330725000/experianqas__PopupHelperJS&quot;)}
+QASDisplayLightbox({ id : &quot;{!Account.Id}&quot;, touchpoint : &quot;Mailing_Address&quot; });</url>
+</WebLink>

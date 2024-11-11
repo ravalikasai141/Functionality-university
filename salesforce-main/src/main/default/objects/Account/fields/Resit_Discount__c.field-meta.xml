@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resit_Discount__c</fullName>
+    <description>This is the discount % given to students linked to this account that have failed a course that was paid for by the client and they are now funding the resit themselves</description>
+    <externalId>false</externalId>
+    <label>Resit Discount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

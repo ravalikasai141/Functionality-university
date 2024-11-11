@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UpdateLeadfromHoovers</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Update Lead from Hoover&apos;s</masterLabel>
+    <openType>noSidebar</openType>
+    <protected>false</protected>
+    <url>https://secure.hoovers.com/subscribe/sfdc/search/simple/people/index.xhtml?which=people&amp;query_string={!Lead_FirstName}%20{!Lead_LastName}&amp;company={!Lead_Company}&amp;sfaction=update&amp;sfobject=lead&amp;sflead_id={!Lead_ID}&amp;sfsid={!API_Session_ID}&amp;sfurl={!API_Partner_Server_URL_70}</url>
+</WebLink>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_to_Eloqua</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Add to Eloqua</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>http://now.eloqua.com/cookieverifpwd.asp?LoginPrefix=BPPE&amp;elqExtUserName=SFDC.Integration&amp;elqExtPwdHash=7EAAB4AF06BE5BB0D40F26FBD0ADB252C43DACE2365883B3CF1976F6A85069E8&amp;URL=agent/contact/ContactSave.asp?new=true%26ContactID=0%26EmailAddress={!Lead.Email}%26FirstName={!Lead.FirstName}%26LastName={!Lead.LastName}%26Salesperson={!User.Name}%26SFDCLeadID={!Lead.Id}%26Company={!Lead.Company}</url>
+</WebLink>

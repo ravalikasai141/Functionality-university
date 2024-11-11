@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Invoicing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indication that this customer is going to receive manual invoices. This means that all related Orders that are related to this Account record with a SOLD-TO relationship, will be put in the &apos;manual&apos; invoicing batch. The only way to trigger invoicing for these orders, is by using this batch or manually creating the invoices.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Will set all related SOLD-TO Orders to the Manual Invoicing batch, allowing them to be processed by the manual invoicing only.</inlineHelpText>
+    <label>Manual Invoicing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

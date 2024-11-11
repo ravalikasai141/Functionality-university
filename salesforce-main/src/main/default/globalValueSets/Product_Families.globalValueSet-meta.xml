@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Session</fullName>
+        <default>false</default>
+        <label>Session</label>
+    </customValue>
+    <customValue>
+        <fullName>Materials</fullName>
+        <default>false</default>
+        <label>Materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Exam</fullName>
+        <default>false</default>
+        <label>Exam</label>
+    </customValue>
+    <customValue>
+        <fullName>VLE</fullName>
+        <default>false</default>
+        <label>VLE</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Session</fullName>
+        <default>false</default>
+        <label>Online Session</label>
+    </customValue>
+    <customValue>
+        <fullName>Course</fullName>
+        <default>false</default>
+        <label>Course</label>
+    </customValue>
+    <customValue>
+        <fullName>Delivery Charges</fullName>
+        <default>false</default>
+        <label>Delivery Charges</label>
+    </customValue>
+    <customValue>
+        <fullName>End-point Assessment (EPA) Fees</fullName>
+        <default>false</default>
+        <label>End-point Assessment (EPA) Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>External Course Fees</fullName>
+        <default>false</default>
+        <label>External Course Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Royalties and Licence Fees</fullName>
+        <default>false</default>
+        <label>Royalties and Licence Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Fees</fullName>
+        <default>false</default>
+        <label>Other Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>ICAS Fees</fullName>
+        <default>false</default>
+        <label>ICAS Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal Use</fullName>
+        <default>false</default>
+        <label>Internal Use</label>
+    </customValue>
+    <customValue>
+        <fullName>Learning Materials</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Learning Materials</label>
+    </customValue>
+    <customValue>
+        <fullName>Sessions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sessions</label>
+    </customValue>
+    <customValue>
+        <fullName>Programme</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Programme</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Pathway</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pathway</label>
+    </customValue>
+    <masterLabel>Product Families</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

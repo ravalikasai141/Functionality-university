@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Religion__c</fullName>
+    <externalId>false</externalId>
+    <label>Religion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>20~ No religion</fullName>
+                <default>false</default>
+                <label>20~ No religion</label>
+            </value>
+            <value>
+                <fullName>21~ Buddhist</fullName>
+                <default>false</default>
+                <label>21~ Buddhist</label>
+            </value>
+            <value>
+                <fullName>22~ Christian</fullName>
+                <default>false</default>
+                <label>22~ Christian</label>
+            </value>
+            <value>
+                <fullName>29~ Hindu</fullName>
+                <default>false</default>
+                <label>29~ Hindu</label>
+            </value>
+            <value>
+                <fullName>30~ Jewish</fullName>
+                <default>false</default>
+                <label>30~ Jewish</label>
+            </value>
+            <value>
+                <fullName>31~ Muslim</fullName>
+                <default>false</default>
+                <label>31~ Muslim</label>
+            </value>
+            <value>
+                <fullName>33~ Sikh</fullName>
+                <default>false</default>
+                <label>33~ Sikh</label>
+            </value>
+            <value>
+                <fullName>80~ Any other religion or belief</fullName>
+                <default>false</default>
+                <label>80~ Any other religion or belief</label>
+            </value>
+            <value>
+                <fullName>98~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>98~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

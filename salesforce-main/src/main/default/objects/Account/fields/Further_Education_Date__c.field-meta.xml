@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Further_Education_Date__c</fullName>
+    <description>Expected or completed date of A-level qualifications.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Expected or completed date of A-level qualifications.</inlineHelpText>
+    <label>Further Education Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

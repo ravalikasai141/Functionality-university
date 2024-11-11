@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Account: Most complete record</label>
+    <protected>false</protected>
+    <values>
+        <field>Active__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Condition__c</field>
+        <value xsi:type="xsd:string">Most complete record</value>
+    </values>
+    <values>
+        <field>Default__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Field__c</field>
+        <value xsi:type="xsd:string">AccountSource, Account_Tax_Category__c, AnnualRevenue, Client_Category__c, Company_Email__c, Head_Office_Address_1__c, Industry_Type__c, Name, National_ID_Number__c, NumberOfEmployees, Phone, Registered_Company_Name__c</value>
+    </values>
+    <values>
+        <field>Index__c</field>
+        <value xsi:type="xsd:double">4.0</value>
+    </values>
+    <values>
+        <field>Object__c</field>
+        <value xsi:type="xsd:string">Account</value>
+    </values>
+    <values>
+        <field>Record_Type__c</field>
+        <value xsi:type="xsd:string">N/A</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Preference_Type__c</fullName>
+    <description>Stores the Contact Channels provided in Application events</description>
+    <externalId>false</externalId>
+    <label>Contact preference type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>COURSES_AND_LEARNING</fullName>
+                <default>false</default>
+                <label>Courses and Learning</label>
+            </value>
+            <value>
+                <fullName>SURVEY_AND_RESEARCH</fullName>
+                <default>false</default>
+                <label>Surveys and research</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

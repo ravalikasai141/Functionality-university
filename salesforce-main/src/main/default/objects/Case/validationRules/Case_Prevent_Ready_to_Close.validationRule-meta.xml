@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Prevent_Ready_to_Close</fullName>
+    <active>true</active>
+    <description>Restrict the ability to set the case to ready to close if it was re-opened.</description>
+    <errorConditionFormula>OR(
+ AND(
+  RecordType.DeveloperName = &quot;Student_Query&quot;, 
+  ISPICKVAL( PRIORVALUE( Status), &quot;Re-opened&quot;),
+  ISPICKVAL(Status, &quot;Ready to Close&quot;)
+ ),
+ AND(
+  RecordType.DeveloperName = &quot;Student_Queries&quot;, 
+  ISNEW(),
+  ISPICKVAL(Status, &quot;Ready to Close&quot;)
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Cases are restricted from being set to ready to close if they were new or re-opened, instead set to in progress first.</errorMessage>
+</ValidationRule>

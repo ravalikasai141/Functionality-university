@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <description>Owner of contact record is set as the task assignee</description>
+        <name>Assignee_Contact_Owner</name>
+        <label>Assignee = Contact Owner</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>varAssigneeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MasterContact.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Callback_Task</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Owner of lead record is set as the task assignee</description>
+        <name>Assignee_Lead_Owner</name>
+        <label>Assignee = Lead Owner</label>
+        <locationX>578</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>varAssigneeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MasterLead.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Callback_Task</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>What object is the RFI task related to?</description>
+        <name>Determine_Master_Object</name>
+        <label>Determine Master Object</label>
+        <locationX>644</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Student_or_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varMasterObject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MasterContact</targetReference>
+            </connector>
+            <label>Student or Contact</label>
+        </rules>
+        <rules>
+            <name>Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varMasterObject</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MasterLead</targetReference>
+            </connector>
+            <label>Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check contact owner is an active business user</description>
+        <name>Validate_Contact_Owner</name>
+        <label>Validate Contact Owner</label>
+        <locationX>182</locationX>
+        <locationY>398</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Valid_Contact_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>MasterContact.Owner.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>MasterContact.Owner.UserRole.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>System / API</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>MasterContact.Owner.UserRole.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketing Cloud</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assignee_Contact_Owner</targetReference>
+            </connector>
+            <label>Valid Contact Owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check lead owner is an active business user</description>
+        <name>Validate_Lead_Owner</name>
+        <label>Validate Lead Owner</label>
+        <locationX>710</locationX>
+        <locationY>398</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Valid_Lead_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>MasterLead.Owner:User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>MasterLead.Owner:User.UserRole.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>System / API</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>MasterLead.Owner:User.UserRole.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketing Cloud</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assignee_Lead_Owner</targetReference>
+            </connector>
+            <label>Valid Lead Owner</label>
+        </rules>
+    </decisions>
+    <description>Decision steps to evaluate if a callback task should be created</description>
+    <interviewLabel>Callback Task Compile {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Callback Task Compile</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Contact related to RFI task (WhoId)</description>
+        <name>MasterContact</name>
+        <label>MasterContact</label>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Validate_Contact_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varWhoId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Lead related to RFI task (WhoId)</description>
+        <name>MasterLead</name>
+        <label>MasterLead</label>
+        <locationX>710</locationX>
+        <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Validate_Lead_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varWhoId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Determine_Master_Object</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <description>Create callback task</description>
+        <name>Create_Callback_Task</name>
+        <label>Create Callback Task</label>
+        <locationX>644</locationX>
+        <locationY>830</locationY>
+        <flowName>Create_Callback_Task</flowName>
+        <inputAssignments>
+            <name>varAssignedTo</name>
+            <value>
+                <elementReference>varAssigneeId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varDescription</name>
+            <value>
+                <elementReference>varDescription</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varDueDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varName</name>
+            <value>
+                <elementReference>varWhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varRelatedTo</name>
+            <value>
+                <elementReference>varWhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varSubject</name>
+            <value>
+                <elementReference>varSubject</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <description>Assignee of the new task record</description>
+        <name>varAssigneeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Description of callback task</description>
+        <name>varDescription</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Master object related to RFI task</description>
+        <name>varMasterObject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Subject of callback task</description>
+        <name>varSubject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Callback</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>WhatId of the RFI task that triggered the process</description>
+        <name>varWhatId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>WhoId of the RFI task that triggered the process</description>
+        <name>varWhoId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

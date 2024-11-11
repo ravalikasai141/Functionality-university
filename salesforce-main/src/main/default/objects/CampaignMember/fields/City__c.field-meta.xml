@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>City__c</fullName>
+    <description>Formula field that displays address information of the location where the campaign is held.  Used to populate automated emails messages from Salesforce (e.g. open day emails).</description>
+    <externalId>false</externalId>
+    <formula>Campaign.Location__r.City__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>City</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

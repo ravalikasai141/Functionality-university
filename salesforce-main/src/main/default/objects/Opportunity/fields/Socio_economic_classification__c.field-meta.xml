@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Socio_economic_classification__c</fullName>
+    <description>Supplied by UCAS only and only applicable to UK residents applying for undergraduate credit-bearing courses. Stores the socio-economic classification (SEC) of student if 21 or over at the start of their Engagement or parental classification if under 21. Required at entry to a student&apos;s Engagement and is not required to be maintained throughout the Engagement.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Supplied by UCAS only and only applicable to UK residents applying for undergraduate credit-bearing courses. Stores the socio-economic classification (SEC) of student if 21 or over at the start of their Engagement or parental classification if under 21. Required at entry to a student&apos;s Engagement and is not required to be maintained throughout the Engagement.</inlineHelpText>
+    <label>Socio-economic classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01~ Higher managerial &amp; professional occupations</fullName>
+                <default>false</default>
+                <label>01~ Higher managerial &amp; professional occupations</label>
+            </value>
+            <value>
+                <fullName>02~ Lower managerial &amp; professional occupations</fullName>
+                <default>false</default>
+                <label>02~ Lower managerial &amp; professional occupations</label>
+            </value>
+            <value>
+                <fullName>03~ Intermediate occupation</fullName>
+                <default>false</default>
+                <label>03~ Intermediate occupation</label>
+            </value>
+            <value>
+                <fullName>04~ Small employers &amp; own account workers</fullName>
+                <default>false</default>
+                <label>04~ Small employers &amp; own account workers</label>
+            </value>
+            <value>
+                <fullName>05~ Lower supervisory &amp; technical occupations</fullName>
+                <default>false</default>
+                <label>05~ Lower supervisory &amp; technical occupations</label>
+            </value>
+            <value>
+                <fullName>06~ Semi-routine occupations</fullName>
+                <default>false</default>
+                <label>06~ Semi-routine occupations</label>
+            </value>
+            <value>
+                <fullName>07~ Routine occupations</fullName>
+                <default>false</default>
+                <label>07~ Routine occupations</label>
+            </value>
+            <value>
+                <fullName>08~ Never worked &amp; long-term unemployed</fullName>
+                <default>false</default>
+                <label>08~ Never worked &amp; long-term unemployed</label>
+            </value>
+            <value>
+                <fullName>09~ Not classified</fullName>
+                <default>false</default>
+                <label>09~ Not classified</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

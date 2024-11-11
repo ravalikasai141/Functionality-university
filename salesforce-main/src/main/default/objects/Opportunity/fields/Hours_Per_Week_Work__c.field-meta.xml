@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hours_Per_Week_Work__c</fullName>
+    <description>Number of hours the student expects to work per week while studying.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of hours the student expects to work per week while studying.</inlineHelpText>
+    <label>Hours Per Week Work</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

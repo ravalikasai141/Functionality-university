@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_Experience_Status__c</fullName>
+    <description>This fields records whether the student is a care leaver</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This fields records whether the student is a care leaver</inlineHelpText>
+    <label>Care Experience Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>06~ Care leaver</fullName>
+                <default>false</default>
+                <label>06~ Care leaver</label>
+            </value>
+            <value>
+                <fullName>07~ Care experienced</fullName>
+                <default>false</default>
+                <label>07~ Care experienced</label>
+            </value>
+            <value>
+                <fullName>08~ Self-declared care experience but not confirmed</fullName>
+                <default>false</default>
+                <label>08~ Self-declared care experience but not confirmed</label>
+            </value>
+            <value>
+                <fullName>09~ No experience of care</fullName>
+                <default>false</default>
+                <label>09~ No experience of care</label>
+            </value>
+            <value>
+                <fullName>97~ Not known</fullName>
+                <default>false</default>
+                <label>97~ Not known</label>
+            </value>
+            <value>
+                <fullName>98~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>98~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+{
+  "plugins": ["@salesforce/eslint-plugin-aura"],
+  "extends": ["plugin:@salesforce/eslint-plugin-aura/recommended"],
+  "rules": {
+    // Linting rules should be reviewed and enabled at a future date
+    "vars-on-top": "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "warn",
+    "no-alert": "warn",
+    "no-mixed-spaces-and-tabs": "warn",
+    "eqeqeq": "warn",
+    "no-console": "warn",
+    "no-empty": "warn"
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Programme_Text__c</fullName>
+    <description>Indicates the programme the student expressed interest in while attending the campaign.  Primarily used when a campaign may be relevant to more than one programme.</description>
+    <externalId>false</externalId>
+    <label>Programme</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

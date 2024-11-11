@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Book_More_Than_Quoted</fullName>
+    <active>true</active>
+    <description>This validation rule is to stop users booking more students onto an order then has been quoted</description>
+    <errorConditionFormula>AND(
+				ISNEW(),
+				blng_OrderProduct__r.Booked_Quantity__c &gt; blng_OrderProduct__r.SBQQ__OrderedQuantity__c,
+    NOT(ISPICKVAL(On_Hold__c, &apos;Cancelled&apos;))
+)</errorConditionFormula>
+    <errorMessage>The number of students booked against this order has reached the amount of students quoted. Please create a new quote for this booking</errorMessage>
+</ValidationRule>

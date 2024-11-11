@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Line</fullName>
+    <active>true</active>
+    <label>Booking Line</label>
+    <picklistValues>
+        <picklist>Delivery_Status_OLD__c</picklist>
+        <values>
+            <fullName>Dispatched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do not Fulfil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent for Fulfilment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be Fulfilled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>On_Hold__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

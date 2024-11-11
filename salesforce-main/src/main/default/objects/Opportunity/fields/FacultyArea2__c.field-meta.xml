@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FacultyArea2__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team. 5/11/11</description>
+    <externalId>false</externalId>
+    <label>Faculty Area 2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Faculty_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Degree</fullName>
+                <default>false</default>
+                <label>Degree</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+            <value>
+                <fullName>Qual</fullName>
+                <default>false</default>
+                <label>Qual</label>
+            </value>
+            <value>
+                <fullName>Qual Online</fullName>
+                <default>false</default>
+                <label>Qual Online</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Online CPD</fullName>
+                <default>false</default>
+                <label>Online CPD</label>
+            </value>
+            <value>
+                <fullName>In-House</fullName>
+                <default>false</default>
+                <label>In-House</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>A&amp;T</controllingFieldValue>
+            <controllingFieldValue>BFI</controllingFieldValue>
+            <controllingFieldValue>MGMT</controllingFieldValue>
+            <valueName>Degree</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>A&amp;T</controllingFieldValue>
+            <controllingFieldValue>BFI</controllingFieldValue>
+            <valueName>Qual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>A&amp;T</controllingFieldValue>
+            <controllingFieldValue>BFI</controllingFieldValue>
+            <valueName>Qual Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MGMT</controllingFieldValue>
+            <valueName>HR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MGMT</controllingFieldValue>
+            <valueName>Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PD</controllingFieldValue>
+            <valueName>Online CPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PD</controllingFieldValue>
+            <valueName>In-House</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PD</controllingFieldValue>
+            <valueName>Public</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

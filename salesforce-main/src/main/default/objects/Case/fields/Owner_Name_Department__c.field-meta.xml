@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Name_Department__c</fullName>
+    <description>External_Handover__r.FirstName &amp; &quot; &quot; &amp; External_Handover__r.LastName &amp; &quot; - &quot; &amp; External_Handover__r.Title,</description>
+    <externalId>false</externalId>
+    <formula>IF(
+ ISPICKVAL( Status, &quot;External Handover&quot;),
+ External_Handover_Full_Name__c &amp; &quot; (&quot; &amp; External_Handover_Department__c &amp; &quot;)&quot;,
+ IF( 
+  LEFT( OwnerId, 3) = &quot;00G&quot;,
+  Owner:Queue.Name,
+  Owner:User.FirstName &amp; &quot; &quot; &amp; Owner:User.LastName &amp;
+  IF(
+   ISBLANK( Owner:User.Department),
+   &quot;&quot;,
+   &quot; (&quot; &amp; Owner:User.Department &amp; &quot;)&quot;
+  )
+ )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Template Owner Name &amp; Team/Department</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

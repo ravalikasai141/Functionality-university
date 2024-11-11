@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Select_Disability_Status_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>SFDC Select Disability Status Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Known Disability</fullName>
+                <default>false</default>
+                <label>No Known Disability</label>
+            </value>
+            <value>
+                <fullName>Two or More</fullName>
+                <default>false</default>
+                <label>Two or More</label>
+            </value>
+            <value>
+                <fullName>Specific Learning Difficulty</fullName>
+                <default>false</default>
+                <label>Specific Learning Difficulty</label>
+            </value>
+            <value>
+                <fullName>Autistic Spectrum Condition</fullName>
+                <default>false</default>
+                <label>Autistic Spectrum Condition</label>
+            </value>
+            <value>
+                <fullName>Illness/Health condition</fullName>
+                <default>false</default>
+                <label>Illness/Health condition</label>
+            </value>
+            <value>
+                <fullName>Mental Health condition</fullName>
+                <default>false</default>
+                <label>Mental Health condition</label>
+            </value>
+            <value>
+                <fullName>Physical Impairment</fullName>
+                <default>false</default>
+                <label>Physical Impairment</label>
+            </value>
+            <value>
+                <fullName>Hearing Impairment</fullName>
+                <default>false</default>
+                <label>Hearing Impairment</label>
+            </value>
+            <value>
+                <fullName>Visual Impairment</fullName>
+                <default>false</default>
+                <label>Visual Impairment</label>
+            </value>
+            <value>
+                <fullName>Not listed above</fullName>
+                <default>false</default>
+                <label>Not listed above</label>
+            </value>
+            <value>
+                <fullName>Not Known</fullName>
+                <default>false</default>
+                <label>Not Known</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

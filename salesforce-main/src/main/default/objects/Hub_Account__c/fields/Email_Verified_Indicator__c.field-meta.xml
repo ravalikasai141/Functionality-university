@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Verified_Indicator__c</fullName>
+    <description>Green tick if Hub email has been verified</description>
+    <externalId>false</externalId>
+    <formula>IF( Email_Verified__c = TRUE,
+IMAGE( &quot;/img/func_icons/util/checkmark16.gif&quot;, &quot;Email Verified&quot;),
+NULL)</formula>
+    <label>Email Verified</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

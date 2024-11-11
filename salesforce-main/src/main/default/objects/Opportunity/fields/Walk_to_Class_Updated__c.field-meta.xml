@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Walk_to_Class_Updated__c</fullName>
+    <description>This Field will allow the admissions team to see when it has been recorded that a Walk to Class is complete</description>
+    <externalId>false</externalId>
+    <label>Walk to Class Updated</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

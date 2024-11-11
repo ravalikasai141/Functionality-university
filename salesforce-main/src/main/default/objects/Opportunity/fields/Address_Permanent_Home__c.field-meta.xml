@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Permanent_Home__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This denotes if the address is the student&apos;s designated permanent home address</description>
+    <externalId>false</externalId>
+    <label>Permanent Home?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

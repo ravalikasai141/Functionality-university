@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modules__c</fullName>
+    <description>For ACCA courses</description>
+    <externalId>false</externalId>
+    <label>Modules</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACCA - Knowledge - F1</fullName>
+                <default>false</default>
+                <label>ACCA - Knowledge - F1</label>
+            </value>
+            <value>
+                <fullName>ACCA - Knowledge - F2</fullName>
+                <default>false</default>
+                <label>ACCA - Knowledge - F2</label>
+            </value>
+            <value>
+                <fullName>ACCA - Knowledge - F3</fullName>
+                <default>false</default>
+                <label>ACCA - Knowledge - F3</label>
+            </value>
+            <value>
+                <fullName>ACCA - Skills - F4</fullName>
+                <default>false</default>
+                <label>ACCA - Skills - F4</label>
+            </value>
+            <value>
+                <fullName>ACCA - Skills - F5</fullName>
+                <default>false</default>
+                <label>ACCA - Skills - F5</label>
+            </value>
+            <value>
+                <fullName>ACCA - Skills - F6</fullName>
+                <default>false</default>
+                <label>ACCA - Skills - F6</label>
+            </value>
+            <value>
+                <fullName>ACCA - Skills - F7</fullName>
+                <default>false</default>
+                <label>ACCA - Skills - F7</label>
+            </value>
+            <value>
+                <fullName>ACCA - Skills - F8</fullName>
+                <default>false</default>
+                <label>ACCA - Skills - F8</label>
+            </value>
+            <value>
+                <fullName>ACCA - Skills - F9</fullName>
+                <default>false</default>
+                <label>ACCA - Skills - F9</label>
+            </value>
+            <value>
+                <fullName>ACCA - Essentials - P1</fullName>
+                <default>false</default>
+                <label>ACCA - Essentials - P1</label>
+            </value>
+            <value>
+                <fullName>ACCA - Essentials - P2</fullName>
+                <default>false</default>
+                <label>ACCA - Essentials - P2</label>
+            </value>
+            <value>
+                <fullName>ACCA - Essentials - P3</fullName>
+                <default>false</default>
+                <label>ACCA - Essentials - P3</label>
+            </value>
+            <value>
+                <fullName>ACCA - Options - P4</fullName>
+                <default>false</default>
+                <label>ACCA - Options - P4</label>
+            </value>
+            <value>
+                <fullName>ACCA - Options - P5</fullName>
+                <default>false</default>
+                <label>ACCA - Options - P5</label>
+            </value>
+            <value>
+                <fullName>ACCA - Options - P6</fullName>
+                <default>false</default>
+                <label>ACCA - Options - P6</label>
+            </value>
+            <value>
+                <fullName>ACCA - Options - P7</fullName>
+                <default>false</default>
+                <label>ACCA - Options - P7</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

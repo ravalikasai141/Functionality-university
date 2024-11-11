@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>English_Language_Scores_Required</fullName>
+    <active>true</active>
+    <description>If a Language Test Type is selected that requires a score to be filled in then this enforces that the values are not null.</description>
+    <errorConditionFormula>AND(
+NOT($User.UserRoleId = &quot;00E0X0000012hSl&quot;),
+OR( 
+TEXT(Language_Test_Type__pc) = &quot;IELTS&quot;, 
+TEXT(Language_Test_Type__pc) = &quot;BPP ELT&quot;, 
+TEXT(Language_Test_Type__pc) = &quot;PTE&quot;,
+TEXT(Language_Test_Type__pc) = &quot;Oxford ELT Test&quot;,
+TEXT(Language_Test_Type__pc) = &quot;Language Cert&quot;
+), 
+OR( 
+ISBLANK(TEXT(Listening_Language_Score__pc)), 
+ISBLANK(TEXT(Reading_Language_Score__pc)), 
+ISBLANK(TEXT(Speaking_Language_Score__pc)), 
+ISBLANK(TEXT(Writing_Language_Score__pc)), 
+ISBLANK(TEXT(Overall_Language_Score__pc)) 
+) 
+)</errorConditionFormula>
+    <errorDisplayField>Language_Test_Type__pc</errorDisplayField>
+    <errorMessage>You must enter the English Language Test Scores</errorMessage>
+</ValidationRule>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_What_is_your_query_about__c</fullName>
+    <externalId>false</externalId>
+    <label>What is your query about?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Booking a New Course</fullName>
+                <default>false</default>
+                <label>Booking a New Course</label>
+            </value>
+            <value>
+                <fullName>Student Support</fullName>
+                <default>false</default>
+                <label>Student Support</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Careers</fullName>
+                <default>false</default>
+                <label>Careers</label>
+            </value>
+            <value>
+                <fullName>Books/Materials</fullName>
+                <default>false</default>
+                <label>Books/Materials</label>
+            </value>
+            <value>
+                <fullName>VLE or IT Support</fullName>
+                <default>false</default>
+                <label>VLE or IT Support</label>
+            </value>
+            <value>
+                <fullName>Induction/Joining Instructions</fullName>
+                <default>false</default>
+                <label>Induction/Joining Instructions</label>
+            </value>
+            <value>
+                <fullName>Accommodation</fullName>
+                <default>false</default>
+                <label>Accommodation</label>
+            </value>
+            <value>
+                <fullName>VISA/CAS</fullName>
+                <default>false</default>
+                <label>VISA/CAS</label>
+            </value>
+            <value>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_Detail__c</fullName>
+    <description>Reason given for lead dropping out of pipeline or currently unable to progress</description>
+    <externalId>false</externalId>
+    <label>Lead Status Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>TTMC</fullName>
+                <default>false</default>
+                <label>TTMC</label>
+            </value>
+            <value>
+                <fullName>Contact Request</fullName>
+                <default>false</default>
+                <label>Contact Request</label>
+            </value>
+            <value>
+                <fullName>Lead Forensics</fullName>
+                <default>false</default>
+                <label>Lead Forensics</label>
+            </value>
+            <value>
+                <fullName>Already Booked</fullName>
+                <default>false</default>
+                <label>Already Booked</label>
+            </value>
+            <value>
+                <fullName>Request No Further Contact</fullName>
+                <default>false</default>
+                <label>Request No Further Contact</label>
+            </value>
+            <value>
+                <fullName>Ineligible (Academic)</fullName>
+                <default>false</default>
+                <label>Ineligible (Academic)</label>
+            </value>
+            <value>
+                <fullName>Ineligible (Language)</fullName>
+                <default>false</default>
+                <label>Ineligible (Language)</label>
+            </value>
+            <value>
+                <fullName>Ineligible (Visa)</fullName>
+                <default>false</default>
+                <label>Ineligible (Visa)</label>
+            </value>
+            <value>
+                <fullName>Invalid Contact Details</fullName>
+                <default>false</default>
+                <label>Invalid Contact Details</label>
+            </value>
+            <value>
+                <fullName>Funding Restrictions</fullName>
+                <default>false</default>
+                <label>Funding Restrictions</label>
+            </value>
+            <value>
+                <fullName>Studying With Another Provider</fullName>
+                <default>false</default>
+                <label>Studying With Another Provider</label>
+            </value>
+            <value>
+                <fullName>No Longer Interest In Studying</fullName>
+                <default>false</default>
+                <label>No Longer Interest In Studying</label>
+            </value>
+            <value>
+                <fullName>Awaiting Results</fullName>
+                <default>false</default>
+                <label>Awaiting Results</label>
+            </value>
+            <value>
+                <fullName>Re-sitting Course</fullName>
+                <default>false</default>
+                <label>Re-sitting Course</label>
+            </value>
+            <value>
+                <fullName>Ineligible - Occupation</fullName>
+                <default>false</default>
+                <label>Ineligible - Occupation</label>
+            </value>
+            <value>
+                <fullName>Course not Offered</fullName>
+                <default>false</default>
+                <label>Course not Offered</label>
+            </value>
+            <value>
+                <fullName>Marketing Enquiry</fullName>
+                <default>false</default>
+                <label>Marketing Enquiry</label>
+            </value>
+            <value>
+                <fullName>Unable to Establish Contact</fullName>
+                <default>false</default>
+                <label>Unable to Establish Contact</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Establishing Contact</controllingFieldValue>
+            <controllingFieldValue>Re-engaged</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Establishing Contact</controllingFieldValue>
+            <controllingFieldValue>Re-engaged</controllingFieldValue>
+            <valueName>Phone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Establishing Contact</controllingFieldValue>
+            <valueName>TTMC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Re-engaged</controllingFieldValue>
+            <valueName>Contact Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Re-engaged</controllingFieldValue>
+            <valueName>Lead Forensics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Already Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Request No Further Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Ineligible (Academic)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Ineligible (Language)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Ineligible (Visa)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Invalid Contact Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Funding Restrictions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Studying With Another Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>No Longer Interest In Studying</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Awaiting Results</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Re-sitting Course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Ineligible - Occupation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Course not Offered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Marketing Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Further Action</controllingFieldValue>
+            <valueName>Unable to Establish Contact</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

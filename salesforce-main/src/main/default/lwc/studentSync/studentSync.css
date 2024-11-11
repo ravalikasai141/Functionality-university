@@ -1,0 +1,6 @@
+.load-screen {
+  min-height: 200px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}

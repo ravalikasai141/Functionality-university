@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Guardian_Mobile__c</fullName>
+    <description>The mobile number of the students designated parent or guardian</description>
+    <externalId>false</externalId>
+    <label>Parents/Guardian Mobile</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

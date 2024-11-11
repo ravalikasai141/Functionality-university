@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-Case</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Administration</label>
+    <tabs>soat__Activities</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>Release__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>Campus__c</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>Programme__c</tabs>
+    <tabs>BLND_Snapshot</tabs>
+    <tabs>ERD__ERD_Tool_Beta</tabs>
+    <tabs>cloudconverter__Cloud_Converter</tabs>
+    <tabs>Employment_History__c</tabs>
+    <tabs>Reference__c</tabs>
+    <tabs>Agent__c</tabs>
+    <tabs>UCAS_Number__c</tabs>
+    <tabs>Application_wizard_reference__c</tabs>
+    <tabs>Integration_Log_Incoming__c</tabs>
+    <tabs>Locality__c</tabs>
+    <tabs>Integration_Log__c</tabs>
+    <tabs>Stock_Site__c</tabs>
+    <tabs>Delivery__c</tabs>
+    <tabs>Hub_Account__c</tabs>
+</CustomApplication>

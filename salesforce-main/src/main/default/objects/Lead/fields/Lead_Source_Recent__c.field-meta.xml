@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_Recent__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Source - Recent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>RFI</fullName>
+                <default>false</default>
+                <label>RFI</label>
+            </value>
+            <value>
+                <fullName>Walk-Ins</fullName>
+                <default>false</default>
+                <label>Walk-Ins</label>
+            </value>
+            <value>
+                <fullName>Campaign Landing Page</fullName>
+                <default>false</default>
+                <label>Campaign Landing Page</label>
+            </value>
+            <value>
+                <fullName>Direct Input</fullName>
+                <default>false</default>
+                <label>Direct Input</label>
+            </value>
+            <value>
+                <fullName>3rd Party Website Traffic</fullName>
+                <default>false</default>
+                <label>3rd Party Website Traffic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

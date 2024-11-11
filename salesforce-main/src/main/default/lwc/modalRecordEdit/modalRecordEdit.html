@@ -1,0 +1,23 @@
+<template>
+    <lightning-modal-header label={header}></lightning-modal-header>
+    <lightning-modal-body>
+        <div class="form-placeholder">
+            <template lwc:if={formLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+            <div class="form-wrapper slds-hide">
+                <lightning-record-form
+                    object-api-name={object}
+                    record-id={recordId}
+                    fields={fields}
+                    mode="edit"
+                    onload={onLoad}
+                    oncancel={onCancel}
+                    onsuccess={onSuccess}
+                    columns="2"
+                    density="comfy"
+                ></lightning-record-form>
+            </div>
+        </div>
+    </lightning-modal-body>
+</template>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Invoice Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Immediate Invoice</fullName>
+                <default>false</default>
+                <label>Immediate Invoice</label>
+            </value>
+            <value>
+                <fullName>Consolidated Rules</fullName>
+                <default>false</default>
+                <label>Consolidated Rules</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

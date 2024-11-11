@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Destination_Conflict</fullName>
+    <active>true</active>
+    <description>Delivery cannot be set to deliver to both customer address &amp; BPP study location</description>
+    <errorConditionFormula>NOT( ISBLANK( Delivered_to_BPP_Address__c ))  &amp;&amp;
+NOT( ISBLANK(  Delivered_to_Customer_Address__c ))</errorConditionFormula>
+    <errorDisplayField>Delivered_to_BPP_Address__c</errorDisplayField>
+    <errorMessage>Please select only one option out of Deliver to BPP Address and Deliver to Customer Address</errorMessage>
+</ValidationRule>

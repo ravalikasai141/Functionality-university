@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_must_be_populated_before_BD_Opp</fullName>
+    <active>true</active>
+    <description>Rule to prevent a BD Opportunity being selected before a Client is</description>
+    <errorConditionFormula>AND(
+        ISBLANK(Client__c),
+        ISCHANGED(BD_Opportunity__c),
+        (RecordType.DeveloperName = 'Apprentice_Application')
+        )</errorConditionFormula>
+    <errorMessage>A Client must be set before updating the BD Opportunity field</errorMessage>
+</ValidationRule>

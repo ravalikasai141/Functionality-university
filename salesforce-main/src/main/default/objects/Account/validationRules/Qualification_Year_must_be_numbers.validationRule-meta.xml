@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualification_Year_must_be_numbers</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( Qualification_Year__pc  &lt;&gt; null,
+NOT(ISNUMBER( Qualification_Year__pc )), false)</errorConditionFormula>
+    <errorDisplayField>Qualification_Year__pc</errorDisplayField>
+    <errorMessage>Only numbers can be entered.</errorMessage>
+</ValidationRule>

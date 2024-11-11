@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Stock_Site_Updates</fullName>
+    <active>true</active>
+    <description>Stock Site cannot be updated if stock is allocated or delivery has been dispatched</description>
+    <errorConditionFormula>ISCHANGED( Stock_Site__c ) 
+ &amp;&amp; 
+(Stock_Allocated__c = TRUE
+ || 
+ISPICKVAL( Delivery_Status__c , &apos;Dispatched&apos; ))</errorConditionFormula>
+    <errorDisplayField>Stock_Site__c</errorDisplayField>
+    <errorMessage>Stock Site cannot be changed. Either stock from the current stock site has been allocated or the delivery has already been dispatched.</errorMessage>
+</ValidationRule>

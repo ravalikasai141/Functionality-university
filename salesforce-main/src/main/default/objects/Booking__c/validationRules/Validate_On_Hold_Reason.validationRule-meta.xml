@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_On_Hold_Reason</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL(Status__c, &apos;On Hold&apos;) &amp;&amp; ISBLANK(On_Hold_Reason__c)</errorConditionFormula>
+    <errorDisplayField>On_Hold_Reason__c</errorDisplayField>
+    <errorMessage>On Hold Reason is required if a Booking is On Hold</errorMessage>
+</ValidationRule>

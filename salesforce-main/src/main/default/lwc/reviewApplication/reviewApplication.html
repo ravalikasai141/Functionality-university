@@ -1,0 +1,48 @@
+<template>
+    <div class="slds-grid">
+        <div class="slds-size_12-of-12">
+            <template if:true={loading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+            <c-review-dates
+                record-id={recordId}
+                onloading={onReviewLoading}
+                onsuccess={onReviewSuccess}
+                onerror={onReviewError}
+                onclose={onModalClose}
+            ></c-review-dates>
+            <template lwc:if={allowReview}>
+                <c-review-application-edit opportunity-id={recordId} account-id={accountId}></c-review-application-edit>
+                <c-review-application-section title="Review">
+                    <div slot="body">
+                        <c-review-application-comment
+                            opportunity-id={recordId}
+                            onloading={onReviewLoading}
+                            onsuccess={onReviewSuccess}
+                            onerror={onReviewError}
+                        >
+                        </c-review-application-comment>
+                    </div>
+                </c-review-application-section>
+            </template>
+            <template lwc:if={allowFinalReview}>
+                <c-review-application-acceptance
+                    opportunity-id={recordId}
+                    account-id={accountId}
+                    onloading={onReviewLoading}
+                    onsuccess={onReviewSuccess}
+                    onerror={onReviewError}
+                ></c-review-application-acceptance>
+            </template>
+            <template lwc:if={reviewUnavailable}>
+                <c-review-application-unavailable
+                    stage={stageName}
+                    status={status}
+                    resubmission-date={resubmissionDate}
+                    opportunity-id={recordId}
+                    onreview={onReviewStart}
+                ></c-review-application-unavailable>
+            </template>
+        </div>
+    </div>
+</template>

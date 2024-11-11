@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Branch_4__c</fullName>
+    <description>BPP 4th branch selection for this opportunity.  Populated by CAB.</description>
+    <externalId>false</externalId>
+    <label>BPP Branch 4</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>London - City</fullName>
+                <default>false</default>
+                <label>London - City</label>
+            </value>
+            <value>
+                <fullName>London - Waterloo</fullName>
+                <default>false</default>
+                <label>London - Waterloo</label>
+            </value>
+            <value>
+                <fullName>London - Holborn</fullName>
+                <default>false</default>
+                <label>London - Holborn</label>
+            </value>
+            <value>
+                <fullName>Reading</fullName>
+                <default>false</default>
+                <label>Reading</label>
+            </value>
+            <value>
+                <fullName>Leeds</fullName>
+                <default>false</default>
+                <label>Leeds</label>
+            </value>
+            <value>
+                <fullName>Croydon</fullName>
+                <default>false</default>
+                <label>Croydon</label>
+            </value>
+            <value>
+                <fullName>Milton Keynes</fullName>
+                <default>false</default>
+                <label>Milton Keynes</label>
+            </value>
+            <value>
+                <fullName>eLearning Center</fullName>
+                <default>false</default>
+                <label>eLearning Center</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Maidstone</fullName>
+                <default>false</default>
+                <label>Maidstone</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>Birmingham</fullName>
+                <default>false</default>
+                <label>Birmingham</label>
+            </value>
+            <value>
+                <fullName>Bristol</fullName>
+                <default>false</default>
+                <label>Bristol</label>
+            </value>
+            <value>
+                <fullName>Nottingham</fullName>
+                <default>false</default>
+                <label>Nottingham</label>
+            </value>
+            <value>
+                <fullName>Cardiff</fullName>
+                <default>false</default>
+                <label>Cardiff</label>
+            </value>
+            <value>
+                <fullName>Newcastle</fullName>
+                <default>false</default>
+                <label>Newcastle</label>
+            </value>
+            <value>
+                <fullName>Southampton</fullName>
+                <default>false</default>
+                <label>Southampton</label>
+            </value>
+            <value>
+                <fullName>Manchester</fullName>
+                <default>false</default>
+                <label>Manchester</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>Swindon</fullName>
+                <default>false</default>
+                <label>Swindon</label>
+            </value>
+            <value>
+                <fullName>Abingdon – McTimoney</fullName>
+                <default>false</default>
+                <label>Abingdon – McTimoney</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

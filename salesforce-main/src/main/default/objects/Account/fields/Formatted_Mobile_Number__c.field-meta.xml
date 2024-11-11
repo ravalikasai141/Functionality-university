@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formatted_Mobile_Number__c</fullName>
+    <description>This is the field referenced by SMS Magic App for sending and receiving SMS.</description>
+    <externalId>false</externalId>
+    <label>Formatted Mobile Number</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

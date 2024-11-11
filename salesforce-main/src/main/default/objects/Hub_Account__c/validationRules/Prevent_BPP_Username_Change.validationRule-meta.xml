@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_BPP_Username_Change</fullName>
+    <active>true</active>
+    <description>Prevents a User from changing a Hub username to an email address that contains &quot;my.bpp.com&quot;.</description>
+    <errorConditionFormula>CONTAINS(BPP_Requested_Hub_Username__c, &quot;my.bpp.com&quot;)</errorConditionFormula>
+    <errorDisplayField>BPP_Requested_Hub_Username__c</errorDisplayField>
+    <errorMessage>Unable to change a Hub Username to an email address that contains &quot;my.bpp.com&quot;.</errorMessage>
+</ValidationRule>

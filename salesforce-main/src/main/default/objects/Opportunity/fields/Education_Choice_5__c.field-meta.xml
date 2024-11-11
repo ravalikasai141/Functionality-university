@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Education_Choice_5__c</fullName>
+    <description>Student&apos;s choice of educational instution.  Typically populated by data processes.</description>
+    <externalId>false</externalId>
+    <label>Education Choice 5</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aberystwyth University</fullName>
+                <default>false</default>
+                <label>Aberystwyth University</label>
+            </value>
+            <value>
+                <fullName>Anglia Ruskin University</fullName>
+                <default>false</default>
+                <label>Anglia Ruskin University</label>
+            </value>
+            <value>
+                <fullName>Aston University</fullName>
+                <default>false</default>
+                <label>Aston University</label>
+            </value>
+            <value>
+                <fullName>Birmingham City University</fullName>
+                <default>false</default>
+                <label>Birmingham City University</label>
+            </value>
+            <value>
+                <fullName>Bournemouth University</fullName>
+                <default>false</default>
+                <label>Bournemouth University</label>
+            </value>
+            <value>
+                <fullName>BPP</fullName>
+                <default>false</default>
+                <label>BPP</label>
+            </value>
+            <value>
+                <fullName>Bradford University</fullName>
+                <default>false</default>
+                <label>Bradford University</label>
+            </value>
+            <value>
+                <fullName>Brighton</fullName>
+                <default>false</default>
+                <label>Brighton</label>
+            </value>
+            <value>
+                <fullName>Brunel</fullName>
+                <default>false</default>
+                <label>Brunel</label>
+            </value>
+            <value>
+                <fullName>Buckinghamshire New University</fullName>
+                <default>false</default>
+                <label>Buckinghamshire New University</label>
+            </value>
+            <value>
+                <fullName>Cardiff University/Law School</fullName>
+                <default>false</default>
+                <label>Cardiff University/Law School</label>
+            </value>
+            <value>
+                <fullName>Central Lancashire</fullName>
+                <default>false</default>
+                <label>Central Lancashire</label>
+            </value>
+            <value>
+                <fullName>City University/The City Law School</fullName>
+                <default>false</default>
+                <label>City University/The City Law School</label>
+            </value>
+            <value>
+                <fullName>CLT Central Law Training</fullName>
+                <default>false</default>
+                <label>CLT Central Law Training</label>
+            </value>
+            <value>
+                <fullName>College of Law</fullName>
+                <default>false</default>
+                <label>College of Law</label>
+            </value>
+            <value>
+                <fullName>De Montfort University</fullName>
+                <default>false</default>
+                <label>De Montfort University</label>
+            </value>
+            <value>
+                <fullName>East Anglia</fullName>
+                <default>false</default>
+                <label>East Anglia</label>
+            </value>
+            <value>
+                <fullName>Glamorgan University</fullName>
+                <default>false</default>
+                <label>Glamorgan University</label>
+            </value>
+            <value>
+                <fullName>Hertfordshire</fullName>
+                <default>false</default>
+                <label>Hertfordshire</label>
+            </value>
+            <value>
+                <fullName>Huddersfield</fullName>
+                <default>false</default>
+                <label>Huddersfield</label>
+            </value>
+            <value>
+                <fullName>Kaplan Law School</fullName>
+                <default>false</default>
+                <label>Kaplan Law School</label>
+            </value>
+            <value>
+                <fullName>Keele</fullName>
+                <default>false</default>
+                <label>Keele</label>
+            </value>
+            <value>
+                <fullName>Kingston University</fullName>
+                <default>false</default>
+                <label>Kingston University</label>
+            </value>
+            <value>
+                <fullName>Leeds Metropolitan</fullName>
+                <default>false</default>
+                <label>Leeds Metropolitan</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>London Metropolitan</fullName>
+                <default>false</default>
+                <label>London Metropolitan</label>
+            </value>
+            <value>
+                <fullName>London South Bank University</fullName>
+                <default>false</default>
+                <label>London South Bank University</label>
+            </value>
+            <value>
+                <fullName>Manchester Metropolitan University</fullName>
+                <default>false</default>
+                <label>Manchester Metropolitan University</label>
+            </value>
+            <value>
+                <fullName>Middlesex University</fullName>
+                <default>false</default>
+                <label>Middlesex University</label>
+            </value>
+            <value>
+                <fullName>Northumbria University</fullName>
+                <default>false</default>
+                <label>Northumbria University</label>
+            </value>
+            <value>
+                <fullName>Nottingham Law School</fullName>
+                <default>false</default>
+                <label>Nottingham Law School</label>
+            </value>
+            <value>
+                <fullName>Oxford Brookes University/Institute of Legal Practice</fullName>
+                <default>false</default>
+                <label>Oxford Brookes University/Institute of Legal Practice</label>
+            </value>
+            <value>
+                <fullName>Plymouth University</fullName>
+                <default>false</default>
+                <label>Plymouth University</label>
+            </value>
+            <value>
+                <fullName>Sheffield (University of)</fullName>
+                <default>false</default>
+                <label>Sheffield (University of)</label>
+            </value>
+            <value>
+                <fullName>Sheffield Hallam</fullName>
+                <default>false</default>
+                <label>Sheffield Hallam</label>
+            </value>
+            <value>
+                <fullName>Southampton Solent</fullName>
+                <default>false</default>
+                <label>Southampton Solent</label>
+            </value>
+            <value>
+                <fullName>Staffordshire University</fullName>
+                <default>false</default>
+                <label>Staffordshire University</label>
+            </value>
+            <value>
+                <fullName>Sunderland (University of)</fullName>
+                <default>false</default>
+                <label>Sunderland (University of)</label>
+            </value>
+            <value>
+                <fullName>Sussex (University of)</fullName>
+                <default>false</default>
+                <label>Sussex (University of)</label>
+            </value>
+            <value>
+                <fullName>Swansea (University of)</fullName>
+                <default>false</default>
+                <label>Swansea (University of)</label>
+            </value>
+            <value>
+                <fullName>Thames Valley University</fullName>
+                <default>false</default>
+                <label>Thames Valley University</label>
+            </value>
+            <value>
+                <fullName>UWE Bristol Law School/Institute of Legal Practice</fullName>
+                <default>false</default>
+                <label>UWE Bristol Law School/Institute of Legal Practice</label>
+            </value>
+            <value>
+                <fullName>Westminster (University of)</fullName>
+                <default>false</default>
+                <label>Westminster (University of)</label>
+            </value>
+            <value>
+                <fullName>Wolverhampton (University of)</fullName>
+                <default>false</default>
+                <label>Wolverhampton (University of)</label>
+            </value>
+            <value>
+                <fullName>Worcester</fullName>
+                <default>false</default>
+                <label>Worcester</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

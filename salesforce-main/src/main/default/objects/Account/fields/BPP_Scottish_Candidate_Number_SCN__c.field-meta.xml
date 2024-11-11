@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Scottish_Candidate_Number_SCN__c</fullName>
+    <description>When a university student applying via UCAS who has a Scottish candidate number (SCN), then Scottish candidate number (SCN) to be captured in Salesforce. So that it can be collected for HESA purposes.</description>
+    <externalId>false</externalId>
+    <label>Scottish Candidate Number (SCN)</label>
+    <length>9</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Task_Link__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(NVMStatsSF__TaskExists__c, HYPERLINK(&quot;/&quot; &amp; NVMStatsSF__TaskID__c, &quot;Open Task&quot; , &quot;_blank&quot;),&quot;&quot;)</formula>
+    <inlineHelpText>URL to open a new tab for the relates task if one exists</inlineHelpText>
+    <label>Task Link</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

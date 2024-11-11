@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_in_Sent_for_Fulfilment_Status__c</fullName>
+    <description>Calculates the number of days between the Sent for Fulfilment Date and Dispatched Date. If Dispatched Date is blank, calculates the number of days between the Sent for Fulfilment Date and today&apos;s date</description>
+    <externalId>false</externalId>
+    <formula>IF(
+	ISBLANK(Sent_for_Fulfilment_On__c),
+	NULL,
+	IF(
+		NOT(ISBLANK( Dispatched_Date__c )),
+		Dispatched_Date__c - Sent_for_Fulfilment_On__c,
+		TODAY() - Sent_for_Fulfilment_On__c
+	)
+)</formula>
+    <label>Days in Sent for Fulfilment Status</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

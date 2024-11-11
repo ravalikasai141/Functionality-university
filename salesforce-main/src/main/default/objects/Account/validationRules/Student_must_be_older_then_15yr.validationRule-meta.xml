@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_must_be_older_then_15yr</fullName>
+    <active>true</active>
+    <description>Student must be older then 15 years old.</description>
+    <errorConditionFormula>FLOOR((TODAY() - PersonBirthdate )/365.2425) &lt; 15</errorConditionFormula>
+    <errorDisplayField>PersonBirthdate</errorDisplayField>
+    <errorMessage>Student must be older then 15 years old.</errorMessage>
+</ValidationRule>

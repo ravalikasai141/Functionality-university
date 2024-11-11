@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rfi_Mode_of_study_or_training__c</fullName>
+    <description>for the rfi form</description>
+    <externalId>false</externalId>
+    <label>Mode of study or training</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Online learning</fullName>
+                <default>false</default>
+                <label>Online learning</label>
+            </value>
+            <value>
+                <fullName>Face-to-face</fullName>
+                <default>false</default>
+                <label>Face-to-face</label>
+            </value>
+            <value>
+                <fullName>Blended learning (combined online, face-to-face)</fullName>
+                <default>false</default>
+                <label>Blended learning (combined online, face-to-face)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

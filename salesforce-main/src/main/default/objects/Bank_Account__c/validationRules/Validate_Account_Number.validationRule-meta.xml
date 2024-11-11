@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Account_Number</fullName>
+    <active>true</active>
+    <description>Ensures Account Number is a number and is 8 characters</description>
+    <errorConditionFormula>IF ( 
+NOT(ISBLANK(Account_Number__c)), LEN(Account_Number__c) &lt;&gt; 8, false 
+)</errorConditionFormula>
+    <errorDisplayField>Account_Number__c</errorDisplayField>
+    <errorMessage>Please enter an 8 digit Account Number</errorMessage>
+</ValidationRule>

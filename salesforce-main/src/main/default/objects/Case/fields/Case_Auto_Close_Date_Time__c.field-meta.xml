@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Auto_Close_Date_Time__c</fullName>
+    <description>Date/time of when to automatically close a case, normally the next working day, after a ready-to-close notification has been sent to the case contact.</description>
+    <externalId>false</externalId>
+    <label>Case Auto-Close Date/Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

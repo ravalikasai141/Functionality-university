@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Curriculum_Program_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Curriculum Program Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SFDC_Curriculum_Campus_Code_Select__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACCA~ ACCA</fullName>
+                <default>false</default>
+                <label>ACCA~ ACCA</label>
+            </value>
+            <value>
+                <fullName>BPTCL~ Bar Prof Training Course</fullName>
+                <default>false</default>
+                <label>BPTCL~ Bar Prof Training Course</label>
+            </value>
+            <value>
+                <fullName>BSCBFS3~ BSc (Hons) Banking &amp; Finance</fullName>
+                <default>false</default>
+                <label>BSCBFS3~ BSc (Hons) Banking &amp; Finance</label>
+            </value>
+            <value>
+                <fullName>BSCBM1~ CertHE Business Management</fullName>
+                <default>false</default>
+                <label>BSCBM1~ CertHE Business Management</label>
+            </value>
+            <value>
+                <fullName>BSCBM3~ BSc (Hons) Business Management</fullName>
+                <default>false</default>
+                <label>BSCBM3~ BSc (Hons) Business Management</label>
+            </value>
+            <value>
+                <fullName>BSCLEM1~ CertHE LEM</fullName>
+                <default>false</default>
+                <label>BSCLEM1~ CertHE LEM</label>
+            </value>
+            <value>
+                <fullName>BSCLEM3~ BSc (Hons) LEM</fullName>
+                <default>false</default>
+                <label>BSCLEM3~ BSc (Hons) LEM</label>
+            </value>
+            <value>
+                <fullName>BSCNURS~ BScNursing Studies(Dip to Deg)</fullName>
+                <default>false</default>
+                <label>BSCNURS~ BScNursing Studies(Dip to Deg)</label>
+            </value>
+            <value>
+                <fullName>BSCPAS1~ CertHE  Prof Accting</fullName>
+                <default>false</default>
+                <label>BSCPAS1~ CertHE  Prof Accting</label>
+            </value>
+            <value>
+                <fullName>BSCPAS3~ BSc (Hons)  Prof Accting</fullName>
+                <default>false</default>
+                <label>BSCPAS3~ BSc (Hons)  Prof Accting</label>
+            </value>
+            <value>
+                <fullName>BSCPSY1~ BSc (Hons) Psychology</fullName>
+                <default>false</default>
+                <label>BSCPSY1~ BSc (Hons) Psychology</label>
+            </value>
+            <value>
+                <fullName>BSCPSYH~ BSc (Hons) Psychology</fullName>
+                <default>false</default>
+                <label>BSCPSYH~ BSc (Hons) Psychology</label>
+            </value>
+            <value>
+                <fullName>BTT	Bar~ Transfer Test</fullName>
+                <default>false</default>
+                <label>BTT	Bar~ Transfer Test</label>
+            </value>
+            <value>
+                <fullName>BVC~ Bar Vocational Course</fullName>
+                <default>false</default>
+                <label>BVC~ Bar Vocational Course</label>
+            </value>
+            <value>
+                <fullName>CERTBSL~ Pwy to HE Cert in Bus Studies</fullName>
+                <default>false</default>
+                <label>CERTBSL~ Pwy to HE Cert in Bus Studies</label>
+            </value>
+            <value>
+                <fullName>CERTHEC~ Pathway to HE Cert in Health</fullName>
+                <default>false</default>
+                <label>CERTHEC~ Pathway to HE Cert in Health</label>
+            </value>
+            <value>
+                <fullName>CertHE-HSC~ HE Cert Heal and Social Care</fullName>
+                <default>false</default>
+                <label>CertHE-HSC~ HE Cert Heal and Social Care</label>
+            </value>
+            <value>
+                <fullName>CIPDHR~ CIPD Cert in HRP</fullName>
+                <default>false</default>
+                <label>CIPDHR~ CIPD Cert in HRP</label>
+            </value>
+            <value>
+                <fullName>EXTITBS-BF~ Ext Int BSc(Hons) B Mgmt w/Fin</fullName>
+                <default>false</default>
+                <label>EXTITBS-BF~ Ext Int BSc(Hons) B Mgmt w/Fin</label>
+            </value>
+            <value>
+                <fullName>EXTITBS-BM~ Ext Int BSc Bus Mgmt</fullName>
+                <default>false</default>
+                <label>EXTITBS-BM~ Ext Int BSc Bus Mgmt</label>
+            </value>
+            <value>
+                <fullName>EXTITBS-PY~ Ext Int BSc(Hons) Psychology</fullName>
+                <default>false</default>
+                <label>EXTITBS-PY~ Ext Int BSc(Hons) Psychology</label>
+            </value>
+            <value>
+                <fullName>EXTITFCB-S~ Ext Int Fnd Cert Bus Mgmt</fullName>
+                <default>false</default>
+                <label>EXTITFCB-S~ Ext Int Fnd Cert Bus Mgmt</label>
+            </value>
+            <value>
+                <fullName>EXTITFC-HEAL~ Ext Int Fnd Cert Healthcare</fullName>
+                <default>false</default>
+                <label>EXTITFC-HEAL~ Ext Int Fnd Cert Healthcare</label>
+            </value>
+            <value>
+                <fullName>EXTITF-CLS~ Ext Int Fnd Cert Law St</fullName>
+                <default>false</default>
+                <label>EXTITF-CLS~ Ext Int Fnd Cert Law St</label>
+            </value>
+            <value>
+                <fullName>EXTIT-IFC~ Ext Int Fnd Cert</fullName>
+                <default>false</default>
+                <label>EXTIT-IFC~ Ext Int Fnd Cert</label>
+            </value>
+            <value>
+                <fullName>EXTITLLM-BL~ Ext Int LLB Law Bus Law</fullName>
+                <default>false</default>
+                <label>EXTITLLM-BL~ Ext Int LLB Law Bus Law</label>
+            </value>
+            <value>
+                <fullName>EXTITLLM-CCL~ Ext Int LLB Law Comp Com Law</fullName>
+                <default>false</default>
+                <label>EXTITLLM-CCL~ Ext Int LLB Law Comp Com Law</label>
+            </value>
+            <value>
+                <fullName>EXTITLLM-CL~ Ext Int LLB Law Com Law</fullName>
+                <default>false</default>
+                <label>EXTITLLM-CL~ Ext Int LLB Law Com Law</label>
+            </value>
+            <value>
+                <fullName>EXTITLLM-RC~ Ext Int LLB Law Reg Compl Law</fullName>
+                <default>false</default>
+                <label>EXTITLLM-RC~ Ext Int LLB Law Reg Compl Law</label>
+            </value>
+            <value>
+                <fullName>EXTITLMS-M~ Ext Int MSc Management</fullName>
+                <default>false</default>
+                <label>EXTITLMS-M~ Ext Int MSc Management</label>
+            </value>
+            <value>
+                <fullName>EXTITLMS-MKT~ Ext Int MSc Marketing</fullName>
+                <default>false</default>
+                <label>EXTITLMS-MKT~ Ext Int MSc Marketing</label>
+            </value>
+            <value>
+                <fullName>FC-HEALTHC~ Path HE Cert Healthcare</fullName>
+                <default>false</default>
+                <label>FC-HEALTHC~ Path HE Cert Healthcare</label>
+            </value>
+            <value>
+                <fullName>GCCLL~ Grad Cert in Comm Law</fullName>
+                <default>false</default>
+                <label>GCCLL~ Grad Cert in Comm Law</label>
+            </value>
+            <value>
+                <fullName>GDLL~ Grad Dip in Law (GDL)</fullName>
+                <default>false</default>
+                <label>GDLL~ Grad Dip in Law (GDL)</label>
+            </value>
+            <value>
+                <fullName>INTFC-BM~ Int Fdn Cert Business Mgmt</fullName>
+                <default>false</default>
+                <label>INTFC-BM~ Int Fdn Cert Business Mgmt</label>
+            </value>
+            <value>
+                <fullName>INTFC-LS~ Int Fdn Cert Legal Studies</fullName>
+                <default>false</default>
+                <label>INTFC-LS~ Int Fdn Cert Legal Studies</label>
+            </value>
+            <value>
+                <fullName>INT-IFC~ Int Foundation Cert</fullName>
+                <default>false</default>
+                <label>INT-IFC~ Int Foundation Cert</label>
+            </value>
+            <value>
+                <fullName>INTPREMD-BM~ Int PreMst Dip Bus Mgmt</fullName>
+                <default>false</default>
+                <label>INTPREMD-BM~ Int PreMst Dip Bus Mgmt</label>
+            </value>
+            <value>
+                <fullName>INTPREMD-LAW~ Int PreMst Dip Law</fullName>
+                <default>false</default>
+                <label>INTPREMD-LAW~ Int PreMst Dip Law</label>
+            </value>
+            <value>
+                <fullName>LLB3~ LLB (Hons) Law</fullName>
+                <default>false</default>
+                <label>LLB3~ LLB (Hons) Law</label>
+            </value>
+            <value>
+                <fullName>LLBBL3~ LLB (Hons) Business Law</fullName>
+                <default>false</default>
+                <label>LLBBL3~ LLB (Hons) Business Law</label>
+            </value>
+            <value>
+                <fullName>LLBGDLC2~ LLB [GDL Conversion]</fullName>
+                <default>false</default>
+                <label>LLBGDLC2~ LLB [GDL Conversion]</label>
+            </value>
+            <value>
+                <fullName>LLBGDLHC~ LLB (Hons) [GDL Conversion]</fullName>
+                <default>false</default>
+                <label>LLBGDLHC~ LLB (Hons) [GDL Conversion]</label>
+            </value>
+            <value>
+                <fullName>LLBLPSY3~ LLB (Hons) Law with Psychology</fullName>
+                <default>false</default>
+                <label>LLBLPSY3~ LLB (Hons) Law with Psychology</label>
+            </value>
+            <value>
+                <fullName>LLMCCLL~ LLM Compar&apos;&apos;tve Comm Law</fullName>
+                <default>false</default>
+                <label>LLMCCLL~ LLM Compar&apos;&apos;tve Comm Law</label>
+            </value>
+            <value>
+                <fullName>LLMCLL~ LLM Comm Law</fullName>
+                <default>false</default>
+                <label>LLMCLL~ LLM Comm Law</label>
+            </value>
+            <value>
+                <fullName>LLMFRCL~ LLM Finl Reg &amp; Compl</fullName>
+                <default>false</default>
+                <label>LLMFRCL~ LLM Finl Reg &amp; Compl</label>
+            </value>
+            <value>
+                <fullName>LLMIBLL~ LLM (Int Bus Law)</fullName>
+                <default>false</default>
+                <label>LLMIBLL~ LLM (Int Bus Law)</label>
+            </value>
+            <value>
+                <fullName>LLMPLP~ LLM Prof Legl Pract</fullName>
+                <default>false</default>
+                <label>LLMPLP~ LLM Prof Legl Pract</label>
+            </value>
+            <value>
+                <fullName>LPC~ Legal Practice Course</fullName>
+                <default>false</default>
+                <label>LPC~ Legal Practice Course</label>
+            </value>
+            <value>
+                <fullName>MALB~ MA Law with Business</fullName>
+                <default>false</default>
+                <label>MALB~ MA Law with Business</label>
+            </value>
+            <value>
+                <fullName>MALPCB~ MA LPC with Business</fullName>
+                <default>false</default>
+                <label>MALPCB~ MA LPC with Business</label>
+            </value>
+            <value>
+                <fullName>MCHIRB~ Mchiro</fullName>
+                <default>false</default>
+                <label>MCHIRB~ Mchiro</label>
+            </value>
+            <value>
+                <fullName>MCHIRC~ Mchiro</fullName>
+                <default>false</default>
+                <label>MCHIRC~ Mchiro</label>
+            </value>
+            <value>
+                <fullName>MCHIRD~ Mchiro</fullName>
+                <default>false</default>
+                <label>MCHIRD~ Mchiro</label>
+            </value>
+            <value>
+                <fullName>MCHIRM~ Mchiro</fullName>
+                <default>false</default>
+                <label>MCHIRM~ Mchiro</label>
+            </value>
+            <value>
+                <fullName>MSCF3~ MSc Fin</fullName>
+                <default>false</default>
+                <label>MSCF3~ MSc Fin</label>
+            </value>
+            <value>
+                <fullName>MSCIM2~ PG Dip Int Marketing</fullName>
+                <default>false</default>
+                <label>MSCIM2~ PG Dip Int Marketing</label>
+            </value>
+            <value>
+                <fullName>MSCM1~ PG Cert in Management</fullName>
+                <default>false</default>
+                <label>MSCM1~ PG Cert in Management</label>
+            </value>
+            <value>
+                <fullName>MSCM3~ MSc Management</fullName>
+                <default>false</default>
+                <label>MSCM3~ MSc Management</label>
+            </value>
+            <value>
+                <fullName>MSCMK1~ PG Cert in Mrkting</fullName>
+                <default>false</default>
+                <label>MSCMK1~ PG Cert in Mrkting</label>
+            </value>
+            <value>
+                <fullName>MSCMK3~ MSc Mrkting</fullName>
+                <default>false</default>
+                <label>MSCMK3~ MSc Mrkting</label>
+            </value>
+            <value>
+                <fullName>MSCPHR1~ PG Cert Prof HR</fullName>
+                <default>false</default>
+                <label>MSCPHR1~ PG Cert Prof HR</label>
+            </value>
+            <value>
+                <fullName>MSCPM1~ PG Cert in Prof Mrkting</fullName>
+                <default>false</default>
+                <label>MSCPM1~ PG Cert in Prof Mrkting</label>
+            </value>
+            <value>
+                <fullName>MSCPM3~ MSc Prof Mrkting</fullName>
+                <default>false</default>
+                <label>MSCPM3~ MSc Prof Mrkting</label>
+            </value>
+            <value>
+                <fullName>PATHHECHC~ Pathway to HE Cert Healthcare</fullName>
+                <default>false</default>
+                <label>PATHHECHC~ Pathway to HE Cert Healthcare</label>
+            </value>
+            <value>
+                <fullName>PATHHECPA~ Pathway to HE Cert Prof Acc</fullName>
+                <default>false</default>
+                <label>PATHHECPA~ Pathway to HE Cert Prof Acc</label>
+            </value>
+            <value>
+                <fullName>PA-VOTECH~ Vocational Training</fullName>
+                <default>false</default>
+                <label>PA-VOTECH~ Vocational Training</label>
+            </value>
+            <value>
+                <fullName>PD-BSB~ Bar Standards Board</fullName>
+                <default>false</default>
+                <label>PD-BSB~ Bar Standards Board</label>
+            </value>
+            <value>
+                <fullName>PD-CIMA~ CIMA (PD)</fullName>
+                <default>false</default>
+                <label>PD-CIMA~ CIMA (PD)</label>
+            </value>
+            <value>
+                <fullName>PD-CIMACPD~ CPD-CIMA</fullName>
+                <default>false</default>
+                <label>PD-CIMACPD~ CPD-CIMA</label>
+            </value>
+            <value>
+                <fullName>PD-CIMAEND~ CIMA Endorsed</fullName>
+                <default>false</default>
+                <label>PD-CIMAEND~ CIMA Endorsed</label>
+            </value>
+            <value>
+                <fullName>PD-CPD~ CPD</fullName>
+                <default>false</default>
+                <label>PD-CPD~ CPD</label>
+            </value>
+            <value>
+                <fullName>PD-HRA~ Higher Rights of Audience</fullName>
+                <default>false</default>
+                <label>PD-HRA~ Higher Rights of Audience</label>
+            </value>
+            <value>
+                <fullName>PD-ICAEWIFRS~ ICAEW Dip in IFRS</fullName>
+                <default>false</default>
+                <label>PD-ICAEWIFRS~ ICAEW Dip in IFRS</label>
+            </value>
+            <value>
+                <fullName>PD-NYBAR~ New York Bar (NYB)</fullName>
+                <default>false</default>
+                <label>PD-NYBAR~ New York Bar (NYB)</label>
+            </value>
+            <value>
+                <fullName>PD-PSC~ Professional Skills Course</fullName>
+                <default>false</default>
+                <label>PD-PSC~ Professional Skills Course</label>
+            </value>
+            <value>
+                <fullName>PD-QLTS~ Qualified Lawyers Tfr Scheme</fullName>
+                <default>false</default>
+                <label>PD-QLTS~ Qualified Lawyers Tfr Scheme</label>
+            </value>
+            <value>
+                <fullName>PD-QLTT~ Qualified Lawyers Tfr Test</fullName>
+                <default>false</default>
+                <label>PD-QLTT~ Qualified Lawyers Tfr Test</label>
+            </value>
+            <value>
+                <fullName>PD-UNKN~ PD Unknown Qualification</fullName>
+                <default>false</default>
+                <label>PD-UNKN~ PD Unknown Qualification</label>
+            </value>
+            <value>
+                <fullName>PQ-AAT~ AAT</fullName>
+                <default>false</default>
+                <label>PQ-AAT~ AAT</label>
+            </value>
+            <value>
+                <fullName>PQ-AATPAY~ AAT NVQ Payroll Administration</fullName>
+                <default>false</default>
+                <label>PQ-AATPAY~ AAT NVQ Payroll Administration</label>
+            </value>
+            <value>
+                <fullName>PQ-ABC~ AAT ABC Bookkeeping</fullName>
+                <default>false</default>
+                <label>PQ-ABC~ AAT ABC Bookkeeping</label>
+            </value>
+            <value>
+                <fullName>PQ-ACCA~ ACCA</fullName>
+                <default>false</default>
+                <label>PQ-ACCA~ ACCA</label>
+            </value>
+            <value>
+                <fullName>PQ-ACCAOXBRK~ ACCA (Oxford Brookes Deg)</fullName>
+                <default>false</default>
+                <label>PQ-ACCAOXBRK~ ACCA (Oxford Brookes Deg)</label>
+            </value>
+            <value>
+                <fullName>PQ-ATT~ Assoc of Tax Technicians</fullName>
+                <default>false</default>
+                <label>PQ-ATT~ Assoc of Tax Technicians</label>
+            </value>
+            <value>
+                <fullName>PQ-CAT~ Cert Accounting Technician</fullName>
+                <default>false</default>
+                <label>PQ-CAT~ Cert Accounting Technician</label>
+            </value>
+            <value>
+                <fullName>PQ-CERTFP~ Cert in Financal Planning</fullName>
+                <default>false</default>
+                <label>PQ-CERTFP~ Cert in Financal Planning</label>
+            </value>
+            <value>
+                <fullName>PQ-CFA~ Chartered Financial Analyst</fullName>
+                <default>false</default>
+                <label>PQ-CFA~ Chartered Financial Analyst</label>
+            </value>
+            <value>
+                <fullName>PQ-CFQ~ Corporate Finance Qual</fullName>
+                <default>false</default>
+                <label>PQ-CFQ~ Corporate Finance Qual</label>
+            </value>
+            <value>
+                <fullName>PQ-CIFA~ Cert Invest &amp; Financial Advice</fullName>
+                <default>false</default>
+                <label>PQ-CIFA~ Cert Invest &amp; Financial Advice</label>
+            </value>
+            <value>
+                <fullName>PQ-CIIDRFP~ CII Dip Reg Financial Planning</fullName>
+                <default>false</default>
+                <label>PQ-CIIDRFP~ CII Dip Reg Financial Planning</label>
+            </value>
+            <value>
+                <fullName>PQ-CIM~ Chartered Inst of Marketing</fullName>
+                <default>false</default>
+                <label>PQ-CIM~ Chartered Inst of Marketing</label>
+            </value>
+            <value>
+                <fullName>PQ-CIMA~ CIMA (PQ)</fullName>
+                <default>false</default>
+                <label>PQ-CIMA~ CIMA (PQ)</label>
+            </value>
+            <value>
+                <fullName>PQ-CISIAC~ CISI Advanced Certificate</fullName>
+                <default>false</default>
+                <label>PQ-CISIAC~ CISI Advanced Certificate</label>
+            </value>
+            <value>
+                <fullName>PQ-CISIC~ CISI Certificates</fullName>
+                <default>false</default>
+                <label>PQ-CISIC~ CISI Certificates</label>
+            </value>
+            <value>
+                <fullName>PQ-CISID~ CISI Diploma</fullName>
+                <default>false</default>
+                <label>PQ-CISID~ CISI Diploma</label>
+            </value>
+            <value>
+                <fullName>PQ-CISIDIA~ CISI Investment Advice Diploma</fullName>
+                <default>false</default>
+                <label>PQ-CISIDIA~ CISI Investment Advice Diploma</label>
+            </value>
+            <value>
+                <fullName>PQ-CISIMWM~ CISI Masters Wealth Management</fullName>
+                <default>false</default>
+                <label>PQ-CISIMWM~ CISI Masters Wealth Management</label>
+            </value>
+            <value>
+                <fullName>PQ-CPI~ Cert Proficiency in Insolvency</fullName>
+                <default>false</default>
+                <label>PQ-CPI~ Cert Proficiency in Insolvency</label>
+            </value>
+            <value>
+                <fullName>PQ-CPPI~ Cert Prof Personal Insolvency</fullName>
+                <default>false</default>
+                <label>PQ-CPPI~ Cert Prof Personal Insolvency</label>
+            </value>
+            <value>
+                <fullName>PQ-CSQS~ Inst Chrtd Secretaries &amp; Admin</fullName>
+                <default>false</default>
+                <label>PQ-CSQS~ Inst Chrtd Secretaries &amp; Admin</label>
+            </value>
+            <value>
+                <fullName>PQ-CTA~ Chartered Tax Adviser (CTA)</fullName>
+                <default>false</default>
+                <label>PQ-CTA~ Chartered Tax Adviser (CTA)</label>
+            </value>
+            <value>
+                <fullName>PQ-DIPFM~ Dip in Financial Management</fullName>
+                <default>false</default>
+                <label>PQ-DIPFM~ Dip in Financial Management</label>
+            </value>
+            <value>
+                <fullName>PQ-DIPFP~ CII Dip in Financial Planning</fullName>
+                <default>false</default>
+                <label>PQ-DIPFP~ CII Dip in Financial Planning</label>
+            </value>
+            <value>
+                <fullName>PQ-DIPIFR~ Dip Int Financial Reporting</fullName>
+                <default>false</default>
+                <label>PQ-DIPIFR~ Dip Int Financial Reporting</label>
+            </value>
+            <value>
+                <fullName>PQ-DIPIP~ Dip in Investment Planning</fullName>
+                <default>false</default>
+                <label>PQ-DIPIP~ Dip in Investment Planning</label>
+            </value>
+            <value>
+                <fullName>PQ-FIA~ Foundations in Accountancy</fullName>
+                <default>false</default>
+                <label>PQ-FIA~ Foundations in Accountancy</label>
+            </value>
+            <value>
+                <fullName>PQ-FRM~ Financial Risk Management Qual</fullName>
+                <default>false</default>
+                <label>PQ-FRM~ Financial Risk Management Qual</label>
+            </value>
+            <value>
+                <fullName>PQ-GMP~ Global Marketer Programme</fullName>
+                <default>false</default>
+                <label>PQ-GMP~ Global Marketer Programme</label>
+            </value>
+            <value>
+                <fullName>PQ-IAQ~ Investment Administration Qual</fullName>
+                <default>false</default>
+                <label>PQ-IAQ~ Investment Administration Qual</label>
+            </value>
+            <value>
+                <fullName>PQ-ICAEW~ Assoc of Chartered Accountants</fullName>
+                <default>false</default>
+                <label>PQ-ICAEW~ Assoc of Chartered Accountants</label>
+            </value>
+            <value>
+                <fullName>PQ-ICAEWINS~ ICAEW Cert in Insolvency</fullName>
+                <default>false</default>
+                <label>PQ-ICAEWINS~ ICAEW Cert in Insolvency</label>
+            </value>
+            <value>
+                <fullName>PQ-ICAS~ ICAS</fullName>
+                <default>false</default>
+                <label>PQ-ICAS~ ICAS</label>
+            </value>
+            <value>
+                <fullName>PQ-IFQ~ Islamic Finance Qualification</fullName>
+                <default>false</default>
+                <label>PQ-IFQ~ Islamic Finance Qualification</label>
+            </value>
+            <value>
+                <fullName>PQ-IMC~ Investment Management Cert</fullName>
+                <default>false</default>
+                <label>PQ-IMC~ Investment Management Cert</label>
+            </value>
+            <value>
+                <fullName>PQ-IOC~ Investment Operations Cert</fullName>
+                <default>false</default>
+                <label>PQ-IOC~ Investment Operations Cert</label>
+            </value>
+            <value>
+                <fullName>PQ-JIEB~ Joint Insolvency Exam Board</fullName>
+                <default>false</default>
+                <label>PQ-JIEB~ Joint Insolvency Exam Board</label>
+            </value>
+            <value>
+                <fullName>PQ-MRS~ Market Research Society (MRS)</fullName>
+                <default>false</default>
+                <label>PQ-MRS~ Market Research Society (MRS)</label>
+            </value>
+            <value>
+                <fullName>PQ-SS~ Spreadsheet Safe</fullName>
+                <default>false</default>
+                <label>PQ-SS~ Spreadsheet Safe</label>
+            </value>
+            <value>
+                <fullName>PQ-UNKN~ PQ Unknown Qualification</fullName>
+                <default>false</default>
+                <label>PQ-UNKN~ PQ Unknown Qualification</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>LPR~ Leeds - Park Row</controllingFieldValue>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>LLMPLP~ LLM Prof Legl Pract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>LLBBL3~ LLB (Hons) Business Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>LLBGDLC2~ LLB [GDL Conversion]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>LLBGDLHC~ LLB (Hons) [GDL Conversion]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <valueName>LLMFRCL~ LLM Finl Reg &amp; Compl</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>LPC~ Legal Practice Course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LRL~ London - Red Lion Street</controllingFieldValue>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <valueName>MALB~ MA Law with Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LSB~ London - Shepherds Bush</controllingFieldValue>
+            <valueName>INT-IFC~ Int Foundation Cert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <valueName>BPTCL~ Bar Prof Training Course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>BSCNURS~ BScNursing Studies(Dip to Deg)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>BTT	Bar~ Transfer Test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>BVC~ Bar Vocational Course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>EXTITF-CLS~ Ext Int Fnd Cert Law St</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>EXTITLLM-BL~ Ext Int LLB Law Bus Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>EXTITLLM-CCL~ Ext Int LLB Law Comp Com Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>EXTITLLM-CL~ Ext Int LLB Law Com Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>EXTITLLM-RC~ Ext Int LLB Law Reg Compl Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>GCCLL~ Grad Cert in Comm Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>SWI~ Swindon</controllingFieldValue>
+            <valueName>GDLL~ Grad Dip in Law (GDL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>INTFC-BM~ Int Fdn Cert Business Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>INTPREMD-LAW~ Int PreMst Dip Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>LLB3~ LLB (Hons) Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>LLBLPSY3~ LLB (Hons) Law with Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <valueName>LLMIBLL~ LLM (Int Bus Law)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWL~ London - Waterloo</controllingFieldValue>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>MALPCB~ MA LPC with Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <valueName>BSCBFS3~ BSc (Hons) Banking &amp; Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LWQ~ Leeds - Whitehall Quay</controllingFieldValue>
+            <controllingFieldValue>LIV~ Liverpool</controllingFieldValue>
+            <valueName>LLMCCLL~ LLM Compar&apos;&apos;tve Comm Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>SWI~ Swindon</controllingFieldValue>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>BSCBM3~ BSc (Hons) Business Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>BRI~ Bristol</controllingFieldValue>
+            <controllingFieldValue>CAM~ Cambridge</controllingFieldValue>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>BSCPAS3~ BSc (Hons)  Prof Accting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <valueName>BSCPSYH~ BSc (Hons) Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>CERTHEC~ Pathway to HE Cert in Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>CertHE-HSC~ HE Cert Heal and Social Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>EXTITFC-HEAL~ Ext Int Fnd Cert Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>MCHIRB~ Mchiro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <valueName>MCHIRC~ Mchiro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>MCHIRD~ Mchiro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>MCHIRM~ Mchiro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <valueName>MSCF3~ MSc Fin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <valueName>MSCM3~ MSc Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <valueName>MSCMK3~ MSc Mrkting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <valueName>MSCPM3~ MSc Prof Mrkting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ~ Manchester - St James</controllingFieldValue>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>PATHHECHC~ Pathway to HE Cert Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABI~ Abingdon</controllingFieldValue>
+            <valueName>BSCPSY1~ BSc (Hons) Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <valueName>ACCA~ ACCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <valueName>BSCBM1~ CertHE Business Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <valueName>BSCLEM1~ CertHE LEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BIR~ Birmingham</controllingFieldValue>
+            <valueName>BSCPAS1~ CertHE  Prof Accting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>BSCLEM3~ BSc (Hons) LEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>CERTBSL~ Pwy to HE Cert in Bus Studies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTITBS-BF~ Ext Int BSc(Hons) B Mgmt w/Fin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTITBS-BM~ Ext Int BSc Bus Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTITBS-PY~ Ext Int BSc(Hons) Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTITFCB-S~ Ext Int Fnd Cert Bus Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTIT-IFC~ Ext Int Fnd Cert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTITLMS-M~ Ext Int MSc Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>EXTITLMS-MKT~ Ext Int MSc Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>FC-HEALTHC~ Path HE Cert Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>INTFC-LS~ Int Fdn Cert Legal Studies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>INTPREMD-BM~ Int PreMst Dip Bus Mgmt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>MSCIM2~ PG Dip Int Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>MSCM1~ PG Cert in Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>MSCMK1~ PG Cert in Mrkting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>MSCPHR1~ PG Cert Prof HR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>MSCPM1~ PG Cert in Prof Mrkting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LLC~ London - London City</controllingFieldValue>
+            <valueName>PATHHECPA~ Pathway to HE Cert Prof Acc</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

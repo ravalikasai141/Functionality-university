@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Development_Event</fullName>
+    <active>true</active>
+    <description>Business Development Event</description>
+    <label>Business Development Event</label>
+    <picklistValues>
+        <picklist>Call_Outcome_Reason__c</picklist>
+        <values>
+            <fullName>Already Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Booking Completion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Results</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Training Request Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy Callback Arranged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dates %26 Prices Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dates %26 Prices Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documents Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faculty Call Arranged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance Query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Offer Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up Offer Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible %28academic%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible %28language%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ineligible %28visa%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid Contact Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer Interest In Studying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programme Query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-sitting Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request No Further Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Studying With Another Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timetable Query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University - Agent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Call_Outcome__c</picklist>
+        <values>
+            <fullName>Acceptance Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Converted to Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Converted to Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documents Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Installment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Further Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Working Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Welcome Call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cycle_Stage__c</picklist>
+        <values>
+            <fullName>Acceptance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retention</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interaction_Type__c</picklist>
+        <values>
+            <fullName>Apprenticeship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request For Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scholarship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Roles_Discussed__c</picklist>
+        <values>
+            <fullName>Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brokerage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claims</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nurse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paralegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relationship management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underwriting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Organisational_Capability_Timeframe__c</picklist>
+        <values>
+            <fullName>Next 0-3 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Next 4-6 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Next 7-12 months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Specific_Apprenticeships_Discussed__c</picklist>
+        <values>
+            <fullName>Accountancy %2F Taxation Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Actuarial Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Actuary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced Credit Controller %2F Debt Collection Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Accountant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Project Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chartered Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance %2F Risk Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Security Technologist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital and Technology Solutions Professional %28Integrated Degree%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services Customer Adviser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Consultant %2F Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Improvement Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infrastructure Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Practitioner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Operations Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Operations Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Operations Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mortgage Adviser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Engineer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations %2F Departmental Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paralegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Accounting %2F Taxation Technician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registered Nurse - Degree %28NMC 2010%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Compliance %2F Risk Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Financial Services Customer Adviser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Insurance Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Investment %2F Commercial Banking Professional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senior Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Developer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Leader %2F Supervisor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Meeting - Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Use a meaningful Subject</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call - Phone Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call - Timed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting - Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Office</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Types_of_Apprenticeship_Discussed__c</picklist>
+        <values>
+            <fullName>Accountancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Actuarial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership and Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verticals_Discussed__c</picklist>
+        <values>
+            <fullName>Accountancy %26 Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Actuarial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking%2FInsurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Crime%2FCompliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate Diploma in Accountancy%2FWrap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR%2C Management%2C Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postgraduate%2FUndergraduate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology Apps %26 Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology Degree App%2FMasters</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

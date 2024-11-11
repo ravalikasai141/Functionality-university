@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Account_Billing_Frequency_1</fullName>
+    <active>true</active>
+    <description>This rule has been created to help the users on completing the mandatory fields based on the selected billing frequency.</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL (Billing_Type__c, &apos;In Arrears&apos;), 
+ISPICKVAL (Billing_Frequency__c , &apos;Monthly&apos;), 
+NOT(ISPICKVAL (Billing_Cycle_Start_Month__c , &apos;&apos;))
+)</errorConditionFormula>
+    <errorMessage>Billing Cycle Start Month field only needs to be populated when the Billing frequency equals Quarterly, Semi-Annual or Annually for the Billing Type of In Arrears</errorMessage>
+</ValidationRule>

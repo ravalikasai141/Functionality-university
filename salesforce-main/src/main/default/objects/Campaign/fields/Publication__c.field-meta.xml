@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publication__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team.  5/11/11</description>
+    <externalId>false</externalId>
+    <label>Publication</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>124 Law</fullName>
+                <default>false</default>
+                <label>124 Law</label>
+            </value>
+            <value>
+                <fullName>Accountancy</fullName>
+                <default>false</default>
+                <label>Accountancy</label>
+            </value>
+            <value>
+                <fullName>Accountancy Age</fullName>
+                <default>false</default>
+                <label>Accountancy Age</label>
+            </value>
+            <value>
+                <fullName>Accounting &amp; Business</fullName>
+                <default>false</default>
+                <label>Accounting &amp; Business</label>
+            </value>
+            <value>
+                <fullName>AWS Link</fullName>
+                <default>false</default>
+                <label>AWS Link</label>
+            </value>
+            <value>
+                <fullName>Best Practice</fullName>
+                <default>false</default>
+                <label>Best Practice</label>
+            </value>
+            <value>
+                <fullName>CFA Magazine</fullName>
+                <default>false</default>
+                <label>CFA Magazine</label>
+            </value>
+            <value>
+                <fullName>City AM</fullName>
+                <default>false</default>
+                <label>City AM</label>
+            </value>
+            <value>
+                <fullName>CLC Chronicle</fullName>
+                <default>false</default>
+                <label>CLC Chronicle</label>
+            </value>
+            <value>
+                <fullName>Constabulary</fullName>
+                <default>false</default>
+                <label>Constabulary</label>
+            </value>
+            <value>
+                <fullName>Corporate Financier</fullName>
+                <default>false</default>
+                <label>Corporate Financier</label>
+            </value>
+            <value>
+                <fullName>Counsel</fullName>
+                <default>false</default>
+                <label>Counsel</label>
+            </value>
+            <value>
+                <fullName>Epoch Times</fullName>
+                <default>false</default>
+                <label>Epoch Times</label>
+            </value>
+            <value>
+                <fullName>Finance Director</fullName>
+                <default>false</default>
+                <label>Finance Director</label>
+            </value>
+            <value>
+                <fullName>Financial Management</fullName>
+                <default>false</default>
+                <label>Financial Management</label>
+            </value>
+            <value>
+                <fullName>Financial News</fullName>
+                <default>false</default>
+                <label>Financial News</label>
+            </value>
+            <value>
+                <fullName>Financial Times</fullName>
+                <default>false</default>
+                <label>Financial Times</label>
+            </value>
+            <value>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+                <label>Guardian</label>
+            </value>
+            <value>
+                <fullName>Independent</fullName>
+                <default>false</default>
+                <label>Independent</label>
+            </value>
+            <value>
+                <fullName>India Times</fullName>
+                <default>false</default>
+                <label>India Times</label>
+            </value>
+            <value>
+                <fullName>In-House Lawyer</fullName>
+                <default>false</default>
+                <label>In-House Lawyer</label>
+            </value>
+            <value>
+                <fullName>Law Society Gazette</fullName>
+                <default>false</default>
+                <label>Law Society Gazette</label>
+            </value>
+            <value>
+                <fullName>Lawyer</fullName>
+                <default>false</default>
+                <label>Lawyer</label>
+            </value>
+            <value>
+                <fullName>Legal Week</fullName>
+                <default>false</default>
+                <label>Legal Week</label>
+            </value>
+            <value>
+                <fullName>Muslim Weekly</fullName>
+                <default>false</default>
+                <label>Muslim Weekly</label>
+            </value>
+            <value>
+                <fullName>NQ Magazine</fullName>
+                <default>false</default>
+                <label>NQ Magazine</label>
+            </value>
+            <value>
+                <fullName>PASS</fullName>
+                <default>false</default>
+                <label>PASS</label>
+            </value>
+            <value>
+                <fullName>Police Life</fullName>
+                <default>false</default>
+                <label>Police Life</label>
+            </value>
+            <value>
+                <fullName>Police Review</fullName>
+                <default>false</default>
+                <label>Police Review</label>
+            </value>
+            <value>
+                <fullName>PQ Magazine</fullName>
+                <default>false</default>
+                <label>PQ Magazine</label>
+            </value>
+            <value>
+                <fullName>Professional Investor</fullName>
+                <default>false</default>
+                <label>Professional Investor</label>
+            </value>
+            <value>
+                <fullName>SII Newsletter</fullName>
+                <default>false</default>
+                <label>SII Newsletter</label>
+            </value>
+            <value>
+                <fullName>SII Review</fullName>
+                <default>false</default>
+                <label>SII Review</label>
+            </value>
+            <value>
+                <fullName>Square Mile</fullName>
+                <default>false</default>
+                <label>Square Mile</label>
+            </value>
+            <value>
+                <fullName>Sunday Times</fullName>
+                <default>false</default>
+                <label>Sunday Times</label>
+            </value>
+            <value>
+                <fullName>T&amp;C Magazine</fullName>
+                <default>false</default>
+                <label>T&amp;C Magazine</label>
+            </value>
+            <value>
+                <fullName>Taxation Careers</fullName>
+                <default>false</default>
+                <label>Taxation Careers</label>
+            </value>
+            <value>
+                <fullName>Taxation Magazine</fullName>
+                <default>false</default>
+                <label>Taxation Magazine</label>
+            </value>
+            <value>
+                <fullName>Telegraph</fullName>
+                <default>false</default>
+                <label>Telegraph</label>
+            </value>
+            <value>
+                <fullName>Times</fullName>
+                <default>false</default>
+                <label>Times</label>
+            </value>
+            <value>
+                <fullName>TSG Life</fullName>
+                <default>false</default>
+                <label>TSG Life</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

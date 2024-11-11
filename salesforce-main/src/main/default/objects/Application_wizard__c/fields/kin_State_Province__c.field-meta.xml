@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>kin_State_Province__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Changing kin region to state province look up field.</description>
+    <externalId>false</externalId>
+    <label>kin State/Province</label>
+    <referenceTo>State_Province__c</referenceTo>
+    <relationshipLabel>Application wizards (kin State/Province)</relationshipLabel>
+    <relationshipName>Application_wizards1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

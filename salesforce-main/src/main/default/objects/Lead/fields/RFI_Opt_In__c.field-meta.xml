@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFI_Opt_In__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>RFI Opt-In (prospective student would like to receive future e-mails of similar nature)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>RFI Opt-In (prospective student would like to receive future e-mails of similar nature)</inlineHelpText>
+    <label>RFI Opt-In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAS_Status_Locked_If_Reg_Status_Blank</fullName>
+    <active>true</active>
+    <description>Whilst the Registration Status field on the Opportunity is blank
+if we try to edit the CAS Status field, then the CAS Status field should be locked.</description>
+    <errorConditionFormula>AND
+(
+(OR (RecordType.DeveloperName = &apos;Student_Application&apos; , RecordType.DeveloperName = &apos;Locked_Application&apos;)),
+ISCHANGED(CAS_status__c),
+Registration_Status__c = &quot;Not Reviewed&quot;
+)</errorConditionFormula>
+    <errorDisplayField>CAS_status__c</errorDisplayField>
+    <errorMessage>Values in this field will appear once the Registration Status field does not state &apos;Not Reviewed&apos;. Please ensure all the fields in the Document checklist are not blank and include an option of ‘Outstanding’, ‘Submitted’, ‘Validated’ or ‘Not Applicable’.</errorMessage>
+</ValidationRule>

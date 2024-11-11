@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Automation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Toggle mutability of the Lead Automation flow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Mutes the Lead Automation flow</inlineHelpText>
+    <label>Lead Automation</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

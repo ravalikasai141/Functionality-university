@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_inform_employer_is_care_leaver__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Given as part of the apprentice application events - indicates whether an employer can be informed if applicant is a care leaver.</description>
+    <externalId>false</externalId>
+    <label>Can inform employer is care leaver</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

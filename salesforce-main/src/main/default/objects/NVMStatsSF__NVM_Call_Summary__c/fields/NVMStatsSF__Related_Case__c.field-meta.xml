@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Related_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The Case this call relates to (as indicated by a Task record whose CallObject matches the GUID from this summary)</inlineHelpText>
+    <label>Related Case</label>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>NVM Call Summaries</relationshipLabel>
+    <relationshipName>NVM_Call_Summaries</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

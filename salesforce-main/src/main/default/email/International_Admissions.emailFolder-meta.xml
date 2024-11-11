@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>International Admissions</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <group>Data_Science</group>
+        <group>InternationalRecordAssignment</group>
+        <role>International</role>
+        <role>International_Mgmt</role>
+        <role>International_Recruitment</role>
+    </sharedTo>
+</EmailFolder>

@@ -1,0 +1,67 @@
+<template>
+    <div class="slds-p-around_medium">
+        <div class="slds-docked-form-footer">
+            <template if:true={showError}>
+                <div class="slds-button slds-button_icon slds-button_icon slds-button_icon-error">
+                    <lightning-icon
+                        icon-name="utility:error"
+                        alternative-text="Error!"
+                        variant="error"
+                        size="small"
+                    ></lightning-icon>
+                    <span class="slds-assistive-text">Resolve error</span>
+                </div>
+                <!-- POPUP CONFIG -->
+                <section
+                    class="slds-popover slds-popover_error slds-nubbin_bottom-left"
+                    style="position: absolute; bottom: 56px; left: 50%; margin-left: 62px; transform: translateX(-50%)"
+                >
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        variant="bare-inverse"
+                        onclick={handleErrorClose}
+                        size="small"
+                        class="slds-float_right slds-p-around_xx-small slds-popover__close slds-align_absolute-center"
+                    ></lightning-button-icon>
+                    <header class="slds-popover__header">
+                        <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <lightning-icon icon-name="utility:error" variant="inverse" size="small"></lightning-icon>
+                            <h2 class="slds-truncate slds-text-heading_medium slds-p-horizontal_small">
+                                Resolve error
+                            </h2>
+                        </div>
+                    </header>
+                    <div class="slds-popover__body">{errorMessage}</div>
+                </section>
+            </template>
+            <template if:false={viewMode}>
+                <lightning-button
+                    class="slds-var-m-around_xx-small"
+                    variant="neutral"
+                    onclick={handleCancelClick}
+                    label="Cancel"
+                    data-id="cancelbutton"
+                    disabled="True"
+                ></lightning-button>
+                <lightning-button
+                    class="slds-var-m-around_xx-small"
+                    variant="brand"
+                    onclick={handleSaveClick}
+                    label="Save"
+                    data-id="savebutton"
+                    disabled="True"
+                ></lightning-button>
+            </template>
+            <template if:true={viewMode}>
+                <lightning-button
+                    class="slds-var-m-around_xx-small"
+                    variant="brand"
+                    onclick={handleEditClick}
+                    label="Edit"
+                    data-id="editbutton"
+                    disabled="True"
+                ></lightning-button>
+            </template>
+        </div>
+    </div>
+</template>

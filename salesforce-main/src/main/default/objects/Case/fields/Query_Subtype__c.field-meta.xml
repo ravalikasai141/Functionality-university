@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Query_Subtype__c</fullName>
+    <externalId>false</externalId>
+    <label>Query Subtype</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Query_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Authorised Leave</fullName>
+                <default>false</default>
+                <label>Authorised Leave</label>
+            </value>
+            <value>
+                <fullName>How do I access my EBook?</fullName>
+                <default>false</default>
+                <label>How do I access my EBook?</label>
+            </value>
+            <value>
+                <fullName>How do I access my results and feedback</fullName>
+                <default>false</default>
+                <label>How do I access my results and feedback</label>
+            </value>
+            <value>
+                <fullName>How do I collect my ID card?</fullName>
+                <default>false</default>
+                <label>How do I collect my ID card?</label>
+            </value>
+            <value>
+                <fullName>I&apos;m having technical issues preventing me from accessing my e-materials</fullName>
+                <default>false</default>
+                <label>I&apos;m having technical issues preventing me from accessing my e-materials</label>
+            </value>
+            <value>
+                <fullName>I&apos;m having technical issues preventing me from studying</fullName>
+                <default>false</default>
+                <label>I&apos;m having technical issues preventing me from studying</label>
+            </value>
+            <value>
+                <fullName>I am in financial difficulty, what are my options?</fullName>
+                <default>false</default>
+                <label>I am in financial difficulty, what are my options?</label>
+            </value>
+            <value>
+                <fullName>I am on Interruption of Studies and wish to extend</fullName>
+                <default>false</default>
+                <label>I am on Interruption of Studies and wish to extend</label>
+            </value>
+            <value>
+                <fullName>I am taking an interruption of studies, how does that affect my payment plan and fees?</fullName>
+                <default>false</default>
+                <label>I am taking an interruption of studies, how does that affect my payment plan and fees?</label>
+            </value>
+            <value>
+                <fullName>I can&apos;t access my forum</fullName>
+                <default>false</default>
+                <label>I can&apos;t access my forum</label>
+            </value>
+            <value>
+                <fullName>I can’t see my course within my online learning platform</fullName>
+                <default>false</default>
+                <label>I can’t see my course within my online learning platform</label>
+            </value>
+            <value>
+                <fullName>I have a different problem with my online learning</fullName>
+                <default>false</default>
+                <label>I have a different problem with my online learning</label>
+            </value>
+            <value>
+                <fullName>I have a query about applying for Post Study Work/Graduate Route Visa</fullName>
+                <default>false</default>
+                <label>I have a query about applying for Post Study Work/Graduate Route Visa</label>
+            </value>
+            <value>
+                <fullName>I have a query about exemptions</fullName>
+                <default>false</default>
+                <label>I have a query about exemptions</label>
+            </value>
+            <value>
+                <fullName>I have a query about inviting visitors to the UK</fullName>
+                <default>false</default>
+                <label>I have a query about inviting visitors to the UK</label>
+            </value>
+            <value>
+                <fullName>I have a query about my attendance</fullName>
+                <default>false</default>
+                <label>I have a query about my attendance</label>
+            </value>
+            <value>
+                <fullName>I have a query about my balance</fullName>
+                <default>false</default>
+                <label>I have a query about my balance</label>
+            </value>
+            <value>
+                <fullName>I have a query about my End Point Assessment</fullName>
+                <default>false</default>
+                <label>I have a query about my End Point Assessment</label>
+            </value>
+            <value>
+                <fullName>I have a query about my submission</fullName>
+                <default>false</default>
+                <label>I have a query about my submission</label>
+            </value>
+            <value>
+                <fullName>I have a query about my timetable</fullName>
+                <default>false</default>
+                <label>I have a query about my timetable</label>
+            </value>
+            <value>
+                <fullName>I have a question about my assessments feedback</fullName>
+                <default>false</default>
+                <label>I have a question about my assessments feedback</label>
+            </value>
+            <value>
+                <fullName>I have a question about my exam arrangements</fullName>
+                <default>false</default>
+                <label>I have a question about my exam arrangements</label>
+            </value>
+            <value>
+                <fullName>I have a question about my exam learning support</fullName>
+                <default>false</default>
+                <label>I have a question about my exam learning support</label>
+            </value>
+            <value>
+                <fullName>I have a question about my graduation ceremony</fullName>
+                <default>false</default>
+                <label>I have a question about my graduation ceremony</label>
+            </value>
+            <value>
+                <fullName>I have a question about my mock/assessment</fullName>
+                <default>false</default>
+                <label>I have a question about my mock/assessment</label>
+            </value>
+            <value>
+                <fullName>I have a question about my Oyster card</fullName>
+                <default>false</default>
+                <label>I have a question about my Oyster card</label>
+            </value>
+            <value>
+                <fullName>I have a question about my results</fullName>
+                <default>false</default>
+                <label>I have a question about my results</label>
+            </value>
+            <value>
+                <fullName>I have a question about my review/gate-way call</fullName>
+                <default>false</default>
+                <label>I have a question about my review/gate-way call</label>
+            </value>
+            <value>
+                <fullName>I have a question about my student loan</fullName>
+                <default>false</default>
+                <label>I have a question about my student loan</label>
+            </value>
+            <value>
+                <fullName>I have a question about my term dates</fullName>
+                <default>false</default>
+                <label>I have a question about my term dates</label>
+            </value>
+            <value>
+                <fullName>I have a question about my Visa</fullName>
+                <default>false</default>
+                <label>I have a question about my Visa</label>
+            </value>
+            <value>
+                <fullName>I have a question about off the job training</fullName>
+                <default>false</default>
+                <label>I have a question about off the job training</label>
+            </value>
+            <value>
+                <fullName>I have a question about Pass Assurance</fullName>
+                <default>false</default>
+                <label>I have a question about Pass Assurance</label>
+            </value>
+            <value>
+                <fullName>I have a question about the content within my material</fullName>
+                <default>false</default>
+                <label>I have a question about the content within my material</label>
+            </value>
+            <value>
+                <fullName>I have a question about the induction webinar</fullName>
+                <default>false</default>
+                <label>I have a question about the induction webinar</label>
+            </value>
+            <value>
+                <fullName>I have a question about the materials I have received</fullName>
+                <default>false</default>
+                <label>I have a question about the materials I have received</label>
+            </value>
+            <value>
+                <fullName>I have a registration query</fullName>
+                <default>false</default>
+                <label>I have a registration query</label>
+            </value>
+            <value>
+                <fullName>I have a specialist learning need, which I need additional support for</fullName>
+                <default>false</default>
+                <label>I have a specialist learning need, which I need additional support for</label>
+            </value>
+            <value>
+                <fullName>I have been billed for resit assessments, can I check what these are?</fullName>
+                <default>false</default>
+                <label>I have been billed for resit assessments, can I check what these are?</label>
+            </value>
+            <value>
+                <fullName>I have got a question regarding my functional skills</fullName>
+                <default>false</default>
+                <label>I have got a question regarding my functional skills</label>
+            </value>
+            <value>
+                <fullName>I have missing or wrong modules on Hub/VLE</fullName>
+                <default>false</default>
+                <label>I have missing or wrong modules on Hub/VLE</label>
+            </value>
+            <value>
+                <fullName>I have not received my certificate</fullName>
+                <default>false</default>
+                <label>I have not received my certificate</label>
+            </value>
+            <value>
+                <fullName>I haven’t received my log in details</fullName>
+                <default>false</default>
+                <label>I haven’t received my log in details</label>
+            </value>
+            <value>
+                <fullName>I have some feedback about my course</fullName>
+                <default>false</default>
+                <label>I have some feedback about my course</label>
+            </value>
+            <value>
+                <fullName>I have some feedback about my recent experience</fullName>
+                <default>false</default>
+                <label>I have some feedback about my recent experience</label>
+            </value>
+            <value>
+                <fullName>I have some feedback about my tutor</fullName>
+                <default>false</default>
+                <label>I have some feedback about my tutor</label>
+            </value>
+            <value>
+                <fullName>I need a replacement certificate</fullName>
+                <default>false</default>
+                <label>I need a replacement certificate</label>
+            </value>
+            <value>
+                <fullName>I need further support with my studies</fullName>
+                <default>false</default>
+                <label>I need further support with my studies</label>
+            </value>
+            <value>
+                <fullName>I need my invoice/receipt to be re-sent to me</fullName>
+                <default>false</default>
+                <label>I need my invoice/receipt to be re-sent to me</label>
+            </value>
+            <value>
+                <fullName>I need to book further papers for my programme</fullName>
+                <default>false</default>
+                <label>I need to book further papers for my programme</label>
+            </value>
+            <value>
+                <fullName>I need to change my employer details</fullName>
+                <default>false</default>
+                <label>I need to change my employer details</label>
+            </value>
+            <value>
+                <fullName>I need to change my personal details</fullName>
+                <default>false</default>
+                <label>I need to change my personal details</label>
+            </value>
+            <value>
+                <fullName>I need to defer my course</fullName>
+                <default>false</default>
+                <label>I need to defer my course</label>
+            </value>
+            <value>
+                <fullName>I need to inform you about my absence</fullName>
+                <default>false</default>
+                <label>I need to inform you about my absence</label>
+            </value>
+            <value>
+                <fullName>I need to report a problem with my Biometric Resident Permit</fullName>
+                <default>false</default>
+                <label>I need to report a problem with my Biometric Resident Permit</label>
+            </value>
+            <value>
+                <fullName>I need to reschedule my course</fullName>
+                <default>false</default>
+                <label>I need to reschedule my course</label>
+            </value>
+            <value>
+                <fullName>I need to speak to someone about a change which affects my apprenticeship</fullName>
+                <default>false</default>
+                <label>I need to speak to someone about a change which affects my apprenticeship</label>
+            </value>
+            <value>
+                <fullName>I require further support with my apprenticeship programme</fullName>
+                <default>false</default>
+                <label>I require further support with my apprenticeship programme</label>
+            </value>
+            <value>
+                <fullName>I want to change my programme, mode or location</fullName>
+                <default>false</default>
+                <label>I want to change my programme, mode or location</label>
+            </value>
+            <value>
+                <fullName>I would like a copy of my transcript</fullName>
+                <default>false</default>
+                <label>I would like a copy of my transcript</label>
+            </value>
+            <value>
+                <fullName>I would like a GBC confirmation letter</fullName>
+                <default>false</default>
+                <label>I would like a GBC confirmation letter</label>
+            </value>
+            <value>
+                <fullName>I would like to apply for an extension of my student visa</fullName>
+                <default>false</default>
+                <label>I would like to apply for an extension of my student visa</label>
+            </value>
+            <value>
+                <fullName>I would like to apply for Interruption of Studies</fullName>
+                <default>false</default>
+                <label>I would like to apply for Interruption of Studies</label>
+            </value>
+            <value>
+                <fullName>I would like to book an appointment to discuss a query I have</fullName>
+                <default>false</default>
+                <label>I would like to book an appointment to discuss a query I have</label>
+            </value>
+            <value>
+                <fullName>I would like to defer my assessment or request an extension</fullName>
+                <default>false</default>
+                <label>I would like to defer my assessment or request an extension</label>
+            </value>
+            <value>
+                <fullName>I would like to discuss appeals</fullName>
+                <default>false</default>
+                <label>I would like to discuss appeals</label>
+            </value>
+            <value>
+                <fullName>I would like to query my most recent invoice</fullName>
+                <default>false</default>
+                <label>I would like to query my most recent invoice</label>
+            </value>
+            <value>
+                <fullName>I would like to request a Bank, Status or Council Tax letter</fullName>
+                <default>false</default>
+                <label>I would like to request a Bank, Status or Council Tax letter</label>
+            </value>
+            <value>
+                <fullName>I would like to request a holiday letter</fullName>
+                <default>false</default>
+                <label>I would like to request a holiday letter</label>
+            </value>
+            <value>
+                <fullName>I would like to request an academic reference</fullName>
+                <default>false</default>
+                <label>I would like to request an academic reference</label>
+            </value>
+            <value>
+                <fullName>I would like to request a Schengen Travel Letter</fullName>
+                <default>false</default>
+                <label>I would like to request a Schengen Travel Letter</label>
+            </value>
+            <value>
+                <fullName>I would like to resit my exam</fullName>
+                <default>false</default>
+                <label>I would like to resit my exam</label>
+            </value>
+            <value>
+                <fullName>I would like to return my study materials</fullName>
+                <default>false</default>
+                <label>I would like to return my study materials</label>
+            </value>
+            <value>
+                <fullName>My Ebook has expired</fullName>
+                <default>false</default>
+                <label>My Ebook has expired</label>
+            </value>
+            <value>
+                <fullName>My ID card has been lost or stolen</fullName>
+                <default>false</default>
+                <label>My ID card has been lost or stolen</label>
+            </value>
+            <value>
+                <fullName>My invoice address is incorrect</fullName>
+                <default>false</default>
+                <label>My invoice address is incorrect</label>
+            </value>
+            <value>
+                <fullName>My letter details are Incorrect</fullName>
+                <default>false</default>
+                <label>My letter details are Incorrect</label>
+            </value>
+            <value>
+                <fullName>SPP Request</fullName>
+                <default>false</default>
+                <label>SPP Request</label>
+            </value>
+            <value>
+                <fullName>Suspension Warning</fullName>
+                <default>false</default>
+                <label>Suspension Warning</label>
+            </value>
+            <value>
+                <fullName>The Purchase Order wasn’t included in my invoice</fullName>
+                <default>false</default>
+                <label>The Purchase Order wasn’t included in my invoice</label>
+            </value>
+            <value>
+                <fullName>When is my next instalment due?</fullName>
+                <default>false</default>
+                <label>When is my next instalment due?</label>
+            </value>
+            <value>
+                <fullName>When will I receive my certificate?</fullName>
+                <default>false</default>
+                <label>When will I receive my certificate?</label>
+            </value>
+            <value>
+                <fullName>When will I receive my refund?</fullName>
+                <default>false</default>
+                <label>When will I receive my refund?</label>
+            </value>
+            <value>
+                <fullName>When will my study materials be delivered?</fullName>
+                <default>false</default>
+                <label>When will my study materials be delivered?</label>
+            </value>
+            <value>
+                <fullName>Where do I find my live session that is due to commence?</fullName>
+                <default>false</default>
+                <label>Where do I find my live session that is due to commence?</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Attendance</controllingFieldValue>
+            <valueName>I have a query about my attendance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Attendance</controllingFieldValue>
+            <valueName>I need to inform you about my absence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter requests</controllingFieldValue>
+            <valueName>Authorised Leave</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter requests</controllingFieldValue>
+            <valueName>I would like a GBC confirmation letter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter requests</controllingFieldValue>
+            <valueName>I would like to request a Bank, Status or Council Tax letter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter requests</controllingFieldValue>
+            <valueName>I would like to request a holiday letter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter requests</controllingFieldValue>
+            <valueName>I would like to request an academic reference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letter requests</controllingFieldValue>
+            <valueName>My letter details are Incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IoS (Interruption of Studies)</controllingFieldValue>
+            <valueName>I am on Interruption of Studies and wish to extend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IoS (Interruption of Studies)</controllingFieldValue>
+            <valueName>I would like to apply for Interruption of Studies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>How do I access my results and feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I have a query about my submission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I have a question about my assessments feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I have a question about my exam arrangements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I have a question about my exam learning support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I have a question about my results</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I would like a copy of my transcript</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I would like to defer my assessment or request an extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I would like to discuss appeals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessments</controllingFieldValue>
+            <valueName>I would like to resit my exam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online learning</controllingFieldValue>
+            <valueName>I have missing or wrong modules on Hub/VLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Book an Appointment</controllingFieldValue>
+            <valueName>I would like to book an appointment to discuss a query I have</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Graduation and Certificates</controllingFieldValue>
+            <valueName>I have a question about my graduation ceremony</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Graduation and Certificates</controllingFieldValue>
+            <valueName>I have not received my certificate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Graduation and Certificates</controllingFieldValue>
+            <valueName>I need a replacement certificate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Graduation and Certificates</controllingFieldValue>
+            <valueName>When will I receive my certificate?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration and enrolment</controllingFieldValue>
+            <valueName>How do I collect my ID card?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration and enrolment</controllingFieldValue>
+            <valueName>I have a query about exemptions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration and enrolment</controllingFieldValue>
+            <valueName>I have a question about my Oyster card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration and enrolment</controllingFieldValue>
+            <valueName>I have a registration query</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration and enrolment</controllingFieldValue>
+            <valueName>My ID card has been lost or stolen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Timetables</controllingFieldValue>
+            <valueName>I have a query about my timetable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Timetables</controllingFieldValue>
+            <valueName>I have a question about my term dates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Visa</controllingFieldValue>
+            <valueName>I have a query about applying for Post Study Work/Graduate Route Visa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Visa</controllingFieldValue>
+            <valueName>I have a query about inviting visitors to the UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Visa</controllingFieldValue>
+            <valueName>I have a question about my Visa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Visa</controllingFieldValue>
+            <valueName>I need to report a problem with my Biometric Resident Permit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Visa</controllingFieldValue>
+            <valueName>I would like to apply for an extension of my student visa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Visa</controllingFieldValue>
+            <valueName>I would like to request a Schengen Travel Letter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Course</controllingFieldValue>
+            <valueName>I have a question about my mock/assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Course</controllingFieldValue>
+            <valueName>I have a question about Pass Assurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Course</controllingFieldValue>
+            <valueName>I have a specialist learning need, which I need additional support for</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Course</controllingFieldValue>
+            <valueName>I need further support with my studies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Course</controllingFieldValue>
+            <valueName>I need to defer my course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Course</controllingFieldValue>
+            <valueName>I need to reschedule my course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I have a query about my End Point Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I have a question about my review/gate-way call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I have a question about off the job training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I have a question about the induction webinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I have got a question regarding my functional skills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I need to book further papers for my programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I need to change my employer details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I need to speak to someone about a change which affects my apprenticeship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Apprenticeship</controllingFieldValue>
+            <valueName>I require further support with my apprenticeship programme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Online Learning and The HUB</controllingFieldValue>
+            <valueName>I&apos;m having technical issues preventing me from studying</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Online Learning and The HUB</controllingFieldValue>
+            <valueName>I can&apos;t access my forum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Online Learning and The HUB</controllingFieldValue>
+            <valueName>I can’t see my course within my online learning platform</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Online Learning and The HUB</controllingFieldValue>
+            <valueName>I have a different problem with my online learning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Online Learning and The HUB</controllingFieldValue>
+            <valueName>I haven’t received my log in details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Online Learning and The HUB</controllingFieldValue>
+            <valueName>Where do I find my live session that is due to commence?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>How do I access my EBook?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>I&apos;m having technical issues preventing me from accessing my e-materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>I have a question about the content within my material</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>I have a question about the materials I have received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>I would like to return my study materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>My Ebook has expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Study Materials</controllingFieldValue>
+            <valueName>When will my study materials be delivered?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feedback</controllingFieldValue>
+            <valueName>I have some feedback about my course</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feedback</controllingFieldValue>
+            <valueName>I have some feedback about my recent experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feedback</controllingFieldValue>
+            <valueName>I have some feedback about my tutor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance and Billing</controllingFieldValue>
+            <valueName>I need my invoice/receipt to be re-sent to me</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance and Billing</controllingFieldValue>
+            <valueName>I would like to query my most recent invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance and Billing</controllingFieldValue>
+            <valueName>My invoice address is incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance and Billing</controllingFieldValue>
+            <valueName>The Purchase Order wasn’t included in my invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance and Billing</controllingFieldValue>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>When will I receive my refund?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Changes to personal details</controllingFieldValue>
+            <valueName>I need to change my personal details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Changes to studies</controllingFieldValue>
+            <valueName>I want to change my programme, mode or location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>I am in financial difficulty, what are my options?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>I am taking an interruption of studies, how does that affect my payment plan and fees?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>I have a query about my balance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>I have been billed for resit assessments, can I check what these are?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>SPP Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>Suspension Warning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>When is my next instalment due?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Loans</controllingFieldValue>
+            <valueName>I have a question about my student loan</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

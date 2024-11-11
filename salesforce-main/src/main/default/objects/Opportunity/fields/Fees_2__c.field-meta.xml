@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fees_2__c</fullName>
+    <description>How the student has stated they will pay for their education.  Populating multiple fees fields indicates more than one method of payment.</description>
+    <externalId>false</externalId>
+    <label>Fees 2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yourself</fullName>
+                <default>false</default>
+                <label>Yourself</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Parent/Guardian</fullName>
+                <default>false</default>
+                <label>Parent/Guardian</label>
+            </value>
+            <value>
+                <fullName>Scholarship/Bursary</fullName>
+                <default>false</default>
+                <label>Scholarship/Bursary</label>
+            </value>
+            <value>
+                <fullName>Other Sponsor</fullName>
+                <default>false</default>
+                <label>Other Sponsor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_identified_disabilities_ESFA__c</fullName>
+    <description>Created a sper JIRA 2243</description>
+    <externalId>false</externalId>
+    <label>All identified disabilities (ESFA)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10~ Moderate learning difficulty</fullName>
+                <default>false</default>
+                <label>10~ Moderate learning difficulty</label>
+            </value>
+            <value>
+                <fullName>11~ Severe learning difficulty</fullName>
+                <default>false</default>
+                <label>11~ Severe learning difficulty</label>
+            </value>
+            <value>
+                <fullName>12~ Dyslexia</fullName>
+                <default>false</default>
+                <label>12~ Dyslexia</label>
+            </value>
+            <value>
+                <fullName>13~ Dyscalculia</fullName>
+                <default>false</default>
+                <label>13~ Dyscalculia</label>
+            </value>
+            <value>
+                <fullName>14~ Autism spectrum disorder</fullName>
+                <default>false</default>
+                <label>14~ Autism spectrum disorder</label>
+            </value>
+            <value>
+                <fullName>15~ Asperger&apos;s syndrome</fullName>
+                <default>false</default>
+                <label>15~ Asperger&apos;s syndrome</label>
+            </value>
+            <value>
+                <fullName>16~ Temporary disability after illness (for example post-viral) or accident</fullName>
+                <default>false</default>
+                <label>16~ Temporary disability after illness (for example post-viral) or accident</label>
+            </value>
+            <value>
+                <fullName>17~ Speech, Language and Communication Needs</fullName>
+                <default>false</default>
+                <label>17~ Speech, Language and Communication Needs</label>
+            </value>
+            <value>
+                <fullName>4~ Visual impairment</fullName>
+                <default>false</default>
+                <label>4~ Visual impairment</label>
+            </value>
+            <value>
+                <fullName>5~ Hearing impairment</fullName>
+                <default>false</default>
+                <label>5~ Hearing impairment</label>
+            </value>
+            <value>
+                <fullName>6~ Disability affecting mobility</fullName>
+                <default>false</default>
+                <label>6~ Disability affecting mobility</label>
+            </value>
+            <value>
+                <fullName>7~ Profound complex disabilities</fullName>
+                <default>false</default>
+                <label>7~ Profound complex disabilities</label>
+            </value>
+            <value>
+                <fullName>8~ Social and emotional difficulties</fullName>
+                <default>false</default>
+                <label>8~ Social and emotional difficulties</label>
+            </value>
+            <value>
+                <fullName>9~ Mental health difficulty</fullName>
+                <default>false</default>
+                <label>9~ Mental health difficulty</label>
+            </value>
+            <value>
+                <fullName>93~ Other physical disability</fullName>
+                <default>false</default>
+                <label>93~ Other physical disability</label>
+            </value>
+            <value>
+                <fullName>94~ Other specific learning difficulty (e.g. Dyspraxia)</fullName>
+                <default>false</default>
+                <label>94~ Other specific learning difficulty (e.g. Dyspraxia)</label>
+            </value>
+            <value>
+                <fullName>95~ Other medical condition (for example epilepsy, asthma, diabetes)</fullName>
+                <default>false</default>
+                <label>95~ Other medical condition (for example epilepsy, asthma, diabetes)</label>
+            </value>
+            <value>
+                <fullName>96~ Other learning difficulty</fullName>
+                <default>false</default>
+                <label>96~ Other learning difficulty</label>
+            </value>
+            <value>
+                <fullName>97~ Other disability</fullName>
+                <default>false</default>
+                <label>97~ Other disability</label>
+            </value>
+            <value>
+                <fullName>98~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>98~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

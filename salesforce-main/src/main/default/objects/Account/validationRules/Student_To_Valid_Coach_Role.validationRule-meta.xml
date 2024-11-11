@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_To_Valid_Coach_Role</fullName>
+    <active>true</active>
+    <description>This validation rule insures that the coach selected has the role as COACH.</description>
+    <errorConditionFormula>IF(ISBLANK( Coach__pc ),false,IF(ISPICKVAL(Coach__pr.Role__c,&apos;COACH&apos;),false,true))</errorConditionFormula>
+    <errorMessage>Select a Coach whose role is Coach</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Student_Change_BStatus_Confirmed</fullName>
+    <active>true</active>
+    <description>To prevent a Student being changed on the Booking once Confirmed</description>
+    <errorConditionFormula>AND(ISCHANGED(Student__c),ISPICKVAL(On_Hold__c, &apos;Confirmed&apos;) )</errorConditionFormula>
+    <errorDisplayField>Student__c</errorDisplayField>
+    <errorMessage>You Should not change student for confirmed bookings</errorMessage>
+</ValidationRule>

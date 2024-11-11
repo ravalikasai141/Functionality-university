@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector_Level_3__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team.  5/11/11</description>
+    <externalId>false</externalId>
+    <label>Tier 3</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sector_Level_2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Partner</fullName>
+                <default>false</default>
+                <label>1 Partner</label>
+            </value>
+            <value>
+                <fullName>2 Partners</fullName>
+                <default>false</default>
+                <label>2 Partners</label>
+            </value>
+            <value>
+                <fullName>BGTS</fullName>
+                <default>false</default>
+                <label>BGTS</label>
+            </value>
+            <value>
+                <fullName>BSc Dip2Deg</fullName>
+                <default>false</default>
+                <label>BSc Dip2Deg</label>
+            </value>
+            <value>
+                <fullName>BSc PP</fullName>
+                <default>false</default>
+                <label>BSc PP</label>
+            </value>
+            <value>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+                <label>Certificate</label>
+            </value>
+            <value>
+                <fullName>Essentials FT</fullName>
+                <default>false</default>
+                <label>Essentials FT</label>
+            </value>
+            <value>
+                <fullName>Essentials PT</fullName>
+                <default>false</default>
+                <label>Essentials PT</label>
+            </value>
+            <value>
+                <fullName>Executive agency</fullName>
+                <default>false</default>
+                <label>Executive agency</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>Full Time 2 year BUS</fullName>
+                <default>false</default>
+                <label>Full Time 2 year BUS</label>
+            </value>
+            <value>
+                <fullName>Full Time 2 year LAW</fullName>
+                <default>false</default>
+                <label>Full Time 2 year LAW</label>
+            </value>
+            <value>
+                <fullName>Full Time 3 year BUS</fullName>
+                <default>false</default>
+                <label>Full Time 3 year BUS</label>
+            </value>
+            <value>
+                <fullName>Full Time 3 year LAW</fullName>
+                <default>false</default>
+                <label>Full Time 3 year LAW</label>
+            </value>
+            <value>
+                <fullName>Full Time BPTC</fullName>
+                <default>false</default>
+                <label>Full Time BPTC</label>
+            </value>
+            <value>
+                <fullName>Full Time GDL</fullName>
+                <default>false</default>
+                <label>Full Time GDL</label>
+            </value>
+            <value>
+                <fullName>Full Time LPC</fullName>
+                <default>false</default>
+                <label>Full Time LPC</label>
+            </value>
+            <value>
+                <fullName>Government Department</fullName>
+                <default>false</default>
+                <label>Government Department</label>
+            </value>
+            <value>
+                <fullName>HE C H&amp;SC</fullName>
+                <default>false</default>
+                <label>HE C H&amp;SC</label>
+            </value>
+            <value>
+                <fullName>HSC Award</fullName>
+                <default>false</default>
+                <label>HSC Award</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>Knowledge FT</fullName>
+                <default>false</default>
+                <label>Knowledge FT</label>
+            </value>
+            <value>
+                <fullName>Knowledge PT</fullName>
+                <default>false</default>
+                <label>Knowledge PT</label>
+            </value>
+            <value>
+                <fullName>Law Centre</fullName>
+                <default>false</default>
+                <label>Law Centre</label>
+            </value>
+            <value>
+                <fullName>Leadership and Professional Development</fullName>
+                <default>false</default>
+                <label>Leadership and Professional Development</label>
+            </value>
+            <value>
+                <fullName>Legal Costing</fullName>
+                <default>false</default>
+                <label>Legal Costing</label>
+            </value>
+            <value>
+                <fullName>Level 2 AAT</fullName>
+                <default>false</default>
+                <label>Level 2 AAT</label>
+            </value>
+            <value>
+                <fullName>Level 2 AAT APPS</fullName>
+                <default>false</default>
+                <label>Level 2 AAT APPS</label>
+            </value>
+            <value>
+                <fullName>Level 2 BUS ADMIN</fullName>
+                <default>false</default>
+                <label>Level 2 BUS ADMIN</label>
+            </value>
+            <value>
+                <fullName>Level 2 CII</fullName>
+                <default>false</default>
+                <label>Level 2 CII</label>
+            </value>
+            <value>
+                <fullName>Level 2 CILEX</fullName>
+                <default>false</default>
+                <label>Level 2 CILEX</label>
+            </value>
+            <value>
+                <fullName>Level 2 CIM</fullName>
+                <default>false</default>
+                <label>Level 2 CIM</label>
+            </value>
+            <value>
+                <fullName>Level 2 CIPD</fullName>
+                <default>false</default>
+                <label>Level 2 CIPD</label>
+            </value>
+            <value>
+                <fullName>Level 3 AAT</fullName>
+                <default>false</default>
+                <label>Level 3 AAT</label>
+            </value>
+            <value>
+                <fullName>Level 3 AAT APPS</fullName>
+                <default>false</default>
+                <label>Level 3 AAT APPS</label>
+            </value>
+            <value>
+                <fullName>Level 3 BUS ADMIN</fullName>
+                <default>false</default>
+                <label>Level 3 BUS ADMIN</label>
+            </value>
+            <value>
+                <fullName>Level 3 CII</fullName>
+                <default>false</default>
+                <label>Level 3 CII</label>
+            </value>
+            <value>
+                <fullName>Level 3 CILEX</fullName>
+                <default>false</default>
+                <label>Level 3 CILEX</label>
+            </value>
+            <value>
+                <fullName>Level 3 CIM</fullName>
+                <default>false</default>
+                <label>Level 3 CIM</label>
+            </value>
+            <value>
+                <fullName>Level 3 CIPD</fullName>
+                <default>false</default>
+                <label>Level 3 CIPD</label>
+            </value>
+            <value>
+                <fullName>Level 3 CISI</fullName>
+                <default>false</default>
+                <label>Level 3 CISI</label>
+            </value>
+            <value>
+                <fullName>Level 4 AAT</fullName>
+                <default>false</default>
+                <label>Level 4 AAT</label>
+            </value>
+            <value>
+                <fullName>Level 4 AAT APPS</fullName>
+                <default>false</default>
+                <label>Level 4 AAT APPS</label>
+            </value>
+            <value>
+                <fullName>Level 4 ATT APPS</fullName>
+                <default>false</default>
+                <label>Level 4 ATT APPS</label>
+            </value>
+            <value>
+                <fullName>Level 4 CFAB</fullName>
+                <default>false</default>
+                <label>Level 4 CFAB</label>
+            </value>
+            <value>
+                <fullName>Level 4 CIMA APPS</fullName>
+                <default>false</default>
+                <label>Level 4 CIMA APPS</label>
+            </value>
+            <value>
+                <fullName>Level 4 MCA</fullName>
+                <default>false</default>
+                <label>Level 4 MCA</label>
+            </value>
+            <value>
+                <fullName>Level 5 CIPD</fullName>
+                <default>false</default>
+                <label>Level 5 CIPD</label>
+            </value>
+            <value>
+                <fullName>Licensed Conveyancer</fullName>
+                <default>false</default>
+                <label>Licensed Conveyancer</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Medico Legal</fullName>
+                <default>false</default>
+                <label>Medico Legal</label>
+            </value>
+            <value>
+                <fullName>NDPB</fullName>
+                <default>false</default>
+                <label>NDPB</label>
+            </value>
+            <value>
+                <fullName>Operational</fullName>
+                <default>false</default>
+                <label>Operational</label>
+            </value>
+            <value>
+                <fullName>Options FT</fullName>
+                <default>false</default>
+                <label>Options FT</label>
+            </value>
+            <value>
+                <fullName>Options PT</fullName>
+                <default>false</default>
+                <label>Options PT</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Part Time 2 year BUS</fullName>
+                <default>false</default>
+                <label>Part Time 2 year BUS</label>
+            </value>
+            <value>
+                <fullName>Part Time 2 year LAW</fullName>
+                <default>false</default>
+                <label>Part Time 2 year LAW</label>
+            </value>
+            <value>
+                <fullName>Part Time 3 year BUS</fullName>
+                <default>false</default>
+                <label>Part Time 3 year BUS</label>
+            </value>
+            <value>
+                <fullName>Part Time 3 year LAW</fullName>
+                <default>false</default>
+                <label>Part Time 3 year LAW</label>
+            </value>
+            <value>
+                <fullName>Part Time BPTC</fullName>
+                <default>false</default>
+                <label>Part Time BPTC</label>
+            </value>
+            <value>
+                <fullName>Part Time GDL</fullName>
+                <default>false</default>
+                <label>Part Time GDL</label>
+            </value>
+            <value>
+                <fullName>Part Time LPC</fullName>
+                <default>false</default>
+                <label>Part Time LPC</label>
+            </value>
+            <value>
+                <fullName>Path 2PP</fullName>
+                <default>false</default>
+                <label>Path 2PP</label>
+            </value>
+            <value>
+                <fullName>PCT</fullName>
+                <default>false</default>
+                <label>PCT</label>
+            </value>
+            <value>
+                <fullName>PG C in HSL</fullName>
+                <default>false</default>
+                <label>PG C in HSL</label>
+            </value>
+            <value>
+                <fullName>Police Authority</fullName>
+                <default>false</default>
+                <label>Police Authority</label>
+            </value>
+            <value>
+                <fullName>Police Force</fullName>
+                <default>false</default>
+                <label>Police Force</label>
+            </value>
+            <value>
+                <fullName>Ret. 2 Prac.</fullName>
+                <default>false</default>
+                <label>Ret. 2 Prac.</label>
+            </value>
+            <value>
+                <fullName>SHA</fullName>
+                <default>false</default>
+                <label>SHA</label>
+            </value>
+            <value>
+                <fullName>Skills FT</fullName>
+                <default>false</default>
+                <label>Skills FT</label>
+            </value>
+            <value>
+                <fullName>Skills PT</fullName>
+                <default>false</default>
+                <label>Skills PT</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>TLA in Prac.</fullName>
+                <default>false</default>
+                <label>TLA in Prac.</label>
+            </value>
+            <value>
+                <fullName>TLDP</fullName>
+                <default>false</default>
+                <label>TLDP</label>
+            </value>
+            <value>
+                <fullName>Top 100</fullName>
+                <default>false</default>
+                <label>Top 100</label>
+            </value>
+            <value>
+                <fullName>Top 60</fullName>
+                <default>false</default>
+                <label>Top 60</label>
+            </value>
+            <value>
+                <fullName>Top CIMA</fullName>
+                <default>false</default>
+                <label>Top CIMA</label>
+            </value>
+            <value>
+                <fullName>Trust</fullName>
+                <default>false</default>
+                <label>Trust</label>
+            </value>
+            <value>
+                <fullName>gg</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>gg</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>AAT APPS</controllingFieldValue>
+            <valueName>Level 2 AAT APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AAT APPS</controllingFieldValue>
+            <valueName>Level 3 AAT APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AAT APPS</controllingFieldValue>
+            <valueName>Level 4 AAT APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA FT</controllingFieldValue>
+            <valueName>Essentials FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA FT</controllingFieldValue>
+            <valueName>Knowledge FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA FT</controllingFieldValue>
+            <valueName>Options FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA FT</controllingFieldValue>
+            <valueName>Skills FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>BSc Dip2Deg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>BSc PP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>HE C H&amp;SC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>HSC Award</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>Path 2PP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>PG C in HSL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>Ret. 2 Prac.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VALIDATED</controllingFieldValue>
+            <valueName>TLA in Prac.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA PT</controllingFieldValue>
+            <valueName>Essentials PT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA PT</controllingFieldValue>
+            <valueName>Knowledge PT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA PT</controllingFieldValue>
+            <valueName>Options PT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA PT</controllingFieldValue>
+            <valueName>Skills PT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ATT APPS</controllingFieldValue>
+            <valueName>Level 4 ATT APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BPTC</controllingFieldValue>
+            <valueName>Full Time BPTC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BPTC</controllingFieldValue>
+            <valueName>Part Time BPTC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS DEGREES</controllingFieldValue>
+            <valueName>Full Time 2 year BUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS DEGREES</controllingFieldValue>
+            <valueName>Full Time 3 year BUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS DEGREES</controllingFieldValue>
+            <valueName>Part Time 2 year BUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS DEGREES</controllingFieldValue>
+            <valueName>Part Time 3 year BUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CFAB</controllingFieldValue>
+            <valueName>Level 4 CFAB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CII</controllingFieldValue>
+            <valueName>Level 2 CII</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CII</controllingFieldValue>
+            <valueName>Level 3 CII</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CILEX</controllingFieldValue>
+            <valueName>Level 2 CILEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CILEX</controllingFieldValue>
+            <valueName>Level 3 CILEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIM</controllingFieldValue>
+            <valueName>Level 2 CIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIM</controllingFieldValue>
+            <valueName>Level 3 CIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Certificate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Operational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Strategic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Top CIMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA APPS</controllingFieldValue>
+            <valueName>Level 4 CIMA APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIPD</controllingFieldValue>
+            <valueName>Level 2 CIPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIPD</controllingFieldValue>
+            <valueName>Level 3 CIPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIPD</controllingFieldValue>
+            <valueName>Level 5 CIPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CISI</controllingFieldValue>
+            <valueName>Level 3 CISI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CPD</controllingFieldValue>
+            <valueName>Leadership and Professional Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CPD</controllingFieldValue>
+            <valueName>Medico Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CPD</controllingFieldValue>
+            <valueName>TLDP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broker</controllingFieldValue>
+            <valueName>Level 2 BUS ADMIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Broker</controllingFieldValue>
+            <valueName>Level 3 BUS ADMIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GDL</controllingFieldValue>
+            <valueName>Full Time GDL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GDL</controllingFieldValue>
+            <valueName>Part Time GDL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW DEGREES</controllingFieldValue>
+            <valueName>Full Time 2 year LAW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW DEGREES</controllingFieldValue>
+            <valueName>Full Time 3 year LAW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW DEGREES</controllingFieldValue>
+            <valueName>Part Time 2 year LAW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW DEGREES</controllingFieldValue>
+            <valueName>Part Time 3 year LAW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LPC</controllingFieldValue>
+            <valueName>Full Time LPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LPC</controllingFieldValue>
+            <valueName>Part Time LPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MCA</controllingFieldValue>
+            <valueName>Level 4 MCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AAT</controllingFieldValue>
+            <valueName>Level 2 AAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AAT</controllingFieldValue>
+            <valueName>Level 3 AAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AAT</controllingFieldValue>
+            <valueName>Level 4 AAT</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

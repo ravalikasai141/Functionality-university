@@ -1,0 +1,20 @@
+<template>
+    <c-review-application-section title={title}>
+        <div class="form-placeholder" slot="body">
+            <template lwc:if={formLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+            <div class="form-wrapper slds-hide">
+                <lightning-record-form
+                    object-api-name={apiName}
+                    record-id={recordId}
+                    fields={fields}
+                    columns="2"
+                    mode="view"
+                    density="comfy"
+                    onload={onLoad}
+                ></lightning-record-form>
+            </div>
+        </div>
+    </c-review-application-section>
+</template>

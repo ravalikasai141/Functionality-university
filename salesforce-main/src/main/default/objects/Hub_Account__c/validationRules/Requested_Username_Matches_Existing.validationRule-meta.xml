@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requested_Username_Matches_Existing</fullName>
+    <active>true</active>
+    <description>Prevents users from entering a Requested Hub Username that matches the existing Hub Username.</description>
+    <errorConditionFormula>BPP_Requested_Hub_Username__c = Hub_Username__c</errorConditionFormula>
+    <errorDisplayField>BPP_Requested_Hub_Username__c</errorDisplayField>
+    <errorMessage>The Requested Hub Username must not be the same value as the existing Hub Username.</errorMessage>
+</ValidationRule>

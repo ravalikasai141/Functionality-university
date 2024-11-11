@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialism_Classgens__c</fullName>
+    <externalId>false</externalId>
+    <label>Specialism (Classgens)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>!~ Management</fullName>
+                <default>false</default>
+                <label>!~ Management</label>
+            </value>
+            <value>
+                <fullName>$~ Shipping</fullName>
+                <default>false</default>
+                <label>$~ Shipping</label>
+            </value>
+            <value>
+                <fullName>+~ Local Government</fullName>
+                <default>false</default>
+                <label>+~ Local Government</label>
+            </value>
+            <value>
+                <fullName>*~ Solicitor Advocates/Higher Rights</fullName>
+                <default>false</default>
+                <label>*~ Solicitor Advocates/Higher Rights</label>
+            </value>
+            <value>
+                <fullName>^~ Construction</fullName>
+                <default>false</default>
+                <label>^~ Construction</label>
+            </value>
+            <value>
+                <fullName>£~ Insolvency</fullName>
+                <default>false</default>
+                <label>£~ Insolvency</label>
+            </value>
+            <value>
+                <fullName>2~ EU Law</fullName>
+                <default>false</default>
+                <label>2~ EU Law</label>
+            </value>
+            <value>
+                <fullName>3~ Human Rights</fullName>
+                <default>false</default>
+                <label>3~ Human Rights</label>
+            </value>
+            <value>
+                <fullName>4~ Support Staff</fullName>
+                <default>false</default>
+                <label>4~ Support Staff</label>
+            </value>
+            <value>
+                <fullName>5~ Financial Reporting</fullName>
+                <default>false</default>
+                <label>5~ Financial Reporting</label>
+            </value>
+            <value>
+                <fullName>6~ Assurance</fullName>
+                <default>false</default>
+                <label>6~ Assurance</label>
+            </value>
+            <value>
+                <fullName>7~ Taxation</fullName>
+                <default>false</default>
+                <label>7~ Taxation</label>
+            </value>
+            <value>
+                <fullName>A~ Business Affairs (Company Commercial)</fullName>
+                <default>false</default>
+                <label>A~ Business Affairs (Company Commercial)</label>
+            </value>
+            <value>
+                <fullName>B~ Charity Law</fullName>
+                <default>false</default>
+                <label>B~ Charity Law</label>
+            </value>
+            <value>
+                <fullName>D~ Property-Resident incl Conveyancing</fullName>
+                <default>false</default>
+                <label>D~ Property-Resident incl Conveyancing</label>
+            </value>
+            <value>
+                <fullName>E~ Property-Commercial incl Conveyancing</fullName>
+                <default>false</default>
+                <label>E~ Property-Commercial incl Conveyancing</label>
+            </value>
+            <value>
+                <fullName>F~ Crime - General, Motor, Juvenile</fullName>
+                <default>false</default>
+                <label>F~ Crime - General, Motor, Juvenile</label>
+            </value>
+            <value>
+                <fullName>G~ Debt and Money Advice</fullName>
+                <default>false</default>
+                <label>G~ Debt and Money Advice</label>
+            </value>
+            <value>
+                <fullName>H~ Environmental Law</fullName>
+                <default>false</default>
+                <label>H~ Environmental Law</label>
+            </value>
+            <value>
+                <fullName>I~ Employment</fullName>
+                <default>false</default>
+                <label>I~ Employment</label>
+            </value>
+            <value>
+                <fullName>J~ Family</fullName>
+                <default>false</default>
+                <label>J~ Family</label>
+            </value>
+            <value>
+                <fullName>K~ Property-Resident incl Conveyancing</fullName>
+                <default>false</default>
+                <label>K~ Property-Resident incl Conveyancing</label>
+            </value>
+            <value>
+                <fullName>M~ Litigation (Dispute Resolution)</fullName>
+                <default>false</default>
+                <label>M~ Litigation (Dispute Resolution)</label>
+            </value>
+            <value>
+                <fullName>N~ Litigation (Dispute Resolution)</fullName>
+                <default>false</default>
+                <label>N~ Litigation (Dispute Resolution)</label>
+            </value>
+            <value>
+                <fullName>O~ Medical Negligence</fullName>
+                <default>false</default>
+                <label>O~ Medical Negligence</label>
+            </value>
+            <value>
+                <fullName>P~ Mental Health</fullName>
+                <default>false</default>
+                <label>P~ Mental Health</label>
+            </value>
+            <value>
+                <fullName>Q~ Neighbor Disputes</fullName>
+                <default>false</default>
+                <label>Q~ Neighbor Disputes</label>
+            </value>
+            <value>
+                <fullName>R~ Personal Injury</fullName>
+                <default>false</default>
+                <label>R~ Personal Injury</label>
+            </value>
+            <value>
+                <fullName>S~ Welfare Benefits</fullName>
+                <default>false</default>
+                <label>S~ Welfare Benefits</label>
+            </value>
+            <value>
+                <fullName>T~ Wills and Probate</fullName>
+                <default>false</default>
+                <label>T~ Wills and Probate</label>
+            </value>
+            <value>
+                <fullName>U~ Taxation</fullName>
+                <default>false</default>
+                <label>U~ Taxation</label>
+            </value>
+            <value>
+                <fullName>V~ Trusts</fullName>
+                <default>false</default>
+                <label>V~ Trusts</label>
+            </value>
+            <value>
+                <fullName>W~ Liquor Licensing/Gambling</fullName>
+                <default>false</default>
+                <label>W~ Liquor Licensing/Gambling</label>
+            </value>
+            <value>
+                <fullName>X~ Intel Property, Computers &amp; Media</fullName>
+                <default>false</default>
+                <label>X~ Intel Property, Computers &amp; Media</label>
+            </value>
+            <value>
+                <fullName>Y~ Insurance</fullName>
+                <default>false</default>
+                <label>Y~ Insurance</label>
+            </value>
+            <value>
+                <fullName>Z~ Agriculture</fullName>
+                <default>false</default>
+                <label>Z~ Agriculture</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

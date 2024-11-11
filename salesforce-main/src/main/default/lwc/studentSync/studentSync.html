@@ -1,0 +1,38 @@
+<template>
+    <lightning-quick-action-panel header="Sync Student Account">
+        <template lwc:if={loading}>
+            <div class="load-screen">
+                <lightning-spinner alternative-text="Loading" variant="brand" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <template lwc:else>
+            <template lwc:if={error}>
+                <div class="slds-size_2-of-2">
+                    <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                        <h2>{error}</h2>
+                    </div>
+                </div>
+            </template>
+            <p class="slds-m-vertical_medium">
+                This action will sync the student account in its current state to the Hub, press confirm to continue.
+            </p>
+            <div class="slds-m-vertical_small">
+                <div class="slds-clearfix">
+                    <div class="slds-float--right">
+                        <lightning-button
+                            onclick={handleCancel}
+                            class="slds-m-right_small"
+                            label="Cancel"
+                        ></lightning-button>
+                        <lightning-button
+                            onclick={handleConfirm}
+                            disabled={disabled}
+                            variant="brand"
+                            label="Confirm"
+                        ></lightning-button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </lightning-quick-action-panel>
+</template>

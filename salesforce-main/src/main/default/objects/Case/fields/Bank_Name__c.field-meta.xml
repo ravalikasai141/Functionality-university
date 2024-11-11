@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Bank Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+                <label>HSBC</label>
+            </value>
+            <value>
+                <fullName>Barclays</fullName>
+                <default>false</default>
+                <label>Barclays</label>
+            </value>
+            <value>
+                <fullName>TSB</fullName>
+                <default>false</default>
+                <label>TSB</label>
+            </value>
+            <value>
+                <fullName>Halifax</fullName>
+                <default>false</default>
+                <label>Halifax</label>
+            </value>
+            <value>
+                <fullName>Lloyds Bank</fullName>
+                <default>false</default>
+                <label>Lloyds Bank</label>
+            </value>
+            <value>
+                <fullName>NatWest</fullName>
+                <default>false</default>
+                <label>NatWest</label>
+            </value>
+            <value>
+                <fullName>Santander</fullName>
+                <default>false</default>
+                <label>Santander</label>
+            </value>
+            <value>
+                <fullName>Royal Bank of Scotland</fullName>
+                <default>false</default>
+                <label>Royal Bank of Scotland</label>
+            </value>
+            <value>
+                <fullName>Metro Bank</fullName>
+                <default>false</default>
+                <label>Metro Bank</label>
+            </value>
+            <value>
+                <fullName>The Co-Operative Bank</fullName>
+                <default>false</default>
+                <label>The Co-Operative Bank</label>
+            </value>
+            <value>
+                <fullName>Yorkshire Bank</fullName>
+                <default>false</default>
+                <label>Yorkshire Bank</label>
+            </value>
+            <value>
+                <fullName>Clydesdale Bank</fullName>
+                <default>false</default>
+                <label>Clydesdale Bank</label>
+            </value>
+            <value>
+                <fullName>Nationwide</fullName>
+                <default>false</default>
+                <label>Nationwide</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

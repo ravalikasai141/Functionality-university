@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_Experience_Verified_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This fields records which BPP user verified the Care Experience Status, either verbally, by email or through assessment for financial support. HESA require that BPP must have reason above and beyond the information given on the student&apos;s application form to identify them as Care Leaver</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This fields records which BPP user verified the Care Experience Status, either verbally, by email or through assessment for financial support. HESA require that BPP must have reason above and beyond the information given on the student&apos;s application form to identify them as Care Leaver</inlineHelpText>
+    <label>Care Experience Verified By?</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

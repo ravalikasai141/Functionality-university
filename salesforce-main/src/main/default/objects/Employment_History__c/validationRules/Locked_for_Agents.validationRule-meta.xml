@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Locked_for_Agents</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Profile.Name=&quot;Agent User&quot;,
+ Student__r.Account.Locked__c  &gt; 0,
+OR( 
+ISCHANGED( Currently_Employed__c ) ,
+ ISCHANGED( Description__c ) ,
+ ISCHANGED( Employer_Name__c ) ,
+ ISCHANGED( Name ) ,
+ ISCHANGED( End_Date__c ),
+ ISCHANGED( Mode__c ),
+ ISCHANGED( Start_Date__c ) ,
+ ISCHANGED( Student__c ) ,
+ ISCHANGED( Title__c ) 
+)
+)</errorConditionFormula>
+    <errorMessage>This Employment History is Locked</errorMessage>
+</ValidationRule>

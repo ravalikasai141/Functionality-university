@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <description>Make all stock management fields blank</description>
+        <name>Assign_Blank_Stock_Management_Values</name>
+        <label>Assign Blank Stock Management Values</label>
+        <locationX>366</locationX>
+        <locationY>422</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Delivery_Record.Stock_Management_Id__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Delivery_Record.Stock_Management_Name__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Delivery_Record.Stock_Management__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Delivery_Stock_Management_Info</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Stock Management info on the delivery record</description>
+        <name>Assign_Delivery_Stock_Management_Info</name>
+        <label>Assign Delivery Stock Management Info</label>
+        <locationX>584</locationX>
+        <locationY>419</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Delivery_Record.Stock_Management_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Stock_Management_Record.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Delivery_Record.Stock_Management_Id__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Stock_Management_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Delivery_Record.Stock_Management__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxStockManagementValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Delivery_Stock_Management_Info</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check that the stock site field has a value or is blank</description>
+        <name>Stock_Site_Value</name>
+        <label>Stock Site Value</label>
+        <locationX>354</locationX>
+        <locationY>213</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Blank_Stock_Management_Values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Stock Site Blank</defaultConnectorLabel>
+        <rules>
+            <name>Stock_Site_Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Delivery_Record.Stock_Site__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Stock_Management_Record</targetReference>
+            </connector>
+            <label>Stock Site Present</label>
+        </rules>
+    </decisions>
+    <description>Update delivery with stock management record for the selected stock site</description>
+    <formulas>
+        <description>If delivery is Awaiting Allocation then update the Stock Management field with the new value else (if on hold) it should be null</description>
+        <name>fxStockManagementValue</name>
+        <dataType>String</dataType>
+        <expression>IF ( ISPICKVAL( {!Get_Delivery_Record.Delivery_Status__c} , &apos;Awaiting Allocation&apos; ) ,
+{!Get_Stock_Management_Record.Id} ,
+NULL
+ )</expression>
+    </formulas>
+    <interviewLabel>Delivery Stock Site Change {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Delivery Stock Site - Assign Stock Management</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Delivery record that triggered the process</description>
+        <name>Get_Delivery_Record</name>
+        <label>Get Delivery Record</label>
+        <locationX>178</locationX>
+        <locationY>211</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Stock_Site_Value</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varDeliveryId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Delivery__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get stock management record for the product from the required stock site</description>
+        <name>Get_Stock_Management_Record</name>
+        <label>Get Stock Management Record</label>
+        <locationX>584</locationX>
+        <locationY>214</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Delivery_Stock_Management_Info</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Stock_Site__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Delivery_Record.Stock_Site__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Product_Factory_Product_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Delivery_Record.Order_Product__r.Product2.BPP_ProductFactoryID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Stock_Management__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Stock Management info on the delivery record</description>
+        <name>Update_Delivery_Stock_Management_Info</name>
+        <label>Update Delivery Stock Management Info</label>
+        <locationX>479</locationX>
+        <locationY>600</locationY>
+        <inputReference>Get_Delivery_Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>52</locationX>
+        <locationY>51</locationY>
+        <connector>
+            <targetReference>Get_Delivery_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Id for delivery record that triggered the process</description>
+        <name>varDeliveryId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

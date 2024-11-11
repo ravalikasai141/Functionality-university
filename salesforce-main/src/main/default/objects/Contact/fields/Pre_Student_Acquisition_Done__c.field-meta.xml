@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Student_Acquisition_Done__c</fullName>
+    <externalId>false</externalId>
+    <formula>(
+IF (Create_lead__c = false , 0 , 1 ) +
+IF ( Receive_lead__c = false , 0 , 1 ) +
+IF ( Allocate_Talent_Coach__c = false , 0 , 1 ) +
+IF ( Allocate_Talent_Agent__c = false , 0 , 1 ) +
+IF( PE_Appt_booked__c = false , 0 , 1 ) +
+IF( PE_Appt_completed__c = false , 0 , 1 ) +
+IF( PE_assessment_setup__c = false , 0 , 1 ) +
+IF( Send_email_with_MP_link_login_info__c = false , 0 , 1 ) +
+IF( Follow_up_on_PE_assessment__c = false , 0 , 1 ) +
+IF(PE_assessment_completed__c = false , 0 , 1 ) +
+IF( Attach_PE_assessment_to_lead_record__c = false , 0 , 1 ) +
+IF( Book_PE_assessment_FU_meeting__c = false , 0 , 1 ) +
+IF( Send_PE_assessment_FU_meeting_reminder__c = false , 0 , 1 ) +
+IF( PE_assessment_FU_meeting_completion__c = false , 0 , 1 ) +
+IF( Give_send_application_procedures_link__c = false , 0 , 1 ) +
+IF( Follow_up_on_Application_progression__c = false , 0 , 1 ) +
+IF( Application_completed_received__c = false , 0 , 1 ) +
+IF( Review_Process_Applications__c = false , 0 , 1 ) +
+IF(Offer_extended__c = false , 0 , 1 ) +
+IF( Offer_accepted_or_declined__c = false , 0 , 1 ) +
+IF( Offer_deferred__c = false , 0 , 1 ) +
+IF( Payment_received_or_assured_by_employer__c = false , 0 , 1 ) +
+IF( Receipt_issued__c = false , 0 , 1 ) +
+IF( Registered__c = false , 0 , 1 ) +
+IF( Generate_Student_ID_in_SIS__c = false , 0 , 1 ) +
+IF( Transfer_Student_Record_Number_to_CRM__c = false , 0 , 1 )
+/ 1 ) / 26</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pre-Student Acquisition % Done</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

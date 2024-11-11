@@ -1,0 +1,12 @@
+<template>
+    <div class="slds-p-around_none slds-border_top">
+        <lightning-datatable
+            key-field="Id"
+            data={rows}
+            columns={columns}
+            selected-rows={selectedRows}
+            hide-checkbox-column="true"
+            onrowaction={handleRowAction}
+        ></lightning-datatable>
+    </div>
+</template>

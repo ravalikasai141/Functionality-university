@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Email__c</fullName>
+    <description>Field was created to have a copy of the person email field on the account to be able use as a recipient in a workflow email alert.</description>
+    <externalId>false</externalId>
+    <label>Copy of Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

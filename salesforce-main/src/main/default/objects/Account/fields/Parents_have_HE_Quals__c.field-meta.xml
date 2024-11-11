@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parents_have_HE_Quals__c</fullName>
+    <description>This field records information about whether a student&apos;s parents have higher education qualifications</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field records information about whether a student&apos;s parents have higher education qualifications</inlineHelpText>
+    <label>Parents have HE Quals?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01~ Yes</fullName>
+                <default>false</default>
+                <label>01~ Yes</label>
+            </value>
+            <value>
+                <fullName>02~ No</fullName>
+                <default>false</default>
+                <label>02~ No</label>
+            </value>
+            <value>
+                <fullName>03~ No response given</fullName>
+                <default>false</default>
+                <label>03~ No response given</label>
+            </value>
+            <value>
+                <fullName>97~ Not known</fullName>
+                <default>false</default>
+                <label>97~ Not known</label>
+            </value>
+            <value>
+                <fullName>98~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>98~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

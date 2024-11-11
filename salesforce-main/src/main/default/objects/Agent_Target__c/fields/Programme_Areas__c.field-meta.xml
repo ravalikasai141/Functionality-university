@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Programme_Areas__c</fullName>
+    <externalId>false</externalId>
+    <label>Programme Areas</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GDL</fullName>
+                <default>false</default>
+                <label>GDL</label>
+            </value>
+            <value>
+                <fullName>LPC</fullName>
+                <default>false</default>
+                <label>LPC</label>
+            </value>
+            <value>
+                <fullName>BPTC</fullName>
+                <default>false</default>
+                <label>BPTC</label>
+            </value>
+            <value>
+                <fullName>UCAS - Business School</fullName>
+                <default>false</default>
+                <label>UCAS - Business School</label>
+            </value>
+            <value>
+                <fullName>UCAS - Law School</fullName>
+                <default>false</default>
+                <label>UCAS - Law School</label>
+            </value>
+            <value>
+                <fullName>UCAS - Health School</fullName>
+                <default>false</default>
+                <label>UCAS - Health School</label>
+            </value>
+            <value>
+                <fullName>Postgraduate - Business School</fullName>
+                <default>false</default>
+                <label>Postgraduate - Business School</label>
+            </value>
+            <value>
+                <fullName>Postgraduate - Law School</fullName>
+                <default>false</default>
+                <label>Postgraduate - Law School</label>
+            </value>
+            <value>
+                <fullName>Postgraduate - Health School</fullName>
+                <default>false</default>
+                <label>Postgraduate - Health School</label>
+            </value>
+            <value>
+                <fullName>ACCA</fullName>
+                <default>false</default>
+                <label>ACCA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

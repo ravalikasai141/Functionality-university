@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EORI_Number</fullName>
+    <active>true</active>
+    <description>Prevents a delivery record being saved if the EORI Number is missing for an EU company if the delivery is being dispatched to the EU.</description>
+    <errorConditionFormula>Order_Product__r.Order.Account.IsPersonAccount = FALSE &amp;&amp;
+ISBLANK( Order_Product__r.Order.Account.EORI_Number__c )  &amp;&amp; 
+Order_Product__r.Order.Account.Head_Office_Country_List__r.region__c = &apos;EU&apos;  &amp;&amp; 
+Country__r.region__c = &apos;EU&apos;  &amp;&amp;
+NOT( ISPICKVAL(Delivery_Status__c , &apos;On Hold&apos; )) &amp;&amp; 
+NOT( ISPICKVAL(Delivery_Status__c , &apos;Cancelled&apos; ))</errorConditionFormula>
+    <errorMessage>This delivery is being dispatched to the EU for an EU company order. The company account must have an EORI Number before progressing.</errorMessage>
+</ValidationRule>

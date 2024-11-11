@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shared_Market_Intelligence__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Did you share market intelligence with the client?</description>
+    <externalId>false</externalId>
+    <label>Shared Market Intelligence</label>
+    <type>Checkbox</type>
+</CustomField>

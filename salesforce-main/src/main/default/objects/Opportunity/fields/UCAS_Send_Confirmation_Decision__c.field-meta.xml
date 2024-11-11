@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UCAS_Send_Confirmation_Decision__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked by workflow when UCAS_Confirmation_Decision__c is updated to a picklist value.  Signals data team to update UCAS; data team process will uncheck when process finishes.</description>
+    <externalId>false</externalId>
+    <label>UCAS Send Confirmation Decision</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

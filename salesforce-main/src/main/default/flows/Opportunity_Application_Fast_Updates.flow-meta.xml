@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <description>Set the CAS Status field to &apos;Issued&apos;</description>
+        <name>CAS_Status_Issued</name>
+        <label>CAS Status Issued</label>
+        <locationX>578</locationX>
+        <locationY>2003</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.CAS_status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Issued</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Populate the NHS Sponsoring Organization with the text portion of the NHS Sponsor field</description>
+        <name>Populate_Sponsoring_Organization</name>
+        <label>Populate Sponsoring Organization</label>
+        <locationX>578</locationX>
+        <locationY>1103</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sponsoring_Organization__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxNHSSponsor</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Sponsorship_Level</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Accepted Date set to current date</description>
+        <name>Set_Accepted_Date</name>
+        <label>Set Accepted Date</label>
+        <locationX>578</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Accepted_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Decision_Code</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>ACI Requested Date set to current date</description>
+        <name>Set_ACI_Requested_Date</name>
+        <label>Set ACI Requested Date</label>
+        <locationX>578</locationX>
+        <locationY>1703</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.BPP_ACI_Request_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_CAS_Number_Been_Set</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Application Date set to current date</description>
+        <name>Set_Application_Date</name>
+        <label>Set Application Date</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Application_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Application_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Cancellation Date set to current date</description>
+        <name>Set_Cancellation_Date</name>
+        <label>Set Cancellation Date</label>
+        <locationX>1106</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Cancellation_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Decision_Code</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set calculated SIS Decision Code (from Status)</description>
+        <name>Set_Decision_Code</name>
+        <label>Set Decision Code</label>
+        <locationX>710</locationX>
+        <locationY>887</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SFDC_Decision_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxSISDecisionCode</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>NHS_Sponsorship</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Declined Date set to current date</description>
+        <name>Set_Decline_Date</name>
+        <label>Set Decline Date</label>
+        <locationX>842</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Decline_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Decision_Code</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Maximise percentage &amp; remove value</description>
+        <name>Set_Full_Sponsorship_Data</name>
+        <label>Set Full Sponsorship Data</label>
+        <locationX>446</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sponsorship_Percentage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>100.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Sponsorship_Amount__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_ACI_Been_Requested</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Both percentage &amp; value should be zero (or null)</description>
+        <name>Set_No_Sponsorship_Data</name>
+        <label>Set No Sponsorship Data</label>
+        <locationX>710</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sponsorship_Percentage__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Sponsorship_Amount__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_ACI_Been_Requested</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Offer Date set to current date &amp; Offer Type populated</description>
+        <name>Set_Offer_Details</name>
+        <label>Set Offer Details</label>
+        <locationX>314</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Offer_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Offer_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxOfferType</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Decision_Code</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Review Date set to current date</description>
+        <name>Set_Review_Date</name>
+        <label>Set Review Date</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Review_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Decision_Code</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Actions based on the application status</description>
+        <name>Application_Status</name>
+        <label>Application Status</label>
+        <locationX>710</locationX>
+        <locationY>587</locationY>
+        <defaultConnector>
+            <targetReference>Set_Decision_Code</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Review</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Review</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Review_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>In Review</label>
+        </rules>
+        <rules>
+            <name>Offer_Made</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Conditional Offer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Unconditional Offer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Offer_Details</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Offer Made</label>
+        </rules>
+        <rules>
+            <name>Offer_Accepted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Accepted -</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Accepted_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Offer Accepted</label>
+        </rules>
+        <rules>
+            <name>Offer_Declined</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Declined</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Decline_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Offer Declined</label>
+        </rules>
+        <rules>
+            <name>Application_Cancelled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Cancellation_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Application Cancelled</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has an Academic Credibility Interview (ACI) been requested?</description>
+        <name>Has_ACI_Been_Requested</name>
+        <label>Has ACI Been Requested?</label>
+        <locationX>710</locationX>
+        <locationY>1595</locationY>
+        <defaultConnector>
+            <targetReference>Has_CAS_Number_Been_Set</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ACI_Requested</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BPP_ACI_Requested__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_ACI_Requested_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>ACI Requested</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the CAS Number field been populated?</description>
+        <name>Has_CAS_Number_Been_Set</name>
+        <label>Has CAS Number Been Set?</label>
+        <locationX>710</locationX>
+        <locationY>1895</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CAS_Number_Set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BPP_CAS_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CAS_Status_Issued</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>CAS Number Set</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Application is created</description>
+        <name>New_Application</name>
+        <label>New Application?</label>
+        <locationX>710</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Application_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Application_Date</targetReference>
+            </connector>
+            <label>New</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the NHS Sponsorship field been populated</description>
+        <name>NHS_Sponsorship</name>
+        <label>NHS Sponsorship</label>
+        <locationX>710</locationX>
+        <locationY>995</locationY>
+        <defaultConnector>
+            <targetReference>Sponsorship_Level</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NHS_Sponsor</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BPP_NHS_Sponsor__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.BPP_NHS_Sponsor__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>001~ Not an NHS Employee</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Sponsoring_Organization</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>NHS Sponsor</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>If the sponsorship level has been specified &amp; is not a partial sponsorship then set the percentage / contribution amounts</description>
+        <name>Sponsorship_Level</name>
+        <label>Sponsorship Level</label>
+        <locationX>710</locationX>
+        <locationY>1295</locationY>
+        <defaultConnector>
+            <targetReference>Has_ACI_Been_Requested</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Full_Sponsorship</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sponsorship_Level__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Full</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Full_Sponsorship_Data</targetReference>
+            </connector>
+            <label>Full Sponsorship</label>
+        </rules>
+        <rules>
+            <name>No_Sponsorship</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sponsorship_Level__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>None</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_No_Sponsorship_Data</targetReference>
+            </connector>
+            <label>No Sponsorship</label>
+        </rules>
+    </decisions>
+    <description>Application opportunity updates (context: after creation/update)</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculate text from NHS Sponsor value</description>
+        <name>fxNHSSponsor</name>
+        <dataType>String</dataType>
+        <expression>RIGHT(TEXT({!$Record.BPP_NHS_Sponsor__c}),LEN(TEXT({!$Record.BPP_NHS_Sponsor__c}))-FIND(&quot;~&quot;,(TEXT({!$Record.BPP_NHS_Sponsor__c})))-1)</expression>
+    </formulas>
+    <formulas>
+        <description>Calculate which type of offer was made</description>
+        <name>fxOfferType</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.StageName}, &apos;Unconditional Offer&apos;),&apos;Unconditional&apos;, &apos;Conditional&apos;)</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates the Decision Code field based on the Opportunity Stage for SIS Integrations.</description>
+        <name>fxSISDecisionCode</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!$Record.StageName},
+&quot;Accepted - Conditional Firm&quot;,&quot;AC&quot;,
+&quot;Accepted - Unconditional Firm&quot;,&quot;AU&quot;,
+&quot;Accepted - Pmt Received&quot;,&quot;AP&quot;,
+&quot;Transferred&quot;,&quot;TR&quot;,
+&quot;Deferred Entry&quot;,&quot;DE&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Opportunity Application Fast Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Application Fast Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>584</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_Application</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.Name} = &apos;Application&apos; || {!$Record.RecordType.Name} = &apos;Locked Application&apos;</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

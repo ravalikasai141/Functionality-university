@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensures_Sponsorship_Level_data_provided</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(AND( 
+AND( 
+ISPICKVAL( Sponsorship_Level__c,&apos;Partial&apos;), 
+ISBLANK(Sponsorship_Amount__c) 
+), 
+AND( 
+ISPICKVAL( Sponsorship_Level__c,&apos;Partial&apos;), 
+ISBLANK(Sponsorship_Percentage__c) 
+) 
+),AND(NOT(ISBLANK(Sponsorship_Amount__c)),NOT(ISBLANK(Sponsorship_Percentage__c))))</errorConditionFormula>
+    <errorDisplayField>Sponsorship_Level__c</errorDisplayField>
+    <errorMessage>If Sponsorship Level is &apos;Partial&apos;, there must be a value provided in either the Sponsorship Amount or Sponsorship Percentage fields.</errorMessage>
+</ValidationRule>

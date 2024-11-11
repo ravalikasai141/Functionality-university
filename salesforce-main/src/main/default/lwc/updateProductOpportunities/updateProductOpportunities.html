@@ -1,0 +1,173 @@
+<template>
+    <lightning-card>
+        <!-- HEADER -->
+        <div class="slds-text-heading_medium slds-text-align_center slds-m-bottom_x-large">Update Applications</div>
+
+        <!-- Loading spinner -->
+        <template lwc:if={loading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+
+        <!-- Error handling -->
+        <template lwc:if={error}>
+            <div class="slds-notify_alert slds-alert_error slds-p-horizontal_x-small slds-m-bottom_x-small">
+                <h2>{error}</h2>
+            </div>
+        </template>
+
+        <!-- BODY -->
+        <!-- If there are no Opportunities to update, inform the user -->
+        <template lwc:if={noRecordsToUpdate}
+            >No Apprentice Application opportunities linked to the given Product were found with a Start Date or End
+            Date different to the {productName} Product</template
+        >
+        <template lwc:else>
+            <!-- Display any Successful or Failed record updates when save is complete -->
+            <template lwc:if={saveCompleted}>
+                <div class="slds-grid slds-grid_vertical">
+                    <!-- Display any successful records -->
+                    <template lwc:if={successfulUpdateText}>
+                        <div class="slds-col">
+                            <lightning-icon
+                                class="slds-m-right_medium slds-m-bottom_medium"
+                                icon-name="action:approval"
+                            ></lightning-icon>
+                            {successfulUpdateText}
+                        </div>
+                    </template>
+
+                    <!-- Display any failed records -->
+                    <template lwc:if={failedUpdateText}>
+                        <div class="slds-col">
+                            <lightning-icon
+                                class="slds-m-bottom_medium slds-m-right_medium"
+                                icon-name="action:close"
+                            ></lightning-icon>
+                            {failedUpdateText}
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <!-- Otherwise display the pending update details -->
+            <template lwc:else>
+                <!-- If there are too many Opportunities to save in one transaction, display how many were identified and how many will be updated as a warning -->
+                <template lwc:if={tooManyOpportunitiesAlertText}>
+                    <div class="slds-notify slds-notify_alert slds-p-horizontal_x-small">
+                        {opportunityCountDescriptionText} {tooManyOpportunitiesAlertText}
+                    </div>
+                </template>
+                <!-- Otherwise only display how many were identified as a standard message -->
+                <template lwc:else>{opportunityCountDescriptionText}</template>
+
+                <p class="slds-m-vertical_medium">
+                    The following changes will be made following this update, please review then click confirm to apply
+                    these changes.
+                </p>
+
+                <div class="slds-grid slds-grid_align-center slds-gutters slds-p-horizontal_large">
+                    <!-- Product card on the left -->
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="slds-box">
+                            <lightning-card variant="Narrow" icon-name="standard:product">
+                                <div slot="title">
+                                    Product
+                                    <div class="slds-text-title">
+                                        <lightning-formatted-url
+                                            value={productLink}
+                                            label={productName}
+                                        ></lightning-formatted-url>
+                                    </div>
+                                </div>
+
+                                <div class="slds-p-horizontal_medium">
+                                    <div class="slds-form-element slds-m-vertical_medium">
+                                        <label class="slds-form-element__label slds-text-title"
+                                            >Product Start Date</label
+                                        >
+                                        <div class="slds-form-element__control">
+                                            <input type="text" disabled class="slds-input" value={productStartDate} />
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-m-vertical_medium">
+                                        <label class="slds-form-element__label slds-text-title">Product End Date</label>
+                                        <div class="slds-form-element__control">
+                                            <input type="text" disabled class="slds-input" value={productEndDate} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </lightning-card>
+                        </div>
+                    </div>
+                    <!-- Arrow pointing to the right -->
+                    <div class="slds-align_absolute-center">
+                        <lightning-icon icon-name="utility:forward" size="large"> </lightning-icon>
+                    </div>
+                    <!-- Opportunity card on the right -->
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="slds-box">
+                            <lightning-card variant="Narrow" icon-name="standard:opportunity">
+                                <div slot="title">
+                                    Opportunity
+                                    <div class="slds-text-title">{oppCardCount}</div>
+                                </div>
+                                <div class="slds-p-horizontal_medium">
+                                    <div class="slds-form-element slds-m-vertical_medium">
+                                        <label class="slds-form-element__label slds-text-title"
+                                            >Application Start Date</label
+                                        >
+                                        <div class="slds-form-element__control">
+                                            <input type="text" disabled class="slds-input" value={productStartDate} />
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element slds-m-vertical_medium">
+                                        <label class="slds-form-element__label slds-text-title"
+                                            >Application End Date</label
+                                        >
+                                        <div class="slds-form-element__control">
+                                            <input type="text" disabled class="slds-input" value={productEndDate} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </lightning-card>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+        <!-- FOOTER -->
+        <div class="slds-m-vertical_small">
+            <div class="slds-clearfix slds-card__footter">
+                <div class="slds-float--right">
+                    <!-- If there are no Opportunities to update, only give the user the option to close -->
+                    <template lwc:if={noRecordsToUpdate}>
+                        <lightning-button onclick={handleCloseClick} variant="brand" label="Close"></lightning-button
+                    ></template>
+                    <template lwc:else>
+                        <!-- Display Close button when Save is complete -->
+                        <template lwc:if={saveCompleted}>
+                            <lightning-button
+                                onclick={handleCloseClick}
+                                variant="brand"
+                                label="Close"
+                            ></lightning-button>
+                        </template>
+                        <!-- Display Cancel and Confirm buttons when Save is complete -->
+                        <template lwc:else>
+                            <lightning-button
+                                onclick={handleCloseClick}
+                                class="slds-m-right_small"
+                                label="Cancel"
+                            ></lightning-button>
+                            <lightning-button
+                                onclick={handleConfirmClick}
+                                disabled={updateButtonDisabled}
+                                variant="brand"
+                                label="Confirm"
+                            ></lightning-button>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

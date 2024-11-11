@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-box status-container">
+        <template lwc:if={showBanner}>
+            <div class="slds-notify slds-notify_alert" role="alert">
+                <span class="slds-assistive-text">Review</span>
+                <h2>This application is ineligible for a review</h2>
+            </div>
+        </template>
+        <p class="slds-text-align_center slds-m-top_medium slds-m-bottom_medium">{statusMessage}</p>
+        <template lwc:if={startReviewAllowed}>
+            <div class="slds-clearfix">
+                <div class="slds-float--right">
+                    <lightning-button
+                        variant="brand"
+                        label="Start Review"
+                        onclick={startReview}
+                        class="slds-m-left_x-small"
+                        disabled={loading}
+                    ></lightning-button>
+                </div>
+            </div>
+        </template>
+        <template lwc:if={startAcceptanceReviewAllowed}>
+            <div class="slds-clearfix">
+                <div class="slds-float--right">
+                    <lightning-button
+                        variant="brand"
+                        label="Start Final Review"
+                        onclick={startAcceptanceReview}
+                        class="slds-m-left_x-small"
+                        disabled={loading}
+                    ></lightning-button>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

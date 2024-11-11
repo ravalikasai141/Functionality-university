@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Record_Type_ID__c</fullName>
+    <description>Pulls the Record Type Id value from either the related Account or Contact. Useful for avoiding multiple unnecessary SOQL calls in the AddressTrigger.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+	NOT(ISBLANK(Student__c)),
+	CASESAFEID(Student__r.RecordTypeId),
+	IF(
+		NOT(ISBLANK(Training_Manager__c)),
+		CASESAFEID(Training_Manager__r.RecordTypeId),
+		NULL
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Related Record Type ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}
+      p { margin: 1em 0; font-family:'MorePro Regular',arial,helvetica,sans-serif;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      @-ms-viewport{ width: device-width;}
+      @font-face {
+  font-family: 'GT Walsheim Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/GT-Walsheim-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'GT Walsheim Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/GT-Walsheim-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'MorePro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/372FB9_1_0.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'MorePro Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/372FB9_0_0.woff2) format('woff2');
+} 
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        .container {width: 100% !important;}
+        .footer { width:auto !important; margin-left:0; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        img { max-width:100% !important; height:auto !important; max-height:auto !important;}
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+body, .tb_properties{font-family: Arial !important; font-size: 17px !important; color: #3C3C3B !important; line-height: 1.5 !important; padding: 0px !important; }.buttonstyles{font-family: Arial, helvetica, sans-serif !important; font-size: 16px !important; color: #FFFFFF !important; padding: 10px 30px !important; }h1{font-family: Arial !important; font-size: 30px !important; color: #202020 !important; line-height: 1 !important; }h2{font-family: Arial !important; font-size: 17px !important; color: #202020 !important; line-height: 1.5 !important; }h3{font-family: Arial !important; font-size: 12px !important; color: #202020 !important; line-height: 1 !important; }a:not(.buttonstyles){line-height: 1 !important; }.mobile-hidden{display: none !important; }.responsive-td {width: 100% !important; display: block !important; padding: 0 !important;}
+/* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+      }
+      @media only screen and (max-width: 600px) {
+        .container { width:100% !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        .photo img { width:100% !important; height:auto !important;}
+        .nav5, .nav6 { display: none !important;}
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+    </style>
+<!--[if gte mso 9]>
+    <style type="text/css" media="all">
+         body, table, td, h1, h2, h3, h4, p, a {font-family: Helvetica, Arial, sans-serif !important;}
+         .footer-text {color:#D0D0D0 !important;}
+    </style>
+<![endif]-->
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+  </head>
+  <body bgcolor="#FFFFFF" text="#3C3C3B" style="background-color: #FFFFFF; color: #3C3C3B; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;">
+    <div style="font-size:0; line-height:0;"><custom name="opencounter" type="tracking"><custom name="usermatch" type="tracking" /></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td align="center" valign="top">
+          <custom type="header"/>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table class="tb_properties border_style" style="background-color:#f9f7f7;" cellspacing="0" cellpadding="0" bgcolor="#f9f7f7" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <!-- added padding here -->
+                          <td class="content_padding" style="">
+                            <!-- end of comment -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr> <!-- top slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                          <td align="left" valign="top">
+                                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                                              <tbody>
+                                              <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #3C3C3B; border: 10px solid #3C3C3B; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 1px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://www.bpp.com/?utm_source=salesforce&utm_medium=Email" title="BPP" alias="BPP Logo" conversion="false" data-linkto="https://"><img data-assetid="76259" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/bd6c2287-bf68-427f-869d-05f0e9c07204.png" alt="BPP" height="30" width="60" style="display: block; width: 60px; height: 30px; padding: 0px; text-align: center;"></a></td></tr></table></td></tr></table>
+                                                </td>
+                                              </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              
+                              <tr> <!-- bottom 1 slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                    <tr>
+                                      <td align="left" valign="top">
+                                        <table cellspacing="0" cellpadding="0" style="width:100%">
+                                          <tbody>
+                                          <tr>
+                                            <td class="responsive-td" valign="top" style="width: 100%;">
+                                                        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="slot-styling"><tr><td style="padding: 0px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 15%; padding-right: 4px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper mobile-hidden"><tr><td style="padding: 8px 2px 0px 8px; " class="stylingblock-content-wrapper mobile-hidden camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><img data-assetid="70638" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/1/17012634-81d9-4d07-bcc6-69388e80807d.png" width="67" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 74%; padding-left: 2px; padding-right: 2px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 60px 25px 0px; " class="stylingblock-content-wrapper camarker-inner"><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ <b>Student Reference Number:</b> {!Account.BNR_Banner_ID__pc}</p><h1 style="color:#3C3C3B;font-family:'GT Walsheim Bold',arial,helvetica,sans-serif !important;font-size:34px;font-style:normal;font-weight:bold;line-height:100%;">
+ Activating your Hub account</h1><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ <br>
+ Hello {!Account.FirstName},<br>
+ <br>
+ The Hub is your online learning environment which provides 24/7 access to all of your BPP course learning materials and resources. You should activate your Hub account before registering and starting your course.</p><h3 style="color:#3C3C3B;font-family:'GT Walsheim Bold',arial,helvetica,sans-serif !important;font-size:16px;font-style:normal;font-weight:bold;line-height:100%;">
+ Accessing the hub</h3><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ <b>Your hub username - {!Account.BPP_Email__pc}</b><br>
+ <br>
+ Your password for The Hub will be sent to you in 48 hours time and you will be required to setup Microsoft Multi-Factor Authentication (MFA) as part of our enhanced security measures.</p><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ Login to The Hub at <a href="www.bpp.com/account" style="color:#3763AC; text-decoration:underline;">www.bpp.com/account</a> with your BPP email and new password.<br>
+ <br>
+ We will also send you a link so you can reset your password to something a little more memorable.<br>
+ <br>
+ If you need to receive the password by an alternative means, please contact us for this to be provided over the phone.</p><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ Once you have activated your Hub account, you will have access to our welcome module, which provides guidance on using The Hub and other online platforms to support you through your course as well as introductory course content.<br>
+ <br>
+ You will also be able to access your Office 365 email account using your @my.bpp.com email address and password.</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 25px 0px; " class="stylingblock-content-wrapper camarker-inner"><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ Although dates depend on your programme, you will be able to view introductory course information in &lsquo;My Learning&rsquo; at least one month before the start date. Study modules will be available at the start of your programme.</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 25px; " class="stylingblock-content-wrapper camarker-inner"><h3 style="color:#3C3C3B;font-family:'GT Walsheim Bold',arial,helvetica,sans-serif !important;font-size:16px;font-style:normal;font-weight:bold;line-height:100%;">
+ Office 365 email account and timetables</h3><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ Once you&rsquo;ve activated your Hub account, you will also be able to access your Office 365 email account using your @my.bpp.com email address and password. Your email account will be used during your studies to send important information, so you should check it regularly.<br>
+ <br>
+ You can login at <a alias="www.outlook.com/my.bpp.com" conversion="false" data-linkto="http://" href="http://www.outlook.com/my.bpp.com" style="color:#3763AC;text-decoration:underline;" title="www.outlook.com/my.bpp.com">www.outlook.com/my.bpp.com</a> or by using links in The Hub. Your course timetable will also be visible as a live calendar on your Office365 calendar.</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 25px; " class="stylingblock-content-wrapper camarker-inner"><h3 style="color:#3C3C3B;font-family:'GT Walsheim Bold',arial,helvetica,sans-serif !important;font-size:16px;font-style:normal;font-weight:bold;line-height:100%;">
+ Online library resources</h3><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ Login details for BPP&rsquo;s library resources will be sent to your my.bpp.com email once you have completed the registration process for your programme.</p><h3 style="color:#3C3C3B;font-family:'GT Walsheim Bold',arial,helvetica,sans-serif !important;font-size:16px;font-style:normal;font-weight:bold;line-height:100%;">
+ Join our Virtual Campus</h3><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ Our Virtual Campus replicates the face-to-face contact you would find from social events at our locations. To get started, visit the <a alias="virtual campus" conversion="false" data-linkto="https://" href="https://community.bpp.com/" style="color:#3763AC;text-decoration:underline;" title="virtual campus">virtual campus</a>.</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 25px 70px; " class="stylingblock-content-wrapper camarker-inner"><h2 style="color:#3C3C3B;font-family:'GT Walsheim Bold',arial,helvetica,sans-serif !important;font-size:24px;font-style:normal;font-weight:bold;line-height:100%;">
+ Any queries?</h2><p style="color:#3C3C3B; font-family:'MorePro Regular',arial,helvetica,sans-serif;font-size:15px;font-style:normal;font-weight:normal;line-height:150%;">
+ If you have any queries please contact us on <a href="tel:(+44) 03300 603 850"><span style="color:#3763AC; text-decoration:underline;">03300 603 100</span></a> or <a href="http://www.bpp.com/contact-bpp" style="color:#3763AC;">via our website</a>.</p></td></tr></table></td><td valign="top" class="responsive-td" style="width: 11%; padding-left: 4px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper mobile-hidden" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 99px 0px 0px; "><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper mobile-hidden"><tr><td style="padding: 99px 6px 0px 0px; " class="stylingblock-content-wrapper mobile-hidden camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><img data-assetid="70639" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/1/75ec3032-63a6-4548-a34b-7162f64f33bf.png" width="51" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                                                      </td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr> <!-- bottom 7 slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                    <tr>
+                                      <td align="left" valign="top">
+                                        <table cellspacing="0" cellpadding="0" style="width:100%">
+                                          <tbody>
+                                          <tr>
+                                            <td class="responsive-td" valign="top" style="width: 100%;">
+                                              <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #3C3C3B; min-width: 100%; border-top: 1px solid #3C3C3B; border-right: 99px solid #3C3C3B; border-bottom: 1px solid #3C3C3B; border-left: 99px solid #3C3C3B; " class="stylingblock-content-wrapper"><tr><td style="padding: 25px 0px 5px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 25%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://www.linkedin.com/company/bpp-professional-education/" title="LinkedIn" alias="" conversion="false" data-linkto="https://"><img data-assetid="76224" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/27d9a805-72bf-439a-b161-efd78d57006d.png" alt="LinkedIn" height="20" width="20" style="display: block; padding: 0px; text-align: center; height: 20px; width: 20px; border: 0px;"></a></td></tr></table></td></tr></table></td><td valign="top" style="width: 25%; padding-left: 0px; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://twitter.com/bppprofed?lang=en" title="Twitter" alias="" conversion="false" data-linkto="https://"><img data-assetid="76222" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/d9ac1ad2-1fc8-4436-a7b3-a445612b972d.png" alt="Twitter" height="20" width="20" style="display: block; padding: 0px; text-align: center; height: 20px; width: 20px; border: 0px;"></a></td></tr></table></td></tr></table></td><td valign="top" style="width: 25%; padding-left: 0px; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://www.facebook.com/BPP/?ref=br_rs" title="Facebook" alias="" conversion="false" data-linkto="https://"><img data-assetid="76220" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/973d3544-8b9f-4639-b871-560b7fd36127.png" alt="Facebook" height="20" width="20" style="display: block; padding: 0px; text-align: center; height: 20px; width: 20px; border: 0px;"></a></td></tr></table></td></tr></table></td><td valign="top" style="width: 25%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://www.instagram.com/bpp_group/" title="Instagram" alias="" conversion="false" data-linkto="https://"><img data-assetid="76221" src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/444cd69a-4d43-430b-87d7-aba83df35a0a.png" alt="Instagram" height="20" width="20" style="display: block; padding: 0px; text-align: center; height: 20px; width: 20px; border: 0px;"></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #3C3C3B; border: 1px solid #3C3C3B; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 5px 14px 0px; " class="stylingblock-content-wrapper camarker-inner"><h3 class="footer-text" style="color:#D0D0D0 !important;font-family:'GT Walsheim Regular',arial,helvetica,sans-serif;font-size:11px;font-style:normal;font-weight:normal;line-height:150%;text-align:center;">
+ &copy; BPP Holdings Limited 2023 &ndash; Owned by private equity firm TDR<br>
+ BPP House, Aldine Place 142-144 Uxbridge Road, London, W12 8AA, Greater London,<br>
+ registered in England and Wales under company number 04546335<br>
+ <br>
+ <a alias="" conversion="false" data-linkto="https://" href="https://www.bpp.com/privacy" style="color:#D0D0D0;text-decoration:underline;" title="Privacy Policy">Privacy Policy</a></h3>&nbsp;<div style="text-align: center;">
+</div></td></tr></table>
+                                            </td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <custom type="footer" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

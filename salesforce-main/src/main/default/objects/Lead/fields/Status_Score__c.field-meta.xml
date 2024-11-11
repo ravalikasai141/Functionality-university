@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Score__c</fullName>
+    <description>Status lead score</description>
+    <externalId>false</externalId>
+    <formula>CASE( Status,
+&apos;New&apos;, 100,
+&apos;Establishing Contact&apos;, 30,
+&apos;Nurturing&apos;, -500,
+&apos;Re-engaged&apos;, 100,
+&apos;No Further Action&apos;, -2000,
+-1000 )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFID__c</fullName>
+    <description>Salesforce unique identification number for this student.</description>
+    <displayFormat>SN{0}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>Salesforce unique identification number for this student.</inlineHelpText>
+    <label>Student ID</label>
+    <trackHistory>false</trackHistory>
+    <type>AutoNumber</type>
+</CustomField>

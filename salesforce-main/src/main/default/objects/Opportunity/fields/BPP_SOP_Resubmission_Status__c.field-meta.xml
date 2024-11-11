@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_SOP_Resubmission_Status__c</fullName>
+    <description>SOP Resubmission Status pick list field in section  &quot;Credibility Assessment&quot; on the &apos;Application&apos; Opportunity Record Type</description>
+    <externalId>false</externalId>
+    <label>SOP Resubmission Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>BPP_SOP_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To Be Reviewed</fullName>
+                <default>false</default>
+                <label>To Be Reviewed</label>
+            </value>
+            <value>
+                <fullName>Reviewed and Confirmed</fullName>
+                <default>false</default>
+                <label>Reviewed and Confirmed</label>
+            </value>
+            <value>
+                <fullName>Resubmission Required</fullName>
+                <default>false</default>
+                <label>Resubmission Required</label>
+            </value>
+            <value>
+                <fullName>On-Hold</fullName>
+                <default>false</default>
+                <label>On-Hold</label>
+            </value>
+            <value>
+                <fullName>SOP Not Accepted</fullName>
+                <default>false</default>
+                <label>SOP Not Accepted</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Resubmission Required</controllingFieldValue>
+            <valueName>To Be Reviewed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resubmission Required</controllingFieldValue>
+            <valueName>Reviewed and Confirmed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resubmission Required</controllingFieldValue>
+            <valueName>Resubmission Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resubmission Required</controllingFieldValue>
+            <valueName>On-Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resubmission Required</controllingFieldValue>
+            <valueName>SOP Not Accepted</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Cycle__c</fullName>
+    <description>Student cycle sets the default mode of contact for the particular student record.  
+
+Pursue (default): Student is a potential purchaser of BPP products near-term.
+Maintenance: Student is a potential purchaser of BPP products long-term.
+No Further Action: Student is not a potential purchaser of BPP products.</description>
+    <externalId>false</externalId>
+    <label>Student Cycle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pursue</fullName>
+                <default>true</default>
+                <label>Pursue</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>No Further Action</fullName>
+                <default>false</default>
+                <label>No Further Action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

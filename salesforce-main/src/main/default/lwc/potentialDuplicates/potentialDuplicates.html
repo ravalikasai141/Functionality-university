@@ -1,0 +1,70 @@
+<template>
+    <span slot="content">
+        <template if:true={error}>
+            <h2 class="slds-text-color_error slds-text-heading_small slds-text-align_center slds-p-around_medium">
+                {error}
+            </h2>
+        </template>
+        <template if:true={isLoading}>
+            <div class="slds-p-vertical_xx-large">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <template if:false={error}>
+            <p>
+                <lightning-formatted-text value={headingText}></lightning-formatted-text>
+            </p>
+            <br />
+            <table
+                class="slds-table slds-table_cell-buffer slds-table_bordered"
+                aria-labelledby="element-with-table-label other-element-with-table-label"
+            >
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <template for:each={headings} for:item="currentHeading">
+                            <th scope="col" key={currentHeading}>
+                                <div class="slds-truncate" title={currentHeading}>{currentHeading}</div>
+                            </th>
+                        </template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={duplicateRecordData} for:item="currentRecord">
+                        <tr key={currentRecord.id} class="slds-hint-parent">
+                            <td>
+                                <div class="slds-truncate" title={currentRecord.Name}>
+                                    <a data-id={currentRecord.id} onclick={navigateToRecord}>{currentRecord.name}</a>
+                                </div>
+                            </td>
+                            <template for:each={currentRecord.fields} for:item="currentRecordField">
+                                <td key={currentRecordField}>
+                                    <div class="slds-truncate" title={currentRecordField}>{currentRecordField}</div>
+                                </td>
+                            </template>
+                            <td>
+                                <div class="slds-align_absolute-center slds-truncate">
+                                    <lightning-button
+                                        label="Use"
+                                        title="Use"
+                                        data-recordid={currentRecord.Id}
+                                        onclick={handleClick}
+                                    ></lightning-button>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <div class="slds-card__footer slds-card__footer-action slds-border_top">
+            <template if:false={error}>
+                <lightning-button
+                    class="slds-var-m-around_xx-small slds-float_right"
+                    variant="brand"
+                    onclick={handleCreateNew}
+                    label="Create New Record"
+                ></lightning-button>
+            </template>
+        </div>
+    </span>
+</template>

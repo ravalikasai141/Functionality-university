@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Line_Manager_Before_Review_Stage</fullName>
+    <active>true</active>
+    <description>Checks whether line manager is set on an application before allowing it to progress to the review stage</description>
+    <errorConditionFormula>AND
+(ISPICKVAL(StageName, &quot;Line Manager Review&quot;),RecordType.DeveloperName  = &quot;Apprentice_Application&quot;,
+ISBLANK(Line_Manager__c))</errorConditionFormula>
+    <errorDisplayField>Line_Manager__c</errorDisplayField>
+    <errorMessage>A Line manager is required before this application can be pre-approved.</errorMessage>
+</ValidationRule>

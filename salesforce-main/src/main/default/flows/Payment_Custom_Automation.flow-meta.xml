@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>No_Opportunity_Found</name>
+        <label>No Opportunity Found</label>
+        <locationX>176</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Update_Payment_with_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Opportunity Found</defaultConnectorLabel>
+        <rules>
+            <name>Opportunity_Not_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Opportunity_Record_for_the_Student</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Opportunity Not Found</label>
+        </rules>
+    </decisions>
+    <description>When a payment record is created for the same student account as the defined opportunities AND the payment is ≥£2000
+Then the payment record is associated with the opportunity with the closest programme start date.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>TodayDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Payment (Custom) Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Payment (Custom) Automation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Application_Record_Type</name>
+        <label>Get Application Record Type</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Locked_Application_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Student_Application</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Locked_Application_Record_Type</name>
+        <label>Get Locked Application Record Type</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Opportunity_Record_for_the_Student</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Locked_Application</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Opportunity with the closest Programme start date.</description>
+        <name>Get_Opportunity_Record_for_the_Student</name>
+        <label>Get Opportunity Record for the Student</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>No_Opportunity_Found</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3) AND (4 OR 5 OR 6) AND 7 AND 8</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Student__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Application_Record_Type.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Locked_Application_Record_Type.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Accepted - Conditional Firm</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Accepted - Unconditional Firm</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Accepted - Pmt Received</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Enrolment_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>First Instalment Paid</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Start_Date__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>TodayDate</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <sortField>Start_Date__c</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>The Enrolment status of the opportunity updated to First Instalment Paid.</description>
+        <name>Update_Opportunity_Enrolment_Status</name>
+        <label>Update Opportunity Enrolment Status</label>
+        <locationX>308</locationX>
+        <locationY>863</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Opportunity_Record_for_the_Student.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Enrolment_Status__c</field>
+            <value>
+                <stringValue>First Instalment Paid</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update payment record with the opportunity with the closest Programme start date.</description>
+        <name>Update_Payment_with_Opportunity</name>
+        <label>Update Payment with Opportunity</label>
+        <locationX>308</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Update_Opportunity_Enrolment_Status</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>Get_Opportunity_Record_for_the_Student.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Application_Record_Type</targetReference>
+        </connector>
+        <filterFormula>NOT(ISBLANK({!$Record.Student__c})) &amp;&amp; {!$Record.AR_Payment_Amount__c} &gt;= 2000 &amp;&amp; ISBLANK({!$Record.Opportunity__c}) &amp;&amp; {!$Setup.FlowSettings__c.Payment_Custom_Automation__c} = False</filterFormula>
+        <object>Payment__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>storeOpp</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

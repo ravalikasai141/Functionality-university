@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Debt__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check box if student is in debt</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check box if student is in debt</inlineHelpText>
+    <label>Debt</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

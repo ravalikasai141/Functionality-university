@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiate_External_Callout__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When a Booking Status is updated and an external callout is needed, if the automation updates are successful, this flag will be set to true. This will initiate any require external callouts.</description>
+    <externalId>false</externalId>
+    <label>Initiate External Callout</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

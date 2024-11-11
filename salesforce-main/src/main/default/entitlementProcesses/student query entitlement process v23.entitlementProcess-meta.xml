@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>false</active>
+    <businessHours>Working Week</businessHours>
+    <description>Entitlement process for Student Query that support agents must complete to resolve a Case</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Finance Queue</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Student finance and loans</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>Can I have a copy of my payment plan?, How can I pay my fees?, I am in financial difficulty, what are my options?, I am taking an interruption of studies, how does that affect my payment plan and fees?, When will I receive my refund?</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I have been billed for resit assessments, can I check what these are?, I would like a receipt for my most recent transaction, I would like the Student Finance Team to call me about a query I have</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I would like to dispute the balance on my account, I would like to provide feedback on my recent experience, When is my next instalment due?</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>961</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Assessments</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I have a question about my exam arrangements, I have a question about my exam learning support, I have a question about my results, I would like a copy of my transcript</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Exam Operations</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND ( (2 AND 3 AND 4) OR (5 AND 6 AND 7) )</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Graduation and Certificates</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I have a question about my graduation ceremony, I have not received my certificate, I need a replacement certificate</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Graduation Team</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Student finance and loans</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I have a question about my student loan</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>SLC Queries</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 4 AND ((3 AND 2) OR (5 AND 6) OR (7 AND 8) OR (9 AND 10))</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Business School Academic Admin</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Assessments, Graduation and Certificates, Letter requests, Online learning</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.School__c</field>
+            <operation>equals</operation>
+            <value>Business</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Attendance and Absences, Letter requests</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Business School Attendance</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Personal Tutor Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Business School Personal Tutors</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Assessments, Book an Appointment, Changes to studies or personal details, IoS (Interruption of Studies), Letter requests, Online learning, Registration and enrolment, Timetables</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Business School Programme Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND (2 AND (3 OR 4) AND 5)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Registration and enrolment, Visa</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I am an international student with a registration query, I have a question about my Visa, I need to report a problem with my Biometric Resident Permit, I want to apply for a Shengen/travel Visa</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I would like to book an appointment for Visa advice, I would like to apply for an extension of my Visa</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>International Student Advice</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2 AND ( (3 AND 4) OR (5 AND 6))</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.School__c</field>
+            <operation>equals</operation>
+            <value>Law</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Attendance and Absences, Letter requests</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Law School Attendance</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Assessments, Changes to studies or personal details, IoS (Interruption of Studies), Letter requests, Online learning, Registration and enrolment, Timetables</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Law School Programme Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.School__c</field>
+            <operation>equals</operation>
+            <value>Psychology</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Assessments, Attendance and Absences, Changes to studies or personal details, IoS (Interruption of Studies), Letter requests, Online learning, Registration and enrolment, Timetables</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Psychology School Programme Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2 AND ((3 AND 4) OR (5 AND 6) OR (7 AND 8) OR (9 AND 10) OR (11 AND 12))</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Student Records</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>IoS (Interruption of Studies)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I am on Interruption of Studies and wish to extend, I would like to apply for Interruption of Studies</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Letter requests</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>Bank, I would like a Council Tax letter, My letter details are Incorrect, Status Letter</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Lockers</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I have a question about my locker key</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Changes to studies or personal details</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>I need to change my personal details, I want to change my programme, mode or location</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Registration and enrolment</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>How do I collect my ID card?, I have a question about my Oyster card, My ID card has been lost or stolen</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.School__c</field>
+            <operation>equals</operation>
+            <value>Technology</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Technology School Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Assessments, Attendance and Absences, Changes to studies or personal details, Graduation and Certificates, IoS (Interruption of Studies), Letter requests, Online learning, Registration and enrolment, Timetables</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

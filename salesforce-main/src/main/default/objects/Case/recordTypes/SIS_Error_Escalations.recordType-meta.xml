@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIS_Error_Escalations</fullName>
+    <active>false</active>
+    <businessProcess>SIS Error Escalations</businessProcess>
+    <label>SIS Error Escalations</label>
+    <picklistValues>
+        <picklist>Bank_Name__c</picklist>
+        <values>
+            <fullName>Barclays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clydesdale Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HSBC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Halifax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lloyds Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NatWest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Royal Bank of Scotland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TSB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Co-Operative Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yorkshire Bank</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CS_External_Handover_Department__c</picklist>
+        <values>
+            <fullName>AAT General Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications Support %28IT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apprenticeship Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Services Manchester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Course Set Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTL LM Sales Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Support Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Key Client Team London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LM Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marking Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Materials Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE LM Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Centre Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ HOP%2FFaculty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Support Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QV Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Direct Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Examinations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni INTL Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Enrolment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLE Support Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %26 Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IOS_Approval_Status__c</picklist>
+        <values>
+            <fullName>Finance%2FStudy Visa Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance%2FStudy Visa Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Programme Support Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Programme Support Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IOS_Form_Received__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Internal_department__c</picklist>
+        <values>
+            <fullName>AAT General Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications Support %28IT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apprenticeship Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Services Manchester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Course Set Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTL LM Sales Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Support Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Key Client Team London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LM Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marking Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Materials Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE LM Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Centre Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ HOP%2FFaculty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Support Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QV Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Direct Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Examinations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni INTL Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Enrolment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLE Support Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Query_Subtype__c</picklist>
+        <values>
+            <fullName>Authorised Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPP Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Warning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Query_Type__c</picklist>
+        <values>
+            <fullName>IoS %28Interruption of Studies%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Assignment__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Release_Type__c</picklist>
+        <values>
+            <fullName>BAU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaged Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>School__c</picklist>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Study_Location__c</picklist>
+        <values>
+            <fullName>Birmingham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bristol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doncaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28City%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Holborn%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Shepherd%27s Bush%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Waterloo%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manchester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

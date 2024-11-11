@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_been_paid_a_care_leavers_bursary_QA__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;I confirm that I have been paid a care leavers bursary before and am not eligible for this payment again:&quot; +
+BR() + BR() +
+IF(
+  Has_been_paid_a_care_leavers_bursary__c = true,
+  &apos;Yes&apos;,
+  &apos;No&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has been paid a care leavers bursary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

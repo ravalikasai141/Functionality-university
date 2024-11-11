@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Curriculum_Campus_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Curriculum Campus Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SFDC_Curriculum_Level_Code_Select__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ABI~ Abingdon</fullName>
+                <default>false</default>
+                <label>ABI~ Abingdon</label>
+            </value>
+            <value>
+                <fullName>AMS~ Amsterdam</fullName>
+                <default>false</default>
+                <label>AMS~ Amsterdam</label>
+            </value>
+            <value>
+                <fullName>BIR~ Birmingham</fullName>
+                <default>false</default>
+                <label>BIR~ Birmingham</label>
+            </value>
+            <value>
+                <fullName>BRI~ Bristol</fullName>
+                <default>false</default>
+                <label>BRI~ Bristol</label>
+            </value>
+            <value>
+                <fullName>CAM~ Cambridge</fullName>
+                <default>false</default>
+                <label>CAM~ Cambridge</label>
+            </value>
+            <value>
+                <fullName>CRO~ Croydon</fullName>
+                <default>false</default>
+                <label>CRO~ Croydon</label>
+            </value>
+            <value>
+                <fullName>DUB~ Dublin</fullName>
+                <default>false</default>
+                <label>DUB~ Dublin</label>
+            </value>
+            <value>
+                <fullName>LIV~ Liverpool</fullName>
+                <default>false</default>
+                <label>LIV~ Liverpool</label>
+            </value>
+            <value>
+                <fullName>LKX~ London - Kings Cross</fullName>
+                <default>false</default>
+                <label>LKX~ London - Kings Cross</label>
+            </value>
+            <value>
+                <fullName>LLC~ London - London City</fullName>
+                <default>false</default>
+                <label>LLC~ London - London City</label>
+            </value>
+            <value>
+                <fullName>LPR~ Leeds - Park Row</fullName>
+                <default>false</default>
+                <label>LPR~ Leeds - Park Row</label>
+            </value>
+            <value>
+                <fullName>LRL~ London - Red Lion Street</fullName>
+                <default>false</default>
+                <label>LRL~ London - Red Lion Street</label>
+            </value>
+            <value>
+                <fullName>LSB~ London - Shepherds Bush</fullName>
+                <default>false</default>
+                <label>LSB~ London - Shepherds Bush</label>
+            </value>
+            <value>
+                <fullName>LWL~ London - Waterloo</fullName>
+                <default>false</default>
+                <label>LWL~ London - Waterloo</label>
+            </value>
+            <value>
+                <fullName>LWQ~ Leeds - Whitehall Quay</fullName>
+                <default>false</default>
+                <label>LWQ~ Leeds - Whitehall Quay</label>
+            </value>
+            <value>
+                <fullName>MK~ Milton Keynes</fullName>
+                <default>false</default>
+                <label>MK~ Milton Keynes</label>
+            </value>
+            <value>
+                <fullName>MSJ~ Manchester - St James</fullName>
+                <default>false</default>
+                <label>MSJ~ Manchester - St James</label>
+            </value>
+            <value>
+                <fullName>NEC~ Newcastle</fullName>
+                <default>false</default>
+                <label>NEC~ Newcastle</label>
+            </value>
+            <value>
+                <fullName>NOT~ Nottingham</fullName>
+                <default>false</default>
+                <label>NOT~ Nottingham</label>
+            </value>
+            <value>
+                <fullName>SWI~ Swindon</fullName>
+                <default>false</default>
+                <label>SWI~ Swindon</label>
+            </value>
+            <value>
+                <fullName>VIR~ Virtual</fullName>
+                <default>false</default>
+                <label>VIR~ Virtual</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>L3~ Level 3</controllingFieldValue>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>ABI~ Abingdon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>L3~ Level 3</controllingFieldValue>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>MSJ~ Manchester - St James</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>BIR~ Birmingham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>BRI~ Bristol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>CAM~ Cambridge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>LIV~ Liverpool</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>LLC~ London - London City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <valueName>LPR~ Leeds - Park Row</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>LRL~ London - Red Lion Street</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>LWL~ London - Waterloo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>LWQ~ Leeds - Whitehall Quay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PG~ Postgraduate</controllingFieldValue>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>SWI~ Swindon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UG~ Undergraduate</controllingFieldValue>
+            <valueName>LSB~ London - Shepherds Bush</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

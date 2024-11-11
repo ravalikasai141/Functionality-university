@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CS_External_Handover_Department__c</fullName>
+    <externalId>false</externalId>
+    <label>External Handover Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AAT General Team</fullName>
+                <default>false</default>
+                <label>AAT General Team</label>
+            </value>
+            <value>
+                <fullName>Applications Support (IT)</fullName>
+                <default>false</default>
+                <label>Applications Support (IT)</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship Team</fullName>
+                <default>false</default>
+                <label>Apprenticeship Team</label>
+            </value>
+            <value>
+                <fullName>Client Services Manchester</fullName>
+                <default>false</default>
+                <label>Client Services Manchester</label>
+            </value>
+            <value>
+                <fullName>Course Set Up</fullName>
+                <default>false</default>
+                <label>Course Set Up</label>
+            </value>
+            <value>
+                <fullName>Credit Control</fullName>
+                <default>false</default>
+                <label>Credit Control</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Direct Sales</fullName>
+                <default>false</default>
+                <label>Direct Sales</label>
+            </value>
+            <value>
+                <fullName>INTL LM Sales Team</fullName>
+                <default>false</default>
+                <label>INTL LM Sales Team</label>
+            </value>
+            <value>
+                <fullName>IT Support Desk</fullName>
+                <default>false</default>
+                <label>IT Support Desk</label>
+            </value>
+            <value>
+                <fullName>Key Client Team London</fullName>
+                <default>false</default>
+                <label>Key Client Team London</label>
+            </value>
+            <value>
+                <fullName>Learning Support</fullName>
+                <default>false</default>
+                <label>Learning Support</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Live Team</fullName>
+                <default>false</default>
+                <label>Live Team</label>
+            </value>
+            <value>
+                <fullName>LM Ops</fullName>
+                <default>false</default>
+                <label>LM Ops</label>
+            </value>
+            <value>
+                <fullName>Marking Team</fullName>
+                <default>false</default>
+                <label>Marking Team</label>
+            </value>
+            <value>
+                <fullName>Materials Distribution</fullName>
+                <default>false</default>
+                <label>Materials Distribution</label>
+            </value>
+            <value>
+                <fullName>PD Ops</fullName>
+                <default>false</default>
+                <label>PD Ops</label>
+            </value>
+            <value>
+                <fullName>PE LM Accounts</fullName>
+                <default>false</default>
+                <label>PE LM Accounts</label>
+            </value>
+            <value>
+                <fullName>Performance Support Team</fullName>
+                <default>false</default>
+                <label>Performance Support Team</label>
+            </value>
+            <value>
+                <fullName>PQ Centre Staff</fullName>
+                <default>false</default>
+                <label>PQ Centre Staff</label>
+            </value>
+            <value>
+                <fullName>PQ HOP/Faculty</fullName>
+                <default>false</default>
+                <label>PQ HOP/Faculty</label>
+            </value>
+            <value>
+                <fullName>PQ Operations</fullName>
+                <default>false</default>
+                <label>PQ Operations</label>
+            </value>
+            <value>
+                <fullName>QV Team</fullName>
+                <default>false</default>
+                <label>QV Team</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Uni Direct Admissions</fullName>
+                <default>false</default>
+                <label>Uni Direct Admissions</label>
+            </value>
+            <value>
+                <fullName>Uni Examinations</fullName>
+                <default>false</default>
+                <label>Uni Examinations</label>
+            </value>
+            <value>
+                <fullName>Uni INTL Admissions</fullName>
+                <default>false</default>
+                <label>Uni INTL Admissions</label>
+            </value>
+            <value>
+                <fullName>Uni Student Enrolment</fullName>
+                <default>false</default>
+                <label>Uni Student Enrolment</label>
+            </value>
+            <value>
+                <fullName>Uni Student Finance</fullName>
+                <default>false</default>
+                <label>Uni Student Finance</label>
+            </value>
+            <value>
+                <fullName>Uni Student Records</fullName>
+                <default>false</default>
+                <label>Uni Student Records</label>
+            </value>
+            <value>
+                <fullName>VLE Support Team</fullName>
+                <default>false</default>
+                <label>VLE Support Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

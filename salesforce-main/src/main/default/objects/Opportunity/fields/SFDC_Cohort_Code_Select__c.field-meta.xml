@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Cohort_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Cohort Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>C1~ Cohort January</fullName>
+                <default>false</default>
+                <label>C1~ Cohort January</label>
+            </value>
+            <value>
+                <fullName>C2~ Cohort February</fullName>
+                <default>false</default>
+                <label>C2~ Cohort February</label>
+            </value>
+            <value>
+                <fullName>C3~ Cohort March</fullName>
+                <default>false</default>
+                <label>C3~ Cohort March</label>
+            </value>
+            <value>
+                <fullName>C4~ Cohort April</fullName>
+                <default>false</default>
+                <label>C4~ Cohort April</label>
+            </value>
+            <value>
+                <fullName>C5~ Cohort May</fullName>
+                <default>false</default>
+                <label>C5~ Cohort May</label>
+            </value>
+            <value>
+                <fullName>C6~ Cohort June</fullName>
+                <default>false</default>
+                <label>C6~ Cohort June</label>
+            </value>
+            <value>
+                <fullName>C7~ Cohort July</fullName>
+                <default>false</default>
+                <label>C7~ Cohort July</label>
+            </value>
+            <value>
+                <fullName>C8~ Cohort August</fullName>
+                <default>false</default>
+                <label>C8~ Cohort August</label>
+            </value>
+            <value>
+                <fullName>C9~ Cohort September</fullName>
+                <default>false</default>
+                <label>C9~ Cohort September</label>
+            </value>
+            <value>
+                <fullName>C10~ Cohort October</fullName>
+                <default>false</default>
+                <label>C10~ Cohort October</label>
+            </value>
+            <value>
+                <fullName>C11~ Cohort November</fullName>
+                <default>false</default>
+                <label>C11~ Cohort November</label>
+            </value>
+            <value>
+                <fullName>C12~ Cohort December</fullName>
+                <default>false</default>
+                <label>C12~ Cohort December</label>
+            </value>
+            <value>
+                <fullName>S1~ SLC May</fullName>
+                <default>false</default>
+                <label>S1~ SLC May</label>
+            </value>
+            <value>
+                <fullName>S2~ SLC Sep</fullName>
+                <default>false</default>
+                <label>S2~ SLC Sep</label>
+            </value>
+            <value>
+                <fullName>S3~ SLC Jan</fullName>
+                <default>false</default>
+                <label>S3~ SLC Jan</label>
+            </value>
+            <value>
+                <fullName>H1~ HESA 11/12</fullName>
+                <default>false</default>
+                <label>H1~ HESA 11/12</label>
+            </value>
+            <value>
+                <fullName>H2~ HESA 12/13</fullName>
+                <default>false</default>
+                <label>H2~ HESA 12/13</label>
+            </value>
+            <value>
+                <fullName>H3~ HESA 13/14</fullName>
+                <default>false</default>
+                <label>H3~ HESA 13/14</label>
+            </value>
+            <value>
+                <fullName>H4~ HESA 14/15</fullName>
+                <default>false</default>
+                <label>H4~ HESA 14/15</label>
+            </value>
+            <value>
+                <fullName>H5~ HESA 15/16</fullName>
+                <default>false</default>
+                <label>H5~ HESA 15/16</label>
+            </value>
+            <value>
+                <fullName>H6~ HESA 16/17</fullName>
+                <default>false</default>
+                <label>H6~ HESA 16/17</label>
+            </value>
+            <value>
+                <fullName>H7~ HESA 17/18</fullName>
+                <default>false</default>
+                <label>H7~ HESA 17/18</label>
+            </value>
+            <value>
+                <fullName>H8~ HESA 18/19</fullName>
+                <default>false</default>
+                <label>H8~ HESA 18/19</label>
+            </value>
+            <value>
+                <fullName>H9~ HESA 19/20</fullName>
+                <default>false</default>
+                <label>H9~ HESA 19/20</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

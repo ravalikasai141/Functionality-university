@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>myRule_32_A1</name>
+        <label>Post Physical Dispatch Actions</label>
+        <locationX>924</locationX>
+        <locationY>2963</locationY>
+        <actionName>StockDispatch</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>idList</name>
+            <value>
+                <elementReference>formula_10_myRule_32_A1_7071217797</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Country_is_UK</name>
+        <label>Country is UK?</label>
+        <locationX>182</locationX>
+        <locationY>1139</locationY>
+        <defaultConnector>
+            <targetReference>Get_None_United_Kingdom_Courier</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Country__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>United Kingdom</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_United_Kingdom_Courier</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_1</name>
+        <label>Populate E-Delivery Email (Creation Only)</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>myRule_4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Populate E-Delivery Email (Creation Only)</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>TRUE_Populate E-Delivery Email (Creation Only)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_12</name>
+        <label>Destination Country Change</label>
+        <locationX>380</locationX>
+        <locationY>1031</locationY>
+        <defaultConnector>
+            <targetReference>myRule_15</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Destination Country Change</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_12</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_12</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Country_is_UK</targetReference>
+            </connector>
+            <label>TRUE_Destination Country Change</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_15</name>
+        <label>Booking Line Update</label>
+        <locationX>380</locationX>
+        <locationY>1631</locationY>
+        <defaultConnector>
+            <targetReference>myRule_17</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Booking Line Update</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_15</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_15</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_15_A1</targetReference>
+            </connector>
+            <label>TRUE_Booking Line Update</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_17</name>
+        <label>Stock Site Changed</label>
+        <locationX>380</locationX>
+        <locationY>1931</locationY>
+        <defaultConnector>
+            <targetReference>myRule_19</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Stock Site Changed</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_17</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_17</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_17_A1</targetReference>
+            </connector>
+            <label>TRUE_Stock Site Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_19</name>
+        <label>Awaiting Allocation - Don&apos;t Allocate Stock</label>
+        <locationX>380</locationX>
+        <locationY>2231</locationY>
+        <defaultConnector>
+            <targetReference>myRule_23</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Awaiting Allocation - Don&apos;t Allocate Stock</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_19</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_19</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_19_A1</targetReference>
+            </connector>
+            <label>TRUE_Awaiting Allocation - Don&apos;t Allocate Stock</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_23</name>
+        <label>Awaiting Allocation - Allocate Stock</label>
+        <locationX>627</locationX>
+        <locationY>2339</locationY>
+        <defaultConnector>
+            <targetReference>myRule_25</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Awaiting Allocation - Allocate Stock</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_23</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_TRUE_myRule_23</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_23_A1</targetReference>
+            </connector>
+            <label>TRUE_Awaiting Allocation - Allocate Stock</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_25</name>
+        <label>Sent for Fulfilment</label>
+        <locationX>858</locationX>
+        <locationY>2447</locationY>
+        <defaultConnector>
+            <targetReference>myRule_29</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Sent for Fulfilment</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_25</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Delivery_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent for Fulfilment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_25_A1</targetReference>
+            </connector>
+            <label>TRUE_Sent for Fulfilment</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_29</name>
+        <label>LM Delivery Sent for Fulfilment</label>
+        <locationX>858</locationX>
+        <locationY>2747</locationY>
+        <defaultConnector>
+            <targetReference>myRule_32</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_LM Delivery Sent for Fulfilment</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_29</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Delivery_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent for Fulfilment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Order_Product__r.Order.Booking_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Learning Media Only</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_29_A1</targetReference>
+            </connector>
+            <label>TRUE_LM Delivery Sent for Fulfilment</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_32</name>
+        <label>Physical Delivery Dispatched</label>
+        <locationX>1056</locationX>
+        <locationY>2855</locationY>
+        <defaultConnectorLabel>FALSE_Physical Delivery Dispatched</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_32</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Delivery_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Dispatched</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Physical Delivery</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_32_A1</targetReference>
+            </connector>
+            <label>TRUE_Physical Delivery Dispatched</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_4</name>
+        <label>Delivery Address Updated</label>
+        <locationX>380</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>myRule_12</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Delivery Address Updated</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_4</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Physical Delivery</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Delivered_to_BPP_Address__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Delivered_to_Customer_Address__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_4_A1</targetReference>
+            </connector>
+            <label>TRUE_Delivery Address Updated</label>
+        </rules>
+    </decisions>
+    <description>Migrated from the Delivery Updates process using multiple criteria.
+Automation for the Delivery object</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_10_myRule_32_A1_7071217797</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Id}  &amp; &quot;,&quot; &amp; {!$Record.Stock_Management__r.Id}</expression>
+    </formulas>
+    <formulas>
+        <name>formula_1_myRule_1_A1_8646397015</name>
+        <dataType>String</dataType>
+        <expression>IF({!$Record.Account__r.IsPersonAccount} = True,
+{!$Record.Account__r.PersonEmail},
+{!$Record.Account__r.Company_Email__c})</expression>
+    </formulas>
+    <formulas>
+        <name>formula_2_myRule_4_A2_2725216471</name>
+        <dataType>String</dataType>
+        <expression>If( {!$Record.Delivered_to_Customer_Address__r.Student__r.IsPersonAccount}  = True,
+{!$Record.Delivered_to_Customer_Address__r.Student__r.PersonEmail},
+{!$Record.Delivered_to_Customer_Address__r.Student__r.BPP_Deliver_To_Contact__r.Email} 
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_3_myRule_4_A2_1145118268</name>
+        <dataType>String</dataType>
+        <expression>If( {!$Record.Delivered_to_Customer_Address__r.Student__r.IsPersonAccount}  = True,
+{!$Record.Delivered_to_Customer_Address__r.Student__r.Phone},
+{!$Record.Delivered_to_Customer_Address__r.Student__r.BPP_Deliver_To_Contact__r.Phone}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_4_myRule_4_A2_8646971921</name>
+        <dataType>String</dataType>
+        <expression>If( {!$Record.Delivered_to_Customer_Address__r.Student__r.IsPersonAccount}  = True,
+{!$Record.Delivered_to_Customer_Address__r.Student__r.FirstName} &amp; &quot; &quot; &amp; {!$Record.Delivered_to_Customer_Address__r.Student__r.LastName},
+{!$Record.Delivered_to_Customer_Address__r.Student__r.BPP_Deliver_To_Contact__r.FirstName} &amp; &quot; &quot; &amp; {!$Record.Delivered_to_Customer_Address__r.Student__r.BPP_Deliver_To_Contact__r.LastName}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_5_myRule_4_A1_0467797223</name>
+        <dataType>String</dataType>
+        <expression>If( {!$Record.Account__r.IsPersonAccount} = True,
+{!$Record.Account__r.FirstName} &amp; &quot; &quot; &amp; {!$Record.Account__r.LastName},
+{!$Record.Account__r.BPP_Deliver_To_Contact__r.FirstName} &amp; &quot; &quot; &amp; {!$Record.Account__r.BPP_Deliver_To_Contact__r.LastName}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_6_myRule_12_A1_7699029719</name>
+        <dataType>String</dataType>
+        <expression>IF(AND(ISBLANK({!$Record.Delivered_to_BPP_Address__c}), NOT(ISBLANK({!$Record.Delivered_to_Customer_Address__r.Student__r.Preferred_Courier__c} 
+))), {!$Record.Delivered_to_Customer_Address__r.Student__r.Preferred_Courier__c},
+IF(NOT(ISBLANK({!$Record.Country__r.Id})), IF({!$Record.Country__r.Name} = &quot;United Kingdom&quot;, {!Get_United_Kingdom_Courier.Id}, {!Get_None_United_Kingdom_Courier.Id}), NULL))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_7_myRule_19_A1_1191342894</name>
+        <dataType>DateTime</dataType>
+        <expression>IF( ISBLANK( {!$Record.Awaiting_Allocation_Date__c} ),
+NOW(),
+{!$Record.Awaiting_Allocation_Date__c} )</expression>
+    </formulas>
+    <formulas>
+        <name>formula_8_myRule_19_A1_1749029034</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Stock_Management_Id__c}</expression>
+    </formulas>
+    <formulas>
+        <name>formula_9_myRule_25_A1_5485223237</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW() &amp;&amp; {!$Record.RecordType.Name} = &apos;E-Delivery&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_12</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ISCHANGED({!$Record.Country__c}),
+ISNEW() &amp;&amp; ISBLANK({!$Record.Courier__c} )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_15</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW() || ISCHANGED( {!$Record.Booking_Line__c} )</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_17</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ISNEW() &amp;&amp; NOT( ISBLANK( {!$Record.Stock_Site__c} )),
+ISCHANGED( {!$Record.Stock_Site__c} )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_19</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ISNEW(),
+ISCHANGED( {!$Record.Delivery_Status__c} ))
+&amp;&amp; 
+ISPICKVAL({!$Record.Delivery_Status__c} , &apos;Awaiting Allocation&apos;) &amp;&amp; 
+{!$Record.Auto_Allocate__c} = FALSE &amp;&amp; 
+NOT( ISCHANGED( {!$Record.Allocation_Attempts__c} ))</expression>
+    </formulas>
+    <formulas>
+        <name>formula_TRUE_myRule_23</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ISNEW(),
+ISCHANGED( {!$Record.Delivery_Status__c} ),
+ISCHANGED( {!$Record.Auto_Allocate__c} ))
+&amp;&amp; 
+ISPICKVAL({!$Record.Delivery_Status__c} , &apos;Awaiting Allocation&apos;) &amp;&amp; 
+{!$Record.Auto_Allocate__c} = TRUE &amp;&amp; 
+NOT( ISCHANGED( {!$Record.Allocation_Attempts__c} ))</expression>
+    </formulas>
+    <label>Delivery Updates_1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_None_United_Kingdom_Courier</name>
+        <label>Get None United Kingdom Courier</label>
+        <locationX>314</locationX>
+        <locationY>1247</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>myRule_12_A1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>DPD International Courier - Non UK</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Courier__c</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_United_Kingdom_Courier</name>
+        <label>Get United Kingdom Courier</label>
+        <locationX>50</locationX>
+        <locationY>1247</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>myRule_12_A1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>DPD UK Standard</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Courier__c</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>myRule_12_A1</name>
+        <label>Update Courier</label>
+        <locationX>182</locationX>
+        <locationY>1439</locationY>
+        <connector>
+            <targetReference>myRule_15</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Courier__c</field>
+            <value>
+                <elementReference>formula_6_myRule_12_A1_7699029719</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_15_A1</name>
+        <label>Set Booking Line Delivery Lookup</label>
+        <locationX>248</locationX>
+        <locationY>1739</locationY>
+        <connector>
+            <targetReference>myRule_17</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Delivery__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Booking_Line__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_19_A1</name>
+        <label>Enable Future Stock Allocation</label>
+        <locationX>132</locationX>
+        <locationY>2339</locationY>
+        <inputAssignments>
+            <field>Awaiting_Allocation_Date__c</field>
+            <value>
+                <elementReference>formula_7_myRule_19_A1_1191342894</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stock_Management__c</field>
+            <value>
+                <elementReference>formula_8_myRule_19_A1_1749029034</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_1_A1</name>
+        <label>Set Email Address</label>
+        <locationX>248</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>myRule_4</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Email__c</field>
+            <value>
+                <elementReference>formula_1_myRule_1_A1_8646397015</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_25_A1</name>
+        <label>Sent for Fulfilment Date</label>
+        <locationX>726</locationX>
+        <locationY>2555</locationY>
+        <connector>
+            <targetReference>myRule_29</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Sent_for_Fulfilment_On__c</field>
+            <value>
+                <elementReference>formula_9_myRule_25_A1_5485223237</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_29_A1</name>
+        <label>Release On Hold Billing</label>
+        <locationX>660</locationX>
+        <locationY>2855</locationY>
+        <inputAssignments>
+            <field>blng__HoldBilling__c</field>
+            <value>
+                <stringValue>No</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Order_Product__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_4_A1</name>
+        <label>Populate BPP Address</label>
+        <locationX>248</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>myRule_4_A2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Delivered_to_BPP_Address__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Address_Line_1__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_BPP_Address__r.Address_1__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Address_Line_2__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_BPP_Address__r.Address_2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Address_Line_3__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_BPP_Address__r.Address_3__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_BPP_Address__r.City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Country__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_BPP_Address__r.Country__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Delivery_Instructions__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Postal_Code__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_BPP_Address__r.Postal_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Recipient_Name__c</field>
+            <value>
+                <elementReference>formula_5_myRule_4_A1_0467797223</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_4_A2</name>
+        <label>Populate Customer Address</label>
+        <locationX>248</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>myRule_12</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Delivered_to_Customer_Address__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Address_Line_1__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.Street_1__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Address_Line_2__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.Street_2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Address_Line_3__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.Street_3__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>City__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Country__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.Lookup_Country__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Delivery_Instructions__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.Delivery_Instructions__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email__c</field>
+            <value>
+                <elementReference>formula_2_myRule_4_A2_2725216471</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone__c</field>
+            <value>
+                <elementReference>formula_3_myRule_4_A2_1145118268</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Postal_Code__c</field>
+            <value>
+                <elementReference>$Record.Delivered_to_Customer_Address__r.Zip_Postal_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Recipient_Name__c</field>
+            <value>
+                <elementReference>formula_4_myRule_4_A2_8646971921</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>myRule_1</targetReference>
+        </connector>
+        <object>Delivery__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>myRule_17_A1</name>
+        <label>Reassign Stock Management Info</label>
+        <locationX>248</locationX>
+        <locationY>2039</locationY>
+        <connector>
+            <targetReference>myRule_19</targetReference>
+        </connector>
+        <flowName>Delivery_Stock_Site_Assign_Stock_Management</flowName>
+        <inputAssignments>
+            <name>varDeliveryId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>myRule_23_A1</name>
+        <label>Request Stock Allocation</label>
+        <locationX>396</locationX>
+        <locationY>2447</locationY>
+        <flowName>Delivery_Stock_Management_Requests</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varRequestedFunction</name>
+            <value>
+                <stringValue>StockAllocation</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

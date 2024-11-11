@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Subsource_Recent__c</fullName>
+    <description>This field has been introduced due to the integration with Eloqua. This has prompted a change in business process for Leads - only 1 unique (email) Lead is allowed. This field has been added to compliment the Lead Subource - containing the original lead subsource value, this field will be updated with the most recent lead subsource information.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the most recent lead subsource</inlineHelpText>
+    <label>Lead Subsource - Recent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquisition Callback</fullName>
+                <default>false</default>
+                <label>Acquisition Callback</label>
+            </value>
+            <value>
+                <fullName>Education Liason</fullName>
+                <default>false</default>
+                <label>Education Liason</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Fair</fullName>
+                <default>false</default>
+                <label>Fair</label>
+            </value>
+            <value>
+                <fullName>Incoming Call</fullName>
+                <default>false</default>
+                <label>Incoming Call</label>
+            </value>
+            <value>
+                <fullName>Incoming Email</fullName>
+                <default>false</default>
+                <label>Incoming Email</label>
+            </value>
+            <value>
+                <fullName>Incoming Mail</fullName>
+                <default>false</default>
+                <label>Incoming Mail</label>
+            </value>
+            <value>
+                <fullName>International Agents</fullName>
+                <default>false</default>
+                <label>International Agents</label>
+            </value>
+            <value>
+                <fullName>Lead Forensics</fullName>
+                <default>false</default>
+                <label>Lead Forensics</label>
+            </value>
+            <value>
+                <fullName>Live Chat</fullName>
+                <default>false</default>
+                <label>Live Chat</label>
+            </value>
+            <value>
+                <fullName>Open Day</fullName>
+                <default>false</default>
+                <label>Open Day</label>
+            </value>
+            <value>
+                <fullName>Other Events</fullName>
+                <default>false</default>
+                <label>Other Events</label>
+            </value>
+            <value>
+                <fullName>Other Salesforce Lead</fullName>
+                <default>false</default>
+                <label>Other Salesforce Lead</label>
+            </value>
+            <value>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+                <label>Outbound Call</label>
+            </value>
+            <value>
+                <fullName>Round Table</fullName>
+                <default>false</default>
+                <label>Round Table</label>
+            </value>
+            <value>
+                <fullName>Unbounce</fullName>
+                <default>false</default>
+                <label>Unbounce</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AddressHistoryRecipientList</fullName>
+        <categories>apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AddressHistoryRecipientList</shortDescription>
+        <value>davidlovejoy@bpp.com;danhughes@bpp.com;liammcneilis@bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>Automated_System_User_Id</fullName>
+        <categories>flow, process builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Automated System User Id</shortDescription>
+        <value>0050X0000079SL9QAM</value>
+    </labels>
+    <labels>
+        <fullName>BATCH_Error_Message</fullName>
+        <categories>BATCH</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BATCH Error Message</shortDescription>
+        <value>On record Id {0}  following error occurred: {1}</value>
+    </labels>
+    <labels>
+        <fullName>BATCH_Error_Message_header</fullName>
+        <categories>BATCH</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BATCH Error Message header</shortDescription>
+        <value>The following error(s) occurred during the {0}:</value>
+    </labels>
+    <labels>
+        <fullName>BATCH_Error_no_reply</fullName>
+        <categories>BATCH</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BATCH Error no reply</shortDescription>
+        <value>Don&apos;t reply to this email.</value>
+    </labels>
+    <labels>
+        <fullName>BATCH_Process_Name</fullName>
+        <categories>BATCH</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BATCH Process Name</shortDescription>
+        <value>Booking Line Batch processing</value>
+    </labels>
+    <labels>
+        <fullName>BPP_Student_Queries_orgId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BPP Student Queries orgId</shortDescription>
+        <value>0D20X0000008R8nSAE</value>
+    </labels>
+    <labels>
+        <fullName>BR_DNB</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BR_DNB</shortDescription>
+        <value>a4C67000000D0j2EAC</value>
+    </labels>
+    <labels>
+        <fullName>CAS_Sponsership</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CAS_Sponsorship_OrgId</shortDescription>
+        <value>0D267000000PDUgCAO</value>
+    </labels>
+    <labels>
+        <fullName>CancelButton</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>CasExportRecipientList</fullName>
+        <categories>apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CasExportRecipientList</shortDescription>
+        <value>davidlovejoy@bpp.com;adamcoll@bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>Courier_International</fullName>
+        <categories>Process Builder, Flow, Validation Rules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Courier - International</shortDescription>
+        <value>a5F670000007ASLEA2</value>
+    </labels>
+    <labels>
+        <fullName>Courier_UK</fullName>
+        <categories>Process Builder, Flow, Validation Rules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Courier - UK</shortDescription>
+        <value>a5F670000007ASJEA2</value>
+    </labels>
+    <labels>
+        <fullName>DeactivatedUserRoleReassignment</fullName>
+        <categories>apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeactivatedUserRoleReassignment</shortDescription>
+        <value>APAC Commercial;BD Sales Manager;BD Sales User;Channel Islands;Client Services Manager;Client Services User;Customer Service Mgmt;Customer Service;Admissions Mgmt;Admissions;International Mgmt;International;PD Team;Qualifying Centre Mgmt;Qualifying Centre;Relationship Managers;Sales Mgmt;Sales Team</value>
+    </labels>
+    <labels>
+        <fullName>Default_QC_Lead_Owner</fullName>
+        <categories>flow, process builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default QC Lead Owner</shortDescription>
+        <value>005b0000002CqHoAAK</value>
+    </labels>
+    <labels>
+        <fullName>Default_Stock_Site</fullName>
+        <categories>flow, process builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default Stock Site</shortDescription>
+        <value>a5L67000000Q7D6EAK</value>
+    </labels>
+    <labels>
+        <fullName>DeliveryUpdateUsers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DeliveryUpdateUsers</shortDescription>
+        <value>josimon@bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>IntegrationUserIds</fullName>
+        <categories>apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IntegrationUserIds</shortDescription>
+        <value>005b0000000nlwx;005b0000001rzUG;0050X000009OTiKQAW;005b0000006V2VSAA0</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Pool_Id</fullName>
+        <categories>flow, process builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Pool Id</shortDescription>
+        <value>00Gb0000000ofxTEAQ</value>
+    </labels>
+    <labels>
+        <fullName>Legal_Entity_LEM</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Legal Entity - LEM</shortDescription>
+        <value>a4a670000005BrlAAE</value>
+    </labels>
+    <labels>
+        <fullName>Legal_Entity_PED</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Legal Entity - PED</shortDescription>
+        <value>a4a670000005BrmAAE</value>
+    </labels>
+    <labels>
+        <fullName>LoginHisoryExclusionList</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoginHisoryExclusionList</shortDescription>
+        <value>admin@noah_crm_bpp.com;alexandrustan@noah_crm_bpp.com;alexkostalas@noah_crm_bpp.com;ancafaget@noah_crm_bpp.com;andrapetrescu@noah_crm_bpp.com;application@noah_crm_bpp.com;automatedcase@00db0000000z8frea0.ext;autoproc@00db0000000z8frea0;autosystemuser@noah_crm_bpp.com;booking@noah_crm_bpp.com;bpp_app_dev_team@noah_crm.bpp.com;bpp_dndirector@noah_crm_bpp.com;bpp_dq@noah_crm_bpp.com;bpp_help_centre@bpphelpcentre.force.com;bpp_informatica@bpp_noah_bpp.com;chatty.expert@chatter.salesforce.com;cloud@00db0000000z8frea0;constantaantonescu@noah_crm_bpp.com;cscasemanagement@bpp-13fd3e55188.force.com;danielabogdan@noah_crm_bpp.com;danieltulbure@noah_crm_bpp.com;davidlovejoy@noah_crm_bpp.com;duplicateopportunities@bpp.com;etl@noah_crm_bpp.com;fowziajaved@noah_crm_bpp.com;iasminacretu@bpp.com;insightsintegration@00db0000000z8frea0.ext;integrations@noah_crm_bpp.com;kevinburton@noah_crm_bpp.com;lauramagdau@noah_crm_bpp.com;marketingcloud@noah_crm_bpp.com;matthewconlon@noah_crm_bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>LoginHisoryExclusionList2</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoginHisoryExclusionList2</shortDescription>
+        <value>microsite@noah_crm_bpp.com;middleware@noah_crm_bpp.com;mohsinali@noah_crm_bpp.com;neilsteward@noah_crm_bpp.com;neptune@noah_crm_bpp.com;nvmcontactworld@noah_crm_bpp.com;rfi@noah_crm_bpp.com;studyvisas@noah_crm_bpp.com;svc_prodbot1@noah_crm_bpp.com;svc_uatbot1@noah_crm_bpp.com;swayanpravasahoo@noah_crm_bpp.com;syncbatch.user@noah_crm_bpp.com;thankyou@bpp-13fd3e55188.force.com</value>
+    </labels>
+    <labels>
+        <fullName>LoginHisoryRecipientList</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LoginHisoryRecipientList</shortDescription>
+        <value>davidlovejoy@bpp.com;neilsteward@bpp.com;matthewconlon@bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>OrderHelperRecipientList</fullName>
+        <categories>apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrderHelperRecipientList</shortDescription>
+        <value>davidlovejoy@bpp.com;matthewconlon@bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>RR_0</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RR_0</shortDescription>
+        <value>a4v67000000DOCZAA4</value>
+    </labels>
+    <labels>
+        <fullName>RR_3</fullName>
+        <categories>Apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RR_3</shortDescription>
+        <value>a4v67000000DOADAA4</value>
+    </labels>
+    <labels>
+        <fullName>SOPReportRecipientList</fullName>
+        <categories>apex</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SOPReportRecipientList</shortDescription>
+        <value>annachilton@bpp.com</value>
+    </labels>
+    <labels>
+        <fullName>SaveButton</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save Button</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Standard_Price_Book_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Standard Price Book ID</shortDescription>
+        <value>01sb0000000L1P9AAK</value>
+    </labels>
+    <labels>
+        <fullName>System_Task_Record_Type_Id</fullName>
+        <categories>flow, process builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>System Task Record Type Id</shortDescription>
+        <value>012670000005mquAAA</value>
+    </labels>
+    <labels>
+        <fullName>User_Task_Record_Type_Id</fullName>
+        <categories>flow, process builder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Task Record Type Id</shortDescription>
+        <value>012b0000000XtPEAA0</value>
+    </labels>
+    <labels>
+        <fullName>toAddresses_UsageGeneration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>toAddresses_UsageGeneration</shortDescription>
+        <value>davidlovejoy@bpp.com;swayanpravasahoo@bpp.com;matthewconlon@bpp.com</value>
+    </labels>
+</CustomLabels>

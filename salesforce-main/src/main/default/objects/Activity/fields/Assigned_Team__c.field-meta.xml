@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Team__c</fullName>
+    <description>Role of the task assignee. This is a static capture to identify which team (role) the task was undertaken in. This is to prevent loss of this data should the assignee move teams &amp; acquire a new role.</description>
+    <externalId>false</externalId>
+    <label>Assigned Team</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

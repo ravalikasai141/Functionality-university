@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Locked_Delivery_Address</fullName>
+    <active>true</active>
+    <description>The delivery address cannot be changed once it has been sent for fulfilment (Sent for Fulfilment or Dispatched status - physical deliveries only)</description>
+    <errorConditionFormula>AND( RecordType.Name = &apos;Physical Delivery&apos;,
+ OR( ISPICKVAL( Delivery_Status__c , &apos;Sent for Fulfilment&apos; ),
+     ISPICKVAL( Delivery_Status__c , &apos;Dispatched&apos; ),
+     ISPICKVAL( Delivery_Status__c , &apos;Cancelled&apos; )),
+ OR( ISCHANGED( Delivered_to_BPP_Address__c ),
+     ISCHANGED( Delivered_to_Customer_Address__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Delivered_to_BPP_Address__c</errorDisplayField>
+    <errorMessage>The delivery address cannot be changed once the delivery has been Sent to Fulfilment or if it has been cancelled</errorMessage>
+</ValidationRule>

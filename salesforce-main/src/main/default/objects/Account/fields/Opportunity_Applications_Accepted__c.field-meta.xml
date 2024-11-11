@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Applications_Accepted__c</fullName>
+    <description>Calculates the number of opportunities accepted (for UCAS, only unconditional offers).  Influences student status field.</description>
+    <externalId>false</externalId>
+    <label>Opportunity Applications Accepted</label>
+    <summaryFilterItems>
+        <field>Opportunity.StageName</field>
+        <operation>equals</operation>
+        <value>Accepted - Pmt Pending, Accepted - Pmt Received, Accepted - Unconditional Firm, Accepted - Unconditional Insurance</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

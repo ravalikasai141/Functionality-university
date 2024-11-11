@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-m-around_medium">
+        <template if:true={showSubTopic}>
+            <div></div>
+           <table class="slds-table">
+                <caption class="title">Subtopic within the Topic</caption>
+                <template for:each={records} for:item="topic">
+                    <tr key={topic.subTopic.id}>
+                        <template if:true={topic.knowledgeArticleCount}>
+                            <td class="col">
+                                <a href={topic.subTopic.hrefVal}>{topic.subTopic.name}</a>
+                            </td>
+                            <td>
+                                <b>{topic.knowledgeArticleCount}</b> &nbsp; Articles
+                            </td>
+                        </template>
+                        <template if:false={topic.knowledgeArticleCount}>
+                            <td class="col">
+                                {topic.subTopic.name}
+                            </td>
+                            <td>0 &nbsp; Articles</td>
+                        </template>
+                    </tr>
+                </template>
+            </table>
+        </br> <div class="title"><b></b></div> 
+        </template>
+    </div>
+</template>

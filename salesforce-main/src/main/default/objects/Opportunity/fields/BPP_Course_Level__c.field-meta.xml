@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Course_Level__c</fullName>
+    <description>Course Level pick list for &apos;CAS VISA Compliance&apos; section located on the &apos;Application&apos; Opportunity Record Type</description>
+    <externalId>false</externalId>
+    <label>Course Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RQF Level 5</fullName>
+                <default>false</default>
+                <label>RQF Level 5</label>
+            </value>
+            <value>
+                <fullName>RQF Level 6</fullName>
+                <default>false</default>
+                <label>RQF Level 6</label>
+            </value>
+            <value>
+                <fullName>RQF Level 7</fullName>
+                <default>false</default>
+                <label>RQF Level 7</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

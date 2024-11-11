@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Last_Enrolment_Date__c</fullName>
+    <description>Last Enrolment Date field for &apos;CAS VISA Compliance&apos; section located on the &apos;Application&apos; Opportunity Record Type</description>
+    <externalId>false</externalId>
+    <label>Last Enrolment Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

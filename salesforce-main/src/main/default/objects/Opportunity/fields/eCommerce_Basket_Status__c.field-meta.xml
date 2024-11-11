@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>eCommerce_Basket_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>eCommerce Basket Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User created web basket</fullName>
+                <default>false</default>
+                <label>User created web basket</label>
+            </value>
+            <value>
+                <fullName>User abandoned basket</fullName>
+                <default>false</default>
+                <label>User abandoned basket</label>
+            </value>
+            <value>
+                <fullName>User purchases web basket</fullName>
+                <default>false</default>
+                <label>User purchases web basket</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>User abandoned basket</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>User purchases web basket</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <valueName>User created web basket</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

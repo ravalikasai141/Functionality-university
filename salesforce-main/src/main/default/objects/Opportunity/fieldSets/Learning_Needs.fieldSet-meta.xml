@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Learning_Needs</fullName>
+    <description>Student Learning Needs Details to display on Apprentice Application Opportunities</description>
+    <displayedFields>
+        <field>Account.Primary_Learning_Difficulty__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Account.Secondary_Learning_Difficulty__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Learning Needs</label>
+</FieldSet>

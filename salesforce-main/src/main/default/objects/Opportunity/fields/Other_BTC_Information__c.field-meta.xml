@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_BTC_Information__c</fullName>
+    <description>BTC - Please give other relevant information that you would like us to take into account when considering your application, for example any extenuating circumstances.</description>
+    <externalId>false</externalId>
+    <label>Other BTC Information</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

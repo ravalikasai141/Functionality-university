@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Opportunity_Stages_for_Agents</fullName>
+    <active>true</active>
+    <description>Restrict the Status values that Agent users can select</description>
+    <errorConditionFormula>AND( $Profile.Name=&quot;Agent User&quot;, ( ISNEW() || ISCHANGED(StageName)),
+OR( RecordType.Name = &apos;Application&apos; &amp;&amp;  NOT(ISPICKVAL(StageName, &quot;Application&quot;)),
+RecordType.Name = &apos;Interest&apos; &amp;&amp;  NOT(ISPICKVAL(StageName, &quot;Agent Application&quot;))))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>You cannot set the opportunity status to this value</errorMessage>
+</ValidationRule>

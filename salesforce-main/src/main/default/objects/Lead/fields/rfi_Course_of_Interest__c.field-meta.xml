@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_Course_of_Interest__c</fullName>
+    <externalId>false</externalId>
+    <label>Course of Interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AAT</fullName>
+                <default>false</default>
+                <label>AAT</label>
+            </value>
+            <value>
+                <fullName>ACA</fullName>
+                <default>false</default>
+                <label>ACA</label>
+            </value>
+            <value>
+                <fullName>Academic English</fullName>
+                <default>false</default>
+                <label>Academic English</label>
+            </value>
+            <value>
+                <fullName>ACCA</fullName>
+                <default>false</default>
+                <label>ACCA</label>
+            </value>
+            <value>
+                <fullName>ACCA Professional Level Papers</fullName>
+                <default>false</default>
+                <label>ACCA Professional Level Papers</label>
+            </value>
+            <value>
+                <fullName>Accountancy/Taxation Professional Apprenticeship</fullName>
+                <default>false</default>
+                <label>Accountancy/Taxation Professional Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Actuarial Technician Apprenticeship</fullName>
+                <default>false</default>
+                <label>Actuarial Technician Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Actuary Apprenticeship</fullName>
+                <default>false</default>
+                <label>Actuary Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Advanced Diploma in Accounting and Finance [ACCA Route]</fullName>
+                <default>false</default>
+                <label>Advanced Diploma in Accounting and Finance [ACCA Route]</label>
+            </value>
+            <value>
+                <fullName>Agile Thinking in a Changing Business World</fullName>
+                <default>false</default>
+                <label>Agile Thinking in a Changing Business World</label>
+            </value>
+            <value>
+                <fullName>Analytical and Critical Thinking</fullName>
+                <default>false</default>
+                <label>Analytical and Critical Thinking</label>
+            </value>
+            <value>
+                <fullName>Application Support Lead - Level 4</fullName>
+                <default>false</default>
+                <label>Application Support Lead - Level 4</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship Accounting</fullName>
+                <default>false</default>
+                <label>Apprenticeship Accounting</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship Business and Administration</fullName>
+                <default>false</default>
+                <label>Apprenticeship Business and Administration</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship Customer Service</fullName>
+                <default>false</default>
+                <label>Apprenticeship Customer Service</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship General</fullName>
+                <default>false</default>
+                <label>Apprenticeship General</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship Law</fullName>
+                <default>false</default>
+                <label>Apprenticeship Law</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship Professional Services</fullName>
+                <default>false</default>
+                <label>Apprenticeship Professional Services</label>
+            </value>
+            <value>
+                <fullName>Assistant Accountant Apprenticeship</fullName>
+                <default>false</default>
+                <label>Assistant Accountant Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Associate Project Manager Apprenticeship</fullName>
+                <default>false</default>
+                <label>Associate Project Manager Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>ATT</fullName>
+                <default>false</default>
+                <label>ATT</label>
+            </value>
+            <value>
+                <fullName>Barrister Training Course (BTC)</fullName>
+                <default>false</default>
+                <label>Barrister Training Course (BTC)</label>
+            </value>
+            <value>
+                <fullName>Bar Transfer Test (BTT)</fullName>
+                <default>false</default>
+                <label>Bar Transfer Test (BTT)</label>
+            </value>
+            <value>
+                <fullName>BSc Accounting and Finance</fullName>
+                <default>false</default>
+                <label>BSc Accounting and Finance</label>
+            </value>
+            <value>
+                <fullName>BSc Nursing (Adult)</fullName>
+                <default>false</default>
+                <label>BSc Nursing (Adult)</label>
+            </value>
+            <value>
+                <fullName>BSc Nursing (Child)</fullName>
+                <default>false</default>
+                <label>BSc Nursing (Child)</label>
+            </value>
+            <value>
+                <fullName>BSc Nursing (Mental Health)</fullName>
+                <default>false</default>
+                <label>BSc Nursing (Mental Health)</label>
+            </value>
+            <value>
+                <fullName>BTC Part 1</fullName>
+                <default>false</default>
+                <label>BTC Part 1</label>
+            </value>
+            <value>
+                <fullName>BTC Part 2</fullName>
+                <default>false</default>
+                <label>BTC Part 2</label>
+            </value>
+            <value>
+                <fullName>Building Effective Coaching Skills</fullName>
+                <default>false</default>
+                <label>Building Effective Coaching Skills</label>
+            </value>
+            <value>
+                <fullName>Business Administrator Apprenticeship</fullName>
+                <default>false</default>
+                <label>Business Administrator Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Business Analyst - Level 4</fullName>
+                <default>false</default>
+                <label>Business Analyst - Level 4</label>
+            </value>
+            <value>
+                <fullName>Capability+</fullName>
+                <default>false</default>
+                <label>Capability+</label>
+            </value>
+            <value>
+                <fullName>CFA</fullName>
+                <default>false</default>
+                <label>CFA</label>
+            </value>
+            <value>
+                <fullName>CFA Certificate in ESG Investing</fullName>
+                <default>false</default>
+                <label>CFA Certificate in ESG Investing</label>
+            </value>
+            <value>
+                <fullName>CFQ</fullName>
+                <default>false</default>
+                <label>CFQ</label>
+            </value>
+            <value>
+                <fullName>Chartered Manager Degree Apprenticeship</fullName>
+                <default>false</default>
+                <label>Chartered Manager Degree Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>CIMA</fullName>
+                <default>false</default>
+                <label>CIMA</label>
+            </value>
+            <value>
+                <fullName>CIMA Certificate in Business Accounting</fullName>
+                <default>false</default>
+                <label>CIMA Certificate in Business Accounting</label>
+            </value>
+            <value>
+                <fullName>CISI CMP</fullName>
+                <default>false</default>
+                <label>CISI CMP</label>
+            </value>
+            <value>
+                <fullName>CISI IAD</fullName>
+                <default>false</default>
+                <label>CISI IAD</label>
+            </value>
+            <value>
+                <fullName>CISI IFQ</fullName>
+                <default>false</default>
+                <label>CISI IFQ</label>
+            </value>
+            <value>
+                <fullName>CISI IOC</fullName>
+                <default>false</default>
+                <label>CISI IOC</label>
+            </value>
+            <value>
+                <fullName>Compliance/Risk Officer Apprenticeship</fullName>
+                <default>false</default>
+                <label>Compliance/Risk Officer Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>CPCI</fullName>
+                <default>false</default>
+                <label>CPCI</label>
+            </value>
+            <value>
+                <fullName>CPI</fullName>
+                <default>false</default>
+                <label>CPI</label>
+            </value>
+            <value>
+                <fullName>Creating a Customer-Centric Organisation</fullName>
+                <default>false</default>
+                <label>Creating a Customer-Centric Organisation</label>
+            </value>
+            <value>
+                <fullName>CTA</fullName>
+                <default>false</default>
+                <label>CTA</label>
+            </value>
+            <value>
+                <fullName>Cyber Security Technologist - Level 4</fullName>
+                <default>false</default>
+                <label>Cyber Security Technologist - Level 4</label>
+            </value>
+            <value>
+                <fullName>Data Analyst Apprenticeship</fullName>
+                <default>false</default>
+                <label>Data Analyst Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Data Analyst - Level 4</fullName>
+                <default>false</default>
+                <label>Data Analyst - Level 4</label>
+            </value>
+            <value>
+                <fullName>Data Fundamentals</fullName>
+                <default>false</default>
+                <label>Data Fundamentals</label>
+            </value>
+            <value>
+                <fullName>Data Scientist Level 6 Apprenticeship</fullName>
+                <default>false</default>
+                <label>Data Scientist Level 6 Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Data Technician - Level 3</fullName>
+                <default>false</default>
+                <label>Data Technician - Level 3</label>
+            </value>
+            <value>
+                <fullName>Data Visualisation</fullName>
+                <default>false</default>
+                <label>Data Visualisation</label>
+            </value>
+            <value>
+                <fullName>DevOps Engineer - Level 4</fullName>
+                <default>false</default>
+                <label>DevOps Engineer - Level 4</label>
+            </value>
+            <value>
+                <fullName>Digital Marketer - Level 3</fullName>
+                <default>false</default>
+                <label>Digital Marketer - Level 3</label>
+            </value>
+            <value>
+                <fullName>Digital Support Technician - Level 3</fullName>
+                <default>false</default>
+                <label>Digital Support Technician - Level 3</label>
+            </value>
+            <value>
+                <fullName>Digital Technology Solutions Professional Degree Apprenticeship</fullName>
+                <default>false</default>
+                <label>Digital Technology Solutions Professional Degree Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Digital Technology Solutions Specialist Degree Apprenticeship</fullName>
+                <default>false</default>
+                <label>Digital Technology Solutions Specialist Degree Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Digital Transformation</fullName>
+                <default>false</default>
+                <label>Digital Transformation</label>
+            </value>
+            <value>
+                <fullName>Emotional Intelligence</fullName>
+                <default>false</default>
+                <label>Emotional Intelligence</label>
+            </value>
+            <value>
+                <fullName>FIA</fullName>
+                <default>false</default>
+                <label>FIA</label>
+            </value>
+            <value>
+                <fullName>Financial Services Customer Adviser Apprenticeship</fullName>
+                <default>false</default>
+                <label>Financial Services Customer Adviser Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Financial Services Professional Apprenticeship</fullName>
+                <default>false</default>
+                <label>Financial Services Professional Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Foundation Degree Nursing Associate Apprenticeship</fullName>
+                <default>false</default>
+                <label>Foundation Degree Nursing Associate Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>General Apprenticeships</fullName>
+                <default>false</default>
+                <label>General Apprenticeships</label>
+            </value>
+            <value>
+                <fullName>Graduate Certificate in Animal Therapy</fullName>
+                <default>false</default>
+                <label>Graduate Certificate in Animal Therapy</label>
+            </value>
+            <value>
+                <fullName>Graduate Diploma in Law (GDL)</fullName>
+                <default>false</default>
+                <label>Graduate Diploma in Law (GDL)</label>
+            </value>
+            <value>
+                <fullName>HR Consultant/Partner Apprenticeship</fullName>
+                <default>false</default>
+                <label>HR Consultant/Partner Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>HR Support Apprenticeship</fullName>
+                <default>false</default>
+                <label>HR Support Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>ICAEW</fullName>
+                <default>false</default>
+                <label>ICAEW</label>
+            </value>
+            <value>
+                <fullName>ICAEW Certificate in Insolvency</fullName>
+                <default>false</default>
+                <label>ICAEW Certificate in Insolvency</label>
+            </value>
+            <value>
+                <fullName>ICAEW CFAB</fullName>
+                <default>false</default>
+                <label>ICAEW CFAB</label>
+            </value>
+            <value>
+                <fullName>ICAS</fullName>
+                <default>false</default>
+                <label>ICAS</label>
+            </value>
+            <value>
+                <fullName>IMC</fullName>
+                <default>false</default>
+                <label>IMC</label>
+            </value>
+            <value>
+                <fullName>Information Communication Technician- Level 3</fullName>
+                <default>false</default>
+                <label>Information Communication Technician- Level 3</label>
+            </value>
+            <value>
+                <fullName>Insurance Practitioner Apprenticeship</fullName>
+                <default>false</default>
+                <label>Insurance Practitioner Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Insurance Professional Apprenticeship</fullName>
+                <default>false</default>
+                <label>Insurance Professional Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>International MBA</fullName>
+                <default>false</default>
+                <label>International MBA</label>
+            </value>
+            <value>
+                <fullName>Investment Operations Administrator Apprenticeship</fullName>
+                <default>false</default>
+                <label>Investment Operations Administrator Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Investment Operations Specialist Apprenticeship</fullName>
+                <default>false</default>
+                <label>Investment Operations Specialist Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>JIEB</fullName>
+                <default>false</default>
+                <label>JIEB</label>
+            </value>
+            <value>
+                <fullName>Law Conversion Course (PGDL)</fullName>
+                <default>false</default>
+                <label>Law Conversion Course (PGDL)</label>
+            </value>
+            <value>
+                <fullName>Leading in a Changing Business Environment</fullName>
+                <default>false</default>
+                <label>Leading in a Changing Business Environment</label>
+            </value>
+            <value>
+                <fullName>Legal Practice Course (LPC)</fullName>
+                <default>false</default>
+                <label>Legal Practice Course (LPC)</label>
+            </value>
+            <value>
+                <fullName>Level 3 Data Technician Apprenticeship</fullName>
+                <default>false</default>
+                <label>Level 3 Data Technician Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>LLM (Chinese Investment and Business Law)</fullName>
+                <default>false</default>
+                <label>LLM (Chinese Investment and Business Law)</label>
+            </value>
+            <value>
+                <fullName>LLM (Commercial Law)</fullName>
+                <default>false</default>
+                <label>LLM (Commercial Law)</label>
+            </value>
+            <value>
+                <fullName>LLM (Comparative Commercial Law)</fullName>
+                <default>false</default>
+                <label>LLM (Comparative Commercial Law)</label>
+            </value>
+            <value>
+                <fullName>LLM (Financial Regulation and Compliance)</fullName>
+                <default>false</default>
+                <label>LLM (Financial Regulation and Compliance)</label>
+            </value>
+            <value>
+                <fullName>LLM (International Business Law)</fullName>
+                <default>false</default>
+                <label>LLM (International Business Law)</label>
+            </value>
+            <value>
+                <fullName>LLM (Islamic Finance and Business Law)</fullName>
+                <default>false</default>
+                <label>LLM (Islamic Finance and Business Law)</label>
+            </value>
+            <value>
+                <fullName>LLM (The Law relating to Fraud and Financial Crime)</fullName>
+                <default>false</default>
+                <label>LLM (The Law relating to Fraud and Financial Crime)</label>
+            </value>
+            <value>
+                <fullName>LLM (Trans-National Criminal Justice)</fullName>
+                <default>false</default>
+                <label>LLM (Trans-National Criminal Justice)</label>
+            </value>
+            <value>
+                <fullName>LLM [Law Conversion]</fullName>
+                <default>false</default>
+                <label>LLM [Law Conversion]</label>
+            </value>
+            <value>
+                <fullName>LLM Commercial Legal Practice (LPC top up)</fullName>
+                <default>false</default>
+                <label>LLM Commercial Legal Practice (LPC top up)</label>
+            </value>
+            <value>
+                <fullName>LLM Law and Legal Practice</fullName>
+                <default>false</default>
+                <label>LLM Law and Legal Practice</label>
+            </value>
+            <value>
+                <fullName>LLM Legal Practice (Bar)</fullName>
+                <default>false</default>
+                <label>LLM Legal Practice (Bar)</label>
+            </value>
+            <value>
+                <fullName>LLM Legal Practice (Solicitors)</fullName>
+                <default>false</default>
+                <label>LLM Legal Practice (Solicitors)</label>
+            </value>
+            <value>
+                <fullName>LLM Professional Legal Practice (LPC top up)</fullName>
+                <default>false</default>
+                <label>LLM Professional Legal Practice (LPC top up)</label>
+            </value>
+            <value>
+                <fullName>Master of Laws (LLM) (all)</fullName>
+                <default>false</default>
+                <label>Master of Laws (LLM) (all)</label>
+            </value>
+            <value>
+                <fullName>Masters in Chiropractic (MChiro)</fullName>
+                <default>false</default>
+                <label>Masters in Chiropractic (MChiro)</label>
+            </value>
+            <value>
+                <fullName>Mortgage Advisor Apprenticeship</fullName>
+                <default>false</default>
+                <label>Mortgage Advisor Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>MSc Accounting and Finance</fullName>
+                <default>false</default>
+                <label>MSc Accounting and Finance</label>
+            </value>
+            <value>
+                <fullName>MSc Accounting and Finance [Advanced Diploma Route]</fullName>
+                <default>false</default>
+                <label>MSc Accounting and Finance [Advanced Diploma Route]</label>
+            </value>
+            <value>
+                <fullName>MSc Animal Manipulation</fullName>
+                <default>false</default>
+                <label>MSc Animal Manipulation</label>
+            </value>
+            <value>
+                <fullName>MSc Healthcare Leadership</fullName>
+                <default>false</default>
+                <label>MSc Healthcare Leadership</label>
+            </value>
+            <value>
+                <fullName>MSc Management</fullName>
+                <default>false</default>
+                <label>MSc Management</label>
+            </value>
+            <value>
+                <fullName>MSc Management with Digital Marketing</fullName>
+                <default>false</default>
+                <label>MSc Management with Digital Marketing</label>
+            </value>
+            <value>
+                <fullName>MSc Management with Finance</fullName>
+                <default>false</default>
+                <label>MSc Management with Finance</label>
+            </value>
+            <value>
+                <fullName>MSc Management with Project Management</fullName>
+                <default>false</default>
+                <label>MSc Management with Project Management</label>
+            </value>
+            <value>
+                <fullName>MSc Psychology [Conversion]</fullName>
+                <default>false</default>
+                <label>MSc Psychology [Conversion]</label>
+            </value>
+            <value>
+                <fullName>MSc Psychology [Conversion] (Online)</fullName>
+                <default>false</default>
+                <label>MSc Psychology [Conversion] (Online)</label>
+            </value>
+            <value>
+                <fullName>Network Engineer - Level 4</fullName>
+                <default>false</default>
+                <label>Network Engineer - Level 4</label>
+            </value>
+            <value>
+                <fullName>Operations/Departmental Manager Apprenticeship</fullName>
+                <default>false</default>
+                <label>Operations/Departmental Manager Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Paralegal Apprenticeship</fullName>
+                <default>false</default>
+                <label>Paralegal Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Pathway to Higher Education Certificate in Health</fullName>
+                <default>false</default>
+                <label>Pathway to Higher Education Certificate in Health</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+            <value>
+                <fullName>PD Accountancy</fullName>
+                <default>false</default>
+                <label>PD Accountancy</label>
+            </value>
+            <value>
+                <fullName>PD Financial Services</fullName>
+                <default>false</default>
+                <label>PD Financial Services</label>
+            </value>
+            <value>
+                <fullName>PD Health</fullName>
+                <default>false</default>
+                <label>PD Health</label>
+            </value>
+            <value>
+                <fullName>PD Law</fullName>
+                <default>false</default>
+                <label>PD Law</label>
+            </value>
+            <value>
+                <fullName>PD Leadership and Personal Development</fullName>
+                <default>false</default>
+                <label>PD Leadership and Personal Development</label>
+            </value>
+            <value>
+                <fullName>PD Tax</fullName>
+                <default>false</default>
+                <label>PD Tax</label>
+            </value>
+            <value>
+                <fullName>Postgraduate Certificate in Management</fullName>
+                <default>false</default>
+                <label>Postgraduate Certificate in Management</label>
+            </value>
+            <value>
+                <fullName>Professional Accounting/Tax Technician Apprenticeship</fullName>
+                <default>false</default>
+                <label>Professional Accounting/Tax Technician Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>PSC</fullName>
+                <default>false</default>
+                <label>PSC</label>
+            </value>
+            <value>
+                <fullName>Radio Network Technician - Level 3</fullName>
+                <default>false</default>
+                <label>Radio Network Technician - Level 3</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse Degree Apprenticeship (Adult)</fullName>
+                <default>false</default>
+                <label>Registered Nurse Degree Apprenticeship (Adult)</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse Degree Apprenticeship (Child)</fullName>
+                <default>false</default>
+                <label>Registered Nurse Degree Apprenticeship (Child)</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse Degree Apprenticeship (Mental Health)</fullName>
+                <default>false</default>
+                <label>Registered Nurse Degree Apprenticeship (Mental Health)</label>
+            </value>
+            <value>
+                <fullName>Resilience and Mental Health</fullName>
+                <default>false</default>
+                <label>Resilience and Mental Health</label>
+            </value>
+            <value>
+                <fullName>Senior Compliance/Risk Specialist Apprenticeship</fullName>
+                <default>false</default>
+                <label>Senior Compliance/Risk Specialist Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Senior Financial Services Customer Adviser Apprenticeship</fullName>
+                <default>false</default>
+                <label>Senior Financial Services Customer Adviser Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Senior Insurance Professional Apprenticeship</fullName>
+                <default>false</default>
+                <label>Senior Insurance Professional Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Senior Investment/Commercial Banking Professional Apprenticeship</fullName>
+                <default>false</default>
+                <label>Senior Investment/Commercial Banking Professional Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Senior People Professional (HR Level 7) Apprenticeship</fullName>
+                <default>false</default>
+                <label>Senior People Professional (HR Level 7) Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Software Developer - Level 4</fullName>
+                <default>false</default>
+                <label>Software Developer - Level 4</label>
+            </value>
+            <value>
+                <fullName>Software Development Technician - Level 3</fullName>
+                <default>false</default>
+                <label>Software Development Technician - Level 3</label>
+            </value>
+            <value>
+                <fullName>Software Tester - Level 4</fullName>
+                <default>false</default>
+                <label>Software Tester - Level 4</label>
+            </value>
+            <value>
+                <fullName>Solicitor Apprenticeship</fullName>
+                <default>false</default>
+                <label>Solicitor Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Solicitors Qualifying Examination (SQE)</fullName>
+                <default>false</default>
+                <label>Solicitors Qualifying Examination (SQE)</label>
+            </value>
+            <value>
+                <fullName>SQE Coaching</fullName>
+                <default>false</default>
+                <label>SQE Coaching</label>
+            </value>
+            <value>
+                <fullName>SQE Essentials for Practice</fullName>
+                <default>false</default>
+                <label>SQE Essentials for Practice</label>
+            </value>
+            <value>
+                <fullName>SQE Law Graduate</fullName>
+                <default>false</default>
+                <label>SQE Law Graduate</label>
+            </value>
+            <value>
+                <fullName>SQE Law Graduate (Master&apos;s)</fullName>
+                <default>false</default>
+                <label>SQE Law Graduate (Master&apos;s)</label>
+            </value>
+            <value>
+                <fullName>SQE Non-Law Graduate (Master&apos;s)</fullName>
+                <default>false</default>
+                <label>SQE Non-Law Graduate (Master&apos;s)</label>
+            </value>
+            <value>
+                <fullName>SQE Preparation</fullName>
+                <default>false</default>
+                <label>SQE Preparation</label>
+            </value>
+            <value>
+                <fullName>Team Leader/Supervisor Apprenticeship</fullName>
+                <default>false</default>
+                <label>Team Leader/Supervisor Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>Teamwork for a Connected World</fullName>
+                <default>false</default>
+                <label>Teamwork for a Connected World</label>
+            </value>
+            <value>
+                <fullName>Telecomms Field Operative - Level 2</fullName>
+                <default>false</default>
+                <label>Telecomms Field Operative - Level 2</label>
+            </value>
+            <value>
+                <fullName>Using Data for Decision Making</fullName>
+                <default>false</default>
+                <label>Using Data for Decision Making</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

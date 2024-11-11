@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensures_spon_amount_percentage_are_blank</fullName>
+    <active>true</active>
+    <description>Ensures sponsorship amount and percentage are blank when sponsorship level is none</description>
+    <errorConditionFormula>AND(ISPICKVAL(Sponsorship_Level__c,&apos;None&apos;),OR(NOT(ISBLANK( Sponsorship_Amount__c)),NOT(ISBLANK( Sponsorship_Percentage__c))))</errorConditionFormula>
+    <errorDisplayField>Sponsorship_Level__c</errorDisplayField>
+    <errorMessage>Sponsorship amount and percentage should be blank when Sponsorship level is None</errorMessage>
+</ValidationRule>

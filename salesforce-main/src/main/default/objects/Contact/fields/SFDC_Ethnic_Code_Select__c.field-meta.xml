@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Ethnic_Code_Select__c</fullName>
+    <description>Added for SIS Integration.</description>
+    <externalId>false</externalId>
+    <label>Ethnicity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>100~ Asian - Bangladeshi or Bangladeshi British</fullName>
+                <default>false</default>
+                <label>100~ Asian - Bangladeshi or Bangladeshi British</label>
+            </value>
+            <value>
+                <fullName>101~ Asian - Chinese or Chinese British</fullName>
+                <default>false</default>
+                <label>101~ Asian - Chinese or Chinese British</label>
+            </value>
+            <value>
+                <fullName>103~ Asian - Indian or Indian British</fullName>
+                <default>false</default>
+                <label>103~ Asian - Indian or Indian British</label>
+            </value>
+            <value>
+                <fullName>104~ Asian - Pakistani or Pakistani British</fullName>
+                <default>false</default>
+                <label>104~ Asian - Pakistani or Pakistani British</label>
+            </value>
+            <value>
+                <fullName>119~ Any other Asian background</fullName>
+                <default>false</default>
+                <label>119~ Any other Asian background</label>
+            </value>
+            <value>
+                <fullName>120~ Black - African or African British</fullName>
+                <default>false</default>
+                <label>120~ Black - African or African British</label>
+            </value>
+            <value>
+                <fullName>121~ Black - Caribbean or Caribbean British</fullName>
+                <default>false</default>
+                <label>121~ Black - Caribbean or Caribbean British</label>
+            </value>
+            <value>
+                <fullName>139~ Any other Black background</fullName>
+                <default>false</default>
+                <label>139~ Any other Black background</label>
+            </value>
+            <value>
+                <fullName>140~ Mixed or multiple ethnic groups - White or White British and Asian or Asian British</fullName>
+                <default>false</default>
+                <label>140~ Mixed or multiple ethnic groups - White or White British and Asian or Asian British</label>
+            </value>
+            <value>
+                <fullName>141~ Mixed or multiple ethnic groups - White or White British and Black African or Black African British</fullName>
+                <default>false</default>
+                <label>141~ Mixed or multiple ethnic groups - White or White British and Black African or Black African British</label>
+            </value>
+            <value>
+                <fullName>142~ Mixed or multiple ethnic groups - White or White British and Black Caribbean or Black Caribbean British</fullName>
+                <default>false</default>
+                <label>142~ Mixed or multiple ethnic groups - White or White British and Black Caribbean or Black Caribbean British</label>
+            </value>
+            <value>
+                <fullName>159~ Any other Mixed or Multiple ethnic background</fullName>
+                <default>false</default>
+                <label>159~ Any other Mixed or Multiple ethnic background</label>
+            </value>
+            <value>
+                <fullName>160~ White - English, Scottish, Welsh, Northern Irish or British</fullName>
+                <default>false</default>
+                <label>160~ White - English, Scottish, Welsh, Northern Irish or British</label>
+            </value>
+            <value>
+                <fullName>163~ White - Gypsy or Irish Traveller</fullName>
+                <default>false</default>
+                <label>163~ White - Gypsy or Irish Traveller</label>
+            </value>
+            <value>
+                <fullName>166~ White - Irish</fullName>
+                <default>false</default>
+                <label>166~ White - Irish</label>
+            </value>
+            <value>
+                <fullName>168~ White - Roma</fullName>
+                <default>false</default>
+                <label>168~ White - Roma</label>
+            </value>
+            <value>
+                <fullName>179~ Any other White background</fullName>
+                <default>false</default>
+                <label>179~ Any other White background</label>
+            </value>
+            <value>
+                <fullName>180~ Arab</fullName>
+                <default>false</default>
+                <label>180~ Arab</label>
+            </value>
+            <value>
+                <fullName>899~ Any other ethnic background</fullName>
+                <default>false</default>
+                <label>899~ Any other ethnic background</label>
+            </value>
+            <value>
+                <fullName>997~ Not known</fullName>
+                <default>false</default>
+                <label>997~ Not known</label>
+            </value>
+            <value>
+                <fullName>998~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>998~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

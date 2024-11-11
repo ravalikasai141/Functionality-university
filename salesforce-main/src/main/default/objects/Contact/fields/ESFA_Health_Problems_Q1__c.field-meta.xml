@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESFA_Health_Problems_Q1__c</fullName>
+    <description>Created as per JIRA 2243</description>
+    <externalId>false</externalId>
+    <label>ESFA Health Problems Q1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1~ Learner considers himself or herself to have a learning difficulty and/or disability and/or health problem</fullName>
+                <default>false</default>
+                <label>1~ Learner considers himself or herself to have a learning difficulty and/or disability and/or health problem</label>
+            </value>
+            <value>
+                <fullName>2~ Learner does not consider himself or herself to have a learning difficulty and/or disability and/or health problem</fullName>
+                <default>false</default>
+                <label>2~ Learner does not consider himself or herself to have a learning difficulty and/or disability and/or health problem</label>
+            </value>
+            <value>
+                <fullName>9~ No information provided by the learner</fullName>
+                <default>false</default>
+                <label>9~ No information provided by the learner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

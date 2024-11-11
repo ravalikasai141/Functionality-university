@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Query_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Query Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assessments</fullName>
+                <default>false</default>
+                <label>Assessments</label>
+            </value>
+            <value>
+                <fullName>Attendance</fullName>
+                <default>false</default>
+                <label>Attendance</label>
+            </value>
+            <value>
+                <fullName>Book an Appointment</fullName>
+                <default>false</default>
+                <label>Book an Appointment</label>
+            </value>
+            <value>
+                <fullName>Changes to personal details</fullName>
+                <default>false</default>
+                <label>Changes to personal details</label>
+            </value>
+            <value>
+                <fullName>Changes to studies</fullName>
+                <default>false</default>
+                <label>Changes to studies</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Finance and Billing</fullName>
+                <default>false</default>
+                <label>Finance and Billing</label>
+            </value>
+            <value>
+                <fullName>Graduation and Certificates</fullName>
+                <default>false</default>
+                <label>Graduation and Certificates</label>
+            </value>
+            <value>
+                <fullName>IoS (Interruption of Studies)</fullName>
+                <default>false</default>
+                <label>IoS (Interruption of Studies)</label>
+            </value>
+            <value>
+                <fullName>Letter requests</fullName>
+                <default>false</default>
+                <label>Letter requests</label>
+            </value>
+            <value>
+                <fullName>My Apprenticeship</fullName>
+                <default>false</default>
+                <label>My Apprenticeship</label>
+            </value>
+            <value>
+                <fullName>My Course</fullName>
+                <default>false</default>
+                <label>My Course</label>
+            </value>
+            <value>
+                <fullName>My Online Learning and The HUB</fullName>
+                <default>false</default>
+                <label>My Online Learning and The HUB</label>
+            </value>
+            <value>
+                <fullName>My Study Materials</fullName>
+                <default>false</default>
+                <label>My Study Materials</label>
+            </value>
+            <value>
+                <fullName>Online learning</fullName>
+                <default>false</default>
+                <label>Online learning</label>
+            </value>
+            <value>
+                <fullName>Registration and enrolment</fullName>
+                <default>false</default>
+                <label>Registration and enrolment</label>
+            </value>
+            <value>
+                <fullName>Review Meeting</fullName>
+                <default>false</default>
+                <label>Review Meeting</label>
+            </value>
+            <value>
+                <fullName>Student Finance</fullName>
+                <default>false</default>
+                <label>Student Finance</label>
+            </value>
+            <value>
+                <fullName>Student Loans</fullName>
+                <default>false</default>
+                <label>Student Loans</label>
+            </value>
+            <value>
+                <fullName>Timetables</fullName>
+                <default>false</default>
+                <label>Timetables</label>
+            </value>
+            <value>
+                <fullName>Visa</fullName>
+                <default>false</default>
+                <label>Visa</label>
+            </value>
+            <value>
+                <fullName>General Query</fullName>
+                <default>false</default>
+                <label>General Query</label>
+            </value>
+            <value>
+                <fullName>Undetermined Query</fullName>
+                <default>false</default>
+                <label>Undetermined Query</label>
+            </value>
+            <value>
+                <fullName>Prior Learning/Exemptions information</fullName>
+                <default>false</default>
+                <label>Prior Learning/Exemptions information</label>
+            </value>
+            <value>
+                <fullName>Additional Information</fullName>
+                <default>false</default>
+                <label>Additional Information</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

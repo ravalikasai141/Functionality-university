@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Invoice_Seperation</fullName>
+    <active>true</active>
+    <description>To prevent users from selecting the Invoice Separation values, &quot;Qualification&quot; or &quot;Level&quot; alongside the &quot;Paper&quot; value</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Invoice_Separation__c)),
+INCLUDES(Invoice_Separation__c, &quot;Paper&quot;),
+OR(
+INCLUDES(Invoice_Separation__c, &quot;Qualification&quot;),
+INCLUDES(Invoice_Separation__c, &quot;Level&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Invoice_Separation__c</errorDisplayField>
+    <errorMessage>&quot;Paper&quot; should not be used with either Qualification or Level options</errorMessage>
+</ValidationRule>

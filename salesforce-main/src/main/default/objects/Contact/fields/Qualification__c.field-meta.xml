@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualification__c</fullName>
+    <description>NOT CURRENTLY IN USE OR DISPLAYED.  Indicates the highest level of qualification the student has achieved.</description>
+    <externalId>false</externalId>
+    <label>[INACTIVE] Qualification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High School</fullName>
+                <default>false</default>
+                <label>High School</label>
+            </value>
+            <value>
+                <fullName>Bachelors Degree</fullName>
+                <default>false</default>
+                <label>Bachelors Degree</label>
+            </value>
+            <value>
+                <fullName>Masers Degree</fullName>
+                <default>false</default>
+                <label>Masers Degree</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Study_Location__c</fullName>
+    <description>List of BPP centres, student can choose a preferred option. 
+This will aid with course planning analysis + potentially automation when booking.</description>
+    <externalId>false</externalId>
+    <label>Preferred Study Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BPP Birmingham</fullName>
+                <default>false</default>
+                <label>BPP Birmingham</label>
+            </value>
+            <value>
+                <fullName>BPP Bristol</fullName>
+                <default>false</default>
+                <label>BPP Bristol</label>
+            </value>
+            <value>
+                <fullName>BPP Cambridge</fullName>
+                <default>false</default>
+                <label>BPP Cambridge</label>
+            </value>
+            <value>
+                <fullName>BPP Croydon</fullName>
+                <default>false</default>
+                <label>BPP Croydon</label>
+            </value>
+            <value>
+                <fullName>BPP Glasgow</fullName>
+                <default>false</default>
+                <label>BPP Glasgow</label>
+            </value>
+            <value>
+                <fullName>BPP Leeds - Whitehall Quay</fullName>
+                <default>false</default>
+                <label>BPP Leeds - Whitehall Quay</label>
+            </value>
+            <value>
+                <fullName>BPP London - Kings Cross</fullName>
+                <default>false</default>
+                <label>BPP London - Kings Cross</label>
+            </value>
+            <value>
+                <fullName>BPP London - Liverpool Street</fullName>
+                <default>false</default>
+                <label>BPP London - Liverpool Street</label>
+            </value>
+            <value>
+                <fullName>BPP London - London City</fullName>
+                <default>false</default>
+                <label>BPP London - London City</label>
+            </value>
+            <value>
+                <fullName>BPP London - Red Lion Street</fullName>
+                <default>false</default>
+                <label>BPP London - Red Lion Street</label>
+            </value>
+            <value>
+                <fullName>BPP London - Shepherds Bush</fullName>
+                <default>false</default>
+                <label>BPP London - Shepherds Bush</label>
+            </value>
+            <value>
+                <fullName>BPP London - Waterloo</fullName>
+                <default>false</default>
+                <label>BPP London - Waterloo</label>
+            </value>
+            <value>
+                <fullName>BPP Manchester - St James</fullName>
+                <default>false</default>
+                <label>BPP Manchester - St James</label>
+            </value>
+            <value>
+                <fullName>BPP Milton Keynes</fullName>
+                <default>false</default>
+                <label>BPP Milton Keynes</label>
+            </value>
+            <value>
+                <fullName>BPP Newcastle</fullName>
+                <default>false</default>
+                <label>BPP Newcastle</label>
+            </value>
+            <value>
+                <fullName>BPP Nottingham</fullName>
+                <default>false</default>
+                <label>BPP Nottingham</label>
+            </value>
+            <value>
+                <fullName>BPP Reading</fullName>
+                <default>false</default>
+                <label>BPP Reading</label>
+            </value>
+            <value>
+                <fullName>BPP Southampton</fullName>
+                <default>false</default>
+                <label>BPP Southampton</label>
+            </value>
+            <value>
+                <fullName>BPP Guernsey</fullName>
+                <default>false</default>
+                <label>BPP Guernsey</label>
+            </value>
+            <value>
+                <fullName>BPP Jersey</fullName>
+                <default>false</default>
+                <label>BPP Jersey</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

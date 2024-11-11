@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MS_Deposit_NonPmt_Reason_Code__c</fullName>
+    <description>Student accepted on Microsite, reason payment process not completed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Student accepted on Microsite, reason payment process not completed.</inlineHelpText>
+    <label>Deposit Non-Pmt Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Card Declined</fullName>
+                <default>false</default>
+                <label>Card Declined</label>
+            </value>
+            <value>
+                <fullName>Sponsor</fullName>
+                <default>false</default>
+                <label>Sponsor</label>
+            </value>
+            <value>
+                <fullName>Bank Transfer</fullName>
+                <default>false</default>
+                <label>Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+                <label>Cheque</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

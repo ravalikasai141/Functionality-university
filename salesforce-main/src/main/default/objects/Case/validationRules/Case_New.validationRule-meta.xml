@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_New</fullName>
+    <active>true</active>
+    <description>All Cases should be only set to new when initially created to allow queue assignment.</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Student_Query&quot;, 
+ ISNEW(),
+ NOT( ISPICKVAL( Origin, &quot;Web&quot;)),
+ LEFT( TEXT( Origin), 5) &lt;&gt; &quot;Email&quot;, 
+ NOT( ISPICKVAL( Status, &quot;New&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>All cases should be only set to new when initially created to allow queue assignment</errorMessage>
+</ValidationRule>

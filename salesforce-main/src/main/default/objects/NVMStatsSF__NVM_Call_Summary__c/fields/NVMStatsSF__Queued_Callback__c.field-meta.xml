@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Queued_Callback__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Calls where an NVM Queued Callback was requested, queueing or calling back.  These calls all share the same Conversation GUID</inlineHelpText>
+    <label>Queued Callback</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

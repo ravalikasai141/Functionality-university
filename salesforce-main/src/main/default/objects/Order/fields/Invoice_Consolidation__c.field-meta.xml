@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Consolidation__c</fullName>
+    <description>If this is manual invoicing or invoicing in advance, this order should not be taken into account for invoice consolidation.</description>
+    <externalId>false</externalId>
+    <formula>IF (ISPICKVAL(Billing_Type__c , &quot;In Advance&quot;)  ||  Contains(TEXT(blng__InvoiceBatch__c),&quot;Manual&quot;), FALSE, TRUE)</formula>
+    <inlineHelpText>For manual invoicing or invoicing in advance, this order should not be taken into account for invoice consolidation/separation.</inlineHelpText>
+    <label>Invoice Consolidation</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

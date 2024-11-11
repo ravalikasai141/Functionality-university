@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Student Queries</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>New,Unverified</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>notEqual</operation>
+                <value>Student Query,Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>University_Student_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Service</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,Unverified</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>contains</operation>
+                <value>my.bpp.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Service_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Service</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,Unverified</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>University_Student_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR (7 AND 8) OR (9 AND 10)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>How do I access my results and feedback,I have a query about my submission,I would like to defer my assessment or request an extension,I would like to discuss appeals,I need to inform you about my absence</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I would like to book an appointment to discuss a query I have,I need to change my personal details,I have a question about my graduation ceremony,I have not received my certificate,I need a replacement certificate,When will I receive my certificate?</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I cannot see a submission link on Hub/VLE,I have missing or wrong modules on Hub/VLE,I have a registration query,How do I collect my ID card?,I have a question about my Oyster card,My ID card has been lost or stolen,I have a question about my term dates</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I need to report a problem with my Biometric Resident Permit,I would like to request a Schengen Travel Letter,I have a query about applying for Post Study Work/Graduate Route Visa,I have a query about inviting visitors to the UK</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a query about my balance,&quot;I have been billed for resit assessments, can I check what these are?&quot;,When is my next instalment due?,I have a query about my timetable,&quot;I would like to request a Bank, Status or Council Tax letter&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I would like to request a holiday letter,My letter details are Incorrect</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Business,Law,Nursing,Technology</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a query about my attendance,Authorised Leave,I would like to request an academic reference</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Business,Law,Psychology,Technology</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a query about exemptions</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Business_School</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Business</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my assessments feedback,I would like to resit my exam,I would like to apply for Interruption of Studies,I am on Interruption of Studies and wish to extend,&quot;I want to change my programme, mode or location&quot;</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>International_Student_Advice</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1</booleanFilter>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my Visa,I would like to apply for an extension of my student visa</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Exam_Operations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1</booleanFilter>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my results,I have a question about my exam learning support,I would like a copy of my transcript,I have a question about my exam arrangements</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Nursing_School</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Nursing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>&quot;I want to change my programme, mode or location&quot;,I am on Interruption of Studies and wish to extend,I would like to apply for Interruption of Studies</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Student_Loans</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1</booleanFilter>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my student loan</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Law_School</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Law</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my assessments feedback,I would like to resit my exam,I am on Interruption of Studies and wish to extend,I would like to apply for Interruption of Studies,&quot;I want to change my programme, mode or location&quot;</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Student_Finance</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1</booleanFilter>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>&quot;I am in financial difficulty, what are my options?&quot;,&quot;I am taking an interruption of studies, how does that affect my payment plan and fees?&quot;,When will I receive my refund?,SPP Request,Suspension Warning</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Technology_School</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Technology</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my assessments feedback,I would like to resit my exam,I am on Interruption of Studies and wish to extend,I would like to apply for Interruption of Studies,&quot;I want to change my programme, mode or location&quot;</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Psychology_School</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.School__c</field>
+                <operation>equals</operation>
+                <value>Psychology</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Query_Subtype__c</field>
+                <operation>equals</operation>
+                <value>I have a question about my assessments feedback,I would like to resit my exam,I would like to apply for Interruption of Studies,I am on Interruption of Studies and wish to extend,&quot;I want to change my programme, mode or location&quot;</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>University_Unverified</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Student Query</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

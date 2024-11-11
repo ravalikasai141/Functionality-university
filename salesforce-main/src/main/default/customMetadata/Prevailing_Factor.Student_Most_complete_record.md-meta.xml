@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Student: Most complete record</label>
+    <protected>false</protected>
+    <values>
+        <field>Active__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Condition__c</field>
+        <value xsi:type="xsd:string">Most complete record</value>
+    </values>
+    <values>
+        <field>Default__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Field__c</field>
+        <value xsi:type="xsd:string">BNR_Banner_ID__pc, Country_of_Permanent_Address__c, Country_of_Residence__pc, FirstName, LastName, Name, PersonBirthdate, PersonEmail, Phone, Primary_Nationality__pc, SFDC_Country_of_Birth__pc, SFDC_Disability_Type_Code_Select__pc, SFDC_Ethnic_Code_Select__pc, SRN__pc</value>
+    </values>
+    <values>
+        <field>Index__c</field>
+        <value xsi:type="xsd:double">7.0</value>
+    </values>
+    <values>
+        <field>Object__c</field>
+        <value xsi:type="xsd:string">Student</value>
+    </values>
+    <values>
+        <field>Record_Type__c</field>
+        <value xsi:type="xsd:string">Student</value>
+    </values>
+</CustomMetadata>

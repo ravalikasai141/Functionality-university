@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Handle_Time__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.Name = &quot;Case&quot;,
+ NVMStatsSF__Agent_Talk_Time__c +  NVMStatsSF__Agent2_Transfer_Time__c  +
+ NVMStatsSF__After_Call_Work_Time__c,
+
+
+ IF(ISPICKVAL(NVMStatsSF__Interaction_Type__c, &quot;Outbound Call&quot;),
+  NVMStatsSF__Agent_Talk_Time__c + NVMStatsSF__Agent2_Transfer_Time__c +
+  NVMStatsSF__After_Call_Work_Time__c +  NVMStatsSF__Consult_Time__c +
+  NVMStatsSF__Agent_Consult_Time__c +
+  NVMStatsSF__Warm_Transfer_Time__c +  NVMStatsSF__Agent_Ring_Duration__c,
+   
+ IF(ISPICKVAL(NVMStatsSF__Interaction_Type__c, &quot;Internal Call&quot;),
+  (IF(NVMStatsSF__EndReason__c != &quot;Agent&quot;,2,1)*(NVMStatsSF__Agent_Talk_Time__c +NVMStatsSF__After_Call_Work_Time__c)) +
+  NVMStatsSF__Agent_Consult_Time__c +
+  NVMStatsSF__Agent_Ring_Duration__c,
+
+
+  NVMStatsSF__Agent_Talk_Time__c + NVMStatsSF__Agent2_Transfer_Time__c + 
+  NVMStatsSF__After_Call_Work_Time__c +  NVMStatsSF__Consult_Time__c +
+  NVMStatsSF__Agent_Consult_Time__c +
+  NVMStatsSF__Warm_Transfer_Time__c )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total working duration of all participating agents (i.e. Agent Talk Time + Transfer Time + Wrap + Hold + Consult Times for Calls and Working + Wrap up for Cases; Agent Handling time for Internal &amp; Outbound Calls also counts Ring time of Agent who dialled)</inlineHelpText>
+    <label>Handle Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_Change_Ownership_for_Agent</fullName>
+    <active>true</active>
+    <description>Stops Agent user being able to change Opportunity Owner</description>
+    <errorConditionFormula>$Profile.Name = &quot;Agent User&quot; &amp;&amp; ISCHANGED( OwnerId )</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>Your Profile type restricts you from changing the Opportunity Owner.</errorMessage>
+</ValidationRule>

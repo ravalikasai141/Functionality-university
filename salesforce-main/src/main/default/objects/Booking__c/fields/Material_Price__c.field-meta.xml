@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Material_Price__c</fullName>
+    <description>Roll up of cost of materials for this booking from the booking lines. To be used in reports as backing information for invoices</description>
+    <externalId>false</externalId>
+    <label>Material Price</label>
+    <summarizedField>Booking_Line__c.blng_PreratedAmount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Booking_Line__c.Product_Family__c</field>
+        <operation>equals</operation>
+        <value>Materials, VLE</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Booking_Line__c.Booking__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

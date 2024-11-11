@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Source__c</fullName>
+    <description>Source of data to create this particular record (e.g. CAB/UCAS/BPTC).  Record source &apos;Salesforce&apos; indicates a record created by an end user.</description>
+    <externalId>false</externalId>
+    <label>Record Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>true</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>CAB</fullName>
+                <default>false</default>
+                <label>CAB</label>
+            </value>
+            <value>
+                <fullName>UCAS</fullName>
+                <default>false</default>
+                <label>UCAS</label>
+            </value>
+            <value>
+                <fullName>BPTC</fullName>
+                <default>false</default>
+                <label>BPTC</label>
+            </value>
+            <value>
+                <fullName>Direct Apps</fullName>
+                <default>false</default>
+                <label>Direct Apps</label>
+            </value>
+            <value>
+                <fullName>Administrate</fullName>
+                <default>false</default>
+                <label>Administrate</label>
+            </value>
+            <value>
+                <fullName>eCommerce</fullName>
+                <default>false</default>
+                <label>eCommerce</label>
+            </value>
+            <value>
+                <fullName>Join</fullName>
+                <default>false</default>
+                <label>Join</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

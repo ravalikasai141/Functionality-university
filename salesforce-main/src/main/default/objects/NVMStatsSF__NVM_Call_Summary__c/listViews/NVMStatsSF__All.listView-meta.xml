@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__All</fullName>
+    <columns>NAME</columns>
+    <columns>NVMStatsSF__NVM_Service_Name__c</columns>
+    <columns>NVMStatsSF__CallTime__c</columns>
+    <columns>NVMStatsSF__Handle_Time__c</columns>
+    <columns>NVMStatsSF__Related_To__c</columns>
+    <columns>NVMStatsSF__Task_Link__c</columns>
+    <columns>NVMStatsSF__Last_State__c</columns>
+    <columns>NVMStatsSF__Abandoned__c</columns>
+    <columns>NVMStatsSF__Agent__c</columns>
+    <columns>NVMStatsSF__Queue_Name__c</columns>
+    <columns>NVMStatsSF__Automation_Segment__c</columns>
+    <columns>NVMStatsSF__Queue_Duration__c</columns>
+    <columns>NVMStatsSF__Agent_Ring_Duration__c</columns>
+    <columns>NVMStatsSF__Consult_Time__c</columns>
+    <columns>NVMStatsSF__After_Call_Work_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NVMStatsSF__CallGuid__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All</label>
+</ListView>

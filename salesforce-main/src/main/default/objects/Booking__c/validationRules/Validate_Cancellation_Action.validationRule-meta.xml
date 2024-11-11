@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Cancellation_Action</fullName>
+    <active>true</active>
+    <description>Cancellation Action is required if a Booking is cancelled</description>
+    <errorConditionFormula>ISPICKVAL(Status__c, &apos;Cancelled&apos;) &amp;&amp; ISBLANK(TEXT( BPP_Cancellation_Action__c))</errorConditionFormula>
+    <errorDisplayField>BPP_Cancellation_Action__c</errorDisplayField>
+    <errorMessage>Cancellation Action is required if a Booking is cancelled</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_Number_Required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does the account require a PO number? This will ensure all orders associated with the account enforce a PO to be entered on all associated bookings</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This will ensure all orders associated with the account enforce a PO to be entered on all associated bookings</inlineHelpText>
+    <label>PO Number Required?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

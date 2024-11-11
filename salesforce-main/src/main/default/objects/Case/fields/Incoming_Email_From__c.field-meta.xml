@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incoming_Email_From__c</fullName>
+    <description>sender email address of email received when case is closed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>sender email address of email received when case is closed</inlineHelpText>
+    <label>Incoming Email From</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

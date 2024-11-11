@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rfi_Interactive__c</fullName>
+    <description>part of the rfi form</description>
+    <externalId>false</externalId>
+    <label>Interactive</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>download prospectus</fullName>
+                <default>false</default>
+                <label>download prospectus</label>
+            </value>
+            <value>
+                <fullName>watch lecture</fullName>
+                <default>false</default>
+                <label>watch lecture</label>
+            </value>
+            <value>
+                <fullName>watch video</fullName>
+                <default>false</default>
+                <label>watch video</label>
+            </value>
+            <value>
+                <fullName>Take test now</fullName>
+                <default>false</default>
+                <label>Take test now</label>
+            </value>
+            <value>
+                <fullName>play quiz now</fullName>
+                <default>false</default>
+                <label>play quiz now</label>
+            </value>
+            <value>
+                <fullName>play game now</fullName>
+                <default>false</default>
+                <label>play game now</label>
+            </value>
+            <value>
+                <fullName>request call back</fullName>
+                <default>false</default>
+                <label>request call back</label>
+            </value>
+            <value>
+                <fullName>request email contact</fullName>
+                <default>false</default>
+                <label>request email contact</label>
+            </value>
+            <value>
+                <fullName>request more information</fullName>
+                <default>false</default>
+                <label>request more information</label>
+            </value>
+            <value>
+                <fullName>Reporting a problem with the website</fullName>
+                <default>false</default>
+                <label>Reporting a problem with the website</label>
+            </value>
+            <value>
+                <fullName>Download a whitepaper/research paper</fullName>
+                <default>false</default>
+                <label>Download a whitepaper/research paper</label>
+            </value>
+            <value>
+                <fullName>Marketing preference</fullName>
+                <default>false</default>
+                <label>Marketing preference</label>
+            </value>
+            <value>
+                <fullName>Entering a competition – word answer</fullName>
+                <default>false</default>
+                <label>Entering a competition – word answer</label>
+            </value>
+            <value>
+                <fullName>Competition – multiple choice answer</fullName>
+                <default>false</default>
+                <label>Competition – multiple choice answer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

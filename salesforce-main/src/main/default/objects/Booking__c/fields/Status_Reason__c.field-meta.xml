@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Reason__c</fullName>
+    <description>Dependant field to Status - reason should be given if the status cannot be progressed to &apos;Confirmed&apos;</description>
+    <externalId>false</externalId>
+    <label>Status Reason</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Failed Paper</fullName>
+                <default>false</default>
+                <label>Failed Paper</label>
+            </value>
+            <value>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+                <label>Upgrade</label>
+            </value>
+            <value>
+                <fullName>Changed Mind</fullName>
+                <default>false</default>
+                <label>Changed Mind</label>
+            </value>
+            <value>
+                <fullName>Extenuating Circumstances</fullName>
+                <default>false</default>
+                <label>Extenuating Circumstances</label>
+            </value>
+            <value>
+                <fullName>Deferral</fullName>
+                <default>false</default>
+                <label>Deferral</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <label>Transfer</label>
+            </value>
+            <value>
+                <fullName>Internal Error</fullName>
+                <default>false</default>
+                <label>Internal Error</label>
+            </value>
+            <value>
+                <fullName>Apprenticeships - Break in Learning</fullName>
+                <default>false</default>
+                <label>Apprenticeships - Break in Learning</label>
+            </value>
+            <value>
+                <fullName>Apprenticeships – Leaver Not Achiever</fullName>
+                <default>false</default>
+                <label>Apprenticeships – Leaver Not Achiever</label>
+            </value>
+            <value>
+                <fullName>Complaint - HUB</fullName>
+                <default>false</default>
+                <label>Complaint - HUB</label>
+            </value>
+            <value>
+                <fullName>Complaint - Tutor</fullName>
+                <default>false</default>
+                <label>Complaint - Tutor</label>
+            </value>
+            <value>
+                <fullName>Complaint - Materials</fullName>
+                <default>false</default>
+                <label>Complaint - Materials</label>
+            </value>
+            <value>
+                <fullName>Complaint - Marking</fullName>
+                <default>false</default>
+                <label>Complaint - Marking</label>
+            </value>
+            <value>
+                <fullName>Complaint - Student Experience</fullName>
+                <default>false</default>
+                <label>Complaint - Student Experience</label>
+            </value>
+            <value>
+                <fullName>Access – (Internal Fix)</fullName>
+                <default>false</default>
+                <label>Access – (Internal Fix)</label>
+            </value>
+            <value>
+                <fullName>Exemption</fullName>
+                <default>false</default>
+                <label>Exemption</label>
+            </value>
+            <value>
+                <fullName>Client lead change</fullName>
+                <default>false</default>
+                <label>Client lead change</label>
+            </value>
+            <value>
+                <fullName>IT fix</fullName>
+                <default>false</default>
+                <label>IT fix</label>
+            </value>
+            <value>
+                <fullName>Scheduling change</fullName>
+                <default>false</default>
+                <label>Scheduling change</label>
+            </value>
+            <value>
+                <fullName>Admin error</fullName>
+                <default>false</default>
+                <label>Admin error</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Failed Paper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Upgrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Changed Mind</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Extenuating Circumstances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Deferral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Internal Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Apprenticeships - Break in Learning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Apprenticeships – Leaver Not Achiever</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Complaint - HUB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Complaint - Tutor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Complaint - Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Complaint - Marking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Complaint - Student Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Access – (Internal Fix)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Exemption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Client lead change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>IT fix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Scheduling change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Admin error</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Order_Status</fullName>
+    <active>true</active>
+    <description>This order isn&apos;t activated. An active order is required to make a Booking</description>
+    <errorConditionFormula>NOT(ISPICKVAL(Order__r.Status, &apos;Activated&apos;))</errorConditionFormula>
+    <errorDisplayField>Order__c</errorDisplayField>
+    <errorMessage>Please make sure Order is Activated</errorMessage>
+</ValidationRule>

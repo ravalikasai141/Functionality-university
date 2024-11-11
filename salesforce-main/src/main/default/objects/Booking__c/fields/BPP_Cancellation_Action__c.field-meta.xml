@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Cancellation_Action__c</fullName>
+    <description>The purpose of this field is to determine whether or not the Booking&apos;s related dispatched materials should have a negative Revenue Schedule created for them when the Booking is cancelled.</description>
+    <externalId>false</externalId>
+    <label>Cancellation Action</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit Fulfilled Materials</fullName>
+                <default>false</default>
+                <label>Credit Fulfilled Materials</label>
+            </value>
+            <value>
+                <fullName>Don&apos;t Credit Fulfilled Materials</fullName>
+                <default>false</default>
+                <label>Don&apos;t Credit Fulfilled Materials</label>
+            </value>
+            <value>
+                <fullName>Credit Dispatched Materials</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Credit Dispatched Materials</label>
+            </value>
+            <value>
+                <fullName>Don&apos;t Credit Dispatched Materials</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Don&apos;t Credit Dispatched Materials</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Credit Fulfilled Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Don&apos;t Credit Fulfilled Materials</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

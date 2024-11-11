@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Assign_Available_All_identified_disabilities_ESFA_Values</name>
+        <label>Assign Available All identified disabilities (ESFA) Values</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>12~ Dyslexia</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>13~ Dyscalculia</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>94~ Other specific learning difficulty (e.g. Dyspraxia)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>14~ Autism spectrum disorder</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>15~ Asperger&apos;s syndrome</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>17~ Speech, Language and Communication Needs</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>8~ Social and emotional difficulties</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>95~ Other medical condition (for example epilepsy, asthma, diabetes)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>9~ Mental health difficulty</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>6~ Disability affecting mobility</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>93~ Other physical disability</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>5~ Hearing impairment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>4~ Visual impairment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>96~ Other learning difficulty</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>97~ Other disability</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>16~ Temporary disability after illness (for example post-viral) or accident</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>7~ Profound complex disabilities</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAValues</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>98~ Prefer not to say</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_AllidentifieddisabilitiesESFAValues</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>No valid picklist selections can be mapped to &apos;Disability (HESA)&apos;</description>
+        <name>Assign_Null_Value</name>
+        <label>Assign Null Value</label>
+        <locationX>50</locationX>
+        <locationY>1523</locationY>
+        <assignmentItems>
+            <assignToReference>varDisabilityHESAPicklistValues</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign mapped &apos;All identified disabilities (ESFA)&apos; value into variable to set &apos;Disability (HESA)&apos; value</description>
+        <name>Assign_Value_All_identified_disabilities_ESFA</name>
+        <label>Assign Value (All identified disabilities (ESFA))</label>
+        <locationX>314</locationX>
+        <locationY>1523</locationY>
+        <assignmentItems>
+            <assignToReference>varDisabilityHESAPicklistValues</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxFormatESFAString</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign mapped &apos;Disability&apos; value into variable to set &apos;Disability (HESA)&apos; value</description>
+        <name>Assign_Value_Disability</name>
+        <label>Assign Value (Disability)</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>varDisabilityHESAPicklistValues</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxDisabilityMapping</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign mapped &apos;Learning Support Details&apos; value into variable to set &apos;Disability (HESA)&apos; value</description>
+        <name>Assign_Value_Learning_Support_Details</name>
+        <label>Assign Value (Learning Support Details)</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>varDisabilityHESAPicklistValues</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxLearningSupportDetailsMapping</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigns calculated mapped string updated with the current loop value to the string of picklist values to be updated</description>
+        <name>Update_Mapped_String</name>
+        <label>Update Mapped String</label>
+        <locationX>622</locationX>
+        <locationY>971</locationY>
+        <assignmentItems>
+            <assignToReference>varAllidentifieddisabilitiesESFAMappedString</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCompileESFAString</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varHESACurrentMappedQuantity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIncrementMappedHESASelections</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_AllidentifieddisabilitiesESFAValues</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Not all fields from &apos;All identified disabilities (ESFA)&apos; are mapped to &apos;Disability (HESA)&apos;. In the event that none of the mapped values were selected we need to check for unmapped values before proceeding to allow the default value to be set. If there are only unmapped values then the field will be made null.</description>
+        <name>Check_Unmapped_Value_Relevancy</name>
+        <label>Check Unmapped Value Relevancy</label>
+        <locationX>182</locationX>
+        <locationY>1415</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Value_All_identified_disabilities_ESFA</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Proceed with Current Mapping</defaultConnectorLabel>
+        <rules>
+            <name>Unmapped_Values_Only_Null</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>varAllidentifieddisabilitiesESFAMappedString</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>95~ No known impairment or condition</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.All_identified_disabilities_ESFA__pc</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>10~ Moderate learning difficulty</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.All_identified_disabilities_ESFA__pc</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>11~ Severe learning difficulty</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Null_Value</targetReference>
+            </connector>
+            <label>Unmapped Values Only (Null)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determine which source field has been updated &amp; will set the values for the &apos;Disability (HESA)&apos; target field.</description>
+        <name>Determine_Source_Field</name>
+        <label>Determine Source Field</label>
+        <locationX>644</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>All_identified_disabilities_ESFA_Updated</name>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.All_identified_disabilities_ESFA__pc</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.All_identified_disabilities_ESFA__pc</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Available_All_identified_disabilities_ESFA_Values</targetReference>
+            </connector>
+            <label>All identified disabilities (ESFA) Updated</label>
+        </rules>
+        <rules>
+            <name>Learning_Support_Details_Updated</name>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Special_Needs_Disability_Support__pc</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Special_Needs_Disability_Support__pc</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Value_Learning_Support_Details</targetReference>
+            </connector>
+            <label>Learning Support Details Updated</label>
+        </rules>
+        <rules>
+            <name>Disability_Updated</name>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SFDC_Select_Disability_Status_Code__pc</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SFDC_Select_Disability_Status_Code__pc</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Value_Disability</targetReference>
+            </connector>
+            <label>Disability Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the active loop item been selected in the &apos;All identified disabilities (ESFA)&apos; multi-select picklist field?</description>
+        <name>Evaluate_Item_Against_ESFA_Picklist</name>
+        <label>Evaluate Item Against ESFA Picklist</label>
+        <locationX>710</locationX>
+        <locationY>755</locationY>
+        <defaultConnector>
+            <targetReference>Loop_AllidentifieddisabilitiesESFAValues</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Loop Value Not Selected</defaultConnectorLabel>
+        <rules>
+            <name>Loop_Value_Selected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.All_identified_disabilities_ESFA__pc</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>Loop_AllidentifieddisabilitiesESFAValues</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Selected_Map_Already_Added</targetReference>
+            </connector>
+            <label>Loop Value Selected</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>HESA can only accept up to 9 selections, so no more can be added to the &apos;Disability (HESA)&apos; field once this limit has been reached</description>
+        <name>Maximum_Selections_Added</name>
+        <label>Maximum Selections Added?</label>
+        <locationX>490</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Evaluate_Item_Against_ESFA_Picklist</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Continue Evaluating Values</defaultConnectorLabel>
+        <rules>
+            <name>Limit_Reached</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varHESACurrentMappedQuantity</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>9.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_AllidentifieddisabilitiesESFAValues</targetReference>
+            </connector>
+            <label>Limit Reached</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the selected mapped value already been added (multiple source values may map to the same &apos;Disability (HESA)&apos; value.</description>
+        <name>Selected_Map_Already_Added</name>
+        <label>Selected Map Already Added</label>
+        <locationX>534</locationX>
+        <locationY>863</locationY>
+        <defaultConnector>
+            <targetReference>Update_Mapped_String</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Mapped Value Needs Adding</defaultConnectorLabel>
+        <rules>
+            <name>Mapped_Value_Already_Added</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varAllidentifieddisabilitiesESFAMappedString</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>fxAllidentifieddisabilitiesESFAMapping</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_AllidentifieddisabilitiesESFAValues</targetReference>
+            </connector>
+            <label>Mapped Value Already Added</label>
+        </rules>
+    </decisions>
+    <description>Update &apos;Disability (HESA)&apos; values from the other learning support fields when they are set</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Maps the current &apos;All identified disabilities (ESFA) Mapping&apos; loop item selection to the corresponding value in &apos;Disability (HESA)&apos;</description>
+        <name>fxAllidentifieddisabilitiesESFAMapping</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!Loop_AllidentifieddisabilitiesESFAValues},
+&quot;12~ Dyslexia&quot;, &quot;51~ Learning difference such as dyslexia, dyspraxia or AD(H)D&quot;,
+&quot;13~ Dyscalculia&quot;, &quot;51~ Learning difference such as dyslexia, dyspraxia or AD(H)D&quot;,
+&quot;94~ Other specific learning difficulty (e.g. Dyspraxia)&quot;, &quot;51~ Learning difference such as dyslexia, dyspraxia or AD(H)D&quot;,
+&quot;14~ Autism spectrum disorder&quot;, &quot;53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition&quot;,
+&quot;15~ Asperger&apos;s syndrome&quot;, &quot;53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition&quot;,
+&quot;17~ Speech, Language and Communication Needs&quot;, &quot;53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition&quot;,
+&quot;8~ Social and emotional difficulties&quot;, &quot;53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition&quot;,
+&quot;95~ Other medical condition (for example epilepsy, asthma, diabetes)&quot;, &quot;54~ Long-term illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy&quot;,
+&quot;9~ Mental health difficulty&quot;, &quot;55~ Mental health condition, challenge or disorder, such as depression, schizophrenia or anxiety&quot;,
+&quot;6~ Disability affecting mobility&quot;, &quot;56~ Physical impairment (a condition that substantially limits one or more basic physical activities such as walking, climbing &quot;,
+&quot;93~ Other physical disability&quot;, &quot;56~ Physical impairment (a condition that substantially limits one or more basic physical activities such as walking, climbing &quot;,
+&quot;5~ Hearing impairment&quot;, &quot;57~ Deaf or have a hearing impairment&quot;,
+&quot;4~ Visual impairment&quot;, &quot;58~ Blind or have a visual impairment uncorrected by glasses&quot;,
+&quot;96~ Other learning difficulty&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;97~ Other disability&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;16~ Temporary disability after illness (for example post-viral) or accident&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;7~ Profound complex disabilities&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;98~ Prefer not to say&quot;, &quot;98~ Prefer not to say&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <description>Adds mapped value of the current loop item to the string of picklist values</description>
+        <name>fxCompileESFAString</name>
+        <dataType>String</dataType>
+        <expression>IF({!varAllidentifieddisabilitiesESFAMappedString} = &apos;95~ No known impairment or condition&apos;,
+{!fxAllidentifieddisabilitiesESFAMapping} &amp; &apos;;&apos;,
+{!varAllidentifieddisabilitiesESFAMappedString} &amp; {!fxAllidentifieddisabilitiesESFAMapping} &amp; &apos;;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <description>Maps the picklist value in &apos;Disability&apos; to the corresponding value in &apos;Disability (HESA)&apos;</description>
+        <name>fxDisabilityMapping</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.SFDC_Select_Disability_Status_Code__pc},
+&quot;No Known Disability&quot;, &quot;95~ No known impairment, health condition or learning difference&quot;,
+&quot;Two or More&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;Specific Learning Difficulty&quot;, &quot;51~ Learning difference such as dyslexia, dyspraxia or AD(H)D&quot;,
+&quot;Autistic Spectrum Condition&quot;, &quot;53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition&quot;,
+&quot;Illness/Health condition&quot;, &quot;54~ Long-term illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy&quot;,
+&quot;Mental Health condition&quot;, &quot;55~ Mental health condition, challenge or disorder, such as depression, schizophrenia or anxiety&quot;,
+&quot;Physical Impairment&quot;, &quot;56~ Physical impairment (a condition that substantially limits one or more basic physical activities such as walking, climbing &quot;,
+&quot;Hearing Impairment&quot;, &quot;57~ Deaf or have a hearing impairment&quot;,
+&quot;Visual Impairment&quot;, &quot;58~ Blind or have a visual impairment uncorrected by glasses&quot;,
+&quot;Not listed above&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <description>Ensures the formatting is correct for setting the &apos;Disability (HESA)&apos; picklist values</description>
+        <name>fxFormatESFAString</name>
+        <dataType>String</dataType>
+        <expression>IF( {!varAllidentifieddisabilitiesESFAMappedString} = &apos;95~ No known impairment or condition&apos;,
+{!varAllidentifieddisabilitiesESFAMappedString},
+LEFT( {!varAllidentifieddisabilitiesESFAMappedString}, LEN( {!varAllidentifieddisabilitiesESFAMappedString})-1))</expression>
+    </formulas>
+    <formulas>
+        <description>Increments number of selections currently mapped to the &apos;Disability (HESA)&apos; multi-select picklist</description>
+        <name>fxIncrementMappedHESASelections</name>
+        <dataType>Number</dataType>
+        <expression>{!varHESACurrentMappedQuantity} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Maps the picklist value in &apos;Learning Support Details&apos; to the corresponding value in &apos;Disability (HESA)&apos;</description>
+        <name>fxLearningSupportDetailsMapping</name>
+        <dataType>String</dataType>
+        <expression>CASE( UPPER( LEFT( {!$Record.Special_Needs_Disability_Support__pc}, 13)),
+&quot;UCAS CODE - A&quot;, &quot;95~ No known impairment, health condition or learning difference&quot;,
+&quot;UCAS CODE - B&quot;, &quot;53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition&quot;,
+&quot;UCAS CODE - C&quot;, &quot;58~ Blind or have a visual impairment uncorrected by glasses&quot;,
+&quot;UCAS CODE - D&quot;, &quot;57~ Deaf or have a hearing impairment&quot;,
+&quot;UCAS CODE - E&quot;, &quot;54~ Long-term illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy&quot;,
+&quot;UCAS CODE - F&quot;, &quot;55~ Mental health condition, challenge or disorder, such as depression, schizophrenia or anxiety&quot;,
+&quot;UCAS CODE - G&quot;, &quot;51~ Learning difference such as dyslexia, dyspraxia or AD(H)D&quot;,
+&quot;UCAS CODE - H&quot;, &quot;56~ Physical impairment (a condition that substantially limits one or more basic physical activities such as walking, climbing &quot;,
+&quot;UCAS CODE - I&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;UCAS CODE - J&quot;, &quot;96~ An impairment, health condition or learning difference not listed above&quot;,
+&quot;UCAS CODE - N&quot;, &quot;95~ No known impairment, health condition or learning difference&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Set Disability Code Select Values {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Set Disability (HESA) Values</label>
+    <loops>
+        <description>Loop collection of picklist values from &apos;All identified disabilities (ESFA) Values&apos;</description>
+        <name>Loop_AllidentifieddisabilitiesESFAValues</name>
+        <label>Loop AllidentifieddisabilitiesESFAValues</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <collectionReference>varAllidentifieddisabilitiesESFAValues</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Maximum_Selections_Added</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Check_Unmapped_Value_Relevancy</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update account record setting the &apos;Disability (HESA)&apos; field values</description>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>644</locationX>
+        <locationY>1799</locationY>
+        <inputAssignments>
+            <field>SFDC_Disability_Type_Code_Select__pc</field>
+            <value>
+                <elementReference>varDisabilityHESAPicklistValues</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Determine_Source_Field</targetReference>
+        </connector>
+        <filterFormula>AND(
+  {!$Record.IsPersonAccount} = TRUE,
+  ISBLANK(TEXT({!$Record.Primary_Learning_Difficulty__c})),
+  ISBLANK({!$Record.Secondary_Learning_Difficulty__c}),
+  OR(
+    ISNEW() &amp;&amp; ISBLANK({!$Record.SFDC_Disability_Type_Code_Select__pc}),
+    NOT(ISNEW()) &amp;&amp; NOT(ISCHANGED({!$Record.SFDC_Disability_Type_Code_Select__pc}))
+  )
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>300</triggerOrder>
+    <variables>
+        <description>Contains string of selected values from the &apos;All identified disabilities (ESFA)&apos; that have been mapped to &apos;Disability (HESA)&apos;. As there is no mapping available for &apos;95~ No known impairment or condition&apos;, this is set as the default</description>
+        <name>varAllidentifieddisabilitiesESFAMappedString</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>95~ No known impairment or condition</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varAllidentifieddisabilitiesESFAValues</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>String of picklist values to populate the &apos;Disability (HESA)&apos; multi-select picklist field during update</description>
+        <name>varDisabilityHESAPicklistValues</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Current number of selections that have been made on the &apos;Disability (HESA)&apos; picklist multi-select picklist field</description>
+        <name>varHESACurrentMappedQuantity</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

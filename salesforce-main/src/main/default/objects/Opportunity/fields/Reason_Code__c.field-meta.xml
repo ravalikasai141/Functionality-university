@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Code__c</fullName>
+    <description>To be able to report on a Reason Code field with specific drop down items to select.
+We can track from within the opportunity the likelihood of a student being recruited in more detail that can be currently seen from just their status, and give reasons behind application stalling - such as &quot;Awaiting Funding&quot;</description>
+    <externalId>false</externalId>
+    <label>Reason Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accepting next week</fullName>
+                <default>false</default>
+                <label>Accepting next week</label>
+            </value>
+            <value>
+                <fullName>Accepting no time frame confirmed</fullName>
+                <default>false</default>
+                <label>Accepting no time frame confirmed</label>
+            </value>
+            <value>
+                <fullName>Accepting this month</fullName>
+                <default>false</default>
+                <label>Accepting this month</label>
+            </value>
+            <value>
+                <fullName>Accepting this week</fullName>
+                <default>false</default>
+                <label>Accepting this week</label>
+            </value>
+            <value>
+                <fullName>Applying for loan</fullName>
+                <default>false</default>
+                <label>Applying for loan</label>
+            </value>
+            <value>
+                <fullName>Applying next week</fullName>
+                <default>false</default>
+                <label>Applying next week</label>
+            </value>
+            <value>
+                <fullName>Applying no time frame</fullName>
+                <default>false</default>
+                <label>Applying no time frame</label>
+            </value>
+            <value>
+                <fullName>Applying this month</fullName>
+                <default>false</default>
+                <label>Applying this month</label>
+            </value>
+            <value>
+                <fullName>Applying this week</fullName>
+                <default>false</default>
+                <label>Applying this week</label>
+            </value>
+            <value>
+                <fullName>Awaiting Programme Information (Timetable)</fullName>
+                <default>false</default>
+                <label>Awaiting Programme Information (Timetable)</label>
+            </value>
+            <value>
+                <fullName>Awaiting results of Training Contract application</fullName>
+                <default>false</default>
+                <label>Awaiting results of Training Contract application</label>
+            </value>
+            <value>
+                <fullName>Awaiting Scholarship outcome</fullName>
+                <default>false</default>
+                <label>Awaiting Scholarship outcome</label>
+            </value>
+            <value>
+                <fullName>Awaiting Scholarship Outcome - BPP</fullName>
+                <default>false</default>
+                <label>Awaiting Scholarship Outcome - BPP</label>
+            </value>
+            <value>
+                <fullName>Awaiting Scholarship Outcome - External</fullName>
+                <default>false</default>
+                <label>Awaiting Scholarship Outcome - External</label>
+            </value>
+            <value>
+                <fullName>Awaiting Tutor Call/Careers Call Outcome</fullName>
+                <default>false</default>
+                <label>Awaiting Tutor Call/Careers Call Outcome</label>
+            </value>
+            <value>
+                <fullName>Cannot get commitment from applicant</fullName>
+                <default>false</default>
+                <label>Cannot get commitment from applicant</label>
+            </value>
+            <value>
+                <fullName>Deferral Risk</fullName>
+                <default>false</default>
+                <label>Deferral Risk</label>
+            </value>
+            <value>
+                <fullName>Does not meet entry criteria</fullName>
+                <default>false</default>
+                <label>Does not meet entry criteria</label>
+            </value>
+            <value>
+                <fullName>Funding - Funding through Loan</fullName>
+                <default>false</default>
+                <label>Funding - Funding through Loan</label>
+            </value>
+            <value>
+                <fullName>Funding - No funding plan</fullName>
+                <default>false</default>
+                <label>Funding - No funding plan</label>
+            </value>
+            <value>
+                <fullName>Mode/Location no longer available - Risk</fullName>
+                <default>false</default>
+                <label>Mode/Location no longer available - Risk</label>
+            </value>
+            <value>
+                <fullName>Needs employer confirmation</fullName>
+                <default>false</default>
+                <label>Needs employer confirmation</label>
+            </value>
+            <value>
+                <fullName>Needs employer confirmation to apply</fullName>
+                <default>false</default>
+                <label>Needs employer confirmation to apply</label>
+            </value>
+            <value>
+                <fullName>No reason code</fullName>
+                <default>true</default>
+                <label>No reason code</label>
+            </value>
+            <value>
+                <fullName>Outstanding documents</fullName>
+                <default>false</default>
+                <label>Outstanding documents</label>
+            </value>
+            <value>
+                <fullName>Outstanding examinations</fullName>
+                <default>false</default>
+                <label>Outstanding examinations</label>
+            </value>
+            <value>
+                <fullName>Pending Course Instance</fullName>
+                <default>false</default>
+                <label>Pending Course Instance</label>
+            </value>
+            <value>
+                <fullName>Relying on full fees scholarship</fullName>
+                <default>false</default>
+                <label>Relying on full fees scholarship</label>
+            </value>
+            <value>
+                <fullName>Serial Deferral</fullName>
+                <default>false</default>
+                <label>Serial Deferral</label>
+            </value>
+            <value>
+                <fullName>Sponsored by BPP Firm</fullName>
+                <default>false</default>
+                <label>Sponsored by BPP Firm</label>
+            </value>
+            <value>
+                <fullName>Sponsored by non-BPP Firm</fullName>
+                <default>false</default>
+                <label>Sponsored by non-BPP Firm</label>
+            </value>
+            <value>
+                <fullName>Unable to establish contact - 1 month+</fullName>
+                <default>false</default>
+                <label>Unable to establish contact - 1 month+</label>
+            </value>
+            <value>
+                <fullName>Unable to establish contact - 1 week</fullName>
+                <default>false</default>
+                <label>Unable to establish contact - 1 week</label>
+            </value>
+            <value>
+                <fullName>Unable to establish contact - 2 week</fullName>
+                <default>false</default>
+                <label>Unable to establish contact - 2 week</label>
+            </value>
+            <value>
+                <fullName>Waiting for parents to fund</fullName>
+                <default>false</default>
+                <label>Waiting for parents to fund</label>
+            </value>
+            <value>
+                <fullName>Waiting for payday 1 month</fullName>
+                <default>false</default>
+                <label>Waiting for payday 1 month</label>
+            </value>
+            <value>
+                <fullName>Waiting for payday to apply</fullName>
+                <default>false</default>
+                <label>Waiting for payday to apply</label>
+            </value>
+            <value>
+                <fullName>Waiting on competitor scholarship outcome</fullName>
+                <default>false</default>
+                <label>Waiting on competitor scholarship outcome</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

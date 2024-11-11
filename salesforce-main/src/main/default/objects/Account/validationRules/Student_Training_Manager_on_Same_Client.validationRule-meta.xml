@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Training_Manager_on_Same_Client</fullName>
+    <active>true</active>
+    <description>Student and Training Manager have to be linked to same client</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Training_Manager__c)),
+NOT(ISBLANK( Client__c )),
+Client__r.Id  &lt;&gt;  Training_Manager__r.AccountId
+)</errorConditionFormula>
+    <errorMessage>The student and the training manager must be associated to the same client account</errorMessage>
+</ValidationRule>

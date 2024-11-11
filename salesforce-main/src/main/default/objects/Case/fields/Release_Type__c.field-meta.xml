@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release_Type__c</fullName>
+    <description>Method in which this particular backlog item has been implemented:
+BAU (Business as Usual) - no prior approval
+SIR (Salesforce Immediate Release) - approved immediate release
+Packaged Release - promoted within a normal release window</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Refers to the type of change made to the production instance.
+None - No changes released into production for this item.
+BAU - No prior approval required (notifies dev &amp; qa)
+SIR - Approved immediate release
+Packaged Release - Normal release conditions</inlineHelpText>
+    <label>Release Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>BAU</fullName>
+                <default>false</default>
+                <label>BAU</label>
+            </value>
+            <value>
+                <fullName>SIR</fullName>
+                <default>false</default>
+                <label>SIR</label>
+            </value>
+            <value>
+                <fullName>Packaged Release</fullName>
+                <default>false</default>
+                <label>Packaged Release</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

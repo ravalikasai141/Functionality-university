@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organisational_Capability_Decline_Reason__c</fullName>
+    <description>If no*, why are they not interested in organisational capability?
+
+*Did you discuss organisational capability mapping with the client?</description>
+    <externalId>false</externalId>
+    <label>Organisational Capability Decline Reason</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

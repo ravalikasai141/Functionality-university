@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mode__c</fullName>
+    <description>Mode that student has applied or expressed interest in studying.</description>
+    <externalId>false</externalId>
+    <label>Mode</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Time</fullName>
+                <default>false</default>
+                <label>Full Time</label>
+            </value>
+            <value>
+                <fullName>Full Time - Accelerated</fullName>
+                <default>false</default>
+                <label>Full Time - Accelerated</label>
+            </value>
+            <value>
+                <fullName>Full Time - Fast Track</fullName>
+                <default>false</default>
+                <label>Full Time - Fast Track</label>
+            </value>
+            <value>
+                <fullName>Part Time Day</fullName>
+                <default>false</default>
+                <label>Part Time Day</label>
+            </value>
+            <value>
+                <fullName>Part Time Weekend</fullName>
+                <default>false</default>
+                <label>Part Time Weekend</label>
+            </value>
+            <value>
+                <fullName>Part Time 1 Evening</fullName>
+                <default>false</default>
+                <label>Part Time 1 Evening</label>
+            </value>
+            <value>
+                <fullName>Part Time 2 Evening</fullName>
+                <default>false</default>
+                <label>Part Time 2 Evening</label>
+            </value>
+            <value>
+                <fullName>Part Time Saturday</fullName>
+                <default>false</default>
+                <label>Part Time Saturday</label>
+            </value>
+            <value>
+                <fullName>Part Time Distance Learning</fullName>
+                <default>false</default>
+                <label>Part Time Distance Learning</label>
+            </value>
+            <value>
+                <fullName>Full Time Distance Learning</fullName>
+                <default>false</default>
+                <label>Full Time Distance Learning</label>
+            </value>
+            <value>
+                <fullName>Fast Track</fullName>
+                <default>false</default>
+                <label>Fast Track</label>
+            </value>
+            <value>
+                <fullName>Flex</fullName>
+                <default>false</default>
+                <label>Flex</label>
+            </value>
+            <value>
+                <fullName>Full Time Accelerated</fullName>
+                <default>false</default>
+                <label>Full Time Accelerated</label>
+            </value>
+            <value>
+                <fullName>On-Line</fullName>
+                <default>false</default>
+                <label>On-Line</label>
+            </value>
+            <value>
+                <fullName>Part Time 2 Evenings</fullName>
+                <default>false</default>
+                <label>Part Time 2 Evenings</label>
+            </value>
+            <value>
+                <fullName>Short Course</fullName>
+                <default>false</default>
+                <label>Short Course</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

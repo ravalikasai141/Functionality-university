@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_create_new_Opportunity_when_lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Profile.Name=&quot;Agent User&quot;,
+ Account.Locked__c &gt; 0,
+ISNEW()
+)</errorConditionFormula>
+    <errorMessage>You cannot create a new Opportunity as this Account is locked.</errorMessage>
+</ValidationRule>

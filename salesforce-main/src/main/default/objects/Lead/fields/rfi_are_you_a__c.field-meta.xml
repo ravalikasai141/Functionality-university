@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_are_you_a__c</fullName>
+    <description>this is apicklist used by rfi form</description>
+    <externalId>false</externalId>
+    <label>Are you a</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>UK/EU students</fullName>
+                <default>false</default>
+                <label>UK/EU students</label>
+            </value>
+            <value>
+                <fullName>International student (Non-EU)</fullName>
+                <default>false</default>
+                <label>International student (Non-EU)</label>
+            </value>
+            <value>
+                <fullName>Training Manager/Employer</fullName>
+                <default>false</default>
+                <label>Training Manager/Employer</label>
+            </value>
+            <value>
+                <fullName>Secondary school/college representative</fullName>
+                <default>false</default>
+                <label>Secondary school/college representative</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

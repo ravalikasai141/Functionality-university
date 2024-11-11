@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rfi_Area_of_study_or_training__c</fullName>
+    <description>part of the rfi form</description>
+    <externalId>false</externalId>
+    <label>Area of study or training</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting (including ACCA, CIMA, AAT, ICAEW)</fullName>
+                <default>false</default>
+                <label>Accounting (including ACCA, CIMA, AAT, ICAEW)</label>
+            </value>
+            <value>
+                <fullName>Actuarial programmes</fullName>
+                <default>false</default>
+                <label>Actuarial programmes</label>
+            </value>
+            <value>
+                <fullName>Banking, Finance and Insurance</fullName>
+                <default>false</default>
+                <label>Banking, Finance and Insurance</label>
+            </value>
+            <value>
+                <fullName>Business and Management</fullName>
+                <default>false</default>
+                <label>Business and Management</label>
+            </value>
+            <value>
+                <fullName>Chiropractic</fullName>
+                <default>false</default>
+                <label>Chiropractic</label>
+            </value>
+            <value>
+                <fullName>Pre-or in-sessional English Language</fullName>
+                <default>false</default>
+                <label>Pre-or in-sessional English Language</label>
+            </value>
+            <value>
+                <fullName>Facilities Management</fullName>
+                <default>false</default>
+                <label>Facilities Management</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>Law (including GDL, LPC, BPTC)</fullName>
+                <default>false</default>
+                <label>Law (including GDL, LPC, BPTC)</label>
+            </value>
+            <value>
+                <fullName>Marketing (including CIM)</fullName>
+                <default>false</default>
+                <label>Marketing (including CIM)</label>
+            </value>
+            <value>
+                <fullName>Tax (including AAT and CTA)</fullName>
+                <default>false</default>
+                <label>Tax (including AAT and CTA)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

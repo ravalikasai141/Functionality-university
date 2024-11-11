@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_5__c</fullName>
+    <externalId>false</externalId>
+    <label>Tier 5</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tier_2__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blended</fullName>
+                <default>false</default>
+                <label>Blended</label>
+            </value>
+            <value>
+                <fullName>Existing Staff</fullName>
+                <default>false</default>
+                <label>Existing Staff</label>
+            </value>
+            <value>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+                <label>Face to Face</label>
+            </value>
+            <value>
+                <fullName>Graduates</fullName>
+                <default>false</default>
+                <label>Graduates</label>
+            </value>
+            <value>
+                <fullName>Mixed Recruitment Type</fullName>
+                <default>false</default>
+                <label>Mixed Recruitment Type</label>
+            </value>
+            <value>
+                <fullName>Online Classroom Live</fullName>
+                <default>false</default>
+                <label>Online Classroom Live</label>
+            </value>
+            <value>
+                <fullName>Online Demand</fullName>
+                <default>false</default>
+                <label>Online Demand</label>
+            </value>
+            <value>
+                <fullName>School Leavers</fullName>
+                <default>false</default>
+                <label>School Leavers</label>
+            </value>
+            <value>
+                <fullName>Traineeships</fullName>
+                <default>false</default>
+                <label>Traineeships</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>Existing Staff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>Graduates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>Mixed Recruitment Type</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>School Leavers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>Traineeships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Blended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Face to Face</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Online Classroom Live</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Online Demand</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

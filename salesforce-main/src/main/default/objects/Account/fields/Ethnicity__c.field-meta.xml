@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ethnicity__c</fullName>
+    <externalId>false</externalId>
+    <label>Ethnicity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10 White</fullName>
+                <default>false</default>
+                <label>10 White</label>
+            </value>
+            <value>
+                <fullName>14 Irish Traveller</fullName>
+                <default>false</default>
+                <label>14 Irish Traveller</label>
+            </value>
+            <value>
+                <fullName>21 Black or Black British-Caribbean</fullName>
+                <default>false</default>
+                <label>21 Black or Black British-Caribbean</label>
+            </value>
+            <value>
+                <fullName>22 Black or Black British-African</fullName>
+                <default>false</default>
+                <label>22 Black or Black British-African</label>
+            </value>
+            <value>
+                <fullName>29 Other Black background</fullName>
+                <default>false</default>
+                <label>29 Other Black background</label>
+            </value>
+            <value>
+                <fullName>31 Asian or Asian British-Indian</fullName>
+                <default>false</default>
+                <label>31 Asian or Asian British-Indian</label>
+            </value>
+            <value>
+                <fullName>32 Asian or Asian British-Pakistani</fullName>
+                <default>false</default>
+                <label>32 Asian or Asian British-Pakistani</label>
+            </value>
+            <value>
+                <fullName>33 Asian or Asian British-Bangladeshi</fullName>
+                <default>false</default>
+                <label>33 Asian or Asian British-Bangladeshi</label>
+            </value>
+            <value>
+                <fullName>34 Chinese</fullName>
+                <default>false</default>
+                <label>34 Chinese</label>
+            </value>
+            <value>
+                <fullName>39 Other Asian background</fullName>
+                <default>false</default>
+                <label>39 Other Asian background</label>
+            </value>
+            <value>
+                <fullName>41 Mixed-White and Black Caribbean</fullName>
+                <default>false</default>
+                <label>41 Mixed-White and Black Caribbean</label>
+            </value>
+            <value>
+                <fullName>42 Mixed-White and Black African</fullName>
+                <default>false</default>
+                <label>42 Mixed-White and Black African</label>
+            </value>
+            <value>
+                <fullName>43 Mixed-White and Asian</fullName>
+                <default>false</default>
+                <label>43 Mixed-White and Asian</label>
+            </value>
+            <value>
+                <fullName>49 Other mixed background</fullName>
+                <default>false</default>
+                <label>49 Other mixed background</label>
+            </value>
+            <value>
+                <fullName>80 Other ethnic background</fullName>
+                <default>false</default>
+                <label>80 Other ethnic background</label>
+            </value>
+            <value>
+                <fullName>98 I do not wish to declare</fullName>
+                <default>false</default>
+                <label>98 I do not wish to declare</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

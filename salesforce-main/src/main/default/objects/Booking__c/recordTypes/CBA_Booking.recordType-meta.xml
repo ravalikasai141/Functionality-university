@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CBA_Booking</fullName>
+    <active>true</active>
+    <description>CBA bookings</description>
+    <label>CBA Booking</label>
+    <picklistValues>
+        <picklist>BPP_Cancellation_Action__c</picklist>
+        <values>
+            <fullName>Credit Fulfilled Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t Credit Fulfilled Materials</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BPP_Cancellation_Terms__c</picklist>
+        <values>
+            <fullName>Inside</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outside</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Reason__c</picklist>
+        <values>
+            <fullName>Access %E2%80%93 %28Internal Fix%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admin error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apprenticeships %E2%80%93 Leaver Not Achiever</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apprenticeships - Break in Learning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changed Mind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client lead change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - HUB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Marking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Student Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - Tutor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exemption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extenuating Circumstances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed Paper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT fix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

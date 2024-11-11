@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Client_Before_Review_Stage</fullName>
+    <active>true</active>
+    <description>Checks whether client is set on an application before allowing it to progress to the BPP review stage</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL(PRIORVALUE(StageName), &apos;BPP Review&apos;),
+  ISPICKVAL(StageName, &apos;Line Manager Review&apos;),
+  (RecordType.DeveloperName = &apos;Apprentice_Application&apos;),
+  ISBLANK(Client__c)
+)</errorConditionFormula>
+    <errorMessage>A Client Account is required before this application can move to the BPP Review stage</errorMessage>
+</ValidationRule>

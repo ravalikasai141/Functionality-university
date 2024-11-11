@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Externally_Invoiced_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+TEXT(blng_Order__r.Billing_Mode__c) = &apos;Billed in Salesforce&apos;,
+OR(
+NOT(ISBLANK(BPP_Invoiced_In_AX_On__c)),
+NOT(ISBLANK(BPP_AX_Invoice_Reference__c))
+)
+)</errorConditionFormula>
+    <errorMessage>The related Order has been specified to be Billed In Salesforce. A Billing Line&apos;s &apos;Externally Invoiced&apos; fields should only be populated if the related Order has a &apos;Billing Mode&apos; of &apos;Billed off-system&apos;</errorMessage>
+</ValidationRule>

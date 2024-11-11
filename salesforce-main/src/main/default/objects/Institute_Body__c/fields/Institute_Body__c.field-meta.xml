@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Institute_Body__c</fullName>
+    <description>Institute Body</description>
+    <externalId>false</externalId>
+    <label>Institute Body</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AAT</fullName>
+                <default>false</default>
+                <label>AAT</label>
+            </value>
+            <value>
+                <fullName>ACCA</fullName>
+                <default>false</default>
+                <label>ACCA</label>
+            </value>
+            <value>
+                <fullName>Apprenticeships</fullName>
+                <default>false</default>
+                <label>Apprenticeships</label>
+            </value>
+            <value>
+                <fullName>ATT</fullName>
+                <default>false</default>
+                <label>ATT</label>
+            </value>
+            <value>
+                <fullName>CBI</fullName>
+                <default>false</default>
+                <label>CBI</label>
+            </value>
+            <value>
+                <fullName>CFA</fullName>
+                <default>false</default>
+                <label>CFA</label>
+            </value>
+            <value>
+                <fullName>CII</fullName>
+                <default>false</default>
+                <label>CII</label>
+            </value>
+            <value>
+                <fullName>CIMA</fullName>
+                <default>false</default>
+                <label>CIMA</label>
+            </value>
+            <value>
+                <fullName>CIPD</fullName>
+                <default>false</default>
+                <label>CIPD</label>
+            </value>
+            <value>
+                <fullName>CISI</fullName>
+                <default>false</default>
+                <label>CISI</label>
+            </value>
+            <value>
+                <fullName>CMI</fullName>
+                <default>false</default>
+                <label>CMI</label>
+            </value>
+            <value>
+                <fullName>CTA</fullName>
+                <default>false</default>
+                <label>CTA</label>
+            </value>
+            <value>
+                <fullName>CTI</fullName>
+                <default>false</default>
+                <label>CTI</label>
+            </value>
+            <value>
+                <fullName>IAD</fullName>
+                <default>false</default>
+                <label>IAD</label>
+            </value>
+            <value>
+                <fullName>ICAEW</fullName>
+                <default>false</default>
+                <label>ICAEW</label>
+            </value>
+            <value>
+                <fullName>ICAS</fullName>
+                <default>false</default>
+                <label>ICAS</label>
+            </value>
+            <value>
+                <fullName>ICSA</fullName>
+                <default>false</default>
+                <label>ICSA</label>
+            </value>
+            <value>
+                <fullName>IMC</fullName>
+                <default>false</default>
+                <label>IMC</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>IOC</fullName>
+                <default>false</default>
+                <label>IOC</label>
+            </value>
+            <value>
+                <fullName>ITP</fullName>
+                <default>false</default>
+                <label>ITP</label>
+            </value>
+            <value>
+                <fullName>MRS</fullName>
+                <default>false</default>
+                <label>MRS</label>
+            </value>
+            <value>
+                <fullName>PMI</fullName>
+                <default>false</default>
+                <label>PMI</label>
+            </value>
+            <value>
+                <fullName>Association of Accounting Technicians</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Association of Accounting Technicians</label>
+            </value>
+            <value>
+                <fullName>Association of Chartered Certified Accountants</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Association of Chartered Certified Accountants</label>
+            </value>
+            <value>
+                <fullName>Association of Tax Technicians</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Association of Tax Technicians</label>
+            </value>
+            <value>
+                <fullName>CII Diploma in Regulated Financial Planning</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CII Diploma in Regulated Financial Planning</label>
+            </value>
+            <value>
+                <fullName>CISI Apprenticeship Programmes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CISI Apprenticeship Programmes</label>
+            </value>
+            <value>
+                <fullName>CISI Capital Markets</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CISI Capital Markets</label>
+            </value>
+            <value>
+                <fullName>CISI Cert in Private Client Investment Advice&amp;Mgmt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CISI Cert in Private Client Investment Advice&amp;Mgmt</label>
+            </value>
+            <value>
+                <fullName>CISI Diploma</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CISI Diploma</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Certificate in Corporate Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Certificate in Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>Chartered Banker</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Banker</label>
+            </value>
+            <value>
+                <fullName>Chartered Banker Institute</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Banker Institute</label>
+            </value>
+            <value>
+                <fullName>Chartered Financial Analyst</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Financial Analyst</label>
+            </value>
+            <value>
+                <fullName>Chartered Institute of Management Accountants</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Institute of Management Accountants</label>
+            </value>
+            <value>
+                <fullName>Chartered Institute of Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Institute of Marketing</label>
+            </value>
+            <value>
+                <fullName>Chartered Institute of Personal &amp; Development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Institute of Personal &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Chartered Mangement Institute</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Mangement Institute</label>
+            </value>
+            <value>
+                <fullName>Chartered Tax Adviser</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chartered Tax Adviser</label>
+            </value>
+            <value>
+                <fullName>Computing Technology Industry Association</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Computing Technology Industry Association</label>
+            </value>
+            <value>
+                <fullName>Computng Technology Industry Association</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Computng Technology Industry Association</label>
+            </value>
+            <value>
+                <fullName>Corporate Finance Diploma</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corporate Finance Diploma</label>
+            </value>
+            <value>
+                <fullName>Diploma for IT &amp; Telecommunications Professionals</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Diploma for IT &amp; Telecommunications Professionals</label>
+            </value>
+            <value>
+                <fullName>Diploma for Info &amp; Technology and Communications</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Diploma for Info &amp; Technology and Communications</label>
+            </value>
+            <value>
+                <fullName>Diploma in Corporate Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Diploma in Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>EMC Data Science Associate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EMC Data Science Associate</label>
+            </value>
+            <value>
+                <fullName>Foundations in Accountancy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Foundations in Accountancy</label>
+            </value>
+            <value>
+                <fullName>Institute Chartered Accountants of England &amp; Wales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Institute Chartered Accountants of England &amp; Wales</label>
+            </value>
+            <value>
+                <fullName>Institute of Chartered Secretaries &amp; Administrators</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Institute of Chartered Secretaries &amp; Administrators</label>
+            </value>
+            <value>
+                <fullName>Investment Operations Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investment Operations Management</label>
+            </value>
+            <value>
+                <fullName>Market Research Society</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Market Research Society</label>
+            </value>
+            <value>
+                <fullName>Oracle Java Certification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Oracle Java Certification</label>
+            </value>
+            <value>
+                <fullName>Professional Bankert Certificate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Professional Bankert Certificate</label>
+            </value>
+            <value>
+                <fullName>Project Management Qualification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Project Management Qualification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

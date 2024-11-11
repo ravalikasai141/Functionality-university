@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exempt_Reason_is_Required</fullName>
+    <active>true</active>
+    <description>Exempt_Reason_is_Required when Exempt Reason is selected for Account Tax Category</description>
+    <errorConditionFormula>RecordType.DeveloperName = &quot;Business_Development_Account&quot; &amp;&amp;
+ISPICKVAL( Account_Tax_Category__c , &apos;Exempt Business&apos;) &amp;&amp; ISBLANK( Exempt_Reason__c )</errorConditionFormula>
+    <errorDisplayField>Exempt_Reason__c</errorDisplayField>
+    <errorMessage>You must enter Exempt Reason for Exempt Business</errorMessage>
+</ValidationRule>

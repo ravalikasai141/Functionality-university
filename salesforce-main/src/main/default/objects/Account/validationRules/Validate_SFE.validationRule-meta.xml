@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_SFE</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(!ISBLANK( AR_Student_Finance_England_SFE__c ), LEN( AR_Student_Finance_England_SFE__c ) != 0,
+NOT(REGEX(AR_Student_Finance_England_SFE__c,  
+&quot;((?i)([A-Z]{4}[0-9]{8}[A-Z]{1}))&quot;)))</errorConditionFormula>
+    <errorDisplayField>AR_Student_Finance_England_SFE__c</errorDisplayField>
+    <errorMessage>Invalid SFE Format. Format: AAAA11112222F (4 Letters, 8 Numbers, 1 Letter)</errorMessage>
+</ValidationRule>

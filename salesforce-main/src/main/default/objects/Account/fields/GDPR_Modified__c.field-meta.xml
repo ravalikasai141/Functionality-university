@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDPR_Modified__c</fullName>
+    <description>Contains date/time stamp of when data has been passed to the GDPR Opt In field. Used as trigger to update GDPR marketing contact preferences</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Account Field</inlineHelpText>
+    <label>GDPR Modified</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

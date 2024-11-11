@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UCAS_Application_Scheme_Code__c</fullName>
+    <description>UCAS identification number specific to the application.  Updated via data team processes.  Should not be modified by end users.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field records the 4-character scheme code issued by UCAS and is used in the HESA return</inlineHelpText>
+    <label>UCAS Scheme Code</label>
+    <length>4</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Phone_Invalid</fullName>
+    <active>true</active>
+    <description>For student accounts, if a preferred phone is set then that number must be populated on the student account.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Student_Account&apos;,
+
+(TEXT( Preferred_Phone__pc )=&apos;Home&apos; &amp;&amp; PersonHomePhone=null) ||
+(TEXT(Preferred_Phone__pc )=&apos;Work&apos; &amp;&amp; Work_Phone__pc =null) ||
+(TEXT(Preferred_Phone__pc )=&apos;Mobile&apos; &amp;&amp; PersonMobilePhone =null) ||
+(TEXT(Preferred_Phone__pc )=&apos;Other&apos; &amp;&amp; PersonOtherPhone =null)
+)</errorConditionFormula>
+    <errorDisplayField>Preferred_Phone__pc</errorDisplayField>
+    <errorMessage>The selected preferred phone number is not present.  Please select a valid phone number.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_cannot_be_changed_to_InProgress</fullName>
+    <active>false</active>
+    <description>This validation rule is used to check whether the case status is directly changed to In Progress from New.</description>
+    <errorConditionFormula>AND(
+      ISPICKVAL(PRIORVALUE(Status),&quot;New&quot;) , 
+      ISPICKVAL(Status,&apos;In Progress&apos;)
+    )</errorConditionFormula>
+    <errorMessage>You cannot change the status directly to In Progress from New.</errorMessage>
+</ValidationRule>

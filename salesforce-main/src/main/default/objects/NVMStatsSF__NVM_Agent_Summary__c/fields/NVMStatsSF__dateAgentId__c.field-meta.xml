@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__dateAgentId__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <deprecated>false</deprecated>
+    <description>Used as unique and INDEXED key to find a summary of an agent&apos;s calls on a given day.  We may need to suffix this with Channel if any agents on different NVM clouds have matching Agent IDs.</description>
+    <externalId>true</externalId>
+    <label>dateAgentId</label>
+    <length>50</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

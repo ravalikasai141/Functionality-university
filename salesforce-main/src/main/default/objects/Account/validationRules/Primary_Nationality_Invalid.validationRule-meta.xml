@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Nationality_Invalid</fullName>
+    <active>true</active>
+    <errorConditionFormula>Primary_Nationality__pr.Valid_Nationality__c = FALSE ||  SFDC_Country_of_Birth__pr.Valid_Nationality__c  = FALSE || Country_of_Permanent_Address__r.Valid_Domicile__c = FALSE</errorConditionFormula>
+    <errorMessage>You have selected an invalid country. Please check the Demographic Information section and select a valid country for Primary Nationality, Country of Birth or Country of Permanent Address.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,73 @@
+<template>
+    <div class="slds-section slds-is-open">
+        <lightning-accordion allow-multiple-sections-open active-section-name="content">
+            <lightning-accordion-section name="content" label={sectionLabel}>
+                <div class="slds-grid slds-wrap slds-section__content">
+                    <template if:true={showSpinner}>
+                        <div class="slds-p-vertical_xx-large">
+                            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                        </div>
+                    </template>
+                    <template for:each={sectionFields} for:item="field">
+                        <div class={field.styling} key={field.name}>
+                            <div class="slds-p-horizontal_small">
+                                <template if:false={field.errorMessage}>
+                                    <!-- Generic Field -->
+                                    <template if:true={field.renderGeneric}>
+                                        <lightning-input
+                                            label={field.label}
+                                            value={field.value}
+                                            class="slds-form-element_readonly"
+                                            formatter={field.formatter}
+                                            type={field.type}
+                                            checked={field.checked}
+                                            readonly
+                                        ></lightning-input>
+                                    </template>
+                                    <template if:false={field.renderGeneric}>
+                                        <div class="slds-form-element_readonly slds-form-element">
+                                            <label class="slds-form-element__label slds-no-flex">{field.label}</label>
+                                            <div class="slds-form-element__control slds-grow">
+                                                <!-- Checkbox Field -->
+                                                <template if:true={field.renderCheckbox}>
+                                                    <lightning-input
+                                                        label={field.label}
+                                                        class="valueAlignment"
+                                                        type="checkbox"
+                                                        checked={field.value}
+                                                        variant="label-hidden"
+                                                        disabled
+                                                    ></lightning-input>
+                                                </template>
+                                                <template if:false={field.renderCheckbox}>
+                                                    <div class="valueAlignment">
+                                                        <!-- Lookup Field -->
+                                                        <template if:true={field.renderLink}>
+                                                            <a href={field.url} target="_blank">{field.value}</a>
+                                                        </template>
+                                                        <!-- Text Fields requiring multiple lines -->
+                                                        <template if:true={field.renderText}>
+                                                            <lightning-formatted-rich-text
+                                                                value={field.value}
+                                                            ></lightning-formatted-rich-text>
+                                                        </template>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </template>
+                                <!-- Field Error -->
+                                <template if:true={field.errorMessage}>
+                                    <div class="slds-box slds-theme--warning slds-m-vertical_xx-small">
+                                        {field.errorMessage}
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </div>
+</template>

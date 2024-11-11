@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Department__c</fullName>
+    <description>sets the case department based on queue / user ownership.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK (Owner:Queue.QueueName ),  Owner:User.Department , CASE(Owner:Queue.DeveloperName , &apos;Student_Advice&apos;, &apos;Student Advice&apos;, &apos;International_Student_Advice&apos;, &apos;Student Advice&apos;,&apos;Student_Advice_Oyster&apos;,&apos;Student Advice&apos;,&apos;Student_Records&apos;, &apos;Student Records&apos;, &apos;School_Program_Support&apos;, &apos;School Program Support&apos;,&apos;Head_of_Student_Experience&apos;,&apos;Student Advice&apos;,&apos;Library_Manager&apos;,&apos;Student Advice&apos;,&apos;Exam_Graduation_Teams&apos;,&apos;Exam &amp; Graduation&apos;,&apos; &apos;))</formula>
+    <inlineHelpText>Owner:Queue.QueueName</inlineHelpText>
+    <label>Sharing Owner Department</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

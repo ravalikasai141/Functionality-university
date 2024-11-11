@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_BCA_Discount_Code__c</fullName>
+    <description>BCA Discount Code picklist for &apos;CAS VISA Compliance&apos; section located on the &apos;Application&apos; Opportunity Record Type</description>
+    <externalId>false</externalId>
+    <label>BCA Discount Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Withdrawn and left UK</fullName>
+                <default>false</default>
+                <label>Withdrawn and left UK</label>
+            </value>
+            <value>
+                <fullName>IOS&apos;d and left the UK</fullName>
+                <default>false</default>
+                <label>IOS&apos;d and left the UK</label>
+            </value>
+            <value>
+                <fullName>Switched Institution Switched</fullName>
+                <default>false</default>
+                <label>Switched Institution Switched</label>
+            </value>
+            <value>
+                <fullName>Immigration Category</fullName>
+                <default>false</default>
+                <label>Immigration Category</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

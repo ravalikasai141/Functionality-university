@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Week_of_Year__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>TEXT(IF( 
+CEILING(( NVMStatsSF__Date__c  - DATE(YEAR(NVMStatsSF__Date__c), 1, 1) + 1)/7) &gt; 52, 52, CEILING((NVMStatsSF__Date__c - DATE(YEAR(NVMStatsSF__Date__c), 1, 1) + 1)/7) 
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Week of Year</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

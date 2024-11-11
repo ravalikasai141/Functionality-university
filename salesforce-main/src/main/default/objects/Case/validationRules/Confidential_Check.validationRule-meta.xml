@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confidential_Check</fullName>
+    <active>true</active>
+    <description>This validation rule is used to check whether the checked confidential is being unchecked</description>
+    <errorConditionFormula>AND(
+   PRIORVALUE(Confidential__c)= true,
+      Confidential__c != true,
+        $Profile.Name =&apos;Cloud Support Specialist&apos;,
+           Not(IsClosed))</errorConditionFormula>
+    <errorMessage>Once Confidential is checked, it cannot be unchecked</errorMessage>
+</ValidationRule>

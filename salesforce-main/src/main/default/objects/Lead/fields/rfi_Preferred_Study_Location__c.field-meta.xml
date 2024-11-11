@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_Preferred_Study_Location__c</fullName>
+    <externalId>false</externalId>
+    <label>Preferred Study Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>rfi_Are_you_EU_UK__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abingdon</fullName>
+                <default>false</default>
+                <label>Abingdon</label>
+            </value>
+            <value>
+                <fullName>Birmingham</fullName>
+                <default>false</default>
+                <label>Birmingham</label>
+            </value>
+            <value>
+                <fullName>Bristol</fullName>
+                <default>false</default>
+                <label>Bristol</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Cardiff</fullName>
+                <default>false</default>
+                <label>Cardiff</label>
+            </value>
+            <value>
+                <fullName>Croydon</fullName>
+                <default>false</default>
+                <label>Croydon</label>
+            </value>
+            <value>
+                <fullName>Edinburgh</fullName>
+                <default>false</default>
+                <label>Edinburgh</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>Leeds</fullName>
+                <default>false</default>
+                <label>Leeds</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>London - City</fullName>
+                <default>false</default>
+                <label>London - City</label>
+            </value>
+            <value>
+                <fullName>London - Holborn</fullName>
+                <default>false</default>
+                <label>London - Holborn</label>
+            </value>
+            <value>
+                <fullName>London - King&apos;s Cross</fullName>
+                <default>false</default>
+                <label>London - King&apos;s Cross</label>
+            </value>
+            <value>
+                <fullName>London - Liverpool Street</fullName>
+                <default>false</default>
+                <label>London - Liverpool Street</label>
+            </value>
+            <value>
+                <fullName>London - Procter House</fullName>
+                <default>false</default>
+                <label>London - Procter House</label>
+            </value>
+            <value>
+                <fullName>London - Shepherds Bush</fullName>
+                <default>false</default>
+                <label>London - Shepherds Bush</label>
+            </value>
+            <value>
+                <fullName>London - Waterloo</fullName>
+                <default>false</default>
+                <label>London - Waterloo</label>
+            </value>
+            <value>
+                <fullName>Maidstone</fullName>
+                <default>false</default>
+                <label>Maidstone</label>
+            </value>
+            <value>
+                <fullName>Manchester</fullName>
+                <default>false</default>
+                <label>Manchester</label>
+            </value>
+            <value>
+                <fullName>Milton Keynes</fullName>
+                <default>false</default>
+                <label>Milton Keynes</label>
+            </value>
+            <value>
+                <fullName>Newcastle</fullName>
+                <default>false</default>
+                <label>Newcastle</label>
+            </value>
+            <value>
+                <fullName>Nottingham</fullName>
+                <default>false</default>
+                <label>Nottingham</label>
+            </value>
+            <value>
+                <fullName>Preston</fullName>
+                <default>false</default>
+                <label>Preston</label>
+            </value>
+            <value>
+                <fullName>Reading</fullName>
+                <default>false</default>
+                <label>Reading</label>
+            </value>
+            <value>
+                <fullName>Sheffield</fullName>
+                <default>false</default>
+                <label>Sheffield</label>
+            </value>
+            <value>
+                <fullName>Southampton</fullName>
+                <default>false</default>
+                <label>Southampton</label>
+            </value>
+            <value>
+                <fullName>Online</fullName>
+                <default>false</default>
+                <label>Online</label>
+            </value>
+            <value>
+                <fullName>Online Classroom</fullName>
+                <default>false</default>
+                <label>Online Classroom</label>
+            </value>
+            <value>
+                <fullName>Online Classroom Live</fullName>
+                <default>false</default>
+                <label>Online Classroom Live</label>
+            </value>
+            <value>
+                <fullName>Distance Learning Basics</fullName>
+                <default>false</default>
+                <label>Distance Learning Basics</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Birmingham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Bristol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Leeds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>London - City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>London - Holborn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>London - Waterloo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Manchester</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

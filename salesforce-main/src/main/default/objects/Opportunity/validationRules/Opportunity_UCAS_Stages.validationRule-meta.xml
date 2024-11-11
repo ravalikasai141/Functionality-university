@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_UCAS_Stages</fullName>
+    <active>false</active>
+    <description>LM std user cannot select from UCAS stages on opportunity</description>
+    <errorConditionFormula>AND (
+  OR (
+     ISPICKVAL(StageName, &quot;Accepted - UCAS Insurance&quot;),
+     ISPICKVAL(StageName, &quot;Accepted - UCAS Firm&quot;),
+$Profile.Name = &quot;LM Standard User&quot;
+))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>UCAS stages on this opportunity are not allowed</errorMessage>
+</ValidationRule>

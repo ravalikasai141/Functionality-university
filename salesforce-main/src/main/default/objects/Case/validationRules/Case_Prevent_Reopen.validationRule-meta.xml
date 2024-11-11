@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Prevent_Reopen</fullName>
+    <active>true</active>
+    <description>Restrict the ability to set the case to reopened if it it is closed or not in a ready to close status.</description>
+    <errorConditionFormula>OR(
+ AND( 
+  RecordType.DeveloperName = &quot;Student_Query&quot;, 
+  PRIORVALUE( IsClosed) = TRUE, 
+  NOT( ISPICKVAL( Status, &quot;Closed&quot;))
+ ),
+ AND(
+  RecordType.DeveloperName = &quot;Student_Queries&quot;, 
+  NOT( ISPICKVAL( PRIORVALUE( Status), &quot;Ready to Close&quot;)),
+  ISPICKVAL( Status, &quot;Re-opened&quot;)
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Cases are restricted from being reopened if they were previously closed, or not already in a &apos;ready to close&apos; status.</errorMessage>
+</ValidationRule>

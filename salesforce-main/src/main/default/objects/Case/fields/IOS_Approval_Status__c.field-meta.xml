@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IOS_Approval_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>IOS Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Query_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>School Programme Support Approved</fullName>
+                <default>false</default>
+                <label>School Programme Support Approved</label>
+            </value>
+            <value>
+                <fullName>School Programme Support Rejected</fullName>
+                <default>false</default>
+                <label>School Programme Support Rejected</label>
+            </value>
+            <value>
+                <fullName>Finance/Study Visa Approved</fullName>
+                <default>false</default>
+                <label>Finance/Study Visa Approved</label>
+            </value>
+            <value>
+                <fullName>Finance/Study Visa Rejected</fullName>
+                <default>false</default>
+                <label>Finance/Study Visa Rejected</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>IoS (Interruption of Studies)</controllingFieldValue>
+            <valueName>School Programme Support Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IoS (Interruption of Studies)</controllingFieldValue>
+            <valueName>School Programme Support Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IoS (Interruption of Studies)</controllingFieldValue>
+            <valueName>Finance/Study Visa Approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IoS (Interruption of Studies)</controllingFieldValue>
+            <valueName>Finance/Study Visa Rejected</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

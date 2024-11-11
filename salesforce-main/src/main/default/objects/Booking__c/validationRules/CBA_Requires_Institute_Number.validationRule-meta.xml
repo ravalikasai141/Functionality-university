@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CBA_Requires_Institute_Number</fullName>
+    <active>true</active>
+    <description>Institute Number is required for CBA bookings</description>
+    <errorConditionFormula>RecordType.Name = &apos;CBA Booking&apos;
+&amp;&amp;
+ISBLANK( Institute_Number__c )</errorConditionFormula>
+    <errorDisplayField>Institute_Number__c</errorDisplayField>
+    <errorMessage>You must enter an Institute Number when making a CBA booking</errorMessage>
+</ValidationRule>

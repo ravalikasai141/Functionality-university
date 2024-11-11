@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Contains the combination of matching rules that may be met during de-duplication.</description>
+    <label>Matching Rule Combination</label>
+    <pluralLabel>Matching Rule Combinations</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

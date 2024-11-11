@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Curriculum_Degree_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Curriculum Degree Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>000000~ Degree Not Declared</fullName>
+                <default>false</default>
+                <label>000000~ Degree Not Declared</label>
+            </value>
+            <value>
+                <fullName>ACP~ Advanced Certificate Program</fullName>
+                <default>false</default>
+                <label>ACP~ Advanced Certificate Program</label>
+            </value>
+            <value>
+                <fullName>BA~ Bachelor of Arts</fullName>
+                <default>false</default>
+                <label>BA~ Bachelor of Arts</label>
+            </value>
+            <value>
+                <fullName>BD~ Bachelors Degree</fullName>
+                <default>false</default>
+                <label>BD~ Bachelors Degree</label>
+            </value>
+            <value>
+                <fullName>BPTC~ Bar Prof Training Course</fullName>
+                <default>false</default>
+                <label>BPTC~ Bar Prof Training Course</label>
+            </value>
+            <value>
+                <fullName>BS~ Bachelor of Science</fullName>
+                <default>false</default>
+                <label>BS~ Bachelor of Science</label>
+            </value>
+            <value>
+                <fullName>BScHon~ Bachelor of Science (Honours)</fullName>
+                <default>false</default>
+                <label>BScHon~ Bachelor of Science (Honours)</label>
+            </value>
+            <value>
+                <fullName>BVC~ Bar Vocational Course</fullName>
+                <default>false</default>
+                <label>BVC~ Bar Vocational Course</label>
+            </value>
+            <value>
+                <fullName>CERT~ Certificate</fullName>
+                <default>false</default>
+                <label>CERT~ Certificate</label>
+            </value>
+            <value>
+                <fullName>CertHE~ Certificate in HE</fullName>
+                <default>false</default>
+                <label>CertHE~ Certificate in HE</label>
+            </value>
+            <value>
+                <fullName>DIP~ Diploma</fullName>
+                <default>false</default>
+                <label>DIP~ Diploma</label>
+            </value>
+            <value>
+                <fullName>DipHE~ Diploma in Higher Education</fullName>
+                <default>false</default>
+                <label>DipHE~ Diploma in Higher Education</label>
+            </value>
+            <value>
+                <fullName>Doct~ Doctorate</fullName>
+                <default>false</default>
+                <label>Doct~ Doctorate</label>
+            </value>
+            <value>
+                <fullName>FPCert~ Fnd Pathway to HE Certificate</fullName>
+                <default>false</default>
+                <label>FPCert~ Fnd Pathway to HE Certificate</label>
+            </value>
+            <value>
+                <fullName>GCER~ Graduate Certificate</fullName>
+                <default>false</default>
+                <label>GCER~ Graduate Certificate</label>
+            </value>
+            <value>
+                <fullName>GrdDip~ Graduate Diploma</fullName>
+                <default>false</default>
+                <label>GrdDip~ Graduate Diploma</label>
+            </value>
+            <value>
+                <fullName>HonD~ Honorary Doctorate</fullName>
+                <default>false</default>
+                <label>HonD~ Honorary Doctorate</label>
+            </value>
+            <value>
+                <fullName>HonDBA~ Honorary Doctor of Bus Admin</fullName>
+                <default>false</default>
+                <label>HonDBA~ Honorary Doctor of Bus Admin</label>
+            </value>
+            <value>
+                <fullName>HonDSc~ Honorary Doctor of Science</fullName>
+                <default>false</default>
+                <label>HonDSc~ Honorary Doctor of Science</label>
+            </value>
+            <value>
+                <fullName>HonLLD~ Honorary Doctor of Laws</fullName>
+                <default>false</default>
+                <label>HonLLD~ Honorary Doctor of Laws</label>
+            </value>
+            <value>
+                <fullName>HonLLM~ Honorary Master of Laws</fullName>
+                <default>false</default>
+                <label>HonLLM~ Honorary Master of Laws</label>
+            </value>
+            <value>
+                <fullName>HonMSc~ Honorary Master of Science</fullName>
+                <default>false</default>
+                <label>HonMSc~ Honorary Master of Science</label>
+            </value>
+            <value>
+                <fullName>IFCert~ International Fnd Certificate</fullName>
+                <default>false</default>
+                <label>IFCert~ International Fnd Certificate</label>
+            </value>
+            <value>
+                <fullName>IPMDip~ Int Pre-Masters Diploma</fullName>
+                <default>false</default>
+                <label>IPMDip~ Int Pre-Masters Diploma</label>
+            </value>
+            <value>
+                <fullName>LLB~ Bachelor of Laws</fullName>
+                <default>false</default>
+                <label>LLB~ Bachelor of Laws</label>
+            </value>
+            <value>
+                <fullName>LLM~ Master of Laws</fullName>
+                <default>false</default>
+                <label>LLM~ Master of Laws</label>
+            </value>
+            <value>
+                <fullName>LLMPLP~ Mstr of Laws Prof Legal Pract</fullName>
+                <default>false</default>
+                <label>LLMPLP~ Mstr of Laws Prof Legal Pract</label>
+            </value>
+            <value>
+                <fullName>LPC~ Legal Practice Course</fullName>
+                <default>false</default>
+                <label>LPC~ Legal Practice Course</label>
+            </value>
+            <value>
+                <fullName>MA~ Master of Arts</fullName>
+                <default>false</default>
+                <label>MA~ Master of Arts</label>
+            </value>
+            <value>
+                <fullName>MBA~ Master of Business Admin</fullName>
+                <default>false</default>
+                <label>MBA~ Master of Business Admin</label>
+            </value>
+            <value>
+                <fullName>Mchiro~ Integrated Masters in Chiro</fullName>
+                <default>false</default>
+                <label>Mchiro~ Integrated Masters in Chiro</label>
+            </value>
+            <value>
+                <fullName>MD~ Doctor of Medicine</fullName>
+                <default>false</default>
+                <label>MD~ Doctor of Medicine</label>
+            </value>
+            <value>
+                <fullName>Mphil~ Master of Philosophy</fullName>
+                <default>false</default>
+                <label>Mphil~ Master of Philosophy</label>
+            </value>
+            <value>
+                <fullName>MS~ Master of Science</fullName>
+                <default>false</default>
+                <label>MS~ Master of Science</label>
+            </value>
+            <value>
+                <fullName>MstD~ Masters Degree</fullName>
+                <default>false</default>
+                <label>MstD~ Masters Degree</label>
+            </value>
+            <value>
+                <fullName>NDG~ Non-Degree Course</fullName>
+                <default>false</default>
+                <label>NDG~ Non-Degree Course</label>
+            </value>
+            <value>
+                <fullName>PGCert~ Postgraduate Certificate</fullName>
+                <default>false</default>
+                <label>PGCert~ Postgraduate Certificate</label>
+            </value>
+            <value>
+                <fullName>PGDip~ Postgraduate Diploma</fullName>
+                <default>false</default>
+                <label>PGDip~ Postgraduate Diploma</label>
+            </value>
+            <value>
+                <fullName>PSC~ Professional Skills Course</fullName>
+                <default>false</default>
+                <label>PSC~ Professional Skills Course</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

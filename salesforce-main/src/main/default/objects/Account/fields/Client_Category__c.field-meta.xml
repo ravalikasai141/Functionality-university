@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Category__c</fullName>
+    <description>Displays what type of client the company currently is</description>
+    <externalId>false</externalId>
+    <label>Client Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Key Client</fullName>
+                <default>false</default>
+                <label>Key Client</label>
+            </value>
+            <value>
+                <fullName>Transactional Client</fullName>
+                <default>false</default>
+                <label>Transactional Client</label>
+            </value>
+            <value>
+                <fullName>APAC Key Client</fullName>
+                <default>false</default>
+                <label>APAC Key Client</label>
+            </value>
+            <value>
+                <fullName>APAC Client</fullName>
+                <default>false</default>
+                <label>APAC Client</label>
+            </value>
+            <value>
+                <fullName>LM Client</fullName>
+                <default>false</default>
+                <label>LM Client</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

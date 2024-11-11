@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Case_Record_Type</name>
+        <label>Case Record Type?</label>
+        <locationX>908</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Email_Direction_Other_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <rules>
+            <name>Apprentice_Onboarding_Record_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Apprentice_Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Direction</targetReference>
+            </connector>
+            <label>Apprentice Onboarding</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Current_Case_Status</name>
+        <label>Current Case Status</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>In_Progress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Update_Inbound_In_Progress_Statuses</targetReference>
+            </connector>
+            <label>In Progress</label>
+        </rules>
+        <rules>
+            <name>Awaiting_Information</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Information</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Inbound_Statuses</targetReference>
+            </connector>
+            <label>Awaiting Information</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Email_Direction</name>
+        <label>Email Direction</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Update_Outbound_Statuses</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Outbound</defaultConnectorLabel>
+        <rules>
+            <name>Email_Direction_Inbound</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Incoming</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Current_Case_Status</targetReference>
+            </connector>
+            <label>Inbound</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Email_Direction_Other_Record_Type</name>
+        <label>Email Direction Other Record Type</label>
+        <locationX>1238</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Outbound</defaultConnectorLabel>
+        <rules>
+            <name>Inbound_Other</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Incoming</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Inbound_In_Progress_Statuses</targetReference>
+            </connector>
+            <label>Inbound Other</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Identify which object the email that triggered the flow has been related to</description>
+        <name>Which_Object_Is_The_EmailMessage_Related_To</name>
+        <label>Which Object Is The Email Message Related To?</label>
+        <locationX>1403</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RelatedToId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>500</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_Record_Type</targetReference>
+            </connector>
+            <label>Case</label>
+        </rules>
+        <rules>
+            <name>Invoice</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RelatedToId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>a4Z</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Related_Invoice</targetReference>
+            </connector>
+            <label>Invoice</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Email Message Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Email Message Automation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Inbound_In_Progress_Statuses</name>
+        <label>Copy 1 of Update Inbound In Progress Statuses</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Reply Received </stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Inbound_In_Progress_Statuses</name>
+        <label>Update Inbound In Progress Statuses</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Reply Received </stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Inbound_Statuses</name>
+        <label>Update Inbound Statuses</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Awaiting Information</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Outbound_Statuses</name>
+        <label>Update Outbound Statuses</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Awaiting Information</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the invoice record that the email message is related to</description>
+        <name>Update_Related_Invoice</name>
+        <label>Update Related Invoice</label>
+        <locationX>1634</locationX>
+        <locationY>431</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.RelatedToId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BPP_Invoice_PDF_Sent__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>blng__Invoice__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>1277</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Which_Object_Is_The_EmailMessage_Related_To</targetReference>
+        </connector>
+        <object>EmailMessage</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

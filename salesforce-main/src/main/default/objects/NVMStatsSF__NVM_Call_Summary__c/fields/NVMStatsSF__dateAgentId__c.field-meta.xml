@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__dateAgentId__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Used as an INDEXED key to find a summary of an agent&apos;s Calls on a given day. You may need to suffix this with Channel if any agents on different NVM clouds have matching Agent IDs.   NB it is NOT unique as many Calls will point to the same agent&apos;s daily summary; it is unique on the agent&apos;s daily summary object</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Combination field showing today&apos;s date and agent ID. You can use this value in Salesforce Search to find Agent State Summaries</inlineHelpText>
+    <label>dateAgentId</label>
+    <length>50</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

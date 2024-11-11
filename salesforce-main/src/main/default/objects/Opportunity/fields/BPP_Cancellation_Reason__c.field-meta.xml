@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Cancellation_Reason__c</fullName>
+    <description>Cancellation Reason field to be mandatory if Status is set to Cancelled or Declined on Student Application Opportunity</description>
+    <externalId>false</externalId>
+    <label>Cancellation Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unable to fund the programme</fullName>
+                <default>false</default>
+                <label>Unable to fund the programme</label>
+            </value>
+            <value>
+                <fullName>Change of profession</fullName>
+                <default>false</default>
+                <label>Change of profession</label>
+            </value>
+            <value>
+                <fullName>Taken up a job</fullName>
+                <default>false</default>
+                <label>Taken up a job</label>
+            </value>
+            <value>
+                <fullName>Gone to a competitor</fullName>
+                <default>false</default>
+                <label>Gone to a competitor</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Failed previous qualification</fullName>
+                <default>false</default>
+                <label>Failed previous qualification</label>
+            </value>
+            <value>
+                <fullName>Location/Mode not available</fullName>
+                <default>false</default>
+                <label>Location/Mode not available</label>
+            </value>
+            <value>
+                <fullName>Family Emergency</fullName>
+                <default>false</default>
+                <label>Family Emergency</label>
+            </value>
+            <value>
+                <fullName>VISA/CAS/EU Delay</fullName>
+                <default>false</default>
+                <label>VISA/CAS/EU Delay</label>
+            </value>
+            <value>
+                <fullName>Prefer not to say</fullName>
+                <default>false</default>
+                <label>Prefer not to say</label>
+            </value>
+            <value>
+                <fullName>VISA Refusal</fullName>
+                <default>false</default>
+                <label>VISA Refusal</label>
+            </value>
+            <value>
+                <fullName>Duplicate Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate Opportunity</label>
+            </value>
+            <value>
+                <fullName>CAS requirement not met</fullName>
+                <default>false</default>
+                <label>CAS requirement not met</label>
+            </value>
+            <value>
+                <fullName>Academic/English entry not met</fullName>
+                <default>false</default>
+                <label>Academic/English entry not met</label>
+            </value>
+            <value>
+                <fullName>Not Available</fullName>
+                <default>false</default>
+                <label>Not Available</label>
+            </value>
+            <value>
+                <fullName>Chosen to study at another BPP location</fullName>
+                <default>false</default>
+                <label>Chosen to study at another BPP location</label>
+            </value>
+            <value>
+                <fullName>Chosen to study another BPP programme</fullName>
+                <default>false</default>
+                <label>Chosen to study another BPP programme</label>
+            </value>
+            <value>
+                <fullName>appMissedDeadline</fullName>
+                <default>false</default>
+                <label>Failed to submit application before deadline</label>
+            </value>
+            <value>
+                <fullName>appWithdrawApplicant</fullName>
+                <default>false</default>
+                <label>Learner withdrawn</label>
+            </value>
+            <value>
+                <fullName>appNoResponseApplicant</fullName>
+                <default>false</default>
+                <label>No response from applicant</label>
+            </value>
+            <value>
+                <fullName>appNoResponseEmployer</fullName>
+                <default>false</default>
+                <label>No response from employer</label>
+            </value>
+            <value>
+                <fullName>appCloneCancelChangedEmployer</fullName>
+                <default>false</default>
+                <label>Cancelled due to change of employer</label>
+            </value>
+            <value>
+                <fullName>appCloneCancelChangedProgramme</fullName>
+                <default>false</default>
+                <label>Change of programme</label>
+            </value>
+            <value>
+                <fullName>appRejectIneligibleResidency</fullName>
+                <default>false</default>
+                <label>Ineligible status (Residency)</label>
+            </value>
+            <value>
+                <fullName>appRejectIneligibleVisa</fullName>
+                <default>false</default>
+                <label>Ineligible status (VISA)</label>
+            </value>
+            <value>
+                <fullName>appRejectRoleOnboarding</fullName>
+                <default>false</default>
+                <label>Job role does not match criteria (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>appRejectRoleHop</fullName>
+                <default>false</default>
+                <label>Job role does not match criteria (Hop)</label>
+            </value>
+            <value>
+                <fullName>appRejectOverqualified</fullName>
+                <default>false</default>
+                <label>Applicant is not suitable for selected programme</label>
+            </value>
+            <value>
+                <fullName>appRejectFundingIssue</fullName>
+                <default>false</default>
+                <label>Application has a funding issue</label>
+            </value>
+            <value>
+                <fullName>appNotEligible</fullName>
+                <default>false</default>
+                <label>Not Eligible</label>
+            </value>
+            <value>
+                <fullName>appInvalid</fullName>
+                <default>false</default>
+                <label>Invalid Application</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

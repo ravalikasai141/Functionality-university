@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smagicschedule__Schedule_Send_SMS</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Schedule/Send SMS</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var packagePrefix = &quot;smagicschedule__&quot;;
+var recordType = &apos;contact&apos;;
+var idToUpdate = &apos;{!Contact.Id}&apos;
+var nameField = &apos;Name&apos;;
+var mobileField = &apos;MobilePhone&apos;;
+var optOutField = &apos;smagicinteract__SMSOptOut__c&apos;; 
+var queryString = parent.window.location.pathname;
+if (parent.window.location.search){
+queryString = queryString + parent.window.location.search
+}
+
+var url = &quot;/apex/&quot;+packagePrefix+&quot;ScheduleSMS?retURL=&quot;+queryString+&quot;&amp;nameField=&quot; +nameField +&quot;&amp;phoneField=&quot;+ mobileField +&quot;&amp;optOutField=&quot;+optOutField+ &quot;&amp;objectType=&quot;+recordType+&quot;&amp;recordIds=&quot;+ idToUpdate;
+
+parent.window.location = url;</url>
+</WebLink>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Needs_Disability_Support__c</fullName>
+    <description>Details about learning support needs.  This field is not currently (May 11,11) populated by data team processes but was included so that an admissions officer can populate details about a student&apos;s needs if required.</description>
+    <externalId>false</externalId>
+    <label>Learning Support Details</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

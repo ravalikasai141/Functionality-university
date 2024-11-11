@@ -1,0 +1,60 @@
+<template>
+    <c-review-application-edit-section
+        title="Student Information"
+        api-name="Account"
+        record-id={accountId}
+        fields={editableFields}
+    ></c-review-application-edit-section>
+    <c-review-application-edit-section
+        title="Course Information"
+        api-name="Opportunity"
+        record-id={opportunityId}
+        fields={opportunityFields}
+    ></c-review-application-edit-section>
+    <c-review-application-section title="Final review">
+        <div slot="body">
+            <template lwc:if={error}>
+                <div class="slds-size_2-of-2">
+                    <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                        <h2>{error}</h2>
+                    </div>
+                </div>
+            </template>
+            <template lwc:if={contractedHoursChangedError}>
+                <div class="slds-notify slds-notify_alert" role="alert">
+                    <span class="slds-assistive-text">Weekly Contract Hours Changed</span>
+                    <h2>{contractedHoursChangedError}</h2>
+                </div>
+            </template>
+            <div class="slds-size_4-of-12">
+                <lightning-combobox
+                    name="status"
+                    label="Status"
+                    placeholder="Select Review Status"
+                    options={reviewOptions}
+                    onchange={handleStatusChange}
+                    required
+                ></lightning-combobox>
+            </div>
+            <div class="slds-size_2-of-2">
+                <lightning-input-rich-text
+                    class="slds-m-top_medium"
+                    onchange={handleCommentChange}
+                    formats={formats}
+                ></lightning-input-rich-text>
+                <div class="slds-m-vertical_medium">
+                    <div class="slds-clearfix">
+                        <div class="slds-float--right">
+                            <lightning-button
+                                onclick={handleSubmit}
+                                disabled={disabled}
+                                variant="brand"
+                                label="Submit final review"
+                            ></lightning-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </c-review-application-section>
+</template>

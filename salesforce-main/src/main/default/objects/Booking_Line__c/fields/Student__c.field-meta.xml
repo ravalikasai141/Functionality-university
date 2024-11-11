@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The student attending this session or receiving these materials</description>
+    <externalId>false</externalId>
+    <label>Student</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Booking Lines</relationshipLabel>
+    <relationshipName>Booking_Lines</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

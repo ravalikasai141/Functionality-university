@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Body_Applications</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+  Course_Instance__r.Mode__c = &quot;Full Time&quot;,
+  $Profile.Name=&quot;Agent User&quot;,
+  OR ( 
+    CONTAINS(Course_Instance__r.Name, &quot;LPC&quot;),
+    CONTAINS(Course_Instance__r.Name, &quot;GDL&quot;),
+    CONTAINS(Course_Instance__r.Name, &quot;BPTC&quot;),
+    CONTAINS(Course_Instance__r.Name, &quot;BSc&quot;),
+    CONTAINS(Course_Instance__r.Name, &quot;LLB&quot;),
+    CONTAINS(Course_Instance__r.Programme__r.Name, &quot;LPC&quot;),
+    CONTAINS(Course_Instance__r.Programme__r.Name, &quot;GDL&quot;),
+    CONTAINS(Course_Instance__r.Programme__r.Name, &quot;BPTC&quot;),
+    CONTAINS(Course_Instance__r.Programme__r.Name, &quot;BSc&quot;),
+    CONTAINS(Course_Instance__r.Programme__r.Name, &quot;LLB&quot;)
+
+  )
+)</errorConditionFormula>
+    <errorMessage>Applications for this Course Instance must go through an External Body. Please create an Interest Opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Working Week</businessHours>
+    <description>Entitlement process for a University Student Query that support agents must complete to resolve a Case</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Student Finance, University Student Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>961</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND 2</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>International Student Advice, Business School, Exam Operations, Nursing School, Student Loans, Law School, Technology School, Psychology School</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

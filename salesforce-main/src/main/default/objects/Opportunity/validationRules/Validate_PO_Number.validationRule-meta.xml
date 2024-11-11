@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_PO_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( NOT(ISBLANK(Purchase_Order_Number__c)), NOT(REGEX(Purchase_Order_Number__c, &apos;^[A-Za-z0-9\\-\\/]+&apos;)), False )</errorConditionFormula>
+    <errorMessage>Incorrect format for PO#.  Please enter only alphanumeric characters.</errorMessage>
+</ValidationRule>

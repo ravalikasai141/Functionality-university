@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Deferral_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Deferral Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Failed prior programme</fullName>
+                <default>false</default>
+                <label>Failed prior programme</label>
+            </value>
+            <value>
+                <fullName>Scheduled re-sits</fullName>
+                <default>false</default>
+                <label>Scheduled re-sits</label>
+            </value>
+            <value>
+                <fullName>Illness</fullName>
+                <default>false</default>
+                <label>Illness</label>
+            </value>
+            <value>
+                <fullName>Not able to start without a TC</fullName>
+                <default>false</default>
+                <label>Not able to start without a TC</label>
+            </value>
+            <value>
+                <fullName>Funding Issue</fullName>
+                <default>false</default>
+                <label>Funding Issue</label>
+            </value>
+            <value>
+                <fullName>VISA/CAS/EU Delay</fullName>
+                <default>false</default>
+                <label>VISA/CAS/EU Delay</label>
+            </value>
+            <value>
+                <fullName>Academic Documents Delay</fullName>
+                <default>false</default>
+                <label>Academic Documents Delay</label>
+            </value>
+            <value>
+                <fullName>Family Emergency</fullName>
+                <default>false</default>
+                <label>Family Emergency</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

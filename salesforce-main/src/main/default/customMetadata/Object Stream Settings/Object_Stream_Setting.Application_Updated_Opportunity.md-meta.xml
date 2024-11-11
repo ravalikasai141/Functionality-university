@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Application Updated Opportunity</label>
+    <protected>false</protected>
+    <values>
+        <field>Emitter__c</field>
+        <value xsi:type="xsd:string">PlatformEventEmitter</value>
+    </values>
+    <values>
+        <field>Event_Name__c</field>
+        <value xsi:type="xsd:string">applicationUpdated</value>
+    </values>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">Course_Instance__c,Start_Date__c,Job_Started_On_Apprentice__c,Weekly_Contracted_Hours_Apprentice__c,Sponsoring_Organization__c,Company_Street_1__c,Company_Street_2__c,Company_Street_3__c,Company_Zip_Postal_Code__c,Company_City__c,Job_Title_Apprentice__c,Job_Description_Apprentice__c,Safety_Knowledge_Apprentice__c,Company_Lookup_Country__c,Line_Manager_Job_Title__c,Line_Manager_First_Name__c,Line_Manager_Last_Name__c,Line_Manager_Email__c,Line_Manager_Telephone__c,End_Date__c,OOTJTH_Preserved__c</value>
+    </values>
+    <values>
+        <field>Operation_Lock__c</field>
+        <value xsi:type="xsd:string">AFTER_UPDATE</value>
+    </values>
+    <values>
+        <field>Record_Types__c</field>
+        <value xsi:type="xsd:string">Apprentice Application</value>
+    </values>
+    <values>
+        <field>SObject_Type__c</field>
+        <value xsi:type="xsd:string">Opportunity</value>
+    </values>
+    <values>
+        <field>Serializer__c</field>
+        <value xsi:type="xsd:string">ApplicationUpdated</value>
+    </values>
+    <values>
+        <field>Sort_Order__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+</CustomMetadata>

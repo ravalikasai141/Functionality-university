@@ -1,0 +1,48 @@
+<template>
+    <template lwc:if={loading}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </template> 
+    <c-review-application-edit-section
+    title="Application review"
+    api-name="Opportunity"
+    record-id={opportunityId}
+    fields={applicationFields}
+></c-review-application-edit-section>
+<c-review-application-edit-section
+    title="Student Information"
+    api-name="Account"
+    record-id={accountId}
+    fields={accountFields}
+    mode="view"
+></c-review-application-edit-section>
+    <c-review-application-edit-section
+        title="Line Manager details"
+        api-name="Opportunity"
+        record-id={opportunityId}
+        fields={lineManagerFields}
+    ></c-review-application-edit-section>
+    <c-review-application-edit-section
+        title="Product details"
+        api-name="Opportunity"
+        record-id={opportunityId}
+        fields={productFields}
+    ></c-review-application-edit-section>
+    <c-review-application-edit-section
+        title="Learner role details"
+        api-name="Opportunity"
+        record-id={opportunityId}
+        fields={roleFields}
+    ></c-review-application-edit-section>
+    <c-review-application-edit-section
+        title="Company details"
+        api-name="Opportunity"
+        record-id={opportunityId}
+        fields={companyFields}
+    ></c-review-application-edit-section>
+    <c-review-application-edit-section
+        title="Exemptions"
+        api-name="Opportunity"
+        record-id={opportunityId}
+        fields={exemptionFields}
+    ></c-review-application-edit-section>
+</template>

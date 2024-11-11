@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brochure_Delivery_Method__c</fullName>
+    <description>Indicates which postal address a brochure request should be sent to when requested for a student account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates which postal address a brochure request should be sent to when requested for a student account.</inlineHelpText>
+    <label>Brochure Delivery Method</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Mailing Address</fullName>
+                <default>false</default>
+                <label>Mailing Address</label>
+            </value>
+            <value>
+                <fullName>Home Address</fullName>
+                <default>false</default>
+                <label>Home Address</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

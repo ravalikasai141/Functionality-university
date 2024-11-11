@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_Are_you_EU_UK__c</fullName>
+    <externalId>false</externalId>
+    <label>Are you EU/UK?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>UK Student</fullName>
+                <default>false</default>
+                <label>UK Student</label>
+            </value>
+            <value>
+                <fullName>EU Student</fullName>
+                <default>false</default>
+                <label>EU Student</label>
+            </value>
+            <value>
+                <fullName>International Student</fullName>
+                <default>false</default>
+                <label>International Student</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

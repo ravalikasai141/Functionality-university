@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Cancelled</fullName>
+    <active>true</active>
+    <description>Ensures delivery record cannot be moved out of a Cancelled status if the related booking line is cancelled</description>
+    <errorConditionFormula>AND(
+NOT( ISBLANK( Booking_Line__c)),
+ISPICKVAL( Booking_Line__r.On_Hold__c , &apos;Cancelled&apos;),
+ISCHANGED( Delivery_Status__c ),
+ISPICKVAL( PRIORVALUE( Delivery_Status__c), &apos;Cancelled&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Delivery_Status__c</errorDisplayField>
+    <errorMessage>The related booking has been cancelled so the delivery must remain cancelled.</errorMessage>
+</ValidationRule>

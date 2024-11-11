@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_Additional_Info</name>
+        <label>Send Email</label>
+        <locationX>182</locationX>
+        <locationY>1514</locationY>
+        <actionName>ApplicationCaseEmail</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Set_Case_Status</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_screen</targetReference>
+        </faultConnector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>caseId</name>
+            <value>
+                <elementReference>Case.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailContent</name>
+            <value>
+                <stringValue>{!Additional_Info_Field.fieldValue}{!Additional_Info_Field_PL.fieldValue}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipient</name>
+            <value>
+                <elementReference>Get_Account.PersonEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subject</name>
+            <value>
+                <stringValue>Important: Additional information needed for your BPP application</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_Review_Meeting</name>
+        <label>Send Email</label>
+        <locationX>1898</locationX>
+        <locationY>1514</locationY>
+        <actionName>ApplicationCaseEmail</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Set_Case_Status</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_screen</targetReference>
+        </faultConnector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>caseId</name>
+            <value>
+                <elementReference>Case.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailContent</name>
+            <value>
+                <stringValue>{!LM_Requested_Only_Nursing.fieldValue}{!LM_Requested_Email_Standard.fieldValue}{!LM_Requested_Natwest_Santander_Email.fieldValue}{!Learner_Only_Professional_Firms_Actuarial.fieldValue}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipient</name>
+            <value>
+                <elementReference>Get_Account.PersonEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subject</name>
+            <value>
+                <stringValue>Next steps: Arrange your application review call</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Set_Additional_Info_Fields</name>
+        <label>Set Additional Info Fields</label>
+        <locationX>182</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>Case.Query_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Additional Information</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Important: Additional information needed for your BPP application</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Include_Prior_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Case_Fields</name>
+        <label>Set Case Fields</label>
+        <locationX>1040</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Case.Origin</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Application</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.Priority</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account.PersonContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Case_Recordtype.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.SuppliedEmail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account.PersonEmail</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Which_Query_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Case_Status</name>
+        <label>Set Case Status</label>
+        <locationX>1040</locationX>
+        <locationY>1946</locationY>
+        <assignmentItems>
+            <assignToReference>Case.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Awaiting Information</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Case</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_General_Query_Fields</name>
+        <label>Set General Query Fields</label>
+        <locationX>1106</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Case.Query_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>General Query</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Important: General Query</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Case</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Review_Meeting_Fields</name>
+        <label>Set Review Meeting Fields</label>
+        <locationX>1898</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Case.Query_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Review Meeting</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Case.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Important: Review Meeting</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Line_Manager_Required</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>AAT_Level_4</name>
+        <choiceText>AAT Level 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>AAT Level 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ACCA_CTA_Level_7</name>
+        <choiceText>ACCA CTA Level 7</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ACCA CTA Level 7</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ACCA_Level_4</name>
+        <choiceText>ACCA Level 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ACCA Level 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ACCA_Level_7</name>
+        <choiceText>ACCA Level 7</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ACCA Level 7</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Additional_Information_Choice</name>
+        <choiceText>Additional Information</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Additional Information</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ATT_CTA_Level_7</name>
+        <choiceText>ATT CTA Level 7</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ATT CTA Level 7</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ATT_Level_4</name>
+        <choiceText>ATT Level 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ATT Level 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>CIMA_Level_4</name>
+        <choiceText>CIMA Level 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>CIMA Level 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>CIMA_Level_7</name>
+        <choiceText>CIMA Level 7</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>CIMA Level 7</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>CTA_Level_7</name>
+        <choiceText>CTA Level 7</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>CTA Level 7</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>General_Query_Choice</name>
+        <choiceText>General Query</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>General Query</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ICAEW_Level_4</name>
+        <choiceText>ICAEW Level 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ICAEW Level 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>ICAEW_Level_7</name>
+        <choiceText>ICAEW Level 7</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ICAEW Level 7</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Insurance_Level_3</name>
+        <choiceText>Insurance Level 3</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Insurance Level 3</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Insurance_Level_4</name>
+        <choiceText>Insurance Level 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Insurance Level 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Learner_Only_Professional_Firms_and_Actuarial_Choice</name>
+        <choiceText>&lt;span style=&quot; color: rgb(68, 68, 68);&quot;&gt;Learner only - Professional firms and Actuarial&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Learner only - Professional firms and Actuarial</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Line_Manager_Requested_Nursing_Only_Choice</name>
+        <choiceText>&lt;span style=&quot;&quot;&gt;Line Manager Requested - Nursing Only&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Line Manager Requested - Nursing Only</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Line_Manager_Requested_Standard_Choice</name>
+        <choiceText>&lt;span style=&quot;&quot;&gt;Line Manager Requested - Standard&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Line Manager Requested - Standard</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>LM_Requested_NATWEST_SANTANDER_Choice</name>
+        <choiceText>&lt;span style=&quot;&quot;&gt;Line Manager Requested - NATWEST / SANTANDER&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Line Manager Requested - NATWEST / SANTANDER</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>No_Template_Choice</name>
+        <choiceText>No Template</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No Template</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Review_Meeting_Choice</name>
+        <choiceText>Review Meeting</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Review Meeting</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Include_Prior_Email</name>
+        <label>Include Prior Email</label>
+        <locationX>182</locationX>
+        <locationY>1106</locationY>
+        <defaultConnector>
+            <targetReference>Review_Email_Additional_Info</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Don&apos;t Include</defaultConnectorLabel>
+        <rules>
+            <name>Include</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Prior_Learning_Form.Form_URL__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Review_Email_with_Prior_Learning</targetReference>
+            </connector>
+            <label>Include</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Line_Manager_Required</name>
+        <label>Line Manager</label>
+        <locationX>1898</locationX>
+        <locationY>890</locationY>
+        <defaultConnector>
+            <targetReference>Create_Case_No_Template</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Template</defaultConnectorLabel>
+        <rules>
+            <name>LM_Requested_Nursing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Line_Manager</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Line_Manager_Requested_Nursing_Only_Choice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LM_Requested_Nursing_Review_Email</targetReference>
+            </connector>
+            <label>LM Requested Nursing</label>
+        </rules>
+        <rules>
+            <name>Line_Manager_Requested_Standard</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Line_Manager</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Line_Manager_Requested_Standard_Choice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LM_Requested_Standard_Review_Email</targetReference>
+            </connector>
+            <label>LM Requested Standard</label>
+        </rules>
+        <rules>
+            <name>Line_Manager_Requested_NATWEST_SANTANDER</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Line_Manager</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>LM_Requested_NATWEST_SANTANDER_Choice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LM_Requested_NATWEST_SANTANDER_Review_Email</targetReference>
+            </connector>
+            <label>LM Requested NATWEST / SANTANDER</label>
+        </rules>
+        <rules>
+            <name>Learner_Only_Prefessional_Firms_And_Actuarial</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Line_Manager</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Learner_Only_Professional_Firms_and_Actuarial_Choice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Learner_Only_Review_Email</targetReference>
+            </connector>
+            <label>Learner Only Prefessional Firms</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Which_Query_Type</name>
+        <label>Which Query Type</label>
+        <locationX>1040</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>Set_Review_Meeting_Fields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Review Meeting</defaultConnectorLabel>
+        <rules>
+            <name>Additional_Information</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Query_Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Additional_Information_Choice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Programme</targetReference>
+            </connector>
+            <label>Additional Information</label>
+        </rules>
+        <rules>
+            <name>General_Query</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Query_Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>General_Query_Choice</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_General_Query_Fields</targetReference>
+            </connector>
+            <label>General Query</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Create Application Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Application Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Case</name>
+        <label>Create Case</label>
+        <locationX>1106</locationX>
+        <locationY>890</locationY>
+        <connector>
+            <targetReference>General_Case_Created_Screen</targetReference>
+        </connector>
+        <inputReference>Case</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Case_Additional_Info</name>
+        <label>Create Case</label>
+        <locationX>182</locationX>
+        <locationY>1406</locationY>
+        <connector>
+            <targetReference>Send_Email_Additional_Info</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_screen</targetReference>
+        </faultConnector>
+        <inputReference>Case</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Case_No_Template</name>
+        <label>Create Case</label>
+        <locationX>2426</locationX>
+        <locationY>998</locationY>
+        <connector>
+            <targetReference>Case_Created_Screen_No_Template</targetReference>
+        </connector>
+        <inputReference>Case</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Case_Review_Meeting</name>
+        <label>Create Case</label>
+        <locationX>1898</locationX>
+        <locationY>1406</locationY>
+        <connector>
+            <targetReference>Send_Email_Review_Meeting</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_screen</targetReference>
+        </faultConnector>
+        <inputReference>Case</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Account</name>
+        <label>Get Account</label>
+        <locationX>1040</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Case_Recordtype</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Opportunity.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Case_Recordtype</name>
+        <label>Get Case Recordtype</label>
+        <locationX>1040</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Case_Type_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Apprentice_Onboarding</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Opportunity</name>
+        <label>Get Opportunity</label>
+        <locationX>1040</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Prior_Learning_Form</name>
+        <label>Get Prior Learning Form</label>
+        <locationX>182</locationX>
+        <locationY>890</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Additional_Info_Fields</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MasterLabel</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Prior_Learning</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Prior_Learning_Form__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Programme</name>
+        <label>Get Programme</label>
+        <locationX>182</locationX>
+        <locationY>782</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Prior_Learning_Form</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Opportunity.Programme_Application__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Programme__c</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Case</name>
+        <label>Update Case</label>
+        <locationX>1040</locationX>
+        <locationY>2054</locationY>
+        <connector>
+            <targetReference>Case_Created_Screen</targetReference>
+        </connector>
+        <inputReference>Case</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>Case_Created_Screen</name>
+        <label>Case Created Screen</label>
+        <locationX>1040</locationX>
+        <locationY>2162</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Case_Created_Text</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;/{!Case.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 16px;&quot;&gt;{!Query_Type} Case&lt;/a&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt; Created&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Email sent to {!Get_Account.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Case_Created_Screen_No_Template</name>
+        <label>Case Created Screen</label>
+        <locationX>2426</locationX>
+        <locationY>1106</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>No_Template_Case_Created_Text</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;  &lt;a href=&quot;/{!Case.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 16px;&quot;&gt;{!Query_Type} Case&lt;/a&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt; Created&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Error_screen</name>
+        <label>Error screen</label>
+        <locationX>2690</locationX>
+        <locationY>1622</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Error_Message</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;An Error Occurred&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>General_Case_Created_Screen</name>
+        <label>General Case Created Screen</label>
+        <locationX>1106</locationX>
+        <locationY>998</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>General_Case_Created_Text</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;  &lt;a href=&quot;/{!Case.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 16px;&quot;&gt;{!Query_Type} Case&lt;/a&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt; Created&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Get_Case_Type_Screen</name>
+        <label>Get Case Type</label>
+        <locationX>1040</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Set_Case_Fields</targetReference>
+        </connector>
+        <fields>
+            <name>Query_Type</name>
+            <choiceReferences>Additional_Information_Choice</choiceReferences>
+            <choiceReferences>Review_Meeting_Choice</choiceReferences>
+            <choiceReferences>General_Query_Choice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Line_Manager</name>
+            <choiceReferences>Line_Manager_Requested_Nursing_Only_Choice</choiceReferences>
+            <choiceReferences>Line_Manager_Requested_Standard_Choice</choiceReferences>
+            <choiceReferences>LM_Requested_NATWEST_SANTANDER_Choice</choiceReferences>
+            <choiceReferences>Learner_Only_Professional_Firms_and_Actuarial_Choice</choiceReferences>
+            <choiceReferences>No_Template_Choice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Line Manager</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Query_Type</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Review_Meeting_Choice</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Prior_Learning</name>
+            <choiceReferences>AAT_Level_4</choiceReferences>
+            <choiceReferences>ACCA_Level_4</choiceReferences>
+            <choiceReferences>ATT_Level_4</choiceReferences>
+            <choiceReferences>CIMA_Level_4</choiceReferences>
+            <choiceReferences>ICAEW_Level_4</choiceReferences>
+            <choiceReferences>ACCA_CTA_Level_7</choiceReferences>
+            <choiceReferences>ACCA_Level_7</choiceReferences>
+            <choiceReferences>ATT_CTA_Level_7</choiceReferences>
+            <choiceReferences>CIMA_Level_7</choiceReferences>
+            <choiceReferences>CTA_Level_7</choiceReferences>
+            <choiceReferences>ICAEW_Level_7</choiceReferences>
+            <choiceReferences>Insurance_Level_4</choiceReferences>
+            <choiceReferences>Insurance_Level_3</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Prior Learning</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Query_Type</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>Additional_Information_Choice</elementReference>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Learner_Only_Review_Email</name>
+        <label>Review Email</label>
+        <locationX>2162</locationX>
+        <locationY>998</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Case_Review_Meeting</targetReference>
+        </connector>
+        <fields>
+            <name>Learner_Only_Professional_Firms_Actuarial</name>
+            <extensionName>c:richTextField</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldValue</name>
+                <value>
+                    <elementReference>Learner_Only_Professional_Firms_and_Actuarial</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>LM_Requested_NATWEST_SANTANDER_Review_Email</name>
+        <label>Review Email</label>
+        <locationX>1898</locationX>
+        <locationY>998</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Case_Review_Meeting</targetReference>
+        </connector>
+        <fields>
+            <name>LM_Requested_Natwest_Santander_Email</name>
+            <extensionName>c:richTextField</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldValue</name>
+                <value>
+                    <elementReference>LM_Requested_NATWEST_SANTANDER</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>LM_Requested_Nursing_Review_Email</name>
+        <label>Review Email</label>
+        <locationX>1370</locationX>
+        <locationY>998</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Case_Review_Meeting</targetReference>
+        </connector>
+        <fields>
+            <name>LM_Requested_Only_Nursing</name>
+            <extensionName>c:richTextField</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldValue</name>
+                <value>
+                    <elementReference>LM_Requested_Nursing_Only</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>LM_Requested_Standard_Review_Email</name>
+        <label>Review Email</label>
+        <locationX>1634</locationX>
+        <locationY>998</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Create_Case_Review_Meeting</targetReference>
+        </connector>
+        <fields>
+            <name>LM_Requested_Email_Standard</name>
+            <extensionName>c:richTextField</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldValue</name>
+                <value>
+                    <elementReference>LM_Requested_Standard</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Review_Email_Additional_Info</name>
+        <label>Review Email</label>
+        <locationX>314</locationX>
+        <locationY>1214</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Create_Case_Additional_Info</targetReference>
+        </connector>
+        <fields>
+            <name>Additional_Info_Field</name>
+            <extensionName>c:richTextField</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldValue</name>
+                <value>
+                    <stringValue>{!Additional_Info_Intro}{!Additional_Info_Body}</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Review_Email_with_Prior_Learning</name>
+        <label>Review Email</label>
+        <locationX>50</locationX>
+        <locationY>1214</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Create_Case_Additional_Info</targetReference>
+        </connector>
+        <fields>
+            <name>Additional_Info_Field_PL</name>
+            <extensionName>c:richTextField</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldValue</name>
+                <value>
+                    <stringValue>{!Additional_Info_Intro}{!Additional_Info_Prior_Learning}{!Additional_Info_Body}</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>914</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Opportunity</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>Additional_Info_Body</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Confirm if you have studied towards or completed any qualifications since your ((A Levels in 2019))? This includes any Accountancy or Tax papers/qualifications that you may have started.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Confirm that you are able to travel to your work address when required or if you will be relocating closer. The home address that you entered in your application is a great distance from the address of your employer.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Confirm how long you have continuously lived in the UK?&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Please advise if you spent a period of time outside of the UK since moving to the UK&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;You can do this by replying to this email with the relevant information or evidence.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;If you need support&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;If you have any questions, please contact us today.&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Call 03300 603 443&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Email &lt;/span&gt;&lt;a href=&quot;mailto:apprenticeshiponboarding@bpp.com&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;apprenticeshiponboarding@bpp.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Kind regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;{!$User.FirstName} {!$User.LastName}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;BPP Professional Apprenticeships&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Additional_Info_Intro</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Dear {!Get_Account.Name},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Thank you for submitting an application to study {!Get_Programme.Name} with BPP.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Having completed our review, we still require some information to be able to fully process your application.&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Additional_Info_Prior_Learning</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Complete the &lt;/span&gt;&lt;a href=&quot;{!Get_Prior_Learning_Form.Form_URL__c}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Prior Learning Form&lt;/a&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt; and provide evidence of your prior learning e.g. degree transcript. Please ensure that you read the form in full as it contains important instructions and information relating to prior learning and how it may impact your apprenticeship.&lt;/span&gt;&lt;/li&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Learner_Only_Professional_Firms_and_Actuarial</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Dear {!Get_Account.Name},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Thank you for your application to join an apprenticeship with BPP.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;As part of the onboarding process and adherence to the Apprenticeship funding rules and criteria, we require you to book a review call with a member of our Apprenticeship team.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;What you need to do next&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;You now need to set up a quick 15 minute video call to:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif; color: rgb(68, 68, 68);&quot;&gt;Discuss your eligibility, prior experience, and knowledge&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif; color: rgb(68, 68, 68);&quot;&gt;Make sure the apprenticeship matches your job needs and is the right programme for you&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif; color: rgb(68, 68, 68);&quot;&gt;Check your ID documents&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Book your application review call &lt;/span&gt;&lt;a href=&quot;https://outlook.office365.com/owa/calendar/BPPApplicationReviewCall@BPPSERVICESLIMITED.onmicrosoft.com/bookings/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Once booked, you&apos;ll receive a confirmation message which will ask you to forward the invite to your line manager. You don&apos;t need to do this as your employer is centrally signing off your application.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Important: You must arrange this call before you can start your apprenticeship programme.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Preparing for your call&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;After you’ve chosen a time, you just need to prepare a few things for your meeting:&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;The call will be on Microsoft Teams. You can download Teams for free&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.microsoft.com/en-gb/microsoft-teams/download-app&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;here&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Make sure you&apos;re signed in to your&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/account&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;BPP Hub account&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Check your learning plan&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/my/help-support/learning-support/apprenticeship-learning-plan&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;before the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;For identity verification, have your camera on during the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Have your passport, driver&apos;s licence, or any photo ID for verification&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;If you need support&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Call 03300 603 443&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Email&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;mailto:apprenticeshiponboarding@bpp.com&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;apprenticeshiponboarding@bpp.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Kind regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;BPP Professional Apprenticeships&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>LM_Requested_NATWEST_SANTANDER</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Dear {!Get_Account.Name},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Thank you for your application to join an apprenticeship with BPP.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;As part of the onboarding process and adherence to the Apprenticeship funding rules and criteria, we require you to book a review call with a member of our Apprenticeship team. This call is currently showing as outstanding on our records and whilst you may be on program and have had a Welcome call already you do still need to complete this call.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;What you need to do next&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;You now need to set up a quick 10 minute video call to:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Discuss your eligibility, prior experience, and knowledge&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Make sure the apprenticeship matches your job needs and is the right programme for you&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Check your ID documents&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Book your application review call &lt;/span&gt;&lt;a href=&quot;https://outlook.office365.com/owa/calendar/BPPApplicationReviewCall@BPPSERVICESLIMITED.onmicrosoft.com/bookings/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Ideally you need to attend with your line manager, but if you cannot align your diaries then we can continue with you and send any documentation to your line manager for agreement once the call has taken place.&amp;nbsp;If you are attending the call with your line manager, please forward them the call invite.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Important: You must arrange this call before you can start your apprenticeship programme. The call will be conducted using Microsoft Teams, however if you can only use Zoom please email once you have booked the call in and we will amend the Teams call to a Zoom call for you.&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Preparing for your call&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;After you’ve chosen a time, you just need to prepare a few things for your meeting:&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Make sure you&apos;re signed in to your&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/account&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;BPP Hub account&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Check your learning plan&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/my/help-support/learning-support/apprenticeship-learning-plan&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;before the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;For identity verification, have your camera on during the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Have your passport, driver&apos;s licence, or any photo ID for verification&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;If you need support&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Call 03300 603 443&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Email&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;mailto:apprenticeshiponboarding@bpp.com&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;apprenticeshiponboarding@bpp.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Kind regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;BPP Professional Apprenticeships&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>LM_Requested_Nursing_Only</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Dear {!Get_Account.Name},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Thank you for your application to join an apprenticeship with BPP.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;As part of the onboarding process and adherence to the Apprenticeship funding rules and criteria, we require you to book a review call with a member of our Apprenticeship team.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;What you need to do next&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;You now need to set up a quick 15 minute video call to:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Review the information you&apos;ve entered in your application&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Check your ID documents&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Book your application review call &lt;/span&gt;&lt;a href=&quot;https://outlook.office365.com/owa/calendar/BPPApplicationReviewCall@BPPSERVICESLIMITED.onmicrosoft.com/bookings/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;here &lt;/a&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Important: You must arrange this call before you can start your apprenticeship programme. Ideally you need to attend with your line manager, but if you cannot align your diaries then we can continue with you and send any documentation to your line manager for agreement once the call has taken place. If you are attending the call with your line manager, please forward them the call invite.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Preparing for your call&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;After you’ve chosen a time, you just need to prepare a few things for your meeting:&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;The call will be on Microsoft Teams. You can download Teams for free&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.microsoft.com/en-gb/microsoft-teams/download-app&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;here&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Make sure you&apos;re signed in to your&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/account&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;BPP Hub account&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Check your learning plan&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/my/help-support/learning-support/apprenticeship-learning-plan&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;&amp;nbsp;before the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;For identity verification, have your camera on during the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Have your passport, driver&apos;s licence, or any photo ID for verification&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;If you need support&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Call 03300 603 443&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Email&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;mailto:apprenticeshiponboarding@bpp.com&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;apprenticeshiponboarding@bpp.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Kind regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;BPP Professional Apprenticeships&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>LM_Requested_Standard</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Dear {!Get_Account.Name},&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Thank you for your application to join an apprenticeship with BPP.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;As part of the onboarding process and adherence to the Apprenticeship funding rules and criteria, we require you to book a review call with a member of our Apprenticeship team.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;What you need to do next&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;You now need to set up a quick 15 minute video call to:&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Discuss your eligibility, experience, and knowledge&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Make sure the apprenticeship matches your job needs&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Check your ID documents&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Book your application review call &lt;/span&gt;&lt;a href=&quot;https://outlook.office365.com/owa/calendar/BPPApplicationReviewCall@BPPSERVICESLIMITED.onmicrosoft.com/bookings/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;here &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Important: You must arrange and attend this call before you can start your apprenticeship programme.&amp;nbsp;Ideally you need to attend with your line manager, but if you cannot align your diaries then we can continue with you and send any documentation to your line manager for agreement once the call has taken place. If you are attending the call with your line manager, please forward them the call invite.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Preparing for your call&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;After you’ve chosen a time, you just need to prepare a few things for your meeting:&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;The call will be on Microsoft Teams. You can download Teams for free&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.microsoft.com/en-gb/microsoft-teams/download-app&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;here&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Make sure you&apos;re signed in to your&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/account&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;BPP Hub account&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Check your learning plan&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://www.bpp.com/my/help-support/learning-support/apprenticeship-learning-plan&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;here&lt;/a&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;&amp;nbsp;before the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;For identity verification, have your camera on during the call&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 14px;&quot;&gt;Have your passport, driver&apos;s licence, or any photo ID for verification&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;If you need support&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;If you have any questions, please contact us today.&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Call 03300 603 443&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Email&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;mailto:apprenticeshiponboarding@bpp.com&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;apprenticeshiponboarding@bpp.com&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;Kind regards,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; font-family: sans-serif;&quot;&gt;BPP Professional Apprenticeships&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>Case</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

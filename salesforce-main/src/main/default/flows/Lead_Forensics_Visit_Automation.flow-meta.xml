@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <description>Assign account owner as the task assignee</description>
+        <name>Assign_Account_Owner</name>
+        <label>Assign Account Owner</label>
+        <locationX>446</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>varAssigneeUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LF__Account__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAssigneeRole</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LF__Account__r.Owner.UserRole.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAssigneeActive</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LF__Account__r.Owner.IsActive</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varTaskWhatId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LF__Account__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Closed_Opportunity_Records_Meeting_Criteria_Found</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign opportunity owner as the task assignee</description>
+        <name>Assign_Opportunity_Owner</name>
+        <label>Assign Opportunity Owner</label>
+        <locationX>314</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>varAssigneeUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Open_Opportunities.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAssigneeRole</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Open_Opportunities.Owner.UserRole.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAssigneeActive</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Open_Opportunities.Owner.IsActive</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varTaskWhatId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Open_Opportunities.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Open_Opportunities</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Counts how many closed opportunities were found in the filtered collection</description>
+        <name>Set_Closed_Opportunity_Collection_Count</name>
+        <label>Set Closed Opportunity Collection Count</label>
+        <locationX>446</locationX>
+        <locationY>1295</locationY>
+        <assignmentItems>
+            <assignToReference>varClosedOpportunityCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Closed_Opportunities</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Account_Owner</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set details required to create task record</description>
+        <name>Set_New_Lead_Task_Details</name>
+        <label>Set New Lead Task Details</label>
+        <locationX>2162</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>varTaskSubject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!varCoreSubjectString} New Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAssigneeUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LF__Lead__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Lead_Task_Required</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set details required to create task record</description>
+        <name>Set_No_Recent_Opportunity_Task_Details</name>
+        <label>Set No Recent Opportunity Task Details</label>
+        <locationX>578</locationX>
+        <locationY>1619</locationY>
+        <assignmentItems>
+            <assignToReference>varTaskSubject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!varCoreSubjectString} No Recent Opportunity</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Validate_Assigned_Owner</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Counts how many open opportunities were found in the filtered collection</description>
+        <name>Set_Open_Opportunity_Collection_Count</name>
+        <label>Set Open Opportunity Collection Count</label>
+        <locationX>248</locationX>
+        <locationY>971</locationY>
+        <assignmentItems>
+            <assignToReference>varOpenOpportunityCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Open_Opportunities</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Open_Opportunity_Records_Found</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set details required to create task record</description>
+        <name>Set_Open_Opportunity_Task_Details</name>
+        <label>Set Open Opportunity Task Details</label>
+        <locationX>50</locationX>
+        <locationY>1679</locationY>
+        <assignmentItems>
+            <assignToReference>varTaskSubject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!varCoreSubjectString} Open Opportunity</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Validate_Assigned_Owner</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set details required to create task record</description>
+        <name>Set_Pipeline_Lead_Task_Details</name>
+        <label>Set Pipeline Lead Task Details</label>
+        <locationX>1502</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>varTaskSubject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!varCoreSubjectString} Pipeline Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varAssigneeUserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LF__Lead__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Lead_Task_Required</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set details required to create task record</description>
+        <name>Set_Recently_Closed_Opportunity_Task_Details</name>
+        <label>Set Recently Closed Opportunity Task Details</label>
+        <locationX>314</locationX>
+        <locationY>1619</locationY>
+        <assignmentItems>
+            <assignToReference>varTaskSubject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!varCoreSubjectString} Recently Closed Opportunity</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Validate_Assigned_Owner</targetReference>
+        </connector>
+    </assignments>
+    <collectionProcessors>
+        <description>Closed opportunities related to the account that meet the conditions</description>
+        <name>Closed_Opportunities</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Closed Opportunities</label>
+        <locationX>446</locationX>
+        <locationY>1187</locationY>
+        <assignNextValueToReference>currentItem_Closed_Opportunities</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Account_Opportunities</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Closed_Opportunities.IsClosed</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <booleanValue>true</booleanValue>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Closed_Opportunities.CloseDate</leftValueReference>
+            <operator>GreaterThan</operator>
+            <rightValue>
+                <elementReference>fxDateOneYearAgo</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Set_Closed_Opportunity_Collection_Count</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <description>Open opportunities related to the account</description>
+        <name>Open_Opportunities</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Open Opportunities</label>
+        <locationX>248</locationX>
+        <locationY>863</locationY>
+        <assignNextValueToReference>currentItem_Closed_Opportunities</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Account_Opportunities</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Closed_Opportunities.IsClosed</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <booleanValue>false</booleanValue>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Set_Open_Opportunity_Collection_Count</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <description>Order account opportunity collection by Close Date &amp; Modified Date</description>
+        <name>Sort_Opportunities</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Sort Opportunities</label>
+        <locationX>248</locationX>
+        <locationY>755</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Account_Opportunities</collectionReference>
+        <connector>
+            <targetReference>Open_Opportunities</targetReference>
+        </connector>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>CloseDate</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>LastModifiedDate</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+    </collectionProcessors>
+    <constants>
+        <description>Text for Subject of Callback Task. Specific info appended based on pathway</description>
+        <name>varCoreSubjectString</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Callback: Website Visit - </stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Does the visit require a follow up task to be created? If a task has already been created within a recent set period then another one should not be created.</description>
+        <name>Account_Task_Required</name>
+        <label>Account Task Required?</label>
+        <locationX>545</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Account_Task_Is_Required</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>fxDaysSinceLastTask</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>30.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fxDaysSinceLastTask</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Opportunities</targetReference>
+            </connector>
+            <label>Account Task Is Required</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the collection has any closed opportunities</description>
+        <name>Closed_Opportunity_Records_Meeting_Criteria_Found</name>
+        <label>Closed Opportunity Records Meeting Criteria Found?</label>
+        <locationX>446</locationX>
+        <locationY>1511</locationY>
+        <defaultConnector>
+            <targetReference>Set_No_Recent_Opportunity_Task_Details</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Recent Opportunities</defaultConnectorLabel>
+        <rules>
+            <name>Closed_Opportunities_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varClosedOpportunityCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Recently_Closed_Opportunity_Task_Details</targetReference>
+            </connector>
+            <label>Closed Opportunities Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>The task owner should only be assigned once by the most recent opportunity</description>
+        <name>Has_Opportunity_Owner_Set_Assignee</name>
+        <label>Has Opportunity Owner Set Assignee?</label>
+        <locationX>226</locationX>
+        <locationY>1295</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Opportunity_Owner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Set</defaultConnectorLabel>
+        <rules>
+            <name>Assignee_Set_Opportunity_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varAssigneeUserId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_Open_Opportunities</targetReference>
+            </connector>
+            <label>Assignee Set (Opportunity Owner)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the lead active in the current cycle (Establishing Contact / Engaged)?</description>
+        <name>Is_Lead_Active_In_Cycle</name>
+        <label>Is Lead Active In Cycle?</label>
+        <locationX>1964</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_Lead</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Establishing Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Engaged</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Pipeline_Lead_Task_Details</targetReference>
+            </connector>
+            <label>Active Lead</label>
+        </rules>
+        <rules>
+            <name>Inactive_Lead</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Nurturing</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No Further Action</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Re_engage_Lead</targetReference>
+            </connector>
+            <label>Inactive Lead</label>
+        </rules>
+        <rules>
+            <name>New_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_New_Lead_Task_Details</targetReference>
+            </connector>
+            <label>New Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Does the visit require a follow up task to be created? If a task has already been created within a recent set period then another one should not be created.</description>
+        <name>Lead_Task_Required</name>
+        <label>Lead Task Required?</label>
+        <locationX>1502</locationX>
+        <locationY>755</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Lead_Task_Is_Required</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4 AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>fxDaysSinceLastTask</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>30.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fxDaysSinceLastTask</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Owner:User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Owner:User.UserRole.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>System / API</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Owner:User.UserRole.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketing Cloud</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Task_To_Engage_With_Lead_Website_Visit</targetReference>
+            </connector>
+            <label>Lead Task Is Required</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Does the open opportunity collection contain any records?</description>
+        <name>Open_Opportunity_Records_Found</name>
+        <label>Open Opportunity Records Found?</label>
+        <locationX>248</locationX>
+        <locationY>1079</locationY>
+        <defaultConnector>
+            <targetReference>Closed_Opportunities</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Open Opportunities</defaultConnectorLabel>
+        <rules>
+            <name>Open_Opportunities_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varOpenOpportunityCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_Open_Opportunities</targetReference>
+            </connector>
+            <label>Open Opportunities Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>What object is the Lead Forensics Visit record related to as the parent customer record &amp; is it new or existing?</description>
+        <name>Parent_Record_Type</name>
+        <label>Parent Record Type</label>
+        <locationX>1889</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Existing_Company_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Account__r.IsPersonAccount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Verify_Account_Conditions</targetReference>
+            </connector>
+            <label>Existing Company Account</label>
+        </rules>
+        <rules>
+            <name>Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Verify_Brand_of_Interest</targetReference>
+            </connector>
+            <label>Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check that assigned owner is active &amp; not a robot</description>
+        <name>Validate_Assigned_Owner</name>
+        <label>Validate Assigned Owner</label>
+        <locationX>248</locationX>
+        <locationY>1895</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_User_Verified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varAssigneeActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Task_To_Engage_With_Account_Website_Visit</targetReference>
+            </connector>
+            <label>Active User Verified</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the Brand Ownership &apos;BPP&apos; or &apos;Estio&apos; &amp; the company account not actively managed?</description>
+        <name>Verify_Account_Conditions</name>
+        <label>Verify Account Conditions</label>
+        <locationX>825</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Account Not Validated</defaultConnectorLabel>
+        <rules>
+            <name>Account_Criteria_Validated</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Account__r.BPP_Not_Actively_Managed__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Account__r.Brand_Ownership__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BPP</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Account__r.Brand_Ownership__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Estio</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Task_Required</targetReference>
+            </connector>
+            <label>Account Criteria Validated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check that the lead has a &apos;BPP&apos; or &apos;Estio&apos; Brand of Interest</description>
+        <name>Verify_Brand_of_Interest</name>
+        <label>Verify Brand of Interest</label>
+        <locationX>2327</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Brand_Validated</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Brand_of_Interest__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BPP</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LF__Lead__r.Brand_of_Interest__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Estio</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Lead_Active_In_Cycle</targetReference>
+            </connector>
+            <label>Brand Validated</label>
+        </rules>
+    </decisions>
+    <description>Lead Forensics Visit updates (context: after creation/update)</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculate the date one year ago today</description>
+        <name>fxDateOneYearAgo</name>
+        <dataType>Date</dataType>
+        <expression>{!$Flow.CurrentDate} - 365</expression>
+    </formulas>
+    <formulas>
+        <description>Calculate how long ago last notification was sent</description>
+        <name>fxDaysSinceLastTask</name>
+        <dataType>Number</dataType>
+        <expression>IF({!Lead} = True, 
+{!$Flow.CurrentDate} - {!$Record.LF__Lead__r.Last_Lead_Forensics_Action_Date__c}, 
+{!$Flow.CurrentDate} - {!$Record.LF__Account__r.Last_Lead_Forensics_Action_Date__c})</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Lead Forensics Visit Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Forensics Visit Automation</label>
+    <loops>
+        <name>Loop_Open_Opportunities</name>
+        <label>Loop Open Opportunities</label>
+        <locationX>50</locationX>
+        <locationY>1187</locationY>
+        <collectionReference>Open_Opportunities</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Has_Opportunity_Owner_Set_Assignee</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Set_Open_Opportunity_Task_Details</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create task record related to either the opportunity or account for the user to review the Lead Forensics visit and engage accordingly with the customer</description>
+        <name>Create_Task_To_Engage_With_Account_Website_Visit</name>
+        <label>Create Task To Engage With Account Website Visit</label>
+        <locationX>116</locationX>
+        <locationY>2003</locationY>
+        <connector>
+            <targetReference>Update_Parent_Account</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>See Lead Forensics Visits widget for full details of website visits.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varAssigneeUserId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>$Label.User_Task_Record_Type_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>varTaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>varTaskWhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Create task record related to the lead for the user to review the Lead Forensics visit and engage accordingly with the customer</description>
+        <name>Create_Task_To_Engage_With_Lead_Website_Visit</name>
+        <label>Create Task To Engage With Lead Website Visit</label>
+        <locationX>1370</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>Update_Parent_Lead</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>See Lead Forensics Visits widget for full details of website visits.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varAssigneeUserId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>$Label.User_Task_Record_Type_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>varTaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.LF__Lead__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Opportunities associated with parent account record</description>
+        <name>Account_Opportunities</name>
+        <label>Account Opportunities</label>
+        <locationX>248</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Sort_Opportunities</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.LF__Account__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Set the lead Status to Re-engaged</description>
+        <name>Re_engage_Lead</name>
+        <label>Re-engage Lead</label>
+        <locationX>1898</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Create_Callback_Task</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.LF__Lead__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Lead_Status_Detail__c</field>
+            <value>
+                <stringValue>Lead Forensics</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Re-engaged</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update parent account record</description>
+        <name>Update_Parent_Account</name>
+        <label>Update Parent Account</label>
+        <locationX>116</locationX>
+        <locationY>2111</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.LF__Account__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Lead_Forensics_Action_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update parent lead record</description>
+        <name>Update_Parent_Lead</name>
+        <label>Update Parent Lead</label>
+        <locationX>1964</locationX>
+        <locationY>1139</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.LF__Lead__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Lead_Forensics_Action_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <start>
+        <locationX>1763</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Parent_Record_Type</targetReference>
+        </connector>
+        <filterFormula>{!$Setup.FlowSettings__c.Lead_Forensics_Visit_Automation__c} = False</filterFormula>
+        <object>LF__Visit__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Create task record related to the lead for the user to review the Lead Forensics visit and engage accordingly with the customer</description>
+        <name>Create_Callback_Task</name>
+        <label>Create Callback Task</label>
+        <locationX>1898</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Update_Parent_Lead</targetReference>
+        </connector>
+        <flowName>Callback_Task_Creation</flowName>
+        <inputAssignments>
+            <name>varDescription</name>
+            <value>
+                <stringValue>See Lead Forensics Visits widget for full details of website visits.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varDueDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varMasterObject</name>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varSubject</name>
+            <value>
+                <stringValue>{!varCoreSubjectString} Re-engaged Lead</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varWhoId</name>
+            <value>
+                <elementReference>$Record.LF__Lead__c</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>currentItem_Closed_Opportunities</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <description>Is the record owner active?</description>
+        <name>varAssigneeActive</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Role of record owner</description>
+        <name>varAssigneeRole</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>User Id of the record owner the task will be assigned to</description>
+        <name>varAssigneeUserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Number of closed opportunities in collection</description>
+        <name>varClosedOpportunityCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Number of open opportunities in collection</description>
+        <name>varOpenOpportunityCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Subject value of task record</description>
+        <name>varTaskSubject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>varCoreSubjectString</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <description>Id of the record that the task is related to (WhatId)</description>
+        <name>varTaskWhatId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

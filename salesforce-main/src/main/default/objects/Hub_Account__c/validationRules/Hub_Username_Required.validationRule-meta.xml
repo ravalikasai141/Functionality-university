@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hub_Username_Required</fullName>
+    <active>true</active>
+    <description>Hub record must have a valid Hub Username</description>
+    <errorConditionFormula>ISBLANK( Hub_Username__c )</errorConditionFormula>
+    <errorDisplayField>Hub_Username__c</errorDisplayField>
+    <errorMessage>Hub Username is missing. Please add a Hub Username to continue.</errorMessage>
+</ValidationRule>

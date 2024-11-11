@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sitting</fullName>
+        <default>false</default>
+        <label>Sitting</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualification</fullName>
+        <default>false</default>
+        <label>Qualification</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper</fullName>
+        <default>false</default>
+        <label>Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Level</fullName>
+        <default>false</default>
+        <label>Level</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper/Level</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Paper/Level</label>
+    </customValue>
+    <description>Possible seperation rules for invoicing. These rules are used in code. Adding values without modifying the code will not change the behavior.</description>
+    <masterLabel>Invoice Separation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

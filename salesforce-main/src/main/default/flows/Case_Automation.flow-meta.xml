@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Inform customer that case is resolved and will be set to close if no additional response is received from the customer</description>
+        <name>Inform_Customer_Case_Ready_to_Close_CS</name>
+        <label>Inform Customer Case Ready to Close</label>
+        <locationX>2514</locationX>
+        <locationY>755</locationY>
+        <actionName>Case.CSCase_Ready_To_Close</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Customer_Service_Action_Logged_as_Task</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Inform customer that case is resolved and will be set to close if no additional response is received from the customer</description>
+        <name>Inform_Customer_Case_Ready_to_Close_SQ</name>
+        <label>Inform Customer Case Ready to Close</label>
+        <locationX>1810</locationX>
+        <locationY>755</locationY>
+        <actionName>Case.Case_Ready_To_Close</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Student_Query_Action_Logged_as_Task</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Response_Customer_Service_Case_Closed</name>
+        <label>Response - Customer Service Case Closed</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <actionName>Case.CSCase_Send_Email_Response_If_Case_Is_Closed</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Closed_Case_Action_Logged_as_Task</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Inform student that their case has already been closed (Student Query response)</description>
+        <name>Response_Student_Query_Case_Closed</name>
+        <label>Response - Student Query Case Closed</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <actionName>Case.Case_Send_Email_Response_If_Case_Is_Closed</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Closed_Case_Action_Logged_as_Task</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>Actions_from_Response</name>
+        <label>Actions from Response</label>
+        <locationX>1414</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Reopen_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.New_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready to Close</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Reopen Case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if case is open or closed</description>
+        <name>Case_Already_Resolved</name>
+        <label>Case Already Resolved?</label>
+        <locationX>1557</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Evaluate_Case_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Case Open</defaultConnectorLabel>
+        <rules>
+            <name>Case_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Received_New_Incoming_Email</targetReference>
+            </connector>
+            <label>Case Closed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check that an email address is available on the case - Supplied (Web) Email</description>
+        <name>Check_Email_Available_CS</name>
+        <label>Check Email Available</label>
+        <locationX>2646</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Close_Case</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_Available_CS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SuppliedEmail</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Inform_Customer_Case_Ready_to_Close_CS</targetReference>
+            </connector>
+            <label>Email Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check that an email address is available on the case - Supplied (Web) Email</description>
+        <name>Check_Email_Available_SQ</name>
+        <label>Check Email Available</label>
+        <locationX>1942</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Close_Case</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_Available_SQ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SuppliedEmail</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Inform_Customer_Case_Ready_to_Close_SQ</targetReference>
+            </connector>
+            <label>Email Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check Incoming Email From value has successfully been saved on the case record before sending an email</description>
+        <name>Check_Incoming_Email_Available</name>
+        <label>Check Incoming Email Available</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Reset_Closed_Case_Email_Alert_State</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Incoming Email Address</defaultConnectorLabel>
+        <rules>
+            <name>Incoming_Email_Available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Incoming_Email_From__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Determine_Closed_Case_Response</targetReference>
+            </connector>
+            <label>Incoming Email Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Send a different email alert based on the record type</description>
+        <name>Determine_Closed_Case_Response</name>
+        <label>Determine Closed Case Response</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Student_Query_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student Query</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Incoming_Email_From__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Response_Student_Query_Case_Closed</targetReference>
+            </connector>
+            <label>Student Query</label>
+        </rules>
+        <rules>
+            <name>Customer_Service_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Service</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Incoming_Email_From__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Response_Customer_Service_Case_Closed</targetReference>
+            </connector>
+            <label>Customer Service</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>What kind of update has occurred on the case 7 what actions should be taken? Customer response? Status change - specific actions for the case type etc.</description>
+        <name>Evaluate_Case_Update</name>
+        <label>Evaluate Case Update</label>
+        <locationX>2316</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Customer_Response</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.New_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Actions_from_Response</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Customer Response</label>
+        </rules>
+        <rules>
+            <name>Student_Query_Actions</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student Query</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Status_Update_SQ</targetReference>
+            </connector>
+            <label>Student Query Actions</label>
+        </rules>
+        <rules>
+            <name>Customer_Service_Actions</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Service</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Status_Update</targetReference>
+            </connector>
+            <label>Customer Service Actions</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has an incoming email been received for a closed case?</description>
+        <name>Received_New_Incoming_Email</name>
+        <label>Received New Incoming Email?</label>
+        <locationX>798</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_Email_Received</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Email_Closed_Alert__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email_Closed_Alert__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Incoming_Email_Available</targetReference>
+            </connector>
+            <label>New Email Received</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Customer Service case has been progressed to a new status</description>
+        <name>Status_Update</name>
+        <label>Status Update</label>
+        <locationX>2800</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ready_to_Close_CS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready to Close</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Email_Available_CS</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Ready to Close</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Student query case has been progressed to a new status</description>
+        <name>Status_Update_SQ</name>
+        <label>Status Update</label>
+        <locationX>2096</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ready_to_Close_SQ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready to Close</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Email_Available_SQ</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Ready to Close</label>
+        </rules>
+    </decisions>
+    <description>Runs when business cases are updated &amp; performs any automation required to progress the case (context: after creation/update)</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Calculates task subject based on the decision path</description>
+        <name>fxCalculateTaskSubject_ClosedCase</name>
+        <dataType>String</dataType>
+        <expression>IF({!Customer_Service_Closed}, &quot;Email Sent: Email Response on closed CS Case&quot;, &quot;Email Sent: Email Response on closed Case&quot;)</expression>
+    </formulas>
+    <formulas>
+        <description>Calculates task subject based on the decision path</description>
+        <name>fxCalculateTaskSubject_StudentQuery</name>
+        <dataType>String</dataType>
+        <expression>IF({!Ready_to_Close_SQ} = True, &quot;Email Sent: Case - Ready To Close&quot;, 
+&quot;Email Sent&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>tomorrow</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() + 1</expression>
+    </formulas>
+    <interviewLabel>Case Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Automation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>System Task created to show email alert was sent</description>
+        <name>Closed_Case_Action_Logged_as_Task</name>
+        <label>Closed Case Action Logged as Task</label>
+        <locationX>314</locationX>
+        <locationY>947</locationY>
+        <connector>
+            <targetReference>Reset_Closed_Case_Email_Alert_State</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Automated_System_User_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>$Label.System_Task_Record_Type_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>fxCalculateTaskSubject_ClosedCase</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>System Task created to show email alert was sent</description>
+        <name>Customer_Service_Action_Logged_as_Task</name>
+        <label>Customer Service Action Logged as Task</label>
+        <locationX>2514</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>Close_Case</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Automated_System_User_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>$Label.System_Task_Record_Type_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Email Sent: Case - Ready To Close</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>System Task created to show email alert was sent</description>
+        <name>Student_Query_Action_Logged_as_Task</name>
+        <label>Student Query Action Logged as Task</label>
+        <locationX>1810</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>Close_Case</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Label.Automated_System_User_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>$Label.System_Task_Record_Type_Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>fxCalculateTaskSubject_StudentQuery</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>Close_Case</name>
+        <label>Close Case</label>
+        <locationX>2316</locationX>
+        <locationY>1223</locationY>
+        <inputAssignments>
+            <field>Case_Auto_Close_Date_Time__c</field>
+            <value>
+                <elementReference>tomorrow</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Resets the closed case so that any further incoming communications will repeat through the same process</description>
+        <name>Reset_Closed_Case_Email_Alert_State</name>
+        <label>Reset Closed Case Email Alert State</label>
+        <locationX>578</locationX>
+        <locationY>1139</locationY>
+        <inputAssignments>
+            <field>Email_Closed_Alert__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1431</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case_Already_Resolved</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.Name} = &apos;Student Query&apos; || {!$Record.RecordType.Name} = &apos;Customer Service&apos; &amp;&amp;
+{!$Setup.FlowSettings__c.Case_Automation__c} = False</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>400</triggerOrder>
+</Flow>

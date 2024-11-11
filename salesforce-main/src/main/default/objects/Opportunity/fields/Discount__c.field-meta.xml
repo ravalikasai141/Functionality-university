@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team.  5/11/11</description>
+    <externalId>false</externalId>
+    <label>Discount</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>As of Contract</fullName>
+                <default>false</default>
+                <label>As of Contract</label>
+            </value>
+            <value>
+                <fullName>Only for this Opportunity</fullName>
+                <default>false</default>
+                <label>Only for this Opportunity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

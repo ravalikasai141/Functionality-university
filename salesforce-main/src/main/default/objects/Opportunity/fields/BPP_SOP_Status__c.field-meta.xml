@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_SOP_Status__c</fullName>
+    <description>SOP Status pick list field in section  &quot;Credibility Assessment&quot; on the &apos;Application&apos; Opportunity Record Type</description>
+    <externalId>false</externalId>
+    <label>SOP Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To Be Reviewed</fullName>
+                <default>false</default>
+                <label>To Be Reviewed</label>
+            </value>
+            <value>
+                <fullName>Reviewed and Confirmed</fullName>
+                <default>false</default>
+                <label>Reviewed and Confirmed</label>
+            </value>
+            <value>
+                <fullName>Resubmission Required</fullName>
+                <default>false</default>
+                <label>Resubmission Required</label>
+            </value>
+            <value>
+                <fullName>On-Hold</fullName>
+                <default>false</default>
+                <label>On-Hold</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

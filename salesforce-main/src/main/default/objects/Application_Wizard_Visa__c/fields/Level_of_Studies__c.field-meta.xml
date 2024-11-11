@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_of_Studies__c</fullName>
+    <externalId>false</externalId>
+    <label>Level of Studies</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CEFR  level A2</fullName>
+                <default>false</default>
+                <label>CEFR  level A2</label>
+            </value>
+            <value>
+                <fullName>CEFR  level B1</fullName>
+                <default>false</default>
+                <label>CEFR  level B1</label>
+            </value>
+            <value>
+                <fullName>CEFR  level B2</fullName>
+                <default>false</default>
+                <label>CEFR  level B2</label>
+            </value>
+            <value>
+                <fullName>CEFR  level C1</fullName>
+                <default>false</default>
+                <label>CEFR  level C1</label>
+            </value>
+            <value>
+                <fullName>CEFR  level C2</fullName>
+                <default>false</default>
+                <label>CEFR  level C2</label>
+            </value>
+            <value>
+                <fullName>NQF level 1</fullName>
+                <default>false</default>
+                <label>NQF level 1</label>
+            </value>
+            <value>
+                <fullName>NQF level 2</fullName>
+                <default>false</default>
+                <label>NQF level 2</label>
+            </value>
+            <value>
+                <fullName>NQF level 3</fullName>
+                <default>false</default>
+                <label>NQF level 3</label>
+            </value>
+            <value>
+                <fullName>NQF level 4</fullName>
+                <default>false</default>
+                <label>NQF level 4</label>
+            </value>
+            <value>
+                <fullName>NQF level 5</fullName>
+                <default>false</default>
+                <label>NQF level 5</label>
+            </value>
+            <value>
+                <fullName>NQF level 6</fullName>
+                <default>false</default>
+                <label>NQF level 6</label>
+            </value>
+            <value>
+                <fullName>NQF level 7</fullName>
+                <default>false</default>
+                <label>NQF level 7</label>
+            </value>
+            <value>
+                <fullName>NQF level 8</fullName>
+                <default>false</default>
+                <label>NQF level 8</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

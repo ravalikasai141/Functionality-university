@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Assigns the email address &amp; phone number into variables calculated from the preferred options selected on the record</description>
+        <name>Assign_Preferred_Email_Phone_Values</name>
+        <label>Assign Preferred Email &amp; Phone Values</label>
+        <locationX>49</locationX>
+        <locationY>333</locationY>
+        <assignmentItems>
+            <assignToReference>varPreferredEmailValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CalcPreferredEmailValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPreferredPhoneValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CalcPreferredPhoneValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account_Contact_Details</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigns the phone number into variables calculated from the preferred options selected on the record
+Emails removed as these are being updated via workflow</description>
+        <name>Assign_Preferred_Phone_Values</name>
+        <label>Assign Preferred Phone Values</label>
+        <locationX>196</locationX>
+        <locationY>323</locationY>
+        <assignmentItems>
+            <assignToReference>varPreferredPhoneValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CalcPreferredPhoneValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account_Phone_Details</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Clean all phone number fields (UK mobile numbers only) into E.164 (+44) format</description>
+        <name>CleanUKPhoneNumbers</name>
+        <label>CleanUKPhoneNumbers</label>
+        <locationX>197</locationX>
+        <locationY>183</locationY>
+        <assignmentItems>
+            <assignToReference>RevTriggerAccount.PersonHomePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CleanHomePhoneNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>RevTriggerAccount.Work_Phone__pc</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CleanWorkPhoneNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>RevTriggerAccount.PersonMobilePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CleanMobileNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>RevTriggerAccount.PersonOtherPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CleanOtherPhoneNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Preferred_Phone_Values</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Is the preferred phone number a UK mobile number?</description>
+        <name>Preferred_Phone_UK_Mobile_Number</name>
+        <label>Preferred Phone = UK Mobile Number?</label>
+        <locationX>309</locationX>
+        <locationY>465</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Mobile_Number</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varPreferredPhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Mobile</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varPreferredPhoneValue</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>+447</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Mobile_Number</targetReference>
+            </connector>
+            <label>Mobile Number</label>
+        </rules>
+    </decisions>
+    <description>Updates master email &amp; phone details with the selected preferred options. If mobile number is identified the Mobile field is also populated, plus Copy of Email field automation.
+**version that updates phone details only**</description>
+    <formulas>
+        <description>Uses varPreferredEmail to select the corresponding email address from the account</description>
+        <name>CalcPreferredEmailValue</name>
+        <dataType>String</dataType>
+        <expression>CASE({!varPreferredEmail},
+&apos;Personal&apos;, {!RevTriggerAccount.Personal_Email__pc}, 
+&apos;Work&apos;, {!RevTriggerAccount.Work_Email__pc}, 
+&apos;BPP&apos;, {!RevTriggerAccount.BPP_Email__pc}, 
+&apos;Other&apos;, {!RevTriggerAccount.Other_Email__pc}, 
+&apos;Billing&apos;, {!RevTriggerAccount.Billing_Email__pc},
+&apos;&apos;, &apos;&apos;, 
+{!RevTriggerAccount.PersonEmail} )</expression>
+    </formulas>
+    <formulas>
+        <description>Uses varPreferredPhone to select the corresponding phone number from the account</description>
+        <name>CalcPreferredPhoneValue</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!varPreferredPhone}, 
+&apos;Work&apos;, {!RevTriggerAccount.Work_Phone__pc}, 
+&apos;Mobile&apos;, {!RevTriggerAccount.PersonMobilePhone}, 
+&apos;Home&apos;, {!RevTriggerAccount.PersonHomePhone}, 
+&apos;Other&apos;, {!RevTriggerAccount.PersonOtherPhone}, 
+&apos;&apos;,&apos;&apos;,
+{!RevTriggerAccount.Phone} )</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans student&apos;s home UK phone number into the E.164 (+44) format</description>
+        <name>CleanHomePhoneNumber</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!RevTriggerAccount.PersonHomePhone},2),
+&quot;+4&quot;, {!RevTriggerAccount.PersonHomePhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!RevTriggerAccount.PersonHomePhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!RevTriggerAccount.PersonHomePhone},Len({!RevTriggerAccount.PersonHomePhone})-1), 
+{!RevTriggerAccount.PersonHomePhone})</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans student&apos;s mobile UK phone number into the E.164 (+44) format</description>
+        <name>CleanMobileNumber</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!RevTriggerAccount.PersonMobilePhone},2),
+&quot;+4&quot;, {!RevTriggerAccount.PersonMobilePhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!RevTriggerAccount.PersonMobilePhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!RevTriggerAccount.PersonMobilePhone},Len({!RevTriggerAccount.PersonMobilePhone})-1), 
+{!RevTriggerAccount.PersonMobilePhone})</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans student&apos;s other UK phone number into the E.164 (+44) format</description>
+        <name>CleanOtherPhoneNumber</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!RevTriggerAccount.PersonOtherPhone},2),
+&quot;+4&quot;, {!RevTriggerAccount.PersonOtherPhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!RevTriggerAccount.PersonOtherPhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!RevTriggerAccount.PersonOtherPhone},Len({!RevTriggerAccount.PersonOtherPhone})-1), 
+{!RevTriggerAccount.PersonOtherPhone})</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans student&apos;s work UK phone number into the E.164 (+44) format</description>
+        <name>CleanWorkPhoneNumber</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!RevTriggerAccount.Work_Phone__pc},2),
+&quot;+4&quot;, {!RevTriggerAccount.Work_Phone__pc}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!RevTriggerAccount.Work_Phone__pc}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!RevTriggerAccount.Work_Phone__pc},Len({!RevTriggerAccount.Work_Phone__pc})-1), 
+{!RevTriggerAccount.Work_Phone__pc})</expression>
+    </formulas>
+    <interviewLabel>Update Account Contact Details {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Account Contact Details</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtain the variables from the account record to use in the flow</description>
+        <name>Get_Email_Phone_Contact_Details</name>
+        <label>Get Email &amp; Phone Contact Details</label>
+        <locationX>198</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CleanUKPhoneNumbers</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.BPP_Email__pc</assignToReference>
+            <field>BPP_Email__pc</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.Billing_Email__pc</assignToReference>
+            <field>Billing_Email__pc</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.Other_Email__pc</assignToReference>
+            <field>Other_Email__pc</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.PersonEmail</assignToReference>
+            <field>PersonEmail</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.PersonHomePhone</assignToReference>
+            <field>PersonHomePhone</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.PersonMobilePhone</assignToReference>
+            <field>PersonMobilePhone</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.PersonOtherPhone</assignToReference>
+            <field>PersonOtherPhone</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.Personal_Email__pc</assignToReference>
+            <field>Personal_Email__pc</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.Phone</assignToReference>
+            <field>Phone</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.Work_Email__pc</assignToReference>
+            <field>Work_Email__pc</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>RevTriggerAccount.Work_Phone__pc</assignToReference>
+            <field>Work_Phone__pc</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <description>Populate Mobile account field with the master mobile number</description>
+        <name>Populate_Mobile_Number</name>
+        <label>Populate Mobile Number</label>
+        <locationX>315</locationX>
+        <locationY>634</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PersonMobilePhone</field>
+            <value>
+                <elementReference>varPreferredPhoneValue</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update contact fields on account record</description>
+        <name>Update_Account_Contact_Details</name>
+        <label>Update Account Contact Details</label>
+        <locationX>48</locationX>
+        <locationY>457</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Copy_of_Email__c</field>
+            <value>
+                <elementReference>varPreferredEmailValue</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonEmail</field>
+            <value>
+                <elementReference>varPreferredEmailValue</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonHomePhone</field>
+            <value>
+                <elementReference>RevTriggerAccount.PersonHomePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonMobilePhone</field>
+            <value>
+                <elementReference>RevTriggerAccount.PersonMobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonOtherPhone</field>
+            <value>
+                <elementReference>RevTriggerAccount.PersonOtherPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>varPreferredPhoneValue</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Phone__pc</field>
+            <value>
+                <elementReference>RevTriggerAccount.Work_Phone__pc</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update phone fields on account record
+Emails removed as these are being updated via workflow</description>
+        <name>Update_Account_Phone_Details</name>
+        <label>Update Account Phone Details</label>
+        <locationX>194</locationX>
+        <locationY>463</locationY>
+        <connector>
+            <targetReference>Preferred_Phone_UK_Mobile_Number</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAccountID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PersonHomePhone</field>
+            <value>
+                <elementReference>RevTriggerAccount.PersonHomePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonMobilePhone</field>
+            <value>
+                <elementReference>RevTriggerAccount.PersonMobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonOtherPhone</field>
+            <value>
+                <elementReference>RevTriggerAccount.PersonOtherPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>varPreferredPhoneValue</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Phone__pc</field>
+            <value>
+                <elementReference>RevTriggerAccount.Work_Phone__pc</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <startElementReference>Get_Email_Phone_Contact_Details</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Variables for account record that triggered the flow process</description>
+        <name>RevTriggerAccount</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>ID of the account record that triggered the process</description>
+        <name>varAccountID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Student&apos;s preferred email address</description>
+        <name>varPreferredEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Email address of the preferred email option</description>
+        <name>varPreferredEmailValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Student&apos;s preferred phone contact method</description>
+        <name>varPreferredPhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Phone number of the preferred phone option</description>
+        <name>varPreferredPhoneValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

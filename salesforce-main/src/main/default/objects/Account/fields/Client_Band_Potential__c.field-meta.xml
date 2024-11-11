@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Band_Potential__c</fullName>
+    <description>Client Band Potential value calculated from the Education Budget field when &apos;Employees&apos; &amp; &apos;Industry Type&apos; are populated</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(NumberOfEmployees), TEXT(Account_Managed__c),
+IF(Education_Budget__c &gt; 1000000, &quot;Platinum Plus&quot;,
+IF(Education_Budget__c &gt;= 400000, &quot;Platinum&quot;,
+IF(Education_Budget__c &gt;= 100000, &quot;Gold&quot;,
+IF(Education_Budget__c &gt;= 30000, &quot;Silver&quot;,
+&quot;Bronze&quot;)))))</formula>
+    <label>Client Band Potential</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

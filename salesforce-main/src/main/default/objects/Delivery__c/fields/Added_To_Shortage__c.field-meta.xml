@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Added_To_Shortage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Quantity has been added to stock shortage - used to ensure it is not counted more than once during multiple allocation attempts</description>
+    <externalId>false</externalId>
+    <label>Added To Shortage</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Renders fields deinfed in the "Enhanced Layout Field" custom metadata</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Enhanced Layout Component</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__HomePage, lightning__RecordPage">
+            <property name="sectionAPIName" label="Enhanced Field Section API Name" type="String" required="true" />
+            <property name="sectionLabel" label="Section Label" type="String" required="true" />
+            <property name="columnWidth" label="Column Width" type="String" default="1" datasource="1, 2" required="true" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

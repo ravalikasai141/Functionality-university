@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_Faculty</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit Faculty</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/apex.js&quot;)}
+
+var nullFieldMsg = &quot;&quot;;
+if ({!ISBLANK(Faculty__c.Email__c )} &amp;&amp; {!ISBLANK(Faculty__c.Phone__c )}) {
+nullFieldMsg += &quot;Either Email or Phone is required\n&quot;;
+}
+if ({!ISPICKVAL(Faculty__c.Role__c, &quot;STAFF&quot;)} &amp;&amp; {!ISBLANK(Faculty__c.Username__c)}){
+nullFieldMsg += &quot;Username is required\n&quot;;
+}
+if(({!NOT(ISBLANK(Faculty__c.Username__c))}) &amp;&amp; ({!LEN(Faculty__c.Username__c)} != 9)){
+nullFieldMsg += &quot;Username is required with 9 Characters\n&quot;;
+}
+if(({!NOT(ISBLANK(Faculty__c.State_Province__c ))}) &amp;&amp; {!ISBLANK( Faculty__c.Postal_Code__c )}){
+nullFieldMsg += &quot;Postal Code is required if State is entered.\n&quot;; 
+} 
+if (nullFieldMsg.length &gt; 0) {
+alert(&quot;Required Fields not all entered.\n\n&quot; + nullFieldMsg);
+}
+else {
+var result = sforce.apex.execute(&quot;PersonIntegrations&quot;,&quot;PersonInt &quot;, {FacultyId:&quot;{!Faculty__c.Id}&quot;});
+if (result != &quot;Application Submitted Successfully&quot;)
+alert(result);
+else
+document.location.reload(true);
+}</url>
+</WebLink>

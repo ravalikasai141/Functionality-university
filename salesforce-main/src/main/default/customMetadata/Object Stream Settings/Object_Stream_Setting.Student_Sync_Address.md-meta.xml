@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Student Sync - Address</label>
+    <protected>false</protected>
+    <values>
+        <field>Emitter__c</field>
+        <value xsi:type="xsd:string">PlatformEventEmitter</value>
+    </values>
+    <values>
+        <field>Event_Name__c</field>
+        <value xsi:type="xsd:string">userAccountUpdated</value>
+    </values>
+    <values>
+        <field>Fields__c</field>
+        <value xsi:type="xsd:string">Type__c,Street_1__c,Street_2__c,Street_3__c,City__c,Lookup_Country__c,Zip_Postal_Code__c,Record_Source__c,Primary_Billing__c,Primary_Delivery__c,Permanent_Home__c,Term_Time__c,Active__c</value>
+    </values>
+    <values>
+        <field>Operation_Lock__c</field>
+        <value xsi:nil="true" />
+    </values>
+    <values>
+        <field>Record_Types__c</field>
+        <value xsi:nil="true" />
+    </values>
+    <values>
+        <field>SObject_Type__c</field>
+        <value xsi:type="xsd:string">Address__c</value>
+    </values>
+    <values>
+        <field>Serializer__c</field>
+        <value xsi:type="xsd:string">StudentSync</value>
+    </values>
+    <values>
+        <field>Sort_Order__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,61 @@
+<template>
+    <div class="slds-section slds-is-open">
+        <lightning-accordion allow-multiple-sections-open active-section-name="content">
+            <lightning-accordion-section name="content" label="Eligibility Criteria">
+                <template if:true={displaySpinner}>
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </template>
+
+                <template if:true={infoText}>
+                    <div class="slds-box slds-box_x-small slds-theme_default slds-m-top_small slds-m-horizontal_small">
+                        <h2 class="slds-text-heading_small slds-text-align_center slds-p-around_small">{infoText}</h2>
+                    </div>
+                </template>
+                <template if:false={infoText}>
+                    <div class="slds-box slds-box_x-small slds-theme_default slds-m-top_small slds-m-horizontal_small">
+                        <h2 class="slds-text-heading_small slds-text-align_center slds-p-around_small">
+                            Eligibility Status:&nbsp;<strong>{eliStatus}</strong>&nbsp;| Date Submitted: {formattedDate}
+                            | Template: {eliTemplate}
+                        </h2>
+                    </div>
+                </template>
+                <div class="slds-grid slds-wrap slds-section__content">
+                    <template if:false={infoText}>
+                        <div class="slds-grid slds-wrap slds-section__content">
+                            <template for:each={answers} for:item="answer">
+                                <div class="slds-col slds-size_2-of-2" key={answer.stepCode}>
+                                    <div class="slds-p-horizontal_small">
+                                        <div class="slds-form-element_readonly slds-form-element">
+                                            <label class="slds-form-element__label slds-no-flex">
+                                                {answer.question}
+                                                <template if:true={answer.eligible}>
+                                                    <span class="slds-badge slds-m-left_small slds-badge_success"
+                                                        >Eligible</span
+                                                    >
+                                                </template>
+                                                <template if:false={answer.eligible}>
+                                                    <span class="slds-badge slds-m-left_small slds-badge_inverse"
+                                                        >Ineligible</span
+                                                    >
+                                                </template>
+                                            </label>
+                                            <div class="slds-form-element__control slds-grow">
+                                                <div class="lookupLineHeight">{answer.summaryText}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+                <template if:true={summary}>
+                    <div class="slds-size_2-of-2 slds-section__content slds-p-around_small slds-m-vertical_medium">
+                        <div class="slds-text-heading_small slds-m-bottom_small">Summary</div>
+                        <lightning-formatted-rich-text value={summary}></lightning-formatted-rich-text>
+                    </div>
+                </template>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </div>
+</template>

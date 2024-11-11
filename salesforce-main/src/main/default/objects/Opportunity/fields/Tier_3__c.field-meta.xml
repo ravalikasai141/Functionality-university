@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_3__c</fullName>
+    <externalId>false</externalId>
+    <label>Tier 3</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tier_2__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ActEd</fullName>
+                <default>false</default>
+                <label>ActEd</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship School (Level 2/3/4/5)</fullName>
+                <default>false</default>
+                <label>Apprenticeship School (Level 2/3/4/5)</label>
+            </value>
+            <value>
+                <fullName>Apprenticeship School (Level 6/7)</fullName>
+                <default>false</default>
+                <label>Apprenticeship School (Level 6/7)</label>
+            </value>
+            <value>
+                <fullName>Channel Islands</fullName>
+                <default>false</default>
+                <label>Channel Islands</label>
+            </value>
+            <value>
+                <fullName>Data Assembly</fullName>
+                <default>false</default>
+                <label>Data Assembly</label>
+            </value>
+            <value>
+                <fullName>Estio</fullName>
+                <default>false</default>
+                <label>Estio</label>
+            </value>
+            <value>
+                <fullName>Firebrand</fullName>
+                <default>false</default>
+                <label>Firebrand</label>
+            </value>
+            <value>
+                <fullName>Law School</fullName>
+                <default>false</default>
+                <label>Law School</label>
+            </value>
+            <value>
+                <fullName>Malaysia BPP</fullName>
+                <default>false</default>
+                <label>Malaysia BPP</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+            <value>
+                <fullName>Poland BPP</fullName>
+                <default>false</default>
+                <label>Poland BPP</label>
+            </value>
+            <value>
+                <fullName>PQ</fullName>
+                <default>false</default>
+                <label>PQ</label>
+            </value>
+            <value>
+                <fullName>PQ (FS, Level 6/7)</fullName>
+                <default>false</default>
+                <label>PQ (FS, Level 6/7)</label>
+            </value>
+            <value>
+                <fullName>PQ (FS)</fullName>
+                <default>false</default>
+                <label>PQ (FS)</label>
+            </value>
+            <value>
+                <fullName>Romania BPP</fullName>
+                <default>false</default>
+                <label>Romania BPP</label>
+            </value>
+            <value>
+                <fullName>School of Business</fullName>
+                <default>false</default>
+                <label>School of Business</label>
+            </value>
+            <value>
+                <fullName>School of Business (Level 6/7)</fullName>
+                <default>false</default>
+                <label>School of Business (Level 6/7)</label>
+            </value>
+            <value>
+                <fullName>School of FS (Level 2/3/4/5)</fullName>
+                <default>false</default>
+                <label>School of FS (Level 2/3/4/5)</label>
+            </value>
+            <value>
+                <fullName>School of FS (Level 6/7)</fullName>
+                <default>false</default>
+                <label>School of FS (Level 6/7)</label>
+            </value>
+            <value>
+                <fullName>School of Health</fullName>
+                <default>false</default>
+                <label>School of Health</label>
+            </value>
+            <value>
+                <fullName>School of Nursing</fullName>
+                <default>false</default>
+                <label>School of Nursing</label>
+            </value>
+            <value>
+                <fullName>School of Technology</fullName>
+                <default>false</default>
+                <label>School of Technology</label>
+            </value>
+            <value>
+                <fullName>School of Technology (Level 6/7)</fullName>
+                <default>false</default>
+                <label>School of Technology (Level 6/7)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>ActEd</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Apprenticeship School (Level 2/3/4/5)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>Apprenticeship School (Level 6/7)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>Estio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Accelerated Training</controllingFieldValue>
+            <controllingFieldValue>Skills Bootcamps</controllingFieldValue>
+            <valueName>Firebrand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Law School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>PQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>PQ (FS, Level 6/7)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>School of Business (Level 6/7)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>School of FS (Level 2/3/4/5)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>School of FS (Level 6/7)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>School of Nursing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Key Skills Series</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>School of Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apprenticeship</controllingFieldValue>
+            <valueName>School of Technology (Level 6/7)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <valueName>Data Assembly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Key Skills Series</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>PD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bespoke</controllingFieldValue>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>School of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Channel Islands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Malaysia BPP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Poland BPP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>PQ (FS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>Romania BPP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Non-Apps</controllingFieldValue>
+            <valueName>School of Health</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

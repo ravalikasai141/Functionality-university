@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admissions_Event</fullName>
+    <active>true</active>
+    <description>Campaign template specific for events such as open days.</description>
+    <label>Event</label>
+    <picklistValues>
+        <picklist>Campaign_Member_Source__c</picklist>
+        <values>
+            <fullName>Existing Contacts - Members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Contacts - Non Members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List - Longer Term</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List - One off</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Delivery_Day__c</picklist>
+        <values>
+            <fullName>Friday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saturday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thursday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuesday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wednesday</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level__c</picklist>
+        <values>
+            <fullName>Postgraduate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undergraduate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publication__c</picklist>
+        <values>
+            <fullName>124 Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AWS Link</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accountancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accountancy Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounting %26 Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Best Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFA Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLC Chronicle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City AM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Constabulary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Financier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counsel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epoch Times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance Director</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-House Lawyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India Times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Society Gazette</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lawyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Week</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muslim Weekly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NQ Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PASS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Police Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Police Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SII Newsletter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SII Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Square Mile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunday Times</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TSG Life</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxation Careers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxation Magazine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telegraph</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Times</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>School__c</picklist>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Group__c</picklist>
+        <values>
+            <fullName>Random</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Targeted_Faculty__c</picklist>
+        <values>
+            <fullName>A%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Education liaison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinars</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Website__c</picklist>
+        <values>
+            <fullName>T%26C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Eaccaglobal%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Eaccountancyage%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Ecfainstitute%2Eorg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Ecimaglobal%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Eicaew%2Eco%2Euk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Epassmagazine%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Esii%2Eorg%2Euk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Esourcethecourse%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Etaxationweb%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Ethelawyer%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Ethesolicitorsgroup%2Eco%2Euk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Ethisislondon%2Eco%2Euk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Etimeslondon%2Eco%2Euk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Etsg%2Eorg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Euksip%2Eorg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>www%2Ewaterlow%2Ecom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

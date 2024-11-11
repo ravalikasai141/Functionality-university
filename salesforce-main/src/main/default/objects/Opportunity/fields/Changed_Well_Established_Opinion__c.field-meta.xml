@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Changed_Well_Established_Opinion__c</fullName>
+    <description>BTC - Please provide an example of where you have changed someone’s well-established opinion and how this was achieved? This does not need to be on a legal subject</description>
+    <externalId>false</externalId>
+    <label>Changed Well Established Opinion</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Day_of_Week__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE(MOD(NVMStatsSF__Date__c - DATE(1900, 1, 7), 7), 
+1, &apos;1-Monday&apos;, 
+2, &apos;2-Tuesday&apos;, 
+3, &apos;3-Wednesday&apos;, 
+4, &apos;4-Thursday&apos;, 
+5, &apos;5-Friday&apos;, 
+6, &apos;6-Saturday&apos;, 
+0, &apos;7-Sunday&apos;, &apos; &apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Day of the week this Call or Case was received on in UTC</inlineHelpText>
+    <label>UTC Day of Week</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

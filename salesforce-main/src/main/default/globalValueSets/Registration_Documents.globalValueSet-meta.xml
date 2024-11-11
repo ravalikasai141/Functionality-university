@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Not Applicable</fullName>
+        <default>false</default>
+        <label>Not Applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>Outstanding</fullName>
+        <default>false</default>
+        <label>Outstanding</label>
+    </customValue>
+    <customValue>
+        <fullName>Submitted</fullName>
+        <default>false</default>
+        <label>Submitted</label>
+    </customValue>
+    <customValue>
+        <fullName>Validated</fullName>
+        <default>false</default>
+        <label>Validated</label>
+    </customValue>
+    <customValue>
+        <fullName>Incomplete</fullName>
+        <default>false</default>
+        <label>Incomplete</label>
+    </customValue>
+    <masterLabel>Registration Documents</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

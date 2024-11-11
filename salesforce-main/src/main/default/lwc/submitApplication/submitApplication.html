@@ -1,0 +1,13 @@
+<template>
+    <lightning-quick-action-panel header="Submit Application">
+        <div class="slds-align_absolute-center slds-text-heading_small">{returnedMessage}</div>
+        <div slot="footer">
+            <lightning-button
+                variant="brand"
+                label="OK"
+                class="slds-m-left_x-small"
+                onclick={closeModal}
+            ></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

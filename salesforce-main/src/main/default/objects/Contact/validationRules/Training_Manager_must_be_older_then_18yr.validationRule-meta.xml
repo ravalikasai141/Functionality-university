@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Manager_must_be_older_then_18yr</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+!ISBLANK(Birthdate),
+RecordType.DeveloperName = &apos;Training_Manager&apos;,
+FLOOR((TODAY() - Birthdate )/365.2425) &lt; 18
+)</errorConditionFormula>
+    <errorDisplayField>Birthdate</errorDisplayField>
+    <errorMessage>The Training Manager must be older then 18 years old.</errorMessage>
+</ValidationRule>

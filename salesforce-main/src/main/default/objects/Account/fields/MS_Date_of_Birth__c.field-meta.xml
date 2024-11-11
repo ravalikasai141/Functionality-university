@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MS_Date_of_Birth__c</fullName>
+    <description>This field is overwritten by workflow every time a student account is updated.  It copies the birthdate field from the contact table into this field on the account table.  This is required for the cross-object formula that determines microsite eligibility on the opportunity.</description>
+    <externalId>false</externalId>
+    <label>MS Date of Birth</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_FieldOfStudy_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>FieldOfStudy Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SFDC_Curriculum_Program_Code_Select__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0000~ Undeclared</fullName>
+                <default>false</default>
+                <label>0000~ Undeclared</label>
+            </value>
+            <value>
+                <fullName>ACC~ Accounting</fullName>
+                <default>false</default>
+                <label>ACC~ Accounting</label>
+            </value>
+            <value>
+                <fullName>ACOS~ Admin &amp; Company Secretarial</fullName>
+                <default>false</default>
+                <label>ACOS~ Admin &amp; Company Secretarial</label>
+            </value>
+            <value>
+                <fullName>ACTL~ Actuarial</fullName>
+                <default>false</default>
+                <label>ACTL~ Actuarial</label>
+            </value>
+            <value>
+                <fullName>BAN~ Banking</fullName>
+                <default>false</default>
+                <label>BAN~ Banking</label>
+            </value>
+            <value>
+                <fullName>BF~ Banking &amp; Finance</fullName>
+                <default>false</default>
+                <label>BF~ Banking &amp; Finance</label>
+            </value>
+            <value>
+                <fullName>BUS~ Business Studies</fullName>
+                <default>false</default>
+                <label>BUS~ Business Studies</label>
+            </value>
+            <value>
+                <fullName>BUSM~ Business Management</fullName>
+                <default>false</default>
+                <label>BUSM~ Business Management</label>
+            </value>
+            <value>
+                <fullName>CHRO~ CHRO</fullName>
+                <default>false</default>
+                <label>CHRO~ CHRO</label>
+            </value>
+            <value>
+                <fullName>DIGM~ Digital Marketing</fullName>
+                <default>false</default>
+                <label>DIGM~ Digital Marketing</label>
+            </value>
+            <value>
+                <fullName>EER~ Employee Relations</fullName>
+                <default>false</default>
+                <label>EER~ Employee Relations</label>
+            </value>
+            <value>
+                <fullName>ENG~ English</fullName>
+                <default>false</default>
+                <label>ENG~ English</label>
+            </value>
+            <value>
+                <fullName>EPL~ Employment Law</fullName>
+                <default>false</default>
+                <label>EPL~ Employment Law</label>
+            </value>
+            <value>
+                <fullName>FIB~ Behavioural Finance</fullName>
+                <default>false</default>
+                <label>FIB~ Behavioural Finance</label>
+            </value>
+            <value>
+                <fullName>FIC~ Corporate Finance</fullName>
+                <default>false</default>
+                <label>FIC~ Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>FIE~ Entrepreneurial Finance</fullName>
+                <default>false</default>
+                <label>FIE~ Entrepreneurial Finance</label>
+            </value>
+            <value>
+                <fullName>FII~ Investment Management</fullName>
+                <default>false</default>
+                <label>FII~ Investment Management</label>
+            </value>
+            <value>
+                <fullName>FIN~ Finance</fullName>
+                <default>false</default>
+                <label>FIN~ Finance</label>
+            </value>
+            <value>
+                <fullName>FQT~ Quantitative Finance &amp; Trading</fullName>
+                <default>false</default>
+                <label>FQT~ Quantitative Finance &amp; Trading</label>
+            </value>
+            <value>
+                <fullName>GHR~ Global Human Resources</fullName>
+                <default>false</default>
+                <label>GHR~ Global Human Resources</label>
+            </value>
+            <value>
+                <fullName>HEAL~ HEAL</fullName>
+                <default>false</default>
+                <label>HEAL~ HEAL</label>
+            </value>
+            <value>
+                <fullName>HR~ Human Resource</fullName>
+                <default>false</default>
+                <label>HR~ Human Resource</label>
+            </value>
+            <value>
+                <fullName>HRP~ Professional Human Resources</fullName>
+                <default>false</default>
+                <label>HRP~ Professional Human Resources</label>
+            </value>
+            <value>
+                <fullName>HRS~ Human Resource Management</fullName>
+                <default>false</default>
+                <label>HRS~ Human Resource Management</label>
+            </value>
+            <value>
+                <fullName>INSV~ Insolvency</fullName>
+                <default>false</default>
+                <label>INSV~ Insolvency</label>
+            </value>
+            <value>
+                <fullName>INV~ Investment Management</fullName>
+                <default>false</default>
+                <label>INV~ Investment Management</label>
+            </value>
+            <value>
+                <fullName>LAW~ Law</fullName>
+                <default>false</default>
+                <label>LAW~ Law</label>
+            </value>
+            <value>
+                <fullName>LD~ Learning &amp; Development</fullName>
+                <default>false</default>
+                <label>LD~ Learning &amp; Development</label>
+            </value>
+            <value>
+                <fullName>LEM~ LEM</fullName>
+                <default>false</default>
+                <label>LEM~ LEM</label>
+            </value>
+            <value>
+                <fullName>MGT~ Management</fullName>
+                <default>false</default>
+                <label>MGT~ Management</label>
+            </value>
+            <value>
+                <fullName>MKP~ Professional Marketing</fullName>
+                <default>false</default>
+                <label>MKP~ Professional Marketing</label>
+            </value>
+            <value>
+                <fullName>MKT~ Marketing</fullName>
+                <default>false</default>
+                <label>MKT~ Marketing</label>
+            </value>
+            <value>
+                <fullName>PAC~ Professional Accounting</fullName>
+                <default>false</default>
+                <label>PAC~ Professional Accounting</label>
+            </value>
+            <value>
+                <fullName>PD~ Professional Development</fullName>
+                <default>false</default>
+                <label>PD~ Professional Development</label>
+            </value>
+            <value>
+                <fullName>PSYC~ Psychology</fullName>
+                <default>false</default>
+                <label>PSYC~ Psychology</label>
+            </value>
+            <value>
+                <fullName>TAX	~ Tax</fullName>
+                <default>false</default>
+                <label>TAX	~ Tax</label>
+            </value>
+            <value>
+                <fullName>TLM~ Talent Management</fullName>
+                <default>false</default>
+                <label>TLM~ Talent Management</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>PQ-CERTFP~ Cert in Financal Planning</controllingFieldValue>
+            <controllingFieldValue>PQ-CFA~ Chartered Financial Analyst</controllingFieldValue>
+            <controllingFieldValue>PQ-IAQ~ Investment Administration Qual</controllingFieldValue>
+            <controllingFieldValue>PQ-IFQ~ Islamic Finance Qualification</controllingFieldValue>
+            <controllingFieldValue>PQ-IMC~ Investment Management Cert</controllingFieldValue>
+            <controllingFieldValue>PQ-CFQ~ Corporate Finance Qual</controllingFieldValue>
+            <controllingFieldValue>PQ-IOC~ Investment Operations Cert</controllingFieldValue>
+            <controllingFieldValue>PQ-CIFA~ Cert Invest &amp; Financial Advice</controllingFieldValue>
+            <controllingFieldValue>PQ-CIIDRFP~ CII Dip Reg Financial Planning</controllingFieldValue>
+            <controllingFieldValue>PQ-CISIAC~ CISI Advanced Certificate</controllingFieldValue>
+            <controllingFieldValue>PQ-CISIC~ CISI Certificates</controllingFieldValue>
+            <controllingFieldValue>PQ-CISID~ CISI Diploma</controllingFieldValue>
+            <controllingFieldValue>PQ-CISIDIA~ CISI Investment Advice Diploma</controllingFieldValue>
+            <controllingFieldValue>PQ-CISIMWM~ CISI Masters Wealth Management</controllingFieldValue>
+            <controllingFieldValue>PQ-DIPFM~ Dip in Financial Management</controllingFieldValue>
+            <controllingFieldValue>PQ-DIPFP~ CII Dip in Financial Planning</controllingFieldValue>
+            <controllingFieldValue>PQ-DIPIFR~ Dip Int Financial Reporting</controllingFieldValue>
+            <controllingFieldValue>PQ-DIPIP~ Dip in Investment Planning</controllingFieldValue>
+            <controllingFieldValue>PQ-FRM~ Financial Risk Management Qual</controllingFieldValue>
+            <valueName>BF~ Banking &amp; Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ-GMP~ Global Marketer Programme</controllingFieldValue>
+            <controllingFieldValue>PQ-MRS~ Market Research Society (MRS)</controllingFieldValue>
+            <controllingFieldValue>PQ-CIM~ Chartered Inst of Marketing</controllingFieldValue>
+            <controllingFieldValue>EXTITLMS-MKT~ Ext Int MSc Marketing</controllingFieldValue>
+            <controllingFieldValue>MSCIM2~ PG Dip Int Marketing</controllingFieldValue>
+            <controllingFieldValue>MSCMK1~ PG Cert in Mrkting</controllingFieldValue>
+            <controllingFieldValue>MSCMK3~ MSc Mrkting</controllingFieldValue>
+            <controllingFieldValue>MSCPM1~ PG Cert in Prof Mrkting</controllingFieldValue>
+            <controllingFieldValue>MSCPM3~ MSc Prof Mrkting</controllingFieldValue>
+            <valueName>MKT~ Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ-ICAEW~ Assoc of Chartered Accountants</controllingFieldValue>
+            <controllingFieldValue>PQ-ICAS~ ICAS</controllingFieldValue>
+            <controllingFieldValue>PQ-CIMA~ CIMA (PQ)</controllingFieldValue>
+            <controllingFieldValue>PQ-SS~ Spreadsheet Safe</controllingFieldValue>
+            <controllingFieldValue>PQ-AAT~ AAT</controllingFieldValue>
+            <controllingFieldValue>PQ-FIA~ Foundations in Accountancy</controllingFieldValue>
+            <controllingFieldValue>PQ-AATPAY~ AAT NVQ Payroll Administration</controllingFieldValue>
+            <controllingFieldValue>PQ-ABC~ AAT ABC Bookkeeping</controllingFieldValue>
+            <controllingFieldValue>PQ-ACCA~ ACCA</controllingFieldValue>
+            <controllingFieldValue>PQ-ACCAOXBRK~ ACCA (Oxford Brookes Deg)</controllingFieldValue>
+            <controllingFieldValue>PQ-CAT~ Cert Accounting Technician</controllingFieldValue>
+            <valueName>ACC~ Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ-ICAEWINS~ ICAEW Cert in Insolvency</controllingFieldValue>
+            <controllingFieldValue>PQ-JIEB~ Joint Insolvency Exam Board</controllingFieldValue>
+            <controllingFieldValue>PQ-CPI~ Cert Proficiency in Insolvency</controllingFieldValue>
+            <controllingFieldValue>PQ-CPPI~ Cert Prof Personal Insolvency</controllingFieldValue>
+            <valueName>INSV~ Insolvency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BSCPAS3~ BSc (Hons)  Prof Accting</controllingFieldValue>
+            <controllingFieldValue>BSCPAS1~ CertHE  Prof Accting</controllingFieldValue>
+            <controllingFieldValue>PATHHECPA~ Pathway to HE Cert Prof Acc</controllingFieldValue>
+            <valueName>PAC~ Professional Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BSCPSY1~ BSc (Hons) Psychology</controllingFieldValue>
+            <controllingFieldValue>BSCPSYH~ BSc (Hons) Psychology</controllingFieldValue>
+            <controllingFieldValue>EXTITBS-PY~ Ext Int BSc(Hons) Psychology</controllingFieldValue>
+            <controllingFieldValue>LLBLPSY3~ LLB (Hons) Law with Psychology</controllingFieldValue>
+            <controllingFieldValue>MCHIRM~ Mchiro</controllingFieldValue>
+            <valueName>PSYC~ Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BSCPSYH~ BSc (Hons) Psychology</controllingFieldValue>
+            <controllingFieldValue>CERTHEC~ Pathway to HE Cert in Health</controllingFieldValue>
+            <controllingFieldValue>CertHE-HSC~ HE Cert Heal and Social Care</controllingFieldValue>
+            <controllingFieldValue>BSCNURS~ BScNursing Studies(Dip to Deg)</controllingFieldValue>
+            <controllingFieldValue>EXTITFC-HEAL~ Ext Int Fnd Cert Healthcare</controllingFieldValue>
+            <controllingFieldValue>FC-HEALTHC~ Path HE Cert Healthcare</controllingFieldValue>
+            <controllingFieldValue>PATHHECHC~ Pathway to HE Cert Healthcare</controllingFieldValue>
+            <valueName>HEAL~ HEAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BTT	Bar~ Transfer Test</controllingFieldValue>
+            <controllingFieldValue>BVC~ Bar Vocational Course</controllingFieldValue>
+            <controllingFieldValue>BPTCL~ Bar Prof Training Course</controllingFieldValue>
+            <controllingFieldValue>EXTITF-CLS~ Ext Int Fnd Cert Law St</controllingFieldValue>
+            <controllingFieldValue>EXTITLLM-BL~ Ext Int LLB Law Bus Law</controllingFieldValue>
+            <controllingFieldValue>EXTITLLM-CCL~ Ext Int LLB Law Comp Com Law</controllingFieldValue>
+            <controllingFieldValue>EXTITLLM-CL~ Ext Int LLB Law Com Law</controllingFieldValue>
+            <controllingFieldValue>EXTITLLM-RC~ Ext Int LLB Law Reg Compl Law</controllingFieldValue>
+            <controllingFieldValue>GCCLL~ Grad Cert in Comm Law</controllingFieldValue>
+            <controllingFieldValue>GDLL~ Grad Dip in Law (GDL)</controllingFieldValue>
+            <controllingFieldValue>INTFC-LS~ Int Fdn Cert Legal Studies</controllingFieldValue>
+            <controllingFieldValue>INTPREMD-LAW~ Int PreMst Dip Law</controllingFieldValue>
+            <controllingFieldValue>LLB3~ LLB (Hons) Law</controllingFieldValue>
+            <controllingFieldValue>LLBBL3~ LLB (Hons) Business Law</controllingFieldValue>
+            <controllingFieldValue>LLBGDLC2~ LLB [GDL Conversion]</controllingFieldValue>
+            <controllingFieldValue>LLBGDLHC~ LLB (Hons) [GDL Conversion]</controllingFieldValue>
+            <controllingFieldValue>LLBLPSY3~ LLB (Hons) Law with Psychology</controllingFieldValue>
+            <controllingFieldValue>LLMCCLL~ LLM Compar&apos;&apos;tve Comm Law</controllingFieldValue>
+            <controllingFieldValue>LLMCLL~ LLM Comm Law</controllingFieldValue>
+            <controllingFieldValue>LLMFRCL~ LLM Finl Reg &amp; Compl</controllingFieldValue>
+            <controllingFieldValue>LLMIBLL~ LLM (Int Bus Law)</controllingFieldValue>
+            <controllingFieldValue>LLMPLP~ LLM Prof Legl Pract</controllingFieldValue>
+            <controllingFieldValue>LPC~ Legal Practice Course</controllingFieldValue>
+            <controllingFieldValue>MALB~ MA Law with Business</controllingFieldValue>
+            <controllingFieldValue>MALPCB~ MA LPC with Business</controllingFieldValue>
+            <valueName>LAW~ Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CERTBSL~ Pwy to HE Cert in Bus Studies</controllingFieldValue>
+            <controllingFieldValue>EXTITBS-BF~ Ext Int BSc(Hons) B Mgmt w/Fin</controllingFieldValue>
+            <controllingFieldValue>BSCBM1~ CertHE Business Management</controllingFieldValue>
+            <controllingFieldValue>BSCBM3~ BSc (Hons) Business Management</controllingFieldValue>
+            <controllingFieldValue>BSCLEM1~ CertHE LEM</controllingFieldValue>
+            <controllingFieldValue>BSCLEM3~ BSc (Hons) LEM</controllingFieldValue>
+            <controllingFieldValue>INTPREMD-BM~ Int PreMst Dip Bus Mgmt</controllingFieldValue>
+            <valueName>BUS~ Business Studies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIPDHR~ CIPD Cert in HRP</controllingFieldValue>
+            <valueName>HR~ Human Resource</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ-UNKN~ PQ Unknown Qualification</controllingFieldValue>
+            <controllingFieldValue>EXTIT-IFC~ Ext Int Fnd Cert</controllingFieldValue>
+            <controllingFieldValue>INT-IFC~ Int Foundation Cert</controllingFieldValue>
+            <controllingFieldValue>PA-VOTECH~ Vocational Training</controllingFieldValue>
+            <valueName>0000~ Undeclared</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACCA~ ACCA</controllingFieldValue>
+            <controllingFieldValue>EXTITBS-PY~ Ext Int BSc(Hons) Psychology</controllingFieldValue>
+            <controllingFieldValue>MSCF3~ MSc Fin</controllingFieldValue>
+            <valueName>FIN~ Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BSCBFS3~ BSc (Hons) Banking &amp; Finance</controllingFieldValue>
+            <valueName>BAN~ Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BSCLEM1~ CertHE LEM</controllingFieldValue>
+            <controllingFieldValue>BSCLEM3~ BSc (Hons) LEM</controllingFieldValue>
+            <controllingFieldValue>BSCPAS1~ CertHE  Prof Accting</controllingFieldValue>
+            <valueName>LEM~ LEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTITBS-BM~ Ext Int BSc Bus Mgmt</controllingFieldValue>
+            <controllingFieldValue>EXTITFCB-S~ Ext Int Fnd Cert Bus Mgmt</controllingFieldValue>
+            <controllingFieldValue>INTFC-BM~ Int Fdn Cert Business Mgmt</controllingFieldValue>
+            <valueName>BUSM~ Business Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTITLMS-M~ Ext Int MSc Management</controllingFieldValue>
+            <controllingFieldValue>MSCM1~ PG Cert in Management</controllingFieldValue>
+            <controllingFieldValue>MSCM3~ MSc Management</controllingFieldValue>
+            <valueName>MGT~ Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MCHIRB~ Mchiro</controllingFieldValue>
+            <controllingFieldValue>MCHIRC~ Mchiro</controllingFieldValue>
+            <controllingFieldValue>MCHIRD~ Mchiro</controllingFieldValue>
+            <controllingFieldValue>MCHIRM~ Mchiro</controllingFieldValue>
+            <valueName>CHRO~ CHRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSCM1~ PG Cert in Management</controllingFieldValue>
+            <controllingFieldValue>MSCM3~ MSc Management</controllingFieldValue>
+            <controllingFieldValue>MSCMK1~ PG Cert in Mrkting</controllingFieldValue>
+            <controllingFieldValue>MSCPHR1~ PG Cert Prof HR</controllingFieldValue>
+            <valueName>HRP~ Professional Human Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSCM1~ PG Cert in Management</controllingFieldValue>
+            <valueName>MKP~ Professional Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PD-BSB~ Bar Standards Board</controllingFieldValue>
+            <controllingFieldValue>PD-CIMA~ CIMA (PD)</controllingFieldValue>
+            <controllingFieldValue>PD-CIMACPD~ CPD-CIMA</controllingFieldValue>
+            <controllingFieldValue>PD-CIMAEND~ CIMA Endorsed</controllingFieldValue>
+            <controllingFieldValue>PD-CPD~ CPD</controllingFieldValue>
+            <controllingFieldValue>PD-HRA~ Higher Rights of Audience</controllingFieldValue>
+            <controllingFieldValue>PD-ICAEWIFRS~ ICAEW Dip in IFRS</controllingFieldValue>
+            <controllingFieldValue>PD-NYBAR~ New York Bar (NYB)</controllingFieldValue>
+            <controllingFieldValue>PD-PSC~ Professional Skills Course</controllingFieldValue>
+            <controllingFieldValue>PD-QLTS~ Qualified Lawyers Tfr Scheme</controllingFieldValue>
+            <controllingFieldValue>PD-QLTT~ Qualified Lawyers Tfr Test</controllingFieldValue>
+            <controllingFieldValue>PD-UNKN~ PD Unknown Qualification</controllingFieldValue>
+            <valueName>PD~ Professional Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ-CSQS~ Inst Chrtd Secretaries &amp; Admin</controllingFieldValue>
+            <valueName>ACOS~ Admin &amp; Company Secretarial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ-CTA~ Chartered Tax Adviser (CTA)</controllingFieldValue>
+            <controllingFieldValue>PQ-ATT~ Assoc of Tax Technicians</controllingFieldValue>
+            <valueName>TAX	~ Tax</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

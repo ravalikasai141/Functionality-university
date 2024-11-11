@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_Delivery_Status_Flow</fullName>
+    <active>true</active>
+    <description>Ensure that the Status field only moves to a valid status in relation to the previous value - Physical Delivery record type</description>
+    <errorConditionFormula>AND( RecordType.Name = &apos;Physical Delivery&apos;,
+OR(
+AND( ISNEW(),
+NOT( ISPICKVAL( Delivery_Status__c , &quot;On Hold&quot;)),
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Awaiting Allocation&quot;))),
+AND( ISCHANGED( Delivery_Status__c ) ,
+OR(
+ISPICKVAL( PRIORVALUE( Delivery_Status__c ), &quot;Cancelled&quot;) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;On Hold&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Awaiting Allocation&quot;)),
+ISPICKVAL( PRIORVALUE( Delivery_Status__c ), &quot;On Hold&quot;) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Awaiting Allocation&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Cancelled&quot;)),
+ISPICKVAL( PRIORVALUE( Delivery_Status__c ), &quot;Awaiting Allocation&quot;) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;On Hold&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Ready for Fulfilment&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Cancelled&quot;)),
+ISPICKVAL( PRIORVALUE( Delivery_Status__c ), &quot;Ready for Fulfilment&quot;) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;On Hold&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Awaiting Allocation&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Sent for Fulfilment&quot;)) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Cancelled&quot;)),
+ISPICKVAL( PRIORVALUE( Delivery_Status__c ), &quot;Sent for Fulfilment&quot;) &amp;&amp;
+NOT( ISPICKVAL( Delivery_Status__c , &quot;Dispatched&quot;)),
+ISPICKVAL( PRIORVALUE( Delivery_Status__c ), &quot;Dispatched&quot;)
+)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Delivery_Status__c</errorDisplayField>
+    <errorMessage>The record cannot be moved into that status</errorMessage>
+</ValidationRule>

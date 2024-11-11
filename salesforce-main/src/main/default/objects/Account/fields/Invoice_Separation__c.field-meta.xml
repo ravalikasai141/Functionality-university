@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Separation__c</fullName>
+    <description>Defines the separation rules of the invoice scheduler.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Applicable to invoicing in arrears. If a value has been selected, a separate invoice will be created based on this value.</inlineHelpText>
+    <label>Invoice Separation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Invoice_Separation</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

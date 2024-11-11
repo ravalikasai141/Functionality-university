@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensures_Sponsorship_Percentage_less_100</fullName>
+    <active>true</active>
+    <errorConditionFormula>Sponsorship_Percentage__c &gt; 1</errorConditionFormula>
+    <errorDisplayField>Sponsorship_Percentage__c</errorDisplayField>
+    <errorMessage>The Sponsorship Percentage cannot be greater then 100.</errorMessage>
+</ValidationRule>

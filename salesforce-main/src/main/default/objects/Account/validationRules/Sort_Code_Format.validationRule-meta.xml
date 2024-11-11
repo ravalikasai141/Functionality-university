@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sort_Code_Format</fullName>
+    <active>true</active>
+    <description>Enforces Sort Code format of three lots of 2 digits separated by &quot;-&quot;</description>
+    <errorConditionFormula>AND(
+NOT( ISBLANK(  Bank_Sort_Code__c  )),
+NOT( REGEX( Bank_Sort_Code__c , &quot;[0-9]{2}-[0-9]{2}-[0-9]{2}&quot; ))
+)</errorConditionFormula>
+    <errorDisplayField>Bank_Sort_Code__c</errorDisplayField>
+    <errorMessage>You must enter the sort code in the following format 12-34-56</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Short_Abandon__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>(NVMStatsSF__Abandoned__c = true) &amp;&amp; (NVMStatsSF__Total_Call_Duration__c &lt; 10)  &amp;&amp;  (NVMStatsSF__Agent_Talk_Time__c == 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Calls abandoned within 10s where Agent Talk Time is zero</inlineHelpText>
+    <label>Short Abandon</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

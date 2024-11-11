@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Curriculum_Level_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Curriculum Level Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>00~ Level Not Declared</fullName>
+                <default>true</default>
+                <label>00~ Level Not Declared</label>
+            </value>
+            <value>
+                <fullName>L3~ Level 3</fullName>
+                <default>false</default>
+                <label>L3~ Level 3</label>
+            </value>
+            <value>
+                <fullName>PA~ Professional Apprenticeships</fullName>
+                <default>false</default>
+                <label>PA~ Professional Apprenticeships</label>
+            </value>
+            <value>
+                <fullName>PQ~ Professional Qualification</fullName>
+                <default>false</default>
+                <label>PQ~ Professional Qualification</label>
+            </value>
+            <value>
+                <fullName>PG~ Postgraduate</fullName>
+                <default>false</default>
+                <label>PG~ Postgraduate</label>
+            </value>
+            <value>
+                <fullName>PD~ Professional Development</fullName>
+                <default>false</default>
+                <label>PD~ Professional Development</label>
+            </value>
+            <value>
+                <fullName>UG~ Undergraduate</fullName>
+                <default>false</default>
+                <label>UG~ Undergraduate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

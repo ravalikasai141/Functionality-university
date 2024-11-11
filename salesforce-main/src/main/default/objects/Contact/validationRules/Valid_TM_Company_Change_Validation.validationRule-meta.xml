@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_TM_Company_Change_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+(PRIORVALUE( Active__c ) = true),
+(Active__c = true),
+(ISCHANGED( AccountId ))
+)</errorConditionFormula>
+    <errorMessage>You cannot change Company if Training Manager is Active</errorMessage>
+</ValidationRule>

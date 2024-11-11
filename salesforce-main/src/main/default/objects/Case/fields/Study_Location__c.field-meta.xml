@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Study_Location__c</fullName>
+    <externalId>false</externalId>
+    <label>Study Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Birmingham</fullName>
+                <default>false</default>
+                <label>Birmingham</label>
+            </value>
+            <value>
+                <fullName>Bristol</fullName>
+                <default>false</default>
+                <label>Bristol</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Doncaster</fullName>
+                <default>false</default>
+                <label>Doncaster</label>
+            </value>
+            <value>
+                <fullName>Leeds</fullName>
+                <default>false</default>
+                <label>Leeds</label>
+            </value>
+            <value>
+                <fullName>London (City)</fullName>
+                <default>false</default>
+                <label>London (City)</label>
+            </value>
+            <value>
+                <fullName>London (Holborn)</fullName>
+                <default>false</default>
+                <label>London (Holborn)</label>
+            </value>
+            <value>
+                <fullName>London (Kings Cross)</fullName>
+                <default>false</default>
+                <label>London (Kings Cross)</label>
+            </value>
+            <value>
+                <fullName>London (Portsoken)</fullName>
+                <default>false</default>
+                <label>London (Portsoken)</label>
+            </value>
+            <value>
+                <fullName>London (Shepherd&apos;s Bush)</fullName>
+                <default>false</default>
+                <label>London (Shepherd&apos;s Bush)</label>
+            </value>
+            <value>
+                <fullName>London (Waterloo)</fullName>
+                <default>false</default>
+                <label>London (Waterloo)</label>
+            </value>
+            <value>
+                <fullName>Manchester</fullName>
+                <default>false</default>
+                <label>Manchester</label>
+            </value>
+            <value>
+                <fullName>Online</fullName>
+                <default>false</default>
+                <label>Online</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

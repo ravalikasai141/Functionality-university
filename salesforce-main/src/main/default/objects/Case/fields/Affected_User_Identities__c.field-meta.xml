@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affected_User_Identities__c</fullName>
+    <description>The affected user id and a prefix of the system the identity comes from. i.e. Profile(&lt;profileid&gt;), SIS(&lt;bannerid&gt;), CRM&lt;crmid&gt;, Neptun(&lt;neptuneid&gt;)]</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The affected user id and a prefix of the system the identity comes from. i.e. Profile(&lt;profileid&gt;), SIS(&lt;bannerid&gt;), CRM&lt;crmid&gt;, Neptun(&lt;neptuneid&gt;)]</inlineHelpText>
+    <label>Affected User Identities</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

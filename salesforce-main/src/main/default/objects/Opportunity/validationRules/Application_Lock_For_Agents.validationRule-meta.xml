@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Lock_For_Agents</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Profile.Name=&quot;Agent User&quot;,
+$RecordType.Name=&quot;Application&quot;,
+Locked__c=TRUE,
+OR(
+ISCHANGED(StageName),
+ISCHANGED( Name ),
+ISCHANGED( AccountId ),
+ISCHANGED( Course_Instance__c ),
+ISCHANGED( Mode__c ),
+ISCHANGED( Programme_Application__c ),
+ISCHANGED( Location__c ),
+ISCHANGED(  AP_ID__c ),
+ISCHANGED( StageName ),
+ISCHANGED( Cycle__c ),
+ISCHANGED( Cycle_Override__c ),
+ISCHANGED( Rating__c ),
+ISCHANGED( Modules__c ),
+ISCHANGED(  Start_Date__c ),
+ISCHANGED( NextStep ),
+ISCHANGED( CloseDate ),
+ISCHANGED( CampaignId ),
+ISCHANGED(  Sponsor_Email__c ),
+ISCHANGED( Sponsor_First_Name__c ),
+ISCHANGED( Sponsoring_Organization__c ),
+ISCHANGED( Sponsoring_Purchase_Order__c ),
+ISCHANGED( Sponsor_Last_Name__c ),
+ISCHANGED( Sponsor_Phone__c ),
+ISCHANGED( Sponsorship_Type__c ),
+ISCHANGED( CAS_Visa_Documents__c ),
+ISCHANGED( How_did_you_hear_about_us__c ),
+ISCHANGED( Why_did_you_choose_to_study_with_us__c ),
+ISCHANGED( BPP_Branch_1__c ),
+ISCHANGED( BPP_Branch__c ),
+ISCHANGED( BPP_Branch_3__c ),
+ISCHANGED( BPP_Branch_4__c ),
+ISCHANGED( Referee_Email__c ),
+ISCHANGED( Referee_Name__c )
+)
+)</errorConditionFormula>
+    <errorMessage>The Application is Locked. Please submit a Change Request.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <description>Increment the V2V Cycle Engagement Contact Attempts value by one -  same value as the cycle contact attempts (IncrementV2VCycleAttempts)</description>
+        <name>Assign_Cycle_Engagement_Contact_Attempts</name>
+        <label>Assign Cycle Engagement Contact Attempts</label>
+        <locationX>675</locationX>
+        <locationY>383</locationY>
+        <assignmentItems>
+            <assignToReference>varLeadRecord.V2V_Cycle_Engagement_Contact_Attempts__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIncrementV2VCycleAttempts</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_V2V_Contact_Been_Made</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Increment the V2V 1st Engagement Contact Attempts value by one -  same value as the cycle contact attempts (fxIncrementV2VCycleAttempts)</description>
+        <name>Assign_First_Engagement_Contact_Attempts</name>
+        <label>Assign First Engagement Contact Attempts</label>
+        <locationX>426</locationX>
+        <locationY>391</locationY>
+        <assignmentItems>
+            <assignToReference>varLeadRecord.V2V_1st_Engagement_Contact_Attempts__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIncrementV2VCycleAttempts</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Cycle_Engagement_Contact_Attempts</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Updates lead status to &quot;Establishing Contact&quot; and sets the reason to Email as the lead will now need to be contacted via an email journey</description>
+        <name>Establishing_Contact_Email</name>
+        <label>Establishing Contact - Email</label>
+        <locationX>1103</locationX>
+        <locationY>479</locationY>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatus</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Establishing Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatusDetail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Email</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Updates lead status to &quot;Establishing Contact&quot; and sets the reason to Phone as the lead will primary be contacted via this method</description>
+        <name>Establishing_Contact_Phone</name>
+        <label>Establishing Contact - Phone</label>
+        <locationX>1686</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatus</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Establishing Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatusDetail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Phone</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Contact_Limit_Reached</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Increment the V2V Cycle Engagements and V2V Engagements values by one</description>
+        <name>Increment_V2V_Engagements</name>
+        <label>Assign Engagements Values</label>
+        <locationX>856</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>varLeadRecord.V2V_Cycle_Engagements__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIncrementV2VCycleEngagements</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varLeadRecord.V2V_Engagements__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIncrementV2VEngagements</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Call_Outcome</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Moves the lead to an Engaged status</description>
+        <name>Lead_Status_Engaged</name>
+        <label>Lead Status: Engaged</label>
+        <locationX>1817</locationX>
+        <locationY>246</locationY>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatus</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Engaged</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatusDetail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Updates lead status to &quot;No Further Action&quot; and uses task outcome reason formula calculation to determine lead status reason</description>
+        <name>Lead_Status_No_Further_Action</name>
+        <label>Lead Status: No Further Action</label>
+        <locationX>1285</locationX>
+        <locationY>335</locationY>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatus</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Further Action</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewLeadStatusDetail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxNFA_LeadStatusReason</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead_Record</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>What is the next action from the outcome of the call?</description>
+        <name>Call_Outcome</name>
+        <label>Call Outcome</label>
+        <locationX>1200</locationX>
+        <locationY>45</locationY>
+        <defaultConnector>
+            <targetReference>Next_Stage_Status_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Further_Action</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCallOutcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No Further Action</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Status_No_Further_Action</targetReference>
+            </connector>
+            <label>No Further Action</label>
+        </rules>
+        <rules>
+            <name>No_Working_Number</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCallOutcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No Working Number</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Valid_Email</targetReference>
+            </connector>
+            <label>No Working Number</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>If still trying to establish contact after 6 attempts then lead is abandoned to &apos;No Further Action&apos;. This enables the lead to be re-engaged should subsequent contact be made.</description>
+        <name>Contact_Limit_Reached</name>
+        <label>Contact Limit Reached?</label>
+        <locationX>1499</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_Lead_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Limit_Hit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varNewLeadStatus</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Establishing Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fxIncrementV2VCycleAttempts</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>6.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Status_No_Further_Action</targetReference>
+            </connector>
+            <label>Limit Hit</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is this the first lead cycle (new lead not re-engaged)</description>
+        <name>First_Lead_Cycle</name>
+        <label>First Lead Cycle?</label>
+        <locationX>423</locationX>
+        <locationY>223</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Cycle_Engagement_Contact_Attempts</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Lead_Cycle_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.BPP_Lead_Cycle__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_First_Engagement_Contact_Attempts</targetReference>
+            </connector>
+            <label>Lead Cycle 1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has V2V contact been made with the lead during the current lead cycle?</description>
+        <name>Has_V2V_Contact_Already_Been_Established</name>
+        <label>Has V2V Contact Already Been Established?</label>
+        <locationX>526</locationX>
+        <locationY>33</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NoPriorV2VContact</name>
+            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Establishing Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-engaged</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.V2V_Cycle_Engagements__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>First_Lead_Cycle</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+        <rules>
+            <name>YesPriorV2VContact</name>
+            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Establishing Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-engaged</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.V2V_Cycle_Engagements__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Has_V2V_Contact_Been_Made</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has V2V contact been established during this interaction?</description>
+        <name>Has_V2V_Contact_Been_Made</name>
+        <label>Has V2V Contact Been Made?</label>
+        <locationX>678</locationX>
+        <locationY>34</locationY>
+        <defaultConnector>
+            <targetReference>Increment_V2V_Engagements</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes</defaultConnectorLabel>
+        <rules>
+            <name>NoV2VEngagement</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>varCallOutcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Left Voicemail</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCallOutcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No Working Number</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Call_Outcome</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Can status be updated based on existing status and call outcome?
+Either to Establishing Contact or Engaged</description>
+        <name>Next_Stage_Status_Update</name>
+        <label>Next Stage Status Update</label>
+        <locationX>1679</locationX>
+        <locationY>48</locationY>
+        <defaultConnector>
+            <targetReference>Contact_Limit_Reached</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Establishing_Contact</name>
+            <conditionLogic>(1 OR 2 OR (3 AND 4)) AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-engaged</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Establishing Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Lead_Status_Detail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCallOutcome</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Left Voicemail</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Establishing_Contact_Phone</targetReference>
+            </connector>
+            <label>Establishing Contact</label>
+        </rules>
+        <rules>
+            <name>Engaged</name>
+            <conditionLogic>(1 Or 2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-engaged</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Establishing Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varCallOutcome</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Left Voicemail</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Status_Engaged</targetReference>
+            </connector>
+            <label>Engaged</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is there a valid email address on the lead record?</description>
+        <name>Valid_Email</name>
+        <label>Valid Email?</label>
+        <locationX>1093</locationX>
+        <locationY>255</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesValidEmail</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Establishing_Contact_Email</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+        <rules>
+            <name>NoValidEmail</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadRecord.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Status_No_Further_Action</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <description>Updates parent lead record when a new NVM task is created.
+
+V2V Contact Attempts incremented where required - lead moves to NFA after max contact attempts. V2V engagements incremented where required. Lead status fields updated by the call outcome fields where appropriate</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Increment the existing V2V contact attempt by one</description>
+        <name>fxIncrementV2VAttempts</name>
+        <dataType>Number</dataType>
+        <expression>{!varLeadRecord.V2V_Contact_Attempts__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Increment the existing V2V cycle contact attempt by one</description>
+        <name>fxIncrementV2VCycleAttempts</name>
+        <dataType>Number</dataType>
+        <expression>{!varLeadRecord.V2V_Cycle_Contact_Attempts__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Increment the existing V2V cycle engagements by one</description>
+        <name>fxIncrementV2VCycleEngagements</name>
+        <dataType>Number</dataType>
+        <expression>{!varLeadRecord.V2V_Cycle_Engagements__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Increment the existing V2V engagements by one</description>
+        <name>fxIncrementV2VEngagements</name>
+        <dataType>Number</dataType>
+        <expression>{!varLeadRecord.V2V_Engagements__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Calculates the Lead Status Reason from the Call Reason Outcome field.
+If it is not &quot;No Working Number&quot; then map field</description>
+        <name>fxNFA_LeadStatusReason</name>
+        <dataType>String</dataType>
+        <expression>IF(OR({!varCallOutcome}=&apos;No Working Number&apos;,{!Limit_Hit}=True),&apos;Unable to Establish Contact&apos;,{!varCallOutcomeReason})</expression>
+    </formulas>
+    <interviewLabel>NVM Triggered Lead Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>NVM Triggered Lead Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Lead record that is the parent (WhoId) of the task that triggered the process</description>
+        <name>Lead_Record</name>
+        <label>Lead Record</label>
+        <locationX>390</locationX>
+        <locationY>31</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_V2V_Contact_Already_Been_Established</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varLeadId</elementReference>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <outputReference>varLeadRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <queriedFields>Lead_Status_Detail__c</queriedFields>
+        <queriedFields>BPP_Lead_Cycle__c</queriedFields>
+        <queriedFields>V2V_1st_Engagement_Contact_Attempts__c</queriedFields>
+        <queriedFields>V2V_Cycle_Engagement_Contact_Attempts__c</queriedFields>
+        <queriedFields>V2V_Cycle_Contact_Attempts__c</queriedFields>
+        <queriedFields>V2V_Cycle_Engagements__c</queriedFields>
+        <queriedFields>V2V_Contact_Attempts__c</queriedFields>
+        <queriedFields>V2V_Engagements__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates the lead record that is the parent to the task that triggered the process</description>
+        <name>Update_Lead_Record</name>
+        <label>Update Lead Record</label>
+        <locationX>1693</locationX>
+        <locationY>467</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varLeadId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Lead_Status_Detail__c</field>
+            <value>
+                <elementReference>varNewLeadStatusDetail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <elementReference>varNewLeadStatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_1st_Engagement_Contact_Attempts__c</field>
+            <value>
+                <elementReference>varLeadRecord.V2V_1st_Engagement_Contact_Attempts__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Contact_Attempts__c</field>
+            <value>
+                <elementReference>fxIncrementV2VAttempts</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Cycle_Contact_Attempts__c</field>
+            <value>
+                <elementReference>fxIncrementV2VCycleAttempts</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Cycle_Engagement_Contact_Attempts__c</field>
+            <value>
+                <elementReference>varLeadRecord.V2V_Cycle_Engagement_Contact_Attempts__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Cycle_Engagements__c</field>
+            <value>
+                <elementReference>varLeadRecord.V2V_Cycle_Engagements__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Engagements__c</field>
+            <value>
+                <elementReference>varLeadRecord.V2V_Engagements__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>51</locationX>
+        <locationY>13</locationY>
+        <connector>
+            <targetReference>Lead_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Task NVM call outcome</description>
+        <name>varCallOutcome</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Task NVM call outcome reason</description>
+        <name>varCallOutcomeReason</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the lead to be updated</description>
+        <name>varLeadId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Lead record related to the task that triggered the process</description>
+        <name>varLeadRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+    <variables>
+        <description>Updated Lead Status value for the lead record</description>
+        <name>varNewLeadStatus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>varLeadRecord.Status</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <description>Updated Lead Status Detail value for the lead record</description>
+        <name>varNewLeadStatusDetail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>varLeadRecord.Lead_Status_Detail__c</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <description>Id of the task record that initiated the flow</description>
+        <name>varTaskId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

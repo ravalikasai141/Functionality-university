@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>In 20 mins - If the Case Status is &apos;New&apos;, escalate the case by checking the &apos;Escalated&apos; checkbix and update the Owner to the Executive queue.</description>
+    <recurrenceType>none</recurrenceType>
+</MilestoneType>

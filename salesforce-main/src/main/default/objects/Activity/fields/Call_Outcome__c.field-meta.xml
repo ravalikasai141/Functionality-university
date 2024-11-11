@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Outcome__c</fullName>
+    <description>NVM disposition code - to capture outcome of the call. Dependant on Cycle Stage</description>
+    <externalId>false</externalId>
+    <label>Call Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cycle_Stage__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Left Voicemail</fullName>
+                <default>false</default>
+                <label>Left Voicemail</label>
+            </value>
+            <value>
+                <fullName>No Working Number</fullName>
+                <default>false</default>
+                <label>No Working Number</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <label>Transfer</label>
+            </value>
+            <value>
+                <fullName>No Further Action</fullName>
+                <default>false</default>
+                <label>No Further Action</label>
+            </value>
+            <value>
+                <fullName>Interested</fullName>
+                <default>false</default>
+                <label>Interested</label>
+            </value>
+            <value>
+                <fullName>Sale</fullName>
+                <default>false</default>
+                <label>Sale</label>
+            </value>
+            <value>
+                <fullName>Application Process</fullName>
+                <default>false</default>
+                <label>Application Process</label>
+            </value>
+            <value>
+                <fullName>Converted to Application</fullName>
+                <default>false</default>
+                <label>Converted to Application</label>
+            </value>
+            <value>
+                <fullName>Incomplete Application</fullName>
+                <default>false</default>
+                <label>Incomplete Application</label>
+            </value>
+            <value>
+                <fullName>Offer Call</fullName>
+                <default>false</default>
+                <label>Offer Call</label>
+            </value>
+            <value>
+                <fullName>Offer Documents</fullName>
+                <default>false</default>
+                <label>Offer Documents</label>
+            </value>
+            <value>
+                <fullName>Converted to Accepted</fullName>
+                <default>false</default>
+                <label>Converted to Accepted</label>
+            </value>
+            <value>
+                <fullName>Deposit Follow Up</fullName>
+                <default>false</default>
+                <label>Deposit Follow Up</label>
+            </value>
+            <value>
+                <fullName>Acceptance Call</fullName>
+                <default>false</default>
+                <label>Acceptance Call</label>
+            </value>
+            <value>
+                <fullName>Declined Offer</fullName>
+                <default>false</default>
+                <label>Declined Offer</label>
+            </value>
+            <value>
+                <fullName>Application Rejected</fullName>
+                <default>false</default>
+                <label>Application Rejected</label>
+            </value>
+            <value>
+                <fullName>Welcome Call</fullName>
+                <default>false</default>
+                <label>Welcome Call</label>
+            </value>
+            <value>
+                <fullName>First Installment</fullName>
+                <default>false</default>
+                <label>First Installment</label>
+            </value>
+            <value>
+                <fullName>Direct Debit</fullName>
+                <default>false</default>
+                <label>Direct Debit</label>
+            </value>
+            <value>
+                <fullName>Documents Submitted</fullName>
+                <default>false</default>
+                <label>Documents Submitted</label>
+            </value>
+            <value>
+                <fullName>Pre-registration</fullName>
+                <default>false</default>
+                <label>Pre-registration</label>
+            </value>
+            <value>
+                <fullName>Registration</fullName>
+                <default>false</default>
+                <label>Registration</label>
+            </value>
+            <value>
+                <fullName>Deferral Request</fullName>
+                <default>false</default>
+                <label>Deferral Request</label>
+            </value>
+            <value>
+                <fullName>Cancellation Request</fullName>
+                <default>false</default>
+                <label>Cancellation Request</label>
+            </value>
+            <value>
+                <fullName>Hot Transfer</fullName>
+                <default>false</default>
+                <label>Hot Transfer</label>
+            </value>
+            <value>
+                <fullName>Course Enquiry</fullName>
+                <default>false</default>
+                <label>Course Enquiry</label>
+            </value>
+            <value>
+                <fullName>VLE</fullName>
+                <default>false</default>
+                <label>VLE</label>
+            </value>
+            <value>
+                <fullName>Study Materials</fullName>
+                <default>false</default>
+                <label>Study Materials</label>
+            </value>
+            <value>
+                <fullName>Finance &amp; Billing</fullName>
+                <default>false</default>
+                <label>Finance &amp; Billing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Payment and Billing</fullName>
+                <default>false</default>
+                <label>Payment and Billing</label>
+            </value>
+            <value>
+                <fullName>Exams</fullName>
+                <default>false</default>
+                <label>Exams</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Ledger Contact</fullName>
+                <default>false</default>
+                <label>Ledger Contact</label>
+            </value>
+            <value>
+                <fullName>PASS</fullName>
+                <default>false</default>
+                <label>PASS</label>
+            </value>
+            <value>
+                <fullName>TW1&amp;2</fullName>
+                <default>false</default>
+                <label>TW1&amp;2</label>
+            </value>
+            <value>
+                <fullName>TW3</fullName>
+                <default>false</default>
+                <label>TW3</label>
+            </value>
+            <value>
+                <fullName>Formative</fullName>
+                <default>false</default>
+                <label>Formative</label>
+            </value>
+            <value>
+                <fullName>Summative</fullName>
+                <default>false</default>
+                <label>Summative</label>
+            </value>
+            <value>
+                <fullName>Business School &amp; Psychology</fullName>
+                <default>false</default>
+                <label>Business School &amp; Psychology</label>
+            </value>
+            <value>
+                <fullName>Health School</fullName>
+                <default>false</default>
+                <label>Health School</label>
+            </value>
+            <value>
+                <fullName>Law School</fullName>
+                <default>false</default>
+                <label>Law School</label>
+            </value>
+            <value>
+                <fullName>Professional Development (PD)</fullName>
+                <default>false</default>
+                <label>Professional Development (PD)</label>
+            </value>
+            <value>
+                <fullName>School of Nursing</fullName>
+                <default>false</default>
+                <label>School of Nursing</label>
+            </value>
+            <value>
+                <fullName>School of Technology</fullName>
+                <default>false</default>
+                <label>School of Technology</label>
+            </value>
+            <value>
+                <fullName>Internal Use Only</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal Use Only</label>
+            </value>
+            <value>
+                <fullName>Non-related Queries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-related Queries</label>
+            </value>
+            <value>
+                <fullName>Non-related Query</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-related Query</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>Left Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>No Working Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <valueName>No Further Action</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <valueName>Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lead</controllingFieldValue>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <valueName>Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <valueName>Application Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest</controllingFieldValue>
+            <valueName>Converted to Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Incomplete Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Offer Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Offer Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Converted to Accepted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Deposit Follow Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Acceptance Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Declined Offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Application Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Welcome Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>First Installment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Direct Debit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Documents Submitted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Pre-registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Deferral Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Cancellation Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retention</controllingFieldValue>
+            <valueName>Hot Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Course Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>VLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Study Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Finance &amp; Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>Payment and Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>Exams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Finance</controllingFieldValue>
+            <valueName>Ledger Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>PASS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>TW1&amp;2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>TW3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>Formative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engagement</controllingFieldValue>
+            <valueName>Summative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>Business School &amp; Psychology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>Health School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>Law School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>Professional Development (PD)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>School of Nursing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UCA</controllingFieldValue>
+            <valueName>School of Technology</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

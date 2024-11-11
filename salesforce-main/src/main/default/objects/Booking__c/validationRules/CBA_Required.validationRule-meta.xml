@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CBA_Required</fullName>
+    <active>true</active>
+    <description>A CBA booking must have a CBA record linking the product &amp; instance</description>
+    <errorConditionFormula>RecordType.Name = &apos;CBA Booking&apos; &amp;&amp;
+ISBLANK( CBA__c )</errorConditionFormula>
+    <errorDisplayField>CBA__c</errorDisplayField>
+    <errorMessage>A CBA booking must have a linked CBA record.</errorMessage>
+</ValidationRule>

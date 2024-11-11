@@ -1,0 +1,1805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Occupation__c</fullName>
+    <externalId>false</externalId>
+    <label>Student Occupation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0000~ Not stated</fullName>
+                <default>false</default>
+                <label>0000~ Not stated</label>
+            </value>
+            <value>
+                <fullName>0001~ Information refused</fullName>
+                <default>false</default>
+                <label>0001~ Information refused</label>
+            </value>
+            <value>
+                <fullName>0007~ Retired</fullName>
+                <default>false</default>
+                <label>0007~ Retired</label>
+            </value>
+            <value>
+                <fullName>0008~ Unemployed</fullName>
+                <default>false</default>
+                <label>0008~ Unemployed</label>
+            </value>
+            <value>
+                <fullName>0009~ Not known</fullName>
+                <default>false</default>
+                <label>0009~ Not known</label>
+            </value>
+            <value>
+                <fullName>1111~ Senior officials in national government</fullName>
+                <default>false</default>
+                <label>1111~ Senior officials in national government</label>
+            </value>
+            <value>
+                <fullName>1112~ Directors &amp; chief executives of major organisations</fullName>
+                <default>false</default>
+                <label>1112~ Directors &amp; chief executives of major organisations</label>
+            </value>
+            <value>
+                <fullName>1113~ Senior officials in local government</fullName>
+                <default>false</default>
+                <label>1113~ Senior officials in local government</label>
+            </value>
+            <value>
+                <fullName>1114~ Senior officials of special interest organisations</fullName>
+                <default>false</default>
+                <label>1114~ Senior officials of special interest organisations</label>
+            </value>
+            <value>
+                <fullName>1121~ Production, works &amp; maintenance managers</fullName>
+                <default>false</default>
+                <label>1121~ Production, works &amp; maintenance managers</label>
+            </value>
+            <value>
+                <fullName>1122~ Managers in construction</fullName>
+                <default>false</default>
+                <label>1122~ Managers in construction</label>
+            </value>
+            <value>
+                <fullName>1123~ Managers in mining &amp; energy</fullName>
+                <default>false</default>
+                <label>1123~ Managers in mining &amp; energy</label>
+            </value>
+            <value>
+                <fullName>1131~ Financial managers &amp; chartered secretaries</fullName>
+                <default>false</default>
+                <label>1131~ Financial managers &amp; chartered secretaries</label>
+            </value>
+            <value>
+                <fullName>1132~ Marketing &amp; sales managers</fullName>
+                <default>false</default>
+                <label>1132~ Marketing &amp; sales managers</label>
+            </value>
+            <value>
+                <fullName>1133~ Purchasing managers</fullName>
+                <default>false</default>
+                <label>1133~ Purchasing managers</label>
+            </value>
+            <value>
+                <fullName>1134~ Advertising &amp; public relations managers</fullName>
+                <default>false</default>
+                <label>1134~ Advertising &amp; public relations managers</label>
+            </value>
+            <value>
+                <fullName>1135~ Personnel, training &amp; industrial relations managers</fullName>
+                <default>false</default>
+                <label>1135~ Personnel, training &amp; industrial relations managers</label>
+            </value>
+            <value>
+                <fullName>1136~ Information &amp; communication technology managers</fullName>
+                <default>false</default>
+                <label>1136~ Information &amp; communication technology managers</label>
+            </value>
+            <value>
+                <fullName>1137~ Research &amp; development managers</fullName>
+                <default>false</default>
+                <label>1137~ Research &amp; development managers</label>
+            </value>
+            <value>
+                <fullName>1141~ Quality assurance managers</fullName>
+                <default>false</default>
+                <label>1141~ Quality assurance managers</label>
+            </value>
+            <value>
+                <fullName>1142~ Customer care managers</fullName>
+                <default>false</default>
+                <label>1142~ Customer care managers</label>
+            </value>
+            <value>
+                <fullName>1151~ Financial institution managers</fullName>
+                <default>false</default>
+                <label>1151~ Financial institution managers</label>
+            </value>
+            <value>
+                <fullName>1152~ Office managers</fullName>
+                <default>false</default>
+                <label>1152~ Office managers</label>
+            </value>
+            <value>
+                <fullName>1161~ Transport &amp; distribution managers</fullName>
+                <default>false</default>
+                <label>1161~ Transport &amp; distribution managers</label>
+            </value>
+            <value>
+                <fullName>1162~ Storage &amp; warehouse managers</fullName>
+                <default>false</default>
+                <label>1162~ Storage &amp; warehouse managers</label>
+            </value>
+            <value>
+                <fullName>1163~ Retail &amp; wholesale managers</fullName>
+                <default>false</default>
+                <label>1163~ Retail &amp; wholesale managers</label>
+            </value>
+            <value>
+                <fullName>1171~ Officers in armed forces</fullName>
+                <default>false</default>
+                <label>1171~ Officers in armed forces</label>
+            </value>
+            <value>
+                <fullName>1172~ Police officers (inspectors &amp; above)</fullName>
+                <default>false</default>
+                <label>1172~ Police officers (inspectors &amp; above)</label>
+            </value>
+            <value>
+                <fullName>1173~ Senior officers in fire, ambulance, prison &amp; related services</fullName>
+                <default>false</default>
+                <label>1173~ Senior officers in fire, ambulance, prison &amp; related services</label>
+            </value>
+            <value>
+                <fullName>1174~ Security managers</fullName>
+                <default>false</default>
+                <label>1174~ Security managers</label>
+            </value>
+            <value>
+                <fullName>1181~ Hospital &amp; health service managers</fullName>
+                <default>false</default>
+                <label>1181~ Hospital &amp; health service managers</label>
+            </value>
+            <value>
+                <fullName>1182~ Pharmacy managers</fullName>
+                <default>false</default>
+                <label>1182~ Pharmacy managers</label>
+            </value>
+            <value>
+                <fullName>1183~ Healthcare practice managers</fullName>
+                <default>false</default>
+                <label>1183~ Healthcare practice managers</label>
+            </value>
+            <value>
+                <fullName>1184~ Social services managers</fullName>
+                <default>false</default>
+                <label>1184~ Social services managers</label>
+            </value>
+            <value>
+                <fullName>1185~ Residential &amp; day care managers</fullName>
+                <default>false</default>
+                <label>1185~ Residential &amp; day care managers</label>
+            </value>
+            <value>
+                <fullName>1211~ Farm managers</fullName>
+                <default>false</default>
+                <label>1211~ Farm managers</label>
+            </value>
+            <value>
+                <fullName>1212~ Natural environment &amp; conservation managers</fullName>
+                <default>false</default>
+                <label>1212~ Natural environment &amp; conservation managers</label>
+            </value>
+            <value>
+                <fullName>1219~ Managers in animal husbandry, forestry &amp; fishing n.e.c</fullName>
+                <default>false</default>
+                <label>1219~ Managers in animal husbandry, forestry &amp; fishing n.e.c</label>
+            </value>
+            <value>
+                <fullName>1221~ Hotel &amp; accommodation managers</fullName>
+                <default>false</default>
+                <label>1221~ Hotel &amp; accommodation managers</label>
+            </value>
+            <value>
+                <fullName>1222~ Conference &amp; exhibition managers</fullName>
+                <default>false</default>
+                <label>1222~ Conference &amp; exhibition managers</label>
+            </value>
+            <value>
+                <fullName>1223~ Restaurant &amp; catering managers</fullName>
+                <default>false</default>
+                <label>1223~ Restaurant &amp; catering managers</label>
+            </value>
+            <value>
+                <fullName>1224~ Publicans &amp; managers of licensed premises</fullName>
+                <default>false</default>
+                <label>1224~ Publicans &amp; managers of licensed premises</label>
+            </value>
+            <value>
+                <fullName>1225~ Leisure &amp; sports managers</fullName>
+                <default>false</default>
+                <label>1225~ Leisure &amp; sports managers</label>
+            </value>
+            <value>
+                <fullName>1226~ Travel agency managers</fullName>
+                <default>false</default>
+                <label>1226~ Travel agency managers</label>
+            </value>
+            <value>
+                <fullName>1231~ Property, housing &amp; land managers</fullName>
+                <default>false</default>
+                <label>1231~ Property, housing &amp; land managers</label>
+            </value>
+            <value>
+                <fullName>1232~ Garage managers &amp; proprietors</fullName>
+                <default>false</default>
+                <label>1232~ Garage managers &amp; proprietors</label>
+            </value>
+            <value>
+                <fullName>1233~ Hairdressing &amp; beauty salon managers &amp; proprietors</fullName>
+                <default>false</default>
+                <label>1233~ Hairdressing &amp; beauty salon managers &amp; proprietors</label>
+            </value>
+            <value>
+                <fullName>1234~ Shopkeepers &amp; wholesale/retail dealers</fullName>
+                <default>false</default>
+                <label>1234~ Shopkeepers &amp; wholesale/retail dealers</label>
+            </value>
+            <value>
+                <fullName>1235~ Recycling &amp; refuse disposal managers</fullName>
+                <default>false</default>
+                <label>1235~ Recycling &amp; refuse disposal managers</label>
+            </value>
+            <value>
+                <fullName>1239~ Managers &amp; proprietors in other services n.e.c</fullName>
+                <default>false</default>
+                <label>1239~ Managers &amp; proprietors in other services n.e.c</label>
+            </value>
+            <value>
+                <fullName>2111~ Chemists</fullName>
+                <default>false</default>
+                <label>2111~ Chemists</label>
+            </value>
+            <value>
+                <fullName>2112~ Biological scientists &amp; biochemists</fullName>
+                <default>false</default>
+                <label>2112~ Biological scientists &amp; biochemists</label>
+            </value>
+            <value>
+                <fullName>2113~ Physicists, geologists &amp; meteorologists</fullName>
+                <default>false</default>
+                <label>2113~ Physicists, geologists &amp; meteorologists</label>
+            </value>
+            <value>
+                <fullName>2121~ Civil engineers</fullName>
+                <default>false</default>
+                <label>2121~ Civil engineers</label>
+            </value>
+            <value>
+                <fullName>2122~ Mechanical engineers</fullName>
+                <default>false</default>
+                <label>2122~ Mechanical engineers</label>
+            </value>
+            <value>
+                <fullName>2123~ Electrical engineers</fullName>
+                <default>false</default>
+                <label>2123~ Electrical engineers</label>
+            </value>
+            <value>
+                <fullName>2124~ Electronics engineers</fullName>
+                <default>false</default>
+                <label>2124~ Electronics engineers</label>
+            </value>
+            <value>
+                <fullName>2125~ Chemical engineers</fullName>
+                <default>false</default>
+                <label>2125~ Chemical engineers</label>
+            </value>
+            <value>
+                <fullName>2126~ Design &amp; development engineers</fullName>
+                <default>false</default>
+                <label>2126~ Design &amp; development engineers</label>
+            </value>
+            <value>
+                <fullName>2127~ Production &amp; process engineers</fullName>
+                <default>false</default>
+                <label>2127~ Production &amp; process engineers</label>
+            </value>
+            <value>
+                <fullName>2128~ Planning &amp; quality control engineers</fullName>
+                <default>false</default>
+                <label>2128~ Planning &amp; quality control engineers</label>
+            </value>
+            <value>
+                <fullName>2129~ Engineering professionals n.e.c</fullName>
+                <default>false</default>
+                <label>2129~ Engineering professionals n.e.c</label>
+            </value>
+            <value>
+                <fullName>2131~ IT strategy &amp; planning professionals</fullName>
+                <default>false</default>
+                <label>2131~ IT strategy &amp; planning professionals</label>
+            </value>
+            <value>
+                <fullName>2132~ Software professionals</fullName>
+                <default>false</default>
+                <label>2132~ Software professionals</label>
+            </value>
+            <value>
+                <fullName>2211~ Medical practitioners</fullName>
+                <default>false</default>
+                <label>2211~ Medical practitioners</label>
+            </value>
+            <value>
+                <fullName>2212~ Psychologists</fullName>
+                <default>false</default>
+                <label>2212~ Psychologists</label>
+            </value>
+            <value>
+                <fullName>2213~ Pharmacists/pharmacologists</fullName>
+                <default>false</default>
+                <label>2213~ Pharmacists/pharmacologists</label>
+            </value>
+            <value>
+                <fullName>2214~ Ophthalmic opticians</fullName>
+                <default>false</default>
+                <label>2214~ Ophthalmic opticians</label>
+            </value>
+            <value>
+                <fullName>2215~ Dental practitioners</fullName>
+                <default>false</default>
+                <label>2215~ Dental practitioners</label>
+            </value>
+            <value>
+                <fullName>2216~ Veterinarians</fullName>
+                <default>false</default>
+                <label>2216~ Veterinarians</label>
+            </value>
+            <value>
+                <fullName>2311~ Higher education teaching professionals</fullName>
+                <default>false</default>
+                <label>2311~ Higher education teaching professionals</label>
+            </value>
+            <value>
+                <fullName>2312~ Further education teaching professionals</fullName>
+                <default>false</default>
+                <label>2312~ Further education teaching professionals</label>
+            </value>
+            <value>
+                <fullName>2313~ Education officers, school inspectors</fullName>
+                <default>false</default>
+                <label>2313~ Education officers, school inspectors</label>
+            </value>
+            <value>
+                <fullName>2314~ Secondary education teaching professionals</fullName>
+                <default>false</default>
+                <label>2314~ Secondary education teaching professionals</label>
+            </value>
+            <value>
+                <fullName>2315~ Primary &amp; nursery education teaching professionals</fullName>
+                <default>false</default>
+                <label>2315~ Primary &amp; nursery education teaching professionals</label>
+            </value>
+            <value>
+                <fullName>2316~ Special needs education teaching professionals</fullName>
+                <default>false</default>
+                <label>2316~ Special needs education teaching professionals</label>
+            </value>
+            <value>
+                <fullName>2317~ Registrars &amp; senior administrators of educational establishments</fullName>
+                <default>false</default>
+                <label>2317~ Registrars &amp; senior administrators of educational establishments</label>
+            </value>
+            <value>
+                <fullName>2319~ Teaching professionals n.e.c</fullName>
+                <default>false</default>
+                <label>2319~ Teaching professionals n.e.c</label>
+            </value>
+            <value>
+                <fullName>2321~ Scientific researchers</fullName>
+                <default>false</default>
+                <label>2321~ Scientific researchers</label>
+            </value>
+            <value>
+                <fullName>2322~ Social science researchers</fullName>
+                <default>false</default>
+                <label>2322~ Social science researchers</label>
+            </value>
+            <value>
+                <fullName>2329~ Researchers n.e.c</fullName>
+                <default>false</default>
+                <label>2329~ Researchers n.e.c</label>
+            </value>
+            <value>
+                <fullName>2411~ Solicitors &amp; lawyers, judges &amp; coroners</fullName>
+                <default>false</default>
+                <label>2411~ Solicitors &amp; lawyers, judges &amp; coroners</label>
+            </value>
+            <value>
+                <fullName>2419~ Legal professionals n.e.c</fullName>
+                <default>false</default>
+                <label>2419~ Legal professionals n.e.c</label>
+            </value>
+            <value>
+                <fullName>2421~ Chartered &amp; certified accountants</fullName>
+                <default>false</default>
+                <label>2421~ Chartered &amp; certified accountants</label>
+            </value>
+            <value>
+                <fullName>2422~ Management accountants</fullName>
+                <default>false</default>
+                <label>2422~ Management accountants</label>
+            </value>
+            <value>
+                <fullName>2423~ Management consultants, actuaries, economists &amp; statisticians</fullName>
+                <default>false</default>
+                <label>2423~ Management consultants, actuaries, economists &amp; statisticians</label>
+            </value>
+            <value>
+                <fullName>2431~ Architects</fullName>
+                <default>false</default>
+                <label>2431~ Architects</label>
+            </value>
+            <value>
+                <fullName>2432~ Town planners</fullName>
+                <default>false</default>
+                <label>2432~ Town planners</label>
+            </value>
+            <value>
+                <fullName>2433~ Quantity surveyors</fullName>
+                <default>false</default>
+                <label>2433~ Quantity surveyors</label>
+            </value>
+            <value>
+                <fullName>2434~ Chartered surveyors (not quantity surveyors)</fullName>
+                <default>false</default>
+                <label>2434~ Chartered surveyors (not quantity surveyors)</label>
+            </value>
+            <value>
+                <fullName>2441~ Public service administrative professionals</fullName>
+                <default>false</default>
+                <label>2441~ Public service administrative professionals</label>
+            </value>
+            <value>
+                <fullName>2442~ Social workers</fullName>
+                <default>false</default>
+                <label>2442~ Social workers</label>
+            </value>
+            <value>
+                <fullName>2443~ Probation officers</fullName>
+                <default>false</default>
+                <label>2443~ Probation officers</label>
+            </value>
+            <value>
+                <fullName>2444~ Clergy</fullName>
+                <default>false</default>
+                <label>2444~ Clergy</label>
+            </value>
+            <value>
+                <fullName>2451~ Librarians</fullName>
+                <default>false</default>
+                <label>2451~ Librarians</label>
+            </value>
+            <value>
+                <fullName>2452~ Archivists &amp; curators</fullName>
+                <default>false</default>
+                <label>2452~ Archivists &amp; curators</label>
+            </value>
+            <value>
+                <fullName>3111~ Laboratory technicians</fullName>
+                <default>false</default>
+                <label>3111~ Laboratory technicians</label>
+            </value>
+            <value>
+                <fullName>3112~ Electrical/electronics technicians</fullName>
+                <default>false</default>
+                <label>3112~ Electrical/electronics technicians</label>
+            </value>
+            <value>
+                <fullName>3113~ Engineering technicians</fullName>
+                <default>false</default>
+                <label>3113~ Engineering technicians</label>
+            </value>
+            <value>
+                <fullName>3114~ Building &amp; civil engineering technicians</fullName>
+                <default>false</default>
+                <label>3114~ Building &amp; civil engineering technicians</label>
+            </value>
+            <value>
+                <fullName>3115~ Quality assurance technicians</fullName>
+                <default>false</default>
+                <label>3115~ Quality assurance technicians</label>
+            </value>
+            <value>
+                <fullName>3119~ Science &amp; engineering technicians n.e.c</fullName>
+                <default>false</default>
+                <label>3119~ Science &amp; engineering technicians n.e.c</label>
+            </value>
+            <value>
+                <fullName>3121~ Architectural technologists &amp; town planning technicians</fullName>
+                <default>false</default>
+                <label>3121~ Architectural technologists &amp; town planning technicians</label>
+            </value>
+            <value>
+                <fullName>3122~ Draughtspersons</fullName>
+                <default>false</default>
+                <label>3122~ Draughtspersons</label>
+            </value>
+            <value>
+                <fullName>3123~ Building inspectors</fullName>
+                <default>false</default>
+                <label>3123~ Building inspectors</label>
+            </value>
+            <value>
+                <fullName>3131~ IT operations technicians</fullName>
+                <default>false</default>
+                <label>3131~ IT operations technicians</label>
+            </value>
+            <value>
+                <fullName>3132~ IT user support technicians</fullName>
+                <default>false</default>
+                <label>3132~ IT user support technicians</label>
+            </value>
+            <value>
+                <fullName>3211~ Nurses</fullName>
+                <default>false</default>
+                <label>3211~ Nurses</label>
+            </value>
+            <value>
+                <fullName>3212~ Midwives</fullName>
+                <default>false</default>
+                <label>3212~ Midwives</label>
+            </value>
+            <value>
+                <fullName>3213~ Paramedics</fullName>
+                <default>false</default>
+                <label>3213~ Paramedics</label>
+            </value>
+            <value>
+                <fullName>3214~ Medical radiographers</fullName>
+                <default>false</default>
+                <label>3214~ Medical radiographers</label>
+            </value>
+            <value>
+                <fullName>3215~ Chiropodists</fullName>
+                <default>false</default>
+                <label>3215~ Chiropodists</label>
+            </value>
+            <value>
+                <fullName>3216~ Dispensing opticians</fullName>
+                <default>false</default>
+                <label>3216~ Dispensing opticians</label>
+            </value>
+            <value>
+                <fullName>3217~ Pharmaceutical dispensers</fullName>
+                <default>false</default>
+                <label>3217~ Pharmaceutical dispensers</label>
+            </value>
+            <value>
+                <fullName>3218~ Medical &amp; dental technicians</fullName>
+                <default>false</default>
+                <label>3218~ Medical &amp; dental technicians</label>
+            </value>
+            <value>
+                <fullName>3221~ Physiotherapists</fullName>
+                <default>false</default>
+                <label>3221~ Physiotherapists</label>
+            </value>
+            <value>
+                <fullName>3222~ Occupational therapists</fullName>
+                <default>false</default>
+                <label>3222~ Occupational therapists</label>
+            </value>
+            <value>
+                <fullName>3223~ Speech &amp; language therapists</fullName>
+                <default>false</default>
+                <label>3223~ Speech &amp; language therapists</label>
+            </value>
+            <value>
+                <fullName>3229~ Therapists n.e.c</fullName>
+                <default>false</default>
+                <label>3229~ Therapists n.e.c</label>
+            </value>
+            <value>
+                <fullName>3231~ Youth &amp; community workers</fullName>
+                <default>false</default>
+                <label>3231~ Youth &amp; community workers</label>
+            </value>
+            <value>
+                <fullName>3232~ Housing &amp; welfare officers</fullName>
+                <default>false</default>
+                <label>3232~ Housing &amp; welfare officers</label>
+            </value>
+            <value>
+                <fullName>3311~ NCOs &amp; other ranks</fullName>
+                <default>false</default>
+                <label>3311~ NCOs &amp; other ranks</label>
+            </value>
+            <value>
+                <fullName>3312~ Police officers (sergeant &amp; below)</fullName>
+                <default>false</default>
+                <label>3312~ Police officers (sergeant &amp; below)</label>
+            </value>
+            <value>
+                <fullName>3313~ Fire service officers (leading fire officer &amp; below)</fullName>
+                <default>false</default>
+                <label>3313~ Fire service officers (leading fire officer &amp; below)</label>
+            </value>
+            <value>
+                <fullName>3314~ Prison service officers (below principal officer)</fullName>
+                <default>false</default>
+                <label>3314~ Prison service officers (below principal officer)</label>
+            </value>
+            <value>
+                <fullName>3319~ Protective service associate professionals n.e.c</fullName>
+                <default>false</default>
+                <label>3319~ Protective service associate professionals n.e.c</label>
+            </value>
+            <value>
+                <fullName>3411~ Artists</fullName>
+                <default>false</default>
+                <label>3411~ Artists</label>
+            </value>
+            <value>
+                <fullName>3412~ Authors, writers</fullName>
+                <default>false</default>
+                <label>3412~ Authors, writers</label>
+            </value>
+            <value>
+                <fullName>3413~ Actors, entertainers</fullName>
+                <default>false</default>
+                <label>3413~ Actors, entertainers</label>
+            </value>
+            <value>
+                <fullName>3414~ Dancers &amp; choreographers</fullName>
+                <default>false</default>
+                <label>3414~ Dancers &amp; choreographers</label>
+            </value>
+            <value>
+                <fullName>3415~ Musicians</fullName>
+                <default>false</default>
+                <label>3415~ Musicians</label>
+            </value>
+            <value>
+                <fullName>3416~ Arts officers, producers &amp; directors</fullName>
+                <default>false</default>
+                <label>3416~ Arts officers, producers &amp; directors</label>
+            </value>
+            <value>
+                <fullName>3421~ Graphic designers</fullName>
+                <default>false</default>
+                <label>3421~ Graphic designers</label>
+            </value>
+            <value>
+                <fullName>3422~ Product, clothing &amp; related designers</fullName>
+                <default>false</default>
+                <label>3422~ Product, clothing &amp; related designers</label>
+            </value>
+            <value>
+                <fullName>3431~ Journalists, newspaper &amp; periodical editors</fullName>
+                <default>false</default>
+                <label>3431~ Journalists, newspaper &amp; periodical editors</label>
+            </value>
+            <value>
+                <fullName>3432~ Broadcasting associate professionals</fullName>
+                <default>false</default>
+                <label>3432~ Broadcasting associate professionals</label>
+            </value>
+            <value>
+                <fullName>3433~ Public relations officers</fullName>
+                <default>false</default>
+                <label>3433~ Public relations officers</label>
+            </value>
+            <value>
+                <fullName>3434~ Photographers &amp; audio-visual equipment operators</fullName>
+                <default>false</default>
+                <label>3434~ Photographers &amp; audio-visual equipment operators</label>
+            </value>
+            <value>
+                <fullName>3441~ Sports players</fullName>
+                <default>false</default>
+                <label>3441~ Sports players</label>
+            </value>
+            <value>
+                <fullName>3442~ Sports coaches, instructors &amp; officials</fullName>
+                <default>false</default>
+                <label>3442~ Sports coaches, instructors &amp; officials</label>
+            </value>
+            <value>
+                <fullName>3443~ Fitness instructors</fullName>
+                <default>false</default>
+                <label>3443~ Fitness instructors</label>
+            </value>
+            <value>
+                <fullName>3449~ Sports &amp; fitness occupations n.e.c</fullName>
+                <default>false</default>
+                <label>3449~ Sports &amp; fitness occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>3511~ Air traffic controllers</fullName>
+                <default>false</default>
+                <label>3511~ Air traffic controllers</label>
+            </value>
+            <value>
+                <fullName>3512~ Aircraft pilots &amp; flight engineers</fullName>
+                <default>false</default>
+                <label>3512~ Aircraft pilots &amp; flight engineers</label>
+            </value>
+            <value>
+                <fullName>3513~ Ship &amp; hovercraft officers</fullName>
+                <default>false</default>
+                <label>3513~ Ship &amp; hovercraft officers</label>
+            </value>
+            <value>
+                <fullName>3514~ Train drivers</fullName>
+                <default>false</default>
+                <label>3514~ Train drivers</label>
+            </value>
+            <value>
+                <fullName>3520~ Legal associate professionals</fullName>
+                <default>false</default>
+                <label>3520~ Legal associate professionals</label>
+            </value>
+            <value>
+                <fullName>3531~ Estimators, valuers &amp; assessors</fullName>
+                <default>false</default>
+                <label>3531~ Estimators, valuers &amp; assessors</label>
+            </value>
+            <value>
+                <fullName>3532~ Brokers</fullName>
+                <default>false</default>
+                <label>3532~ Brokers</label>
+            </value>
+            <value>
+                <fullName>3533~ Insurance underwriters</fullName>
+                <default>false</default>
+                <label>3533~ Insurance underwriters</label>
+            </value>
+            <value>
+                <fullName>3534~ Finance &amp; investment analysts/advisers</fullName>
+                <default>false</default>
+                <label>3534~ Finance &amp; investment analysts/advisers</label>
+            </value>
+            <value>
+                <fullName>3535~ Taxation experts</fullName>
+                <default>false</default>
+                <label>3535~ Taxation experts</label>
+            </value>
+            <value>
+                <fullName>3536~ Importers, exporters</fullName>
+                <default>false</default>
+                <label>3536~ Importers, exporters</label>
+            </value>
+            <value>
+                <fullName>3537~ Financial &amp; accounting technicians</fullName>
+                <default>false</default>
+                <label>3537~ Financial &amp; accounting technicians</label>
+            </value>
+            <value>
+                <fullName>3539~ Business &amp; related associate professionals n.e.c</fullName>
+                <default>false</default>
+                <label>3539~ Business &amp; related associate professionals n.e.c</label>
+            </value>
+            <value>
+                <fullName>3541~ Buyers &amp; purchasing officers</fullName>
+                <default>false</default>
+                <label>3541~ Buyers &amp; purchasing officers</label>
+            </value>
+            <value>
+                <fullName>3542~ Sales representatives</fullName>
+                <default>false</default>
+                <label>3542~ Sales representatives</label>
+            </value>
+            <value>
+                <fullName>3543~ Marketing associate professionals</fullName>
+                <default>false</default>
+                <label>3543~ Marketing associate professionals</label>
+            </value>
+            <value>
+                <fullName>3544~ Estate agents, auctioneers</fullName>
+                <default>false</default>
+                <label>3544~ Estate agents, auctioneers</label>
+            </value>
+            <value>
+                <fullName>3551~ Conservation &amp; environmental protection officers</fullName>
+                <default>false</default>
+                <label>3551~ Conservation &amp; environmental protection officers</label>
+            </value>
+            <value>
+                <fullName>3552~ Countryside &amp; park rangers</fullName>
+                <default>false</default>
+                <label>3552~ Countryside &amp; park rangers</label>
+            </value>
+            <value>
+                <fullName>3561~ Public service associate professionals</fullName>
+                <default>false</default>
+                <label>3561~ Public service associate professionals</label>
+            </value>
+            <value>
+                <fullName>3562~ Personnel &amp; industrial relations officers</fullName>
+                <default>false</default>
+                <label>3562~ Personnel &amp; industrial relations officers</label>
+            </value>
+            <value>
+                <fullName>3563~ Vocational &amp; industrial trainers &amp; instructors</fullName>
+                <default>false</default>
+                <label>3563~ Vocational &amp; industrial trainers &amp; instructors</label>
+            </value>
+            <value>
+                <fullName>3564~ Careers advisers &amp; vocational guidance specialists</fullName>
+                <default>false</default>
+                <label>3564~ Careers advisers &amp; vocational guidance specialists</label>
+            </value>
+            <value>
+                <fullName>3565~ Inspectors of factories, utilities &amp; trading standards</fullName>
+                <default>false</default>
+                <label>3565~ Inspectors of factories, utilities &amp; trading standards</label>
+            </value>
+            <value>
+                <fullName>3566~ Statutory examiners</fullName>
+                <default>false</default>
+                <label>3566~ Statutory examiners</label>
+            </value>
+            <value>
+                <fullName>3567~ Occupational hygienists &amp; safety officers (health &amp; safety)</fullName>
+                <default>false</default>
+                <label>3567~ Occupational hygienists &amp; safety officers (health &amp; safety)</label>
+            </value>
+            <value>
+                <fullName>3568~ Environmental health officers</fullName>
+                <default>false</default>
+                <label>3568~ Environmental health officers</label>
+            </value>
+            <value>
+                <fullName>4111~ Civil Service executive officers</fullName>
+                <default>false</default>
+                <label>4111~ Civil Service executive officers</label>
+            </value>
+            <value>
+                <fullName>4112~ Civil Service administrative officers &amp; assistants</fullName>
+                <default>false</default>
+                <label>4112~ Civil Service administrative officers &amp; assistants</label>
+            </value>
+            <value>
+                <fullName>4113~ Local government clerical officers &amp; assistants</fullName>
+                <default>false</default>
+                <label>4113~ Local government clerical officers &amp; assistants</label>
+            </value>
+            <value>
+                <fullName>4114~ Officers of non-governmental organisations</fullName>
+                <default>false</default>
+                <label>4114~ Officers of non-governmental organisations</label>
+            </value>
+            <value>
+                <fullName>4121~ Credit controllers</fullName>
+                <default>false</default>
+                <label>4121~ Credit controllers</label>
+            </value>
+            <value>
+                <fullName>4122~ Accounts &amp; wages clerks, book-keepers, other financial clerks</fullName>
+                <default>false</default>
+                <label>4122~ Accounts &amp; wages clerks, book-keepers, other financial clerks</label>
+            </value>
+            <value>
+                <fullName>4123~ Counter clerks</fullName>
+                <default>false</default>
+                <label>4123~ Counter clerks</label>
+            </value>
+            <value>
+                <fullName>4131~ Filing &amp; other records assistants/clerks</fullName>
+                <default>false</default>
+                <label>4131~ Filing &amp; other records assistants/clerks</label>
+            </value>
+            <value>
+                <fullName>4132~ Pensions &amp; insurance clerks</fullName>
+                <default>false</default>
+                <label>4132~ Pensions &amp; insurance clerks</label>
+            </value>
+            <value>
+                <fullName>4133~ Stock control clerks</fullName>
+                <default>false</default>
+                <label>4133~ Stock control clerks</label>
+            </value>
+            <value>
+                <fullName>4134~ Transport &amp; distribution clerks</fullName>
+                <default>false</default>
+                <label>4134~ Transport &amp; distribution clerks</label>
+            </value>
+            <value>
+                <fullName>4135~ Library assistants/clerks</fullName>
+                <default>false</default>
+                <label>4135~ Library assistants/clerks</label>
+            </value>
+            <value>
+                <fullName>4136~ Database assistants/clerks</fullName>
+                <default>false</default>
+                <label>4136~ Database assistants/clerks</label>
+            </value>
+            <value>
+                <fullName>4137~ Market research interviewers</fullName>
+                <default>false</default>
+                <label>4137~ Market research interviewers</label>
+            </value>
+            <value>
+                <fullName>4141~ Telephonists</fullName>
+                <default>false</default>
+                <label>4141~ Telephonists</label>
+            </value>
+            <value>
+                <fullName>4142~ Communication operators</fullName>
+                <default>false</default>
+                <label>4142~ Communication operators</label>
+            </value>
+            <value>
+                <fullName>4150~ General office assistants/clerks</fullName>
+                <default>false</default>
+                <label>4150~ General office assistants/clerks</label>
+            </value>
+            <value>
+                <fullName>4211~ Medical secretaries</fullName>
+                <default>false</default>
+                <label>4211~ Medical secretaries</label>
+            </value>
+            <value>
+                <fullName>4212~ Legal secretaries</fullName>
+                <default>false</default>
+                <label>4212~ Legal secretaries</label>
+            </value>
+            <value>
+                <fullName>4213~ School secretaries</fullName>
+                <default>false</default>
+                <label>4213~ School secretaries</label>
+            </value>
+            <value>
+                <fullName>4214~ Company secretaries</fullName>
+                <default>false</default>
+                <label>4214~ Company secretaries</label>
+            </value>
+            <value>
+                <fullName>4215~ Personal assistants &amp; other secretaries</fullName>
+                <default>false</default>
+                <label>4215~ Personal assistants &amp; other secretaries</label>
+            </value>
+            <value>
+                <fullName>4216~ Receptionists</fullName>
+                <default>false</default>
+                <label>4216~ Receptionists</label>
+            </value>
+            <value>
+                <fullName>4217~ Typists</fullName>
+                <default>false</default>
+                <label>4217~ Typists</label>
+            </value>
+            <value>
+                <fullName>5111~ Farmers</fullName>
+                <default>false</default>
+                <label>5111~ Farmers</label>
+            </value>
+            <value>
+                <fullName>5112~ Horticultural trades</fullName>
+                <default>false</default>
+                <label>5112~ Horticultural trades</label>
+            </value>
+            <value>
+                <fullName>5113~ Gardeners &amp; groundsmen/groundswomen</fullName>
+                <default>false</default>
+                <label>5113~ Gardeners &amp; groundsmen/groundswomen</label>
+            </value>
+            <value>
+                <fullName>5119~ Agricultural &amp; fishing trades n.e.c</fullName>
+                <default>false</default>
+                <label>5119~ Agricultural &amp; fishing trades n.e.c</label>
+            </value>
+            <value>
+                <fullName>5211~ Smiths &amp; forge workers</fullName>
+                <default>false</default>
+                <label>5211~ Smiths &amp; forge workers</label>
+            </value>
+            <value>
+                <fullName>5212~ Moulders, core makers, die casters</fullName>
+                <default>false</default>
+                <label>5212~ Moulders, core makers, die casters</label>
+            </value>
+            <value>
+                <fullName>5213~ Sheet metal workers</fullName>
+                <default>false</default>
+                <label>5213~ Sheet metal workers</label>
+            </value>
+            <value>
+                <fullName>5214~ Metal plate workers, shipwrights, riveters</fullName>
+                <default>false</default>
+                <label>5214~ Metal plate workers, shipwrights, riveters</label>
+            </value>
+            <value>
+                <fullName>5215~ Welding trades</fullName>
+                <default>false</default>
+                <label>5215~ Welding trades</label>
+            </value>
+            <value>
+                <fullName>5216~ Pipe fitters</fullName>
+                <default>false</default>
+                <label>5216~ Pipe fitters</label>
+            </value>
+            <value>
+                <fullName>5221~ Metal machining setters &amp; setter-operators</fullName>
+                <default>false</default>
+                <label>5221~ Metal machining setters &amp; setter-operators</label>
+            </value>
+            <value>
+                <fullName>5222~ Tool makers, tool fitters &amp; markers-out</fullName>
+                <default>false</default>
+                <label>5222~ Tool makers, tool fitters &amp; markers-out</label>
+            </value>
+            <value>
+                <fullName>5223~ Metal working production &amp; maintenance fitters</fullName>
+                <default>false</default>
+                <label>5223~ Metal working production &amp; maintenance fitters</label>
+            </value>
+            <value>
+                <fullName>5224~ Precision instrument makers &amp; repairers</fullName>
+                <default>false</default>
+                <label>5224~ Precision instrument makers &amp; repairers</label>
+            </value>
+            <value>
+                <fullName>5231~ Motor mechanics, auto engineers</fullName>
+                <default>false</default>
+                <label>5231~ Motor mechanics, auto engineers</label>
+            </value>
+            <value>
+                <fullName>5232~ Vehicle body builders &amp; repairers</fullName>
+                <default>false</default>
+                <label>5232~ Vehicle body builders &amp; repairers</label>
+            </value>
+            <value>
+                <fullName>5233~ Auto electricians</fullName>
+                <default>false</default>
+                <label>5233~ Auto electricians</label>
+            </value>
+            <value>
+                <fullName>5234~ Vehicle spray painters</fullName>
+                <default>false</default>
+                <label>5234~ Vehicle spray painters</label>
+            </value>
+            <value>
+                <fullName>5241~ Electricians, electrical fitters</fullName>
+                <default>false</default>
+                <label>5241~ Electricians, electrical fitters</label>
+            </value>
+            <value>
+                <fullName>5242~ Telecommunications engineers</fullName>
+                <default>false</default>
+                <label>5242~ Telecommunications engineers</label>
+            </value>
+            <value>
+                <fullName>5243~ Lines repairers &amp; cable jointers</fullName>
+                <default>false</default>
+                <label>5243~ Lines repairers &amp; cable jointers</label>
+            </value>
+            <value>
+                <fullName>5244~ TV, video &amp; audio engineers</fullName>
+                <default>false</default>
+                <label>5244~ TV, video &amp; audio engineers</label>
+            </value>
+            <value>
+                <fullName>5245~ Computer engineers, installation &amp; maintenance</fullName>
+                <default>false</default>
+                <label>5245~ Computer engineers, installation &amp; maintenance</label>
+            </value>
+            <value>
+                <fullName>5249~ Electrical/electronics engineers n.e.c</fullName>
+                <default>false</default>
+                <label>5249~ Electrical/electronics engineers n.e.c</label>
+            </value>
+            <value>
+                <fullName>5311~ Steel erectors</fullName>
+                <default>false</default>
+                <label>5311~ Steel erectors</label>
+            </value>
+            <value>
+                <fullName>5312~ Bricklayers, masons</fullName>
+                <default>false</default>
+                <label>5312~ Bricklayers, masons</label>
+            </value>
+            <value>
+                <fullName>5313~ Roofers, roof tilers &amp; slaters</fullName>
+                <default>false</default>
+                <label>5313~ Roofers, roof tilers &amp; slaters</label>
+            </value>
+            <value>
+                <fullName>5314~ Plumbers, heating &amp; ventilating engineers</fullName>
+                <default>false</default>
+                <label>5314~ Plumbers, heating &amp; ventilating engineers</label>
+            </value>
+            <value>
+                <fullName>5315~ Carpenters &amp; joiners</fullName>
+                <default>false</default>
+                <label>5315~ Carpenters &amp; joiners</label>
+            </value>
+            <value>
+                <fullName>5316~ Glaziers, window fabricators &amp; fitters</fullName>
+                <default>false</default>
+                <label>5316~ Glaziers, window fabricators &amp; fitters</label>
+            </value>
+            <value>
+                <fullName>5319~ Construction trades n.e.c</fullName>
+                <default>false</default>
+                <label>5319~ Construction trades n.e.c</label>
+            </value>
+            <value>
+                <fullName>5321~ Plasterers</fullName>
+                <default>false</default>
+                <label>5321~ Plasterers</label>
+            </value>
+            <value>
+                <fullName>5322~ Floorers &amp; wall tilers</fullName>
+                <default>false</default>
+                <label>5322~ Floorers &amp; wall tilers</label>
+            </value>
+            <value>
+                <fullName>5323~ Painters &amp; decorators</fullName>
+                <default>false</default>
+                <label>5323~ Painters &amp; decorators</label>
+            </value>
+            <value>
+                <fullName>5411~ Weavers &amp; knitters</fullName>
+                <default>false</default>
+                <label>5411~ Weavers &amp; knitters</label>
+            </value>
+            <value>
+                <fullName>5412~ Upholsterers</fullName>
+                <default>false</default>
+                <label>5412~ Upholsterers</label>
+            </value>
+            <value>
+                <fullName>5413~ Leather &amp; related trades</fullName>
+                <default>false</default>
+                <label>5413~ Leather &amp; related trades</label>
+            </value>
+            <value>
+                <fullName>5414~ Tailors &amp; dressmakers</fullName>
+                <default>false</default>
+                <label>5414~ Tailors &amp; dressmakers</label>
+            </value>
+            <value>
+                <fullName>5419~ Textiles, garments &amp; related trades n.e.c</fullName>
+                <default>false</default>
+                <label>5419~ Textiles, garments &amp; related trades n.e.c</label>
+            </value>
+            <value>
+                <fullName>5421~ Originators, compositors &amp; print preparers</fullName>
+                <default>false</default>
+                <label>5421~ Originators, compositors &amp; print preparers</label>
+            </value>
+            <value>
+                <fullName>5422~ Printers</fullName>
+                <default>false</default>
+                <label>5422~ Printers</label>
+            </value>
+            <value>
+                <fullName>5423~ Bookbinders &amp; print finishers</fullName>
+                <default>false</default>
+                <label>5423~ Bookbinders &amp; print finishers</label>
+            </value>
+            <value>
+                <fullName>5424~ Screen printers</fullName>
+                <default>false</default>
+                <label>5424~ Screen printers</label>
+            </value>
+            <value>
+                <fullName>5431~ Butchers, meat cutters</fullName>
+                <default>false</default>
+                <label>5431~ Butchers, meat cutters</label>
+            </value>
+            <value>
+                <fullName>5432~ Bakers, flour confectioners</fullName>
+                <default>false</default>
+                <label>5432~ Bakers, flour confectioners</label>
+            </value>
+            <value>
+                <fullName>5433~ Fishmongers, poultry dressers</fullName>
+                <default>false</default>
+                <label>5433~ Fishmongers, poultry dressers</label>
+            </value>
+            <value>
+                <fullName>5434~ Chefs, cooks</fullName>
+                <default>false</default>
+                <label>5434~ Chefs, cooks</label>
+            </value>
+            <value>
+                <fullName>5491~ Glass &amp; ceramics makers, decorators &amp; finishers</fullName>
+                <default>false</default>
+                <label>5491~ Glass &amp; ceramics makers, decorators &amp; finishers</label>
+            </value>
+            <value>
+                <fullName>5492~ Furniture makers, other craft woodworkers</fullName>
+                <default>false</default>
+                <label>5492~ Furniture makers, other craft woodworkers</label>
+            </value>
+            <value>
+                <fullName>5493~ Pattern makers (moulds)</fullName>
+                <default>false</default>
+                <label>5493~ Pattern makers (moulds)</label>
+            </value>
+            <value>
+                <fullName>5494~ Musical instrument makers &amp; tuners</fullName>
+                <default>false</default>
+                <label>5494~ Musical instrument makers &amp; tuners</label>
+            </value>
+            <value>
+                <fullName>5495~ Goldsmiths, silversmiths, precious stone workers</fullName>
+                <default>false</default>
+                <label>5495~ Goldsmiths, silversmiths, precious stone workers</label>
+            </value>
+            <value>
+                <fullName>5496~ Floral arrangers, florists</fullName>
+                <default>false</default>
+                <label>5496~ Floral arrangers, florists</label>
+            </value>
+            <value>
+                <fullName>5499~ Hand craft occupations n.e.c</fullName>
+                <default>false</default>
+                <label>5499~ Hand craft occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>6111~ Nursing auxiliaries &amp; assistants</fullName>
+                <default>false</default>
+                <label>6111~ Nursing auxiliaries &amp; assistants</label>
+            </value>
+            <value>
+                <fullName>6112~ Ambulance staff (excluding paramedics)</fullName>
+                <default>false</default>
+                <label>6112~ Ambulance staff (excluding paramedics)</label>
+            </value>
+            <value>
+                <fullName>6113~ Dental nurses</fullName>
+                <default>false</default>
+                <label>6113~ Dental nurses</label>
+            </value>
+            <value>
+                <fullName>6114~ Houseparents &amp; residential wardens</fullName>
+                <default>false</default>
+                <label>6114~ Houseparents &amp; residential wardens</label>
+            </value>
+            <value>
+                <fullName>6115~ Care assistants &amp; home carers</fullName>
+                <default>false</default>
+                <label>6115~ Care assistants &amp; home carers</label>
+            </value>
+            <value>
+                <fullName>6121~ Nursery nurses</fullName>
+                <default>false</default>
+                <label>6121~ Nursery nurses</label>
+            </value>
+            <value>
+                <fullName>6122~ Childminders &amp; related occupations</fullName>
+                <default>false</default>
+                <label>6122~ Childminders &amp; related occupations</label>
+            </value>
+            <value>
+                <fullName>6123~ Playgroup leaders/assistants</fullName>
+                <default>false</default>
+                <label>6123~ Playgroup leaders/assistants</label>
+            </value>
+            <value>
+                <fullName>6124~ Educational assistants</fullName>
+                <default>false</default>
+                <label>6124~ Educational assistants</label>
+            </value>
+            <value>
+                <fullName>6131~ Veterinary nurses &amp; assistants</fullName>
+                <default>false</default>
+                <label>6131~ Veterinary nurses &amp; assistants</label>
+            </value>
+            <value>
+                <fullName>6139~ Animal care occupations n.e.c</fullName>
+                <default>false</default>
+                <label>6139~ Animal care occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>6211~ Sports &amp; leisure assistants</fullName>
+                <default>false</default>
+                <label>6211~ Sports &amp; leisure assistants</label>
+            </value>
+            <value>
+                <fullName>6212~ Travel agents</fullName>
+                <default>false</default>
+                <label>6212~ Travel agents</label>
+            </value>
+            <value>
+                <fullName>6213~ Travel &amp; tour guides</fullName>
+                <default>false</default>
+                <label>6213~ Travel &amp; tour guides</label>
+            </value>
+            <value>
+                <fullName>6214~ Air travel assistants</fullName>
+                <default>false</default>
+                <label>6214~ Air travel assistants</label>
+            </value>
+            <value>
+                <fullName>6215~ Rail travel assistants</fullName>
+                <default>false</default>
+                <label>6215~ Rail travel assistants</label>
+            </value>
+            <value>
+                <fullName>6219~ Leisure &amp; travel service occupations n.e.c</fullName>
+                <default>false</default>
+                <label>6219~ Leisure &amp; travel service occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>6221~ Hairdressers, barbers</fullName>
+                <default>false</default>
+                <label>6221~ Hairdressers, barbers</label>
+            </value>
+            <value>
+                <fullName>6222~ Beauticians &amp; related occupations</fullName>
+                <default>false</default>
+                <label>6222~ Beauticians &amp; related occupations</label>
+            </value>
+            <value>
+                <fullName>6231~ Housekeepers &amp; related occupations</fullName>
+                <default>false</default>
+                <label>6231~ Housekeepers &amp; related occupations</label>
+            </value>
+            <value>
+                <fullName>6232~ Caretakers</fullName>
+                <default>false</default>
+                <label>6232~ Caretakers</label>
+            </value>
+            <value>
+                <fullName>6291~ Undertakers &amp; mortuary assistants</fullName>
+                <default>false</default>
+                <label>6291~ Undertakers &amp; mortuary assistants</label>
+            </value>
+            <value>
+                <fullName>6292~ Pest control officers</fullName>
+                <default>false</default>
+                <label>6292~ Pest control officers</label>
+            </value>
+            <value>
+                <fullName>7111~ Sales &amp; retail assistants</fullName>
+                <default>false</default>
+                <label>7111~ Sales &amp; retail assistants</label>
+            </value>
+            <value>
+                <fullName>7112~ Retail cashiers &amp; check-out operators</fullName>
+                <default>false</default>
+                <label>7112~ Retail cashiers &amp; check-out operators</label>
+            </value>
+            <value>
+                <fullName>7113~ Telephone salespersons</fullName>
+                <default>false</default>
+                <label>7113~ Telephone salespersons</label>
+            </value>
+            <value>
+                <fullName>7121~ Collector salespersons &amp; credit agents</fullName>
+                <default>false</default>
+                <label>7121~ Collector salespersons &amp; credit agents</label>
+            </value>
+            <value>
+                <fullName>7122~ Debt, rent &amp; other cash collectors</fullName>
+                <default>false</default>
+                <label>7122~ Debt, rent &amp; other cash collectors</label>
+            </value>
+            <value>
+                <fullName>7123~ Roundsmen/women &amp; van salespersons</fullName>
+                <default>false</default>
+                <label>7123~ Roundsmen/women &amp; van salespersons</label>
+            </value>
+            <value>
+                <fullName>7124~ Market &amp; street traders &amp; assistants</fullName>
+                <default>false</default>
+                <label>7124~ Market &amp; street traders &amp; assistants</label>
+            </value>
+            <value>
+                <fullName>7125~ Merchandisers &amp; window dressers</fullName>
+                <default>false</default>
+                <label>7125~ Merchandisers &amp; window dressers</label>
+            </value>
+            <value>
+                <fullName>7129~ Sales related occupations n.e.c</fullName>
+                <default>false</default>
+                <label>7129~ Sales related occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>7211~ Call centre agents/operators</fullName>
+                <default>false</default>
+                <label>7211~ Call centre agents/operators</label>
+            </value>
+            <value>
+                <fullName>7212~ Customer care occupations</fullName>
+                <default>false</default>
+                <label>7212~ Customer care occupations</label>
+            </value>
+            <value>
+                <fullName>8111~ Food, drink &amp; tobacco process operatives</fullName>
+                <default>false</default>
+                <label>8111~ Food, drink &amp; tobacco process operatives</label>
+            </value>
+            <value>
+                <fullName>8112~ Glass &amp; ceramics process operatives</fullName>
+                <default>false</default>
+                <label>8112~ Glass &amp; ceramics process operatives</label>
+            </value>
+            <value>
+                <fullName>8113~ Textile process operatives</fullName>
+                <default>false</default>
+                <label>8113~ Textile process operatives</label>
+            </value>
+            <value>
+                <fullName>8114~ Chemical &amp; related process operatives</fullName>
+                <default>false</default>
+                <label>8114~ Chemical &amp; related process operatives</label>
+            </value>
+            <value>
+                <fullName>8115~ Rubber process operatives</fullName>
+                <default>false</default>
+                <label>8115~ Rubber process operatives</label>
+            </value>
+            <value>
+                <fullName>8116~ Plastics process operatives</fullName>
+                <default>false</default>
+                <label>8116~ Plastics process operatives</label>
+            </value>
+            <value>
+                <fullName>8117~ Metal making &amp; treating process operatives</fullName>
+                <default>false</default>
+                <label>8117~ Metal making &amp; treating process operatives</label>
+            </value>
+            <value>
+                <fullName>8118~ Electroplaters</fullName>
+                <default>false</default>
+                <label>8118~ Electroplaters</label>
+            </value>
+            <value>
+                <fullName>8119~ Process operatives n.e.c</fullName>
+                <default>false</default>
+                <label>8119~ Process operatives n.e.c</label>
+            </value>
+            <value>
+                <fullName>8121~ Paper &amp; wood machine operatives</fullName>
+                <default>false</default>
+                <label>8121~ Paper &amp; wood machine operatives</label>
+            </value>
+            <value>
+                <fullName>8122~ Coal mine operatives</fullName>
+                <default>false</default>
+                <label>8122~ Coal mine operatives</label>
+            </value>
+            <value>
+                <fullName>8123~ Quarry workers &amp; related operatives</fullName>
+                <default>false</default>
+                <label>8123~ Quarry workers &amp; related operatives</label>
+            </value>
+            <value>
+                <fullName>8124~ Energy plant operatives</fullName>
+                <default>false</default>
+                <label>8124~ Energy plant operatives</label>
+            </value>
+            <value>
+                <fullName>8125~ Metal working machine operatives</fullName>
+                <default>false</default>
+                <label>8125~ Metal working machine operatives</label>
+            </value>
+            <value>
+                <fullName>8126~ Water &amp; sewerage plant operatives</fullName>
+                <default>false</default>
+                <label>8126~ Water &amp; sewerage plant operatives</label>
+            </value>
+            <value>
+                <fullName>8129~ Plant &amp; machine operatives n.e.c</fullName>
+                <default>false</default>
+                <label>8129~ Plant &amp; machine operatives n.e.c</label>
+            </value>
+            <value>
+                <fullName>8131~ Assemblers (electrical products)</fullName>
+                <default>false</default>
+                <label>8131~ Assemblers (electrical products)</label>
+            </value>
+            <value>
+                <fullName>8132~ Assemblers (vehicles &amp; metal goods)</fullName>
+                <default>false</default>
+                <label>8132~ Assemblers (vehicles &amp; metal goods)</label>
+            </value>
+            <value>
+                <fullName>8133~ Routine inspectors &amp; testers</fullName>
+                <default>false</default>
+                <label>8133~ Routine inspectors &amp; testers</label>
+            </value>
+            <value>
+                <fullName>8134~ Weighers, graders, sorters</fullName>
+                <default>false</default>
+                <label>8134~ Weighers, graders, sorters</label>
+            </value>
+            <value>
+                <fullName>8135~ Tyre, exhaust &amp; windscreen fitters</fullName>
+                <default>false</default>
+                <label>8135~ Tyre, exhaust &amp; windscreen fitters</label>
+            </value>
+            <value>
+                <fullName>8136~ Clothing cutters</fullName>
+                <default>false</default>
+                <label>8136~ Clothing cutters</label>
+            </value>
+            <value>
+                <fullName>8137~ Sewing machinists</fullName>
+                <default>false</default>
+                <label>8137~ Sewing machinists</label>
+            </value>
+            <value>
+                <fullName>8138~ Routine laboratory testers</fullName>
+                <default>false</default>
+                <label>8138~ Routine laboratory testers</label>
+            </value>
+            <value>
+                <fullName>8139~ Assemblers &amp; routine operatives n.e.c</fullName>
+                <default>false</default>
+                <label>8139~ Assemblers &amp; routine operatives n.e.c</label>
+            </value>
+            <value>
+                <fullName>8141~ Scaffolders, stagers, riggers</fullName>
+                <default>false</default>
+                <label>8141~ Scaffolders, stagers, riggers</label>
+            </value>
+            <value>
+                <fullName>8142~ Road construction operatives</fullName>
+                <default>false</default>
+                <label>8142~ Road construction operatives</label>
+            </value>
+            <value>
+                <fullName>8143~ Rail construction &amp; maintenance operatives</fullName>
+                <default>false</default>
+                <label>8143~ Rail construction &amp; maintenance operatives</label>
+            </value>
+            <value>
+                <fullName>8149~ Construction operatives n.e.c</fullName>
+                <default>false</default>
+                <label>8149~ Construction operatives n.e.c</label>
+            </value>
+            <value>
+                <fullName>8211~ Heavy goods vehicle drivers</fullName>
+                <default>false</default>
+                <label>8211~ Heavy goods vehicle drivers</label>
+            </value>
+            <value>
+                <fullName>8212~ Van drivers</fullName>
+                <default>false</default>
+                <label>8212~ Van drivers</label>
+            </value>
+            <value>
+                <fullName>8213~ Bus &amp; coach drivers</fullName>
+                <default>false</default>
+                <label>8213~ Bus &amp; coach drivers</label>
+            </value>
+            <value>
+                <fullName>8214~ Taxi, cab drivers &amp; chauffeurs</fullName>
+                <default>false</default>
+                <label>8214~ Taxi, cab drivers &amp; chauffeurs</label>
+            </value>
+            <value>
+                <fullName>8215~ Driving instructors</fullName>
+                <default>false</default>
+                <label>8215~ Driving instructors</label>
+            </value>
+            <value>
+                <fullName>8216~ Rail transport operatives</fullName>
+                <default>false</default>
+                <label>8216~ Rail transport operatives</label>
+            </value>
+            <value>
+                <fullName>8217~ Seafarers (merchant navy); barge, lighter &amp; boat operatives</fullName>
+                <default>false</default>
+                <label>8217~ Seafarers (merchant navy); barge, lighter &amp; boat operatives</label>
+            </value>
+            <value>
+                <fullName>8218~ Air transport operatives</fullName>
+                <default>false</default>
+                <label>8218~ Air transport operatives</label>
+            </value>
+            <value>
+                <fullName>8219~ Transport operatives n.e.c</fullName>
+                <default>false</default>
+                <label>8219~ Transport operatives n.e.c</label>
+            </value>
+            <value>
+                <fullName>8221~ Crane drivers</fullName>
+                <default>false</default>
+                <label>8221~ Crane drivers</label>
+            </value>
+            <value>
+                <fullName>8222~ Fork-lift truck drivers</fullName>
+                <default>false</default>
+                <label>8222~ Fork-lift truck drivers</label>
+            </value>
+            <value>
+                <fullName>8223~ Agricultural machinery drivers</fullName>
+                <default>false</default>
+                <label>8223~ Agricultural machinery drivers</label>
+            </value>
+            <value>
+                <fullName>8229~ Mobile machine drivers &amp; operatives n.e.c</fullName>
+                <default>false</default>
+                <label>8229~ Mobile machine drivers &amp; operatives n.e.c</label>
+            </value>
+            <value>
+                <fullName>9111~ Farm workers</fullName>
+                <default>false</default>
+                <label>9111~ Farm workers</label>
+            </value>
+            <value>
+                <fullName>9112~ Forestry workers</fullName>
+                <default>false</default>
+                <label>9112~ Forestry workers</label>
+            </value>
+            <value>
+                <fullName>9119~ Fishing &amp; agriculture related occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9119~ Fishing &amp; agriculture related occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9121~ Labourers in building &amp; woodworking trades</fullName>
+                <default>false</default>
+                <label>9121~ Labourers in building &amp; woodworking trades</label>
+            </value>
+            <value>
+                <fullName>9129~ Labourers in other construction trades n.e.c</fullName>
+                <default>false</default>
+                <label>9129~ Labourers in other construction trades n.e.c</label>
+            </value>
+            <value>
+                <fullName>9131~ Labourers in foundries</fullName>
+                <default>false</default>
+                <label>9131~ Labourers in foundries</label>
+            </value>
+            <value>
+                <fullName>9132~ Industrial cleaning process occupations</fullName>
+                <default>false</default>
+                <label>9132~ Industrial cleaning process occupations</label>
+            </value>
+            <value>
+                <fullName>9133~ Printing machine minders &amp; assistants</fullName>
+                <default>false</default>
+                <label>9133~ Printing machine minders &amp; assistants</label>
+            </value>
+            <value>
+                <fullName>9134~ Packers, bottlers, canners, fillers</fullName>
+                <default>false</default>
+                <label>9134~ Packers, bottlers, canners, fillers</label>
+            </value>
+            <value>
+                <fullName>9139~ Labourers in process &amp; plant operations n.e.c</fullName>
+                <default>false</default>
+                <label>9139~ Labourers in process &amp; plant operations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9141~ Stevedores, dockers &amp; slingers</fullName>
+                <default>false</default>
+                <label>9141~ Stevedores, dockers &amp; slingers</label>
+            </value>
+            <value>
+                <fullName>9149~ Other goods handling &amp; storage occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9149~ Other goods handling &amp; storage occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9211~ Postal workers, mail sorters, messengers, couriers</fullName>
+                <default>false</default>
+                <label>9211~ Postal workers, mail sorters, messengers, couriers</label>
+            </value>
+            <value>
+                <fullName>9219~ Elementary office occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9219~ Elementary office occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9221~ Hospital porters</fullName>
+                <default>false</default>
+                <label>9221~ Hospital porters</label>
+            </value>
+            <value>
+                <fullName>9222~ Hotel porters</fullName>
+                <default>false</default>
+                <label>9222~ Hotel porters</label>
+            </value>
+            <value>
+                <fullName>9223~ Kitchen &amp; catering assistants</fullName>
+                <default>false</default>
+                <label>9223~ Kitchen &amp; catering assistants</label>
+            </value>
+            <value>
+                <fullName>9224~ Waiters, Waitresses</fullName>
+                <default>false</default>
+                <label>9224~ Waiters, Waitresses</label>
+            </value>
+            <value>
+                <fullName>9225~ Bar staff</fullName>
+                <default>false</default>
+                <label>9225~ Bar staff</label>
+            </value>
+            <value>
+                <fullName>9226~ Leisure &amp; theme park attendants</fullName>
+                <default>false</default>
+                <label>9226~ Leisure &amp; theme park attendants</label>
+            </value>
+            <value>
+                <fullName>9229~ Elementary personal services occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9229~ Elementary personal services occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9231~ Window cleaners</fullName>
+                <default>false</default>
+                <label>9231~ Window cleaners</label>
+            </value>
+            <value>
+                <fullName>9232~ Road sweepers</fullName>
+                <default>false</default>
+                <label>9232~ Road sweepers</label>
+            </value>
+            <value>
+                <fullName>9233~ Cleaners, domestics</fullName>
+                <default>false</default>
+                <label>9233~ Cleaners, domestics</label>
+            </value>
+            <value>
+                <fullName>9234~ Launderers, dry cleaners, pressers</fullName>
+                <default>false</default>
+                <label>9234~ Launderers, dry cleaners, pressers</label>
+            </value>
+            <value>
+                <fullName>9235~ Refuse &amp; salvage occupations</fullName>
+                <default>false</default>
+                <label>9235~ Refuse &amp; salvage occupations</label>
+            </value>
+            <value>
+                <fullName>9239~ Elementary cleaning occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9239~ Elementary cleaning occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9241~ Security guards &amp; related occupations</fullName>
+                <default>false</default>
+                <label>9241~ Security guards &amp; related occupations</label>
+            </value>
+            <value>
+                <fullName>9242~ Traffic wardens</fullName>
+                <default>false</default>
+                <label>9242~ Traffic wardens</label>
+            </value>
+            <value>
+                <fullName>9243~ School crossing patrol attendants</fullName>
+                <default>false</default>
+                <label>9243~ School crossing patrol attendants</label>
+            </value>
+            <value>
+                <fullName>9244~ School mid-day assistants</fullName>
+                <default>false</default>
+                <label>9244~ School mid-day assistants</label>
+            </value>
+            <value>
+                <fullName>9245~ Car park attendants</fullName>
+                <default>false</default>
+                <label>9245~ Car park attendants</label>
+            </value>
+            <value>
+                <fullName>9249~ Elementary security occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9249~ Elementary security occupations n.e.c</label>
+            </value>
+            <value>
+                <fullName>9251~ Shelf fillers</fullName>
+                <default>false</default>
+                <label>9251~ Shelf fillers</label>
+            </value>
+            <value>
+                <fullName>9259~ Elementary sales occupations n.e.c</fullName>
+                <default>false</default>
+                <label>9259~ Elementary sales occupations n.e.c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

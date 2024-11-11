@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HUB Welcome Email (2023)</name>
+    <style>none</style>
+    <subject>Your BPP Portal User Details... Welcome!</subject>
+    <textOnly>Student Reference Number: {!Account.BNR_Banner_ID__pc}
+
+Activating your Hub account
+
+
+Hello {!Account.FirstName},
+
+The Hub is your online learning environment which provides 24/7 access to all of your BPP course learning materials and resources. You should activate your Hub account before registering and starting your course.
+
+Accessing the hub
+
+Your hub username - {!Account.BPP_Email__pc}
+
+Your password for The Hub will be sent to you in 48 hours time and you will be required to setup Microsoft Multi-Factor Authentication (MFA) as part of our enhanced security measures.
+
+Login to The Hub at www.bpp.com/account with your BPP email and new password.
+
+We will also send you a link so you can reset your password to something a little more memorable.
+
+If you need to receive the password by an alternative means, please contact us for this to be provided over the phone.
+
+Once you have activated your Hub account, you will have access to our welcome module, which provides guidance on using The Hub and other online platforms to support you through your course as well as introductory course content.
+
+You will also be able to access your Office 365 email account using your @my.bpp.com email address and password.
+
+Although dates depend on your programme, you will be able to view introductory course information in ‘My Learning’ at least one month before the start date. Study modules will be available at the start of your programme.
+
+Office 365 email account and timetables
+
+Once you’ve activated your Hub account, you will also be able to access your Office 365 email account using your @my.bpp.com email address and password. Your email account will be used during your studies to send important information, so you should check it regularly.
+
+You can login at www.outlook.com/my.bpp.com or by using links in The Hub. Your course timetable will also be visible as a live calendar on your Office365 calendar.
+
+Online library resources
+
+Login details for BPP’s library resources will be sent to your my.bpp.com email once you have completed the registration process for your programme.
+
+Join our Virtual Campus
+
+Our Virtual Campus replicates the face-to-face contact you would find from social events at our locations. To get started, visit the virtual campus.
+
+Any queries?
+
+If you have any queries please contact us on 03300 603 100 or via our website.
+
+© BPP Holdings Limited 2023 – Owned by private equity firm TDR
+BPP House, Aldine Place 142-144 Uxbridge Road, London, W12 8AA, Greater London,
+registered in England and Wales under company number 04546335
+
+Privacy Policy</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

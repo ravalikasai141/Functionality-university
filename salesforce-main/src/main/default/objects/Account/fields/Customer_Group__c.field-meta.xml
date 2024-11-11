@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Tier 1 - Key Clients</fullName>
+                <default>false</default>
+                <label>Tier 1 - Key Clients</label>
+            </value>
+            <value>
+                <fullName>Tier 2 - Large Clients</fullName>
+                <default>false</default>
+                <label>Tier 2 - Large Clients</label>
+            </value>
+            <value>
+                <fullName>Tier 3 - Normal</fullName>
+                <default>false</default>
+                <label>Tier 3 - Normal</label>
+            </value>
+            <value>
+                <fullName>Direct Debit Students</fullName>
+                <default>false</default>
+                <label>Direct Debit Students</label>
+            </value>
+            <value>
+                <fullName>Export (LM only)</fullName>
+                <default>false</default>
+                <label>Export (LM only)</label>
+            </value>
+            <value>
+                <fullName>Book Shop/colleges (LM Only)</fullName>
+                <default>false</default>
+                <label>Book Shop/colleges (LM Only)</label>
+            </value>
+            <value>
+                <fullName>Legal - Once account has been pass over to out solicitors for collection</fullName>
+                <default>false</default>
+                <label>Legal - Once account has been pass over to out solicitors for collection</label>
+            </value>
+            <value>
+                <fullName>Intercompany</fullName>
+                <default>false</default>
+                <label>Intercompany</label>
+            </value>
+            <value>
+                <fullName>Collection Agent</fullName>
+                <default>false</default>
+                <label>Collection Agent</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deliver_Materials_to_Student__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Defaults to &quot;Checked&quot; for all student orders. Company orders are set by default by the corresponding value on the company account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When checked materials for bookings related to this order will be sent to the student(s), uncheked will send to the Account</inlineHelpText>
+    <label>Deliver Materials to Student</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

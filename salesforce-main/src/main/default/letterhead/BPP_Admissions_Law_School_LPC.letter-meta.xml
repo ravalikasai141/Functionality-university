@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#6600CC</color>
+        <height>0</height>
+    </bottomLine>
+    <description>New letterhead design for Admissions Law School - LPC - in test stage</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>40</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#6600CC</color>
+        <height>0</height>
+    </middleLine>
+    <name>BPP Admissions (Law School - LPC)</name>
+    <topLine>
+        <color>#6600CC</color>
+        <height>0</height>
+    </topLine>
+</Letterhead>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Complaint_Non_Uni_Query_Type</name>
+        <label>Complaint (Non-Uni) Query Type</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Query_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Complaint (Non-Uni)</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Reference_Query_Type</name>
+        <label>Reference Query Type</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Query_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Reference</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assign the standard default query type of &apos;Undetermined Query&apos; if case is created via Email-To-Case and has otherwise not been assigned one.</description>
+        <name>Undetermined_Query</name>
+        <label>Undetermined Query</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Query_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Undetermined Query</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Add_Case_Query</name>
+        <label>Add Case Query</label>
+        <locationX>446</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_Complaints</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student Query</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email Complaints</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Complaint_Non_Uni_Query_Type</targetReference>
+            </connector>
+            <label>Email Complaints</label>
+        </rules>
+        <rules>
+            <name>Email_Reference</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student Query</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email Reference</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reference_Query_Type</targetReference>
+            </connector>
+            <label>Email Reference</label>
+        </rules>
+        <rules>
+            <name>General_Email_To_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Setup.AssignmentUsers__c.Default_Support_User__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Undetermined_Query</targetReference>
+            </connector>
+            <label>General Email-To-Case</label>
+        </rules>
+    </decisions>
+    <description>Case updates (context: before creation)</description>
+    <environments>Default</environments>
+    <interviewLabel>Case Fast Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Fast Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Add_Case_Query</targetReference>
+        </connector>
+        <filterFormula>{!$Setup.FlowSettings__c.Case_Fast_Updates__c} = False</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>500</triggerOrder>
+</Flow>

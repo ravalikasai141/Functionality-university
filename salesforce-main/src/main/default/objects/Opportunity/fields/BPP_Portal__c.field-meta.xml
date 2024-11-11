@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Portal__c</fullName>
+    <description>Report from the field to monitor leads and opportunities that come via the portal and then BPP can pay the YPO/Salisbury rebate</description>
+    <externalId>false</externalId>
+    <label>Portal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCS</fullName>
+                <default>false</default>
+                <label>CCS</label>
+            </value>
+            <value>
+                <fullName>YPO</fullName>
+                <default>false</default>
+                <label>YPO</label>
+            </value>
+            <value>
+                <fullName>Salisbury</fullName>
+                <default>false</default>
+                <label>Salisbury</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

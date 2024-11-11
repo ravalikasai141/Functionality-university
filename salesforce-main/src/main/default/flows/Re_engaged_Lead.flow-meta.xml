@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Send Notification to designated admin users that there has been an assignment failure.</description>
+        <name>Notify_Admin</name>
+        <label>Notify Admin</label>
+        <locationX>138</locationX>
+        <locationY>890</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Assign_Current_Owner</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Reassignment_Notification.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>varNotificationAlertGroup</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <stringValue>Lead Owner Reassignment Failure</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>ReassignOwnerFailureMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>varLeadId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Assign_Current_Owner</name>
+        <label>Assign Current Owner</label>
+        <locationX>666</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>varLeadOwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Re_engaged_Lead.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Re_engaged_Lead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reassign Lead Owner to the QC manager - designated target to trigger round robin QC assignment</description>
+        <name>Reassign_Lead_Owner_QC</name>
+        <label>Reassign Lead Owner (QC)</label>
+        <locationX>402</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>varLeadOwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Setup.AssignmentUsers__c.Default_Lead_Owner__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ReassignedOwner</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Adds the notification recipient public group id to a collection variable (notification input must be a text type collection).</description>
+        <name>Set_Notification_Recipients</name>
+        <label>Set Notification Recipients</label>
+        <locationX>138</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>varNotificationAlertGroup</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Setup.AssignmentUsers__c.Admin_Alert_Recipients__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Notify_Admin</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check that the flow has not been muted</description>
+        <name>Check_Mutability</name>
+        <label>Check Mutability</label>
+        <locationX>611</locationX>
+        <locationY>134</locationY>
+        <defaultConnectorLabel>Muted</defaultConnectorLabel>
+        <rules>
+            <name>Run_Flow</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.FlowSettings__c.Lead_Re_engaged_Lead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Re_engaged_Lead</targetReference>
+            </connector>
+            <label>Run Flow</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if the lead record owner is active</description>
+        <name>Is_Lead_Owner_Active</name>
+        <label>Is Lead Owner Active?</label>
+        <locationX>534</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Current_Owner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>User Active</defaultConnectorLabel>
+        <rules>
+            <name>User_Not_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Re_engaged_Lead.Owner:User.IsActive</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reassign_Lead_Owner_QC</targetReference>
+            </connector>
+            <label>User Not Active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has a new lead owner been specified?</description>
+        <name>Reassign_Lead</name>
+        <label>Reassign Lead?</label>
+        <locationX>292</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Is_Lead_Owner_Active</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Evaluate Lead Owner</defaultConnectorLabel>
+        <rules>
+            <name>New_Owner_Set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varLeadOwnerId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varLeadOwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ReassignedOwner</targetReference>
+            </connector>
+            <label>New Owner Set</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check reassigned owner is active</description>
+        <name>Validate_Reassigned_Owner</name>
+        <label>Validate Reassigned Owner</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Reassignment_Notification</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Unable to Reassign</defaultConnectorLabel>
+        <rules>
+            <name>User_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ReassignedOwner.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Re_engaged_Lead</targetReference>
+            </connector>
+            <label>User Active</label>
+        </rules>
+    </decisions>
+    <description>Increments the Lead Cycle field and resets the cycle specific V2V cycle fields to 0. Also reassigns lead if the owner is currently inactive - can be skipped for manual updates</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Increment Lead Cycle by 1</description>
+        <name>fxIncrementLeadCycle</name>
+        <dataType>Number</dataType>
+        <expression>{!Re_engaged_Lead.BPP_Lead_Cycle__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Re-engaged Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Re-engaged Lead</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Lead record that is the WhoId of the task that triggered the process</description>
+        <name>Re_engaged_Lead</name>
+        <label>Re-engaged Lead</label>
+        <locationX>292</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Reassign_Lead</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varLeadId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>User record of reassigned lead</description>
+        <name>ReassignedOwner</name>
+        <label>ReassignedOwner</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Validate_Reassigned_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varLeadOwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the &apos;Record_Reassignment&apos; custom notification</description>
+        <name>Reassignment_Notification</name>
+        <label>Reassignment Notification</label>
+        <locationX>138</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Notification_Recipients</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Record_Reassignment</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update re-engaged lead</description>
+        <name>Update_Re_engaged_Lead</name>
+        <label>Update Re-engaged Lead</label>
+        <locationX>292</locationX>
+        <locationY>1232</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varLeadId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BPP_Lead_Cycle__c</field>
+            <value>
+                <elementReference>fxIncrementLeadCycle</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varLeadOwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Cycle_Contact_Attempts__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Cycle_Engagement_Contact_Attempts__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>V2V_Cycle_Engagements__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>485</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Mutability</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Message to inform admin of an issue with the reassignment process.</description>
+        <name>ReassignOwnerFailureMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>This lead has failed to reassign to {!ReassignedOwner.Name} ({!ReassignedOwner.Id}).
+Please check to ensure that processes (flows / custom settings) are assigning records to active users.</text>
+    </textTemplates>
+    <variables>
+        <description>ID of the lead record to be updated</description>
+        <name>varLeadId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Owner of the re-engaged lead. Defaults to the current record owner but will be reassigned if that user is not active.</description>
+        <name>varLeadOwnerId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Contains the id of the group of users the notification alert will be sent to</description>
+        <name>varNotificationAlertGroup</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

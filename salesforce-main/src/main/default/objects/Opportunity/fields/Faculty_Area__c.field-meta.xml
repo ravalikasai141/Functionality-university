@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Faculty_Area__c</fullName>
+    <description>Dependant field to main faculty
+[BD] Predates Apollo Salesforce team. 5/11/11</description>
+    <externalId>false</externalId>
+    <label>Faculty Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Main_Faculty__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AAT Diploma</fullName>
+                <default>false</default>
+                <label>AAT Diploma</label>
+            </value>
+            <value>
+                <fullName>AAT NVQ</fullName>
+                <default>false</default>
+                <label>AAT NVQ</label>
+            </value>
+            <value>
+                <fullName>ACCA</fullName>
+                <default>false</default>
+                <label>ACCA</label>
+            </value>
+            <value>
+                <fullName>BIFM</fullName>
+                <default>false</default>
+                <label>BIFM</label>
+            </value>
+            <value>
+                <fullName>Books</fullName>
+                <default>false</default>
+                <label>Books</label>
+            </value>
+            <value>
+                <fullName>CFA</fullName>
+                <default>false</default>
+                <label>CFA</label>
+            </value>
+            <value>
+                <fullName>CFQ</fullName>
+                <default>false</default>
+                <label>CFQ</label>
+            </value>
+            <value>
+                <fullName>CIMA</fullName>
+                <default>false</default>
+                <label>CIMA</label>
+            </value>
+            <value>
+                <fullName>CIPD Certificate Courses</fullName>
+                <default>false</default>
+                <label>CIPD Certificate Courses</label>
+            </value>
+            <value>
+                <fullName>CIPD Prof Dev Scheme</fullName>
+                <default>false</default>
+                <label>CIPD Prof Dev Scheme</label>
+            </value>
+            <value>
+                <fullName>CIPFA</fullName>
+                <default>false</default>
+                <label>CIPFA</label>
+            </value>
+            <value>
+                <fullName>City</fullName>
+                <default>false</default>
+                <label>City</label>
+            </value>
+            <value>
+                <fullName>Elearning</fullName>
+                <default>false</default>
+                <label>Elearning</label>
+            </value>
+            <value>
+                <fullName>FaT</fullName>
+                <default>false</default>
+                <label>FaT</label>
+            </value>
+            <value>
+                <fullName>Financial Awareness</fullName>
+                <default>false</default>
+                <label>Financial Awareness</label>
+            </value>
+            <value>
+                <fullName>IAQ</fullName>
+                <default>false</default>
+                <label>IAQ</label>
+            </value>
+            <value>
+                <fullName>ICAEW</fullName>
+                <default>false</default>
+                <label>ICAEW</label>
+            </value>
+            <value>
+                <fullName>IMC</fullName>
+                <default>false</default>
+                <label>IMC</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>Law</fullName>
+                <default>false</default>
+                <label>Law</label>
+            </value>
+            <value>
+                <fullName>Law Enforcement</fullName>
+                <default>false</default>
+                <label>Law Enforcement</label>
+            </value>
+            <value>
+                <fullName>L&amp;PD</fullName>
+                <default>false</default>
+                <label>L&amp;PD</label>
+            </value>
+            <value>
+                <fullName>Notes</fullName>
+                <default>false</default>
+                <label>Notes</label>
+            </value>
+            <value>
+                <fullName>PSC</fullName>
+                <default>false</default>
+                <label>PSC</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+            <value>
+                <fullName>QLTT</fullName>
+                <default>false</default>
+                <label>QLTT</label>
+            </value>
+            <value>
+                <fullName>SII Certs</fullName>
+                <default>false</default>
+                <label>SII Certs</label>
+            </value>
+            <value>
+                <fullName>SII Dip Invest Comp</fullName>
+                <default>false</default>
+                <label>SII Dip Invest Comp</label>
+            </value>
+            <value>
+                <fullName>SII Dip Invest Ops</fullName>
+                <default>false</default>
+                <label>SII Dip Invest Ops</label>
+            </value>
+            <value>
+                <fullName>SII Diploma</fullName>
+                <default>false</default>
+                <label>SII Diploma</label>
+            </value>
+            <value>
+                <fullName>CIMA Mastercourses</fullName>
+                <default>false</default>
+                <label>CIMA Mastercourses</label>
+            </value>
+            <value>
+                <fullName>CIMA OCR</fullName>
+                <default>false</default>
+                <label>CIMA OCR</label>
+            </value>
+            <value>
+                <fullName>ACCA OCR</fullName>
+                <default>false</default>
+                <label>ACCA OCR</label>
+            </value>
+            <value>
+                <fullName>ICAEW OCR</fullName>
+                <default>false</default>
+                <label>ICAEW OCR</label>
+            </value>
+            <value>
+                <fullName>Degree Programmes</fullName>
+                <default>false</default>
+                <label>Degree Programmes</label>
+            </value>
+            <value>
+                <fullName>LPC</fullName>
+                <default>false</default>
+                <label>LPC</label>
+            </value>
+            <value>
+                <fullName>GDL</fullName>
+                <default>false</default>
+                <label>GDL</label>
+            </value>
+            <value>
+                <fullName>BFI</fullName>
+                <default>false</default>
+                <label>BFI</label>
+            </value>
+            <value>
+                <fullName>MGMT</fullName>
+                <default>false</default>
+                <label>MGMT</label>
+            </value>
+            <value>
+                <fullName>A&amp;T</fullName>
+                <default>false</default>
+                <label>A&amp;T</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>PD</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Learning Media</controllingFieldValue>
+            <valueName>Books</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Learning Media</controllingFieldValue>
+            <valueName>Elearning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Learning Media</controllingFieldValue>
+            <valueName>Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business School</controllingFieldValue>
+            <valueName>BFI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business School</controllingFieldValue>
+            <valueName>MGMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business School</controllingFieldValue>
+            <valueName>A&amp;T</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business School</controllingFieldValue>
+            <controllingFieldValue>Law School</controllingFieldValue>
+            <valueName>PD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law School</controllingFieldValue>
+            <valueName>Degree Programmes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law School</controllingFieldValue>
+            <valueName>LPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law School</controllingFieldValue>
+            <valueName>GDL</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

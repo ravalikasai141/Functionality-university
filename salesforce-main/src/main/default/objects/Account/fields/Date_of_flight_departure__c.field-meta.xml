@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_flight_departure__c</fullName>
+    <description>Data to be able to capture against a student account by an agent, enrolment officer or engagement officer</description>
+    <externalId>false</externalId>
+    <label>Date of flight departure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

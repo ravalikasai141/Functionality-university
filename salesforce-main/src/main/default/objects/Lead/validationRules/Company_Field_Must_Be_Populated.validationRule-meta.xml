@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Field_Must_Be_Populated</fullName>
+    <active>true</active>
+    <description>The Company field must be populated for business leads.</description>
+    <errorConditionFormula>RecordType.Name = &apos;Business Development&apos; &amp;&amp;
+ISBLANK(Company)</errorConditionFormula>
+    <errorDisplayField>Company</errorDisplayField>
+    <errorMessage>This is a business lead and the Company field must be populated.</errorMessage>
+</ValidationRule>

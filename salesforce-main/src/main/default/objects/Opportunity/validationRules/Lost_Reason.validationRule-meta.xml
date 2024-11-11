@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason</fullName>
+    <active>false</active>
+    <description>You must enter a value if Stage is Cancelled or Declined</description>
+    <errorConditionFormula>AND (
+  OR (
+     ISPICKVAL(StageName, &quot;Cancelled&quot;),
+     ISPICKVAL(StageName, &quot;Declined&quot;)),
+ISBLANK(Reason_Lost__c),
+$Profile.Name = &quot;LM Standard User&quot; 
+
+)</errorConditionFormula>
+    <errorDisplayField>Reason_Lost__c</errorDisplayField>
+    <errorMessage>A reson must be entered if status is Cancelled or Declined</errorMessage>
+</ValidationRule>

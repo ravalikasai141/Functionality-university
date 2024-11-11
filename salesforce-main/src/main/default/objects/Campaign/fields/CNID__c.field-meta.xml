@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CNID__c</fullName>
+    <description>Campaign ID. Salesforce-generated unique identifier for marketing campaigns.  Used to associate lead uploads to campaign.</description>
+    <displayFormat>CN{0}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>Unique identification number for this campaign; every campaign will have a unique ID.  This ID is referenced for uploading students and campaign associations into Salesforce.</inlineHelpText>
+    <label>CNID</label>
+    <type>AutoNumber</type>
+</CustomField>

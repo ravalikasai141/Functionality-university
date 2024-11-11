@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <description>Update the QC Agent with the value of the new Lead Owner</description>
+        <name>Assign_New_QC_Owner</name>
+        <label>Assign New QC Owner</label>
+        <locationX>402</locationX>
+        <locationY>1631</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.BPP_Qualifying_Agent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Updates lead values once lead has been qualified</description>
+        <name>Qualified_Lead_Values</name>
+        <label>Qualified Lead Values</label>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.BPP_Qualified_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxQualifiedDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Lead_Ownership_Reassigned</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set the reassigned lead owner to the Default BES Owner</description>
+        <name>Set_BES_Assignment</name>
+        <label>Set BES Assignment</label>
+        <locationX>578</locationX>
+        <locationY>1139</locationY>
+        <assignmentItems>
+            <assignToReference>varReassignedOwner</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Setup.AssignmentUsers__c.Default_BES_Owner__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Re_engaged_Lead_Process</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set the reassigned lead owner to the Default Lead Owner (QC)</description>
+        <name>Set_QC_Assignment</name>
+        <label>Set QC Assignment</label>
+        <locationX>314</locationX>
+        <locationY>1139</locationY>
+        <assignmentItems>
+            <assignToReference>varReassignedOwner</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Setup.AssignmentUsers__c.Default_Lead_Owner__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Re_engaged_Lead_Process</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Have the email / phone preferences or values been updated?</description>
+        <name>Lead_Contact_Details_Updated</name>
+        <label>Lead Contact Details Updated?</label>
+        <locationX>534</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>Status_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact_Values_Changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Preferred_Email__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Preferred_Email__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Personal_Email__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Personal_Email__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Work_Email__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Work_Email__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Other_Email__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Other_Email__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Preferred_Phone__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Preferred_Phone__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Home_Phone__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Home_Phone__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.MobilePhone</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Work_Phone__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Work_Phone__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Process_Lead_Contact_Details</targetReference>
+            </connector>
+            <label>Contact Values Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Have new contact preferences been submitted (via a central process updating &apos;GDPR Opt In&apos; &amp; &apos;GDPR Modified&apos; fields)</description>
+        <name>Lead_Contact_Preference</name>
+        <label>Lead Contact Preferences Updated</label>
+        <locationX>534</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Contact_Details_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact_Preferences_Updated</name>
+            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GDPR_Modified__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.GDPR_Modified__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.GDPR_Modified__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lead_Contact_Preferences</targetReference>
+            </connector>
+            <label>Contact Preferences Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>The Lead Owner has been changed to a different user</description>
+        <name>Lead_Ownership_Reassigned</name>
+        <label>Lead Ownership Reassigned</label>
+        <locationX>534</locationX>
+        <locationY>1523</locationY>
+        <defaultConnector>
+            <targetReference>Update_Lead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_QC_Owner</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>QC Mgmt</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>QC</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_New_QC_Owner</targetReference>
+            </connector>
+            <label>New QC Owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determine if lead record needs to be reassigned when re-engaged.</description>
+        <name>Reassign_Ownership</name>
+        <label>Reassign Ownership?</label>
+        <locationX>578</locationX>
+        <locationY>1031</locationY>
+        <defaultConnector>
+            <targetReference>Re_engaged_Lead_Process</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Reassignment</defaultConnectorLabel>
+        <rules>
+            <name>Qualifying_Centre</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Lead_Status_Detail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contact Request</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_QC_Assignment</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Qualifying Centre</label>
+        </rules>
+        <rules>
+            <name>Business_Engagement_Specialists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Lead_Status_Detail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead Forensics</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_BES_Assignment</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Business Engagement Specialists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Actions based on the lead status being updated</description>
+        <name>Status_Updated</name>
+        <label>Status Updated</label>
+        <locationX>534</locationX>
+        <locationY>923</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Ownership_Reassigned</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Qualified</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Qualified</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Qualified_Lead_Values</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Qualified</label>
+        </rules>
+        <rules>
+            <name>Re_Engaged</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Re-engaged</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reassign_Ownership</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Re-Engaged</label>
+        </rules>
+    </decisions>
+    <description>Lead updates (context: after creation/update)</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Sets varEvaluateOwner variable when re-engaging lead. Default no, set to yes for external Contact Requests</description>
+        <name>fxEvaluateOwner</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( OR( 
+ISPICKVAL({!$Record.Status}, &quot;Re-engaged&quot;) &amp;&amp; ISPICKVAL({!$Record.Lead_Status_Detail__c}, &quot;Contact Request&quot;), 
+ISPICKVAL({!$Record.Status}, &quot;Re-engaged&quot;) &amp;&amp; ISPICKVAL({!$Record.Lead_Status_Detail__c}, &quot;Lead Forensics&quot;)),
+True, False)</expression>
+    </formulas>
+    <formulas>
+        <description>If the Qualified Date field has not yet been set then the current date/time is set, else the field retains its value</description>
+        <name>fxQualifiedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>IF(ISBLANK({!$Record.BPP_Qualified_Date__c}),NOW(),{!$Record.BPP_Qualified_Date__c})</expression>
+    </formulas>
+    <interviewLabel>Lead Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Automation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the lead record</description>
+        <name>Update_Lead</name>
+        <label>Update Lead</label>
+        <locationX>534</locationX>
+        <locationY>1823</locationY>
+        <inputAssignments>
+            <field>BPP_Qualified_Date__c</field>
+            <value>
+                <elementReference>$Record.BPP_Qualified_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BPP_Qualifying_Agent__c</field>
+            <value>
+                <elementReference>$Record.BPP_Qualifying_Agent__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>408</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Lead_Contact_Preference</targetReference>
+        </connector>
+        <filterFormula>{!$Setup.FlowSettings__c.Lead_Automation__c} = False</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Cleans UK phone number details. Sets phone &amp; email values according to the preferred options</description>
+        <name>Process_Lead_Contact_Details</name>
+        <label>Process Lead Contact Details</label>
+        <locationX>402</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>Status_Updated</targetReference>
+        </connector>
+        <flowName>Customer_Contact_Details_Updated</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varEmail</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varHomePhone</name>
+            <value>
+                <elementReference>$Record.Home_Phone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varMobilePhone</name>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varObjectTrigger</name>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varOtherEmail</name>
+            <value>
+                <elementReference>$Record.Other_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varPersonalEmail</name>
+            <value>
+                <elementReference>$Record.Personal_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varPhone</name>
+            <value>
+                <elementReference>$Record.Phone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varPreferredEmail</name>
+            <value>
+                <elementReference>$Record.Preferred_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varPreferredPhone</name>
+            <value>
+                <elementReference>$Record.Preferred_Phone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varWorkEmail</name>
+            <value>
+                <elementReference>$Record.Work_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varWorkPhone</name>
+            <value>
+                <elementReference>$Record.Work_Phone__c</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Run re-engaged lead process to reset lead cycle &amp; if desired reassign record</description>
+        <name>Re_engaged_Lead_Process</name>
+        <label>Re-engaged Lead Process</label>
+        <locationX>578</locationX>
+        <locationY>1331</locationY>
+        <connector>
+            <targetReference>Lead_Ownership_Reassigned</targetReference>
+        </connector>
+        <flowName>Re_engaged_Lead</flowName>
+        <inputAssignments>
+            <name>varLeadId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varLeadOwnerId</name>
+            <value>
+                <elementReference>varReassignedOwner</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <description>Runs process to update GDPR opt in fields</description>
+        <name>Update_Lead_Contact_Preferences</name>
+        <label>Update Lead Contact Preferences</label>
+        <locationX>402</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Lead_Contact_Details_Updated</targetReference>
+        </connector>
+        <flowName>Customer_Contact_Preferences</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varGDPROptInValue</name>
+            <value>
+                <elementReference>$Record.GDPR_Opt_In__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varObjectTrigger</name>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <description>Id of the user that the lead record should be reassigned to.</description>
+        <name>varReassignedOwner</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

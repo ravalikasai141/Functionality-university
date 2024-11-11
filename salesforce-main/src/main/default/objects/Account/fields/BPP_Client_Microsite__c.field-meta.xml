@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Client_Microsite__c</fullName>
+    <description>Bespoke BPP &apos;microsite&apos; URL</description>
+    <externalId>false</externalId>
+    <label>BPP Client Microsite</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

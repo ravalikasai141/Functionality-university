@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Lightning Message Channel controls the editing and saving of Field Set record components</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>The source component that submitted the event</description>
+        <fieldName>source</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>The view mode that should be rendered across all components</description>
+        <fieldName>viewMode</fieldName>
+    </lightningMessageFields>
+    <masterLabel>Render Field Set Message Channel</masterLabel>
+</LightningMessageChannel>

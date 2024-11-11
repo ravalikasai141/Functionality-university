@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Division__c</fullName>
+    <description>A list of divisions for NatWest Group PCDP England</description>
+    <externalId>false</externalId>
+    <label>Division</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Chief Audit Office</fullName>
+                <default>false</default>
+                <label>Chief Audit Office</label>
+            </value>
+            <value>
+                <fullName>Commercial &amp; Institutional Non Ring Fenced Bank</fullName>
+                <default>false</default>
+                <label>Commercial &amp; Institutional Non Ring Fenced Bank</label>
+            </value>
+            <value>
+                <fullName>Commercial &amp; Institutional Ring Fenced Bank</fullName>
+                <default>false</default>
+                <label>Commercial &amp; Institutional Ring Fenced Bank</label>
+            </value>
+            <value>
+                <fullName>Communications</fullName>
+                <default>false</default>
+                <label>Communications</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Group Chief of Staff Office</fullName>
+                <default>false</default>
+                <label>Group Chief of Staff Office</label>
+            </value>
+            <value>
+                <fullName>Leadership Hub</fullName>
+                <default>false</default>
+                <label>Leadership Hub</label>
+            </value>
+            <value>
+                <fullName>Legal, Governance &amp; Regulatory Affairs</fullName>
+                <default>false</default>
+                <label>Legal, Governance &amp; Regulatory Affairs</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>NatWest Digital X</fullName>
+                <default>false</default>
+                <label>NatWest Digital X</label>
+            </value>
+            <value>
+                <fullName>People and Transformation</fullName>
+                <default>false</default>
+                <label>People and Transformation</label>
+            </value>
+            <value>
+                <fullName>Private Banking</fullName>
+                <default>false</default>
+                <label>Private Banking</label>
+            </value>
+            <value>
+                <fullName>Retail Banking</fullName>
+                <default>false</default>
+                <label>Retail Banking</label>
+            </value>
+            <value>
+                <fullName>Risk</fullName>
+                <default>false</default>
+                <label>Risk</label>
+            </value>
+            <value>
+                <fullName>Strategy, Corporate Development and Sustainability</fullName>
+                <default>false</default>
+                <label>Strategy, Corporate Development and Sustainability</label>
+            </value>
+            <value>
+                <fullName>Ulster Bank</fullName>
+                <default>false</default>
+                <label>Ulster Bank</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

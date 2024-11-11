@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Qualifications</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Update Qualifications</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/apex.js&quot;)} 
+
+//call UpdateSISPerson 
+var result_updatesisperson = sforce.apex.execute(&quot;UpdateSISPerson&quot;,&quot;PersonInformation&quot;,  {accountId:&quot;{!Opportunity.AccountId}&quot;,opportunityId:&quot;{!Opportunity.Id}&quot;}); 
+if (result_updatesisperson != &quot;Success&quot;) 
+alert(result_updatesisperson); 
+else 
+document.location.reload(true);</url>
+</WebLink>

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector_Level_2__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team.  5/11/11</description>
+    <externalId>false</externalId>
+    <label>Tier 2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sector_Level_1__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A&amp;T</fullName>
+                <default>false</default>
+                <label>A&amp;T</label>
+            </value>
+            <value>
+                <fullName>AAT</fullName>
+                <default>false</default>
+                <label>AAT</label>
+            </value>
+            <value>
+                <fullName>AAT APPS</fullName>
+                <default>false</default>
+                <label>AAT APPS</label>
+            </value>
+            <value>
+                <fullName>ACCA FT</fullName>
+                <default>false</default>
+                <label>ACCA FT</label>
+            </value>
+            <value>
+                <fullName>ACCA PT</fullName>
+                <default>false</default>
+                <label>ACCA PT</label>
+            </value>
+            <value>
+                <fullName>Accountancy</fullName>
+                <default>false</default>
+                <label>Accountancy</label>
+            </value>
+            <value>
+                <fullName>ACTUARIAL EDUCATION</fullName>
+                <default>false</default>
+                <label>ACTUARIAL EDUCATION</label>
+            </value>
+            <value>
+                <fullName>Aerospace &amp; Defence</fullName>
+                <default>false</default>
+                <label>Aerospace &amp; Defence</label>
+            </value>
+            <value>
+                <fullName>ATT</fullName>
+                <default>false</default>
+                <label>ATT</label>
+            </value>
+            <value>
+                <fullName>ATT APPS</fullName>
+                <default>false</default>
+                <label>ATT APPS</label>
+            </value>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>BPTC</fullName>
+                <default>false</default>
+                <label>BPTC</label>
+            </value>
+            <value>
+                <fullName>Broker</fullName>
+                <default>false</default>
+                <label>Broker</label>
+            </value>
+            <value>
+                <fullName>BUS ADMIN</fullName>
+                <default>false</default>
+                <label>BUS ADMIN</label>
+            </value>
+            <value>
+                <fullName>BUSINESS DEGREES</fullName>
+                <default>false</default>
+                <label>BUSINESS DEGREES</label>
+            </value>
+            <value>
+                <fullName>Central Bank</fullName>
+                <default>false</default>
+                <label>Central Bank</label>
+            </value>
+            <value>
+                <fullName>Central Government</fullName>
+                <default>false</default>
+                <label>Central Government</label>
+            </value>
+            <value>
+                <fullName>CFA</fullName>
+                <default>false</default>
+                <label>CFA</label>
+            </value>
+            <value>
+                <fullName>CFAB</fullName>
+                <default>false</default>
+                <label>CFAB</label>
+            </value>
+            <value>
+                <fullName>Charity</fullName>
+                <default>false</default>
+                <label>Charity</label>
+            </value>
+            <value>
+                <fullName>CII</fullName>
+                <default>false</default>
+                <label>CII</label>
+            </value>
+            <value>
+                <fullName>CILEX</fullName>
+                <default>false</default>
+                <label>CILEX</label>
+            </value>
+            <value>
+                <fullName>CIM</fullName>
+                <default>false</default>
+                <label>CIM</label>
+            </value>
+            <value>
+                <fullName>CIMA</fullName>
+                <default>false</default>
+                <label>CIMA</label>
+            </value>
+            <value>
+                <fullName>CIMA APPS</fullName>
+                <default>false</default>
+                <label>CIMA APPS</label>
+            </value>
+            <value>
+                <fullName>CIMA PD</fullName>
+                <default>false</default>
+                <label>CIMA PD</label>
+            </value>
+            <value>
+                <fullName>CIPD</fullName>
+                <default>false</default>
+                <label>CIPD</label>
+            </value>
+            <value>
+                <fullName>CISI</fullName>
+                <default>false</default>
+                <label>CISI</label>
+            </value>
+            <value>
+                <fullName>Commercial Bank</fullName>
+                <default>false</default>
+                <label>Commercial Bank</label>
+            </value>
+            <value>
+                <fullName>Committee</fullName>
+                <default>false</default>
+                <label>Committee</label>
+            </value>
+            <value>
+                <fullName>Consumer Business</fullName>
+                <default>false</default>
+                <label>Consumer Business</label>
+            </value>
+            <value>
+                <fullName>Corporate Bank</fullName>
+                <default>false</default>
+                <label>Corporate Bank</label>
+            </value>
+            <value>
+                <fullName>CPD</fullName>
+                <default>false</default>
+                <label>CPD</label>
+            </value>
+            <value>
+                <fullName>CPS</fullName>
+                <default>false</default>
+                <label>CPS</label>
+            </value>
+            <value>
+                <fullName>Crown Prosecution Service</fullName>
+                <default>false</default>
+                <label>Crown Prosecution Service</label>
+            </value>
+            <value>
+                <fullName>CTA</fullName>
+                <default>false</default>
+                <label>CTA</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Educational Establishment</fullName>
+                <default>false</default>
+                <label>Educational Establishment</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Energy, Infrastructure &amp; Utilities (EIU)</fullName>
+                <default>false</default>
+                <label>Energy, Infrastructure &amp; Utilities (EIU)</label>
+            </value>
+            <value>
+                <fullName>Exchange</fullName>
+                <default>false</default>
+                <label>Exchange</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>GDL</fullName>
+                <default>false</default>
+                <label>GDL</label>
+            </value>
+            <value>
+                <fullName>Higher rights</fullName>
+                <default>false</default>
+                <label>Higher rights</label>
+            </value>
+            <value>
+                <fullName>ICAEW</fullName>
+                <default>false</default>
+                <label>ICAEW</label>
+            </value>
+            <value>
+                <fullName>ICAS</fullName>
+                <default>false</default>
+                <label>ICAS</label>
+            </value>
+            <value>
+                <fullName>ICSA</fullName>
+                <default>false</default>
+                <label>ICSA</label>
+            </value>
+            <value>
+                <fullName>IMC</fullName>
+                <default>false</default>
+                <label>IMC</label>
+            </value>
+            <value>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+                <label>Industrial</label>
+            </value>
+            <value>
+                <fullName>Industry &amp; Commerce</fullName>
+                <default>false</default>
+                <label>Industry &amp; Commerce</label>
+            </value>
+            <value>
+                <fullName>Investment Bank</fullName>
+                <default>false</default>
+                <label>Investment Bank</label>
+            </value>
+            <value>
+                <fullName>Investment Management</fullName>
+                <default>false</default>
+                <label>Investment Management</label>
+            </value>
+            <value>
+                <fullName>KPMG GDAC</fullName>
+                <default>false</default>
+                <label>KPMG GDAC</label>
+            </value>
+            <value>
+                <fullName>Law</fullName>
+                <default>false</default>
+                <label>Law</label>
+            </value>
+            <value>
+                <fullName>LAW DEGREES</fullName>
+                <default>false</default>
+                <label>LAW DEGREES</label>
+            </value>
+            <value>
+                <fullName>Law Firm</fullName>
+                <default>false</default>
+                <label>Law Firm</label>
+            </value>
+            <value>
+                <fullName>Leadership &amp; dev</fullName>
+                <default>false</default>
+                <label>Leadership &amp; dev</label>
+            </value>
+            <value>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+                <label>Life Sciences</label>
+            </value>
+            <value>
+                <fullName>Local Authority</fullName>
+                <default>false</default>
+                <label>Local Authority</label>
+            </value>
+            <value>
+                <fullName>LPC</fullName>
+                <default>false</default>
+                <label>LPC</label>
+            </value>
+            <value>
+                <fullName>Management Consultancy</fullName>
+                <default>false</default>
+                <label>Management Consultancy</label>
+            </value>
+            <value>
+                <fullName>MCA</fullName>
+                <default>false</default>
+                <label>MCA</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>NHS</fullName>
+                <default>false</default>
+                <label>NHS</label>
+            </value>
+            <value>
+                <fullName>NY Bar</fullName>
+                <default>false</default>
+                <label>NY Bar</label>
+            </value>
+            <value>
+                <fullName>OTHER PRODUCTS BUSINESS SCHOOL</fullName>
+                <default>false</default>
+                <label>OTHER PRODUCTS BUSINESS SCHOOL</label>
+            </value>
+            <value>
+                <fullName>OTHER PRODUCTS LAW</fullName>
+                <default>false</default>
+                <label>OTHER PRODUCTS LAW</label>
+            </value>
+            <value>
+                <fullName>OTHER PRODUCTS PQ</fullName>
+                <default>false</default>
+                <label>OTHER PRODUCTS PQ</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>PD - INSOLVENCY</fullName>
+                <default>false</default>
+                <label>PD - INSOLVENCY</label>
+            </value>
+            <value>
+                <fullName>Police</fullName>
+                <default>false</default>
+                <label>Police</label>
+            </value>
+            <value>
+                <fullName>Private Equity</fullName>
+                <default>false</default>
+                <label>Private Equity</label>
+            </value>
+            <value>
+                <fullName>Professional Services firm</fullName>
+                <default>false</default>
+                <label>Professional Services firm</label>
+            </value>
+            <value>
+                <fullName>PSC</fullName>
+                <default>false</default>
+                <label>PSC</label>
+            </value>
+            <value>
+                <fullName>Public sector</fullName>
+                <default>false</default>
+                <label>Public sector</label>
+            </value>
+            <value>
+                <fullName>QLTS</fullName>
+                <default>false</default>
+                <label>QLTS</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Regulator</fullName>
+                <default>false</default>
+                <label>Regulator</label>
+            </value>
+            <value>
+                <fullName>Securities House</fullName>
+                <default>false</default>
+                <label>Securities House</label>
+            </value>
+            <value>
+                <fullName>Stockbroker</fullName>
+                <default>false</default>
+                <label>Stockbroker</label>
+            </value>
+            <value>
+                <fullName>Technology &amp; Telco</fullName>
+                <default>false</default>
+                <label>Technology &amp; Telco</label>
+            </value>
+            <value>
+                <fullName>Transport</fullName>
+                <default>false</default>
+                <label>Transport</label>
+            </value>
+            <value>
+                <fullName>VALIDATED</fullName>
+                <default>false</default>
+                <label>VALIDATED</label>
+            </value>
+            <value>
+                <fullName>VANTA</fullName>
+                <default>false</default>
+                <label>VANTA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>AAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>ACCA FT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>ACCA PT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>ACTUARIAL EDUCATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>ATT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>CIMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>CTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>ICAEW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>ICAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>OTHER PRODUCTS PQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PQ</controllingFieldValue>
+            <valueName>PD - INSOLVENCY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>Crown Prosecution Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>Financial Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>Industry &amp; Commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>Law Firm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>NHS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>Professional Services firm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL DEVELOPMENT</controllingFieldValue>
+            <valueName>Public sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS SCHOOL</controllingFieldValue>
+            <valueName>BUSINESS DEGREES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS SCHOOL</controllingFieldValue>
+            <valueName>KPMG GDAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS SCHOOL</controllingFieldValue>
+            <valueName>OTHER PRODUCTS BUSINESS SCHOOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS SCHOOL</controllingFieldValue>
+            <valueName>VANTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINANCIAL SERVICES</controllingFieldValue>
+            <valueName>CFA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINANCIAL SERVICES</controllingFieldValue>
+            <valueName>ICSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINANCIAL SERVICES</controllingFieldValue>
+            <valueName>IMC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>AAT APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>ATT APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>BUS ADMIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CFAB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CII</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CILEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CIMA APPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CIPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>CISI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PROFESSIONAL APPS</controllingFieldValue>
+            <valueName>MCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW SCHOOL</controllingFieldValue>
+            <valueName>BPTC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW SCHOOL</controllingFieldValue>
+            <valueName>GDL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW SCHOOL</controllingFieldValue>
+            <valueName>LAW DEGREES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW SCHOOL</controllingFieldValue>
+            <valueName>LPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LAW SCHOOL</controllingFieldValue>
+            <valueName>OTHER PRODUCTS LAW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SCHOOL OF HEALTH</controllingFieldValue>
+            <valueName>CPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SCHOOL OF HEALTH</controllingFieldValue>
+            <valueName>VALIDATED</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

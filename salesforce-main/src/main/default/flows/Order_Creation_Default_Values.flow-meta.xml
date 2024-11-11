@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <description>Add the account default billing address as the billing address on the order</description>
+        <name>Add_Billing_Address_To_Order</name>
+        <label>Add Billing Address To Order</label>
+        <locationX>978</locationX>
+        <locationY>451</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Bill_To_Address__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account_Default_Billing_Address.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Stock_Site_Specified</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Add the account default delivery address as the delivery address on the order</description>
+        <name>Add_Delivery_Address_To_Order</name>
+        <label>Add Delivery Address To Order</label>
+        <locationX>969</locationX>
+        <locationY>173</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Ship_To_Address__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account_Default_Delivery_Address.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Billing_Address_Specified</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set account Deliver Materials to Student value as the default preference for the order</description>
+        <name>Set_Company_Material_Delivery_Preference</name>
+        <label>Set Company Material Delivery Preference</label>
+        <locationX>972</locationX>
+        <locationY>812</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Deliver_Materials_to_Student__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Deliver_Materials_to_Student__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Set default stock site</description>
+        <name>Set_Stock_Site</name>
+        <label>Set Stock Site</label>
+        <locationX>981</locationX>
+        <locationY>613</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Stock_Site__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Label.Default_Stock_Site</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Order_For_Company_Account</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check that a default delivery record has been found.</description>
+        <name>Account_Default_Billing_Found</name>
+        <label>Account Default Billing Found</label>
+        <locationX>757</locationX>
+        <locationY>451</locationY>
+        <defaultConnector>
+            <targetReference>Stock_Site_Specified</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Default_Billing_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Default_Billing_Address.Student__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.AccountId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account_Default_Billing_Address.Primary_Billing__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_Billing_Address_To_Order</targetReference>
+            </connector>
+            <label>Default Billing Address</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check that a default delivery record has been found.</description>
+        <name>Account_Default_Delivery_Found</name>
+        <label>Account Default Delivery Found</label>
+        <locationX>759</locationX>
+        <locationY>175</locationY>
+        <defaultConnector>
+            <targetReference>Billing_Address_Specified</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Default_Delivery_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Default_Delivery_Address.Student__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.AccountId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account_Default_Delivery_Address.Primary_Delivery__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_Delivery_Address_To_Order</targetReference>
+            </connector>
+            <label>Default Delivery Address</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has a billing address been specified? Should only add default address when none has been specified upon creation.</description>
+        <name>Billing_Address_Specified</name>
+        <label>Billing Address Specified?</label>
+        <locationX>399</locationX>
+        <locationY>322</locationY>
+        <defaultConnector>
+            <targetReference>Stock_Site_Specified</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Billing_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Bill_To_Address__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account_Default_Billing_Address</targetReference>
+            </connector>
+            <label>No Billing Address</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has a delivery address been specified? Should only add default address when none has been specified upon creation.</description>
+        <name>Delivery_Address_Specified</name>
+        <label>Delivery Address Specified?</label>
+        <locationX>396</locationX>
+        <locationY>125</locationY>
+        <defaultConnector>
+            <targetReference>Billing_Address_Specified</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Delivery_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Ship_To_Address__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account_Default_Delivery_Address</targetReference>
+            </connector>
+            <label>No Delivery Address</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the account on the order a company account?</description>
+        <name>Order_For_Company_Account</name>
+        <label>Order For Company Account</label>
+        <locationX>399</locationX>
+        <locationY>809</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Company_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.IsPersonAccount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Company_Material_Delivery_Preference</targetReference>
+            </connector>
+            <label>Company Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has a stock site been specified on the order?</description>
+        <name>Stock_Site_Specified</name>
+        <label>Stock Site Specified?</label>
+        <locationX>396</locationX>
+        <locationY>557</locationY>
+        <defaultConnector>
+            <targetReference>Order_For_Company_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Stock_Site</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Stock_Site__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Stock_Site</targetReference>
+            </connector>
+            <label>No Stock Site</label>
+        </rules>
+    </decisions>
+    <description>Adds default delivery address as well as company materials delivery preference (Deliver Materials to Student)</description>
+    <interviewLabel>Order Creation Default Values {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Order Creation Default Values</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the address record set as the default billing for the account on the order</description>
+        <name>Get_Account_Default_Billing_Address</name>
+        <label>Get Account Default Billing Address</label>
+        <locationX>623</locationX>
+        <locationY>387</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_Default_Billing_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Student__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Primary_Billing__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Address__c</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the address record set as the default delivery for the account on the order</description>
+        <name>Get_Account_Default_Delivery_Address</name>
+        <label>Get Account Default Delivery Address</label>
+        <locationX>620</locationX>
+        <locationY>122</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_Default_Delivery_Found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Student__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Primary_Delivery__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Address__c</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>28</locationX>
+        <locationY>113</locationY>
+        <connector>
+            <targetReference>Delivery_Address_Specified</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Order</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

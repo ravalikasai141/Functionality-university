@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_did_you_hear_about_us__c</fullName>
+    <description>How did this student hear about us?</description>
+    <externalId>false</externalId>
+    <label>How did you hear about us?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Internet search</fullName>
+                <default>false</default>
+                <label>Internet search</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>In the news</fullName>
+                <default>false</default>
+                <label>In the news</label>
+            </value>
+            <value>
+                <fullName>Via a Professional body</fullName>
+                <default>false</default>
+                <label>Via a Professional body</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Friend/Family/ Colleague</fullName>
+                <default>false</default>
+                <label>Friend/Family/ Colleague</label>
+            </value>
+            <value>
+                <fullName>You are a former student (Alumni)</fullName>
+                <default>false</default>
+                <label>You are a former student (Alumni)</label>
+            </value>
+            <value>
+                <fullName>University or school</fullName>
+                <default>false</default>
+                <label>University or school</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Not available</fullName>
+                <default>false</default>
+                <label>Not available</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

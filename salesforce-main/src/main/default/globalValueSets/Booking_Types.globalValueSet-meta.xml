@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Apprenticeship bookings</fullName>
+        <default>false</default>
+        <label>Apprenticeship bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Poland bookings</fullName>
+        <default>false</default>
+        <label>Poland bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Channel Island bookings</fullName>
+        <default>false</default>
+        <label>Channel Island bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Apprenticeship chargeable bookings</fullName>
+        <default>false</default>
+        <label>Apprenticeship chargeable bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Professional qualifications bookings</fullName>
+        <default>false</default>
+        <label>Professional qualifications bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Learning Media Only</fullName>
+        <default>false</default>
+        <label>Learning Media Only</label>
+    </customValue>
+    <customValue>
+        <fullName>Romania Bookings</fullName>
+        <default>false</default>
+        <label>Romania Bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Malaysia Bookings</fullName>
+        <default>false</default>
+        <label>Malaysia Bookings</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Price Key Client Invoiced Off System</fullName>
+        <default>false</default>
+        <label>Fixed Price Key Client Invoiced Off System</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Services Phase 2 Client</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Client Services Phase 2 Client</label>
+    </customValue>
+    <masterLabel>Booking Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

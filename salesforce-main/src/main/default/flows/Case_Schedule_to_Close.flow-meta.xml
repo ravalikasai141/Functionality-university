@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>When an open case is in a state where it needs to schedule to close at a future time (assuming no further updates are made to the case), this will schedule</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fxClosedStatus</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Status},&quot;Unverified&quot;),&quot;Closed - Unverified&quot;,&quot;Closed&quot;)</expression>
+    </formulas>
+    <interviewLabel>Case Schedule for Close {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Schedule to Close</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Close_Case</name>
+        <label>Close Case</label>
+        <locationX>308</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <elementReference>fxClosedStatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(
+({!$Record.RecordType.Name} = &apos;Student Query&apos; || {!$Record.RecordType.Name} = &apos;Customer Service&apos;),
+{!$Record.IsClosed} = False,
+(ISPICKVAL({!$Record.Status}, &apos;Ready to Close&apos;) || ISPICKVAL({!$Record.Status}, &apos;Unverified&apos;)),
+NOT(ISBLANK({!$Record.Case_Auto_Close_Date_Time__c}))
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Case_Scheduled_to_Close</name>
+            <connector>
+                <targetReference>Close_Case</targetReference>
+            </connector>
+            <label>Case Scheduled to Close</label>
+            <offsetNumber>0</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>Case_Auto_Close_Date_Time__c</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>600</triggerOrder>
+</Flow>

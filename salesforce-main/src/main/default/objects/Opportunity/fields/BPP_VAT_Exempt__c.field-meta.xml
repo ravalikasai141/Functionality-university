@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_VAT_Exempt__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Only tick this box if we do not charge VAT on the products booked against this opportunity. This may occur where a supplier has subcontracted us to deliver training under an apprenticeship so is exempt from VAT, or for PQ products charged under University. Please speak to your line manager if you are unsure on this.</inlineHelpText>
+    <label>VAT Exempt?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

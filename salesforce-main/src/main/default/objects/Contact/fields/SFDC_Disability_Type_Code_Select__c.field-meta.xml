@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Disability_Type_Code_Select__c</fullName>
+    <description>Master learning support / disability student account field. Used for HESA reporting</description>
+    <externalId>false</externalId>
+    <label>Disability (HESA)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>95~ No known impairment, health condition or learning difference</fullName>
+                <default>false</default>
+                <label>95~ No known impairment, health condition or learning difference</label>
+            </value>
+            <value>
+                <fullName>51~ Learning difference such as dyslexia, dyspraxia or AD(H)D</fullName>
+                <default>false</default>
+                <label>51~ Learning difference such as dyslexia, dyspraxia or AD(H)D</label>
+            </value>
+            <value>
+                <fullName>53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition</fullName>
+                <default>false</default>
+                <label>53~ Social/communication conditions such as a speech and language impairment or an autistic spectrum condition</label>
+            </value>
+            <value>
+                <fullName>54~ Long-term illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy</fullName>
+                <default>false</default>
+                <label>54~ Long-term illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy</label>
+            </value>
+            <value>
+                <fullName>55~ Mental health condition, challenge or disorder, such as depression, schizophrenia or anxiety</fullName>
+                <default>false</default>
+                <label>55~ Mental health condition, challenge or disorder, such as depression, schizophrenia or anxiety</label>
+            </value>
+            <value>
+                <fullName>56~ Physical impairment (a condition that substantially limits one or more basic physical activities such as walking, climbing stairs, lifting or carrying)</fullName>
+                <default>false</default>
+                <label>56~ Physical impairment (a condition that substantially limits one or more basic physical activities such as walking, climbing stairs, lifting or carrying)</label>
+            </value>
+            <value>
+                <fullName>57~ Deaf or have a hearing impairment</fullName>
+                <default>false</default>
+                <label>57~ Deaf or have a hearing impairment</label>
+            </value>
+            <value>
+                <fullName>58~ Blind or have a visual impairment uncorrected by glasses</fullName>
+                <default>false</default>
+                <label>58~ Blind or have a visual impairment uncorrected by glasses</label>
+            </value>
+            <value>
+                <fullName>59~ Development condition that you have had since childhood which affects motor, cognitive, social and emotional skills, and speech and language</fullName>
+                <default>false</default>
+                <label>59~ Development condition that you have had since childhood which affects motor, cognitive, social and emotional skills, and speech and language</label>
+            </value>
+            <value>
+                <fullName>96~ An impairment, health condition or learning difference not listed above</fullName>
+                <default>false</default>
+                <label>96~ An impairment, health condition or learning difference not listed above</label>
+            </value>
+            <value>
+                <fullName>98~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>98~ Prefer not to say</label>
+            </value>
+            <value>
+                <fullName>99~ Not Available</fullName>
+                <default>false</default>
+                <label>99~ Not Available</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

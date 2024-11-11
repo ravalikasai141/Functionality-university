@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_comment_creation_on_Closed_Case</fullName>
+    <active>true</active>
+    <description>This rule will not allow Integration User to add case comment once the case is closed.</description>
+    <errorConditionFormula>AND(IsCaseClosed__c  = true,$Profile.Name = &apos;System Integration&apos;)</errorConditionFormula>
+    <errorMessage>You cannot add the comment since case is closed</errorMessage>
+</ValidationRule>

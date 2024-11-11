@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modules__c</fullName>
+    <description>Used to indicate which individual modules a student is enrolling</description>
+    <externalId>false</externalId>
+    <label>Modules</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACCA - F1 (AB)</fullName>
+                <default>false</default>
+                <label>ACCA - F1 (AB)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F2 (MA)</fullName>
+                <default>false</default>
+                <label>ACCA - F2 (MA)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F3 (FA)</fullName>
+                <default>false</default>
+                <label>ACCA - F3 (FA)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F4 (LW)</fullName>
+                <default>false</default>
+                <label>ACCA - F4 (LW)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F5 (PM)</fullName>
+                <default>false</default>
+                <label>ACCA - F5 (PM)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F6 (TX)</fullName>
+                <default>false</default>
+                <label>ACCA - F6 (TX)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F7 (FR)</fullName>
+                <default>false</default>
+                <label>ACCA - F7 (FR)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F8 (AA)</fullName>
+                <default>false</default>
+                <label>ACCA - F8 (AA)</label>
+            </value>
+            <value>
+                <fullName>ACCA - F9 (FM)</fullName>
+                <default>false</default>
+                <label>ACCA - F9 (FM)</label>
+            </value>
+            <value>
+                <fullName>ACCA - SBL</fullName>
+                <default>false</default>
+                <label>ACCA - SBL</label>
+            </value>
+            <value>
+                <fullName>ACCA - SBR</fullName>
+                <default>false</default>
+                <label>ACCA - SBR</label>
+            </value>
+            <value>
+                <fullName>LEGACY - ACCA - Essentials - P3</fullName>
+                <default>false</default>
+                <label>LEGACY - ACCA - Essentials - P3</label>
+            </value>
+            <value>
+                <fullName>ACCA - P4 (AFM)</fullName>
+                <default>false</default>
+                <label>ACCA - P4 (AFM)</label>
+            </value>
+            <value>
+                <fullName>ACCA - P5 (APM)</fullName>
+                <default>false</default>
+                <label>ACCA - P5 (APM)</label>
+            </value>
+            <value>
+                <fullName>ACCA - P6 (ATX)</fullName>
+                <default>false</default>
+                <label>ACCA - P6 (ATX)</label>
+            </value>
+            <value>
+                <fullName>ACCA - P7 (AAA)</fullName>
+                <default>false</default>
+                <label>ACCA - P7 (AAA)</label>
+            </value>
+            <value>
+                <fullName>Default</fullName>
+                <default>false</default>
+                <label>Default</label>
+            </value>
+            <value>
+                <fullName>GDL – Contract Law</fullName>
+                <default>false</default>
+                <label>GDL – Contract Law</label>
+            </value>
+            <value>
+                <fullName>GDL – Constitutional and Administrative</fullName>
+                <default>false</default>
+                <label>GDL – Constitutional and Administrative</label>
+            </value>
+            <value>
+                <fullName>GDL – Criminal Law</fullName>
+                <default>false</default>
+                <label>GDL – Criminal Law</label>
+            </value>
+            <value>
+                <fullName>GDL – Equity and Trusts Law</fullName>
+                <default>false</default>
+                <label>GDL – Equity and Trusts Law</label>
+            </value>
+            <value>
+                <fullName>GDL – Land Law</fullName>
+                <default>false</default>
+                <label>GDL – Land Law</label>
+            </value>
+            <value>
+                <fullName>GDL – Law of the European Union</fullName>
+                <default>false</default>
+                <label>GDL – Law of the European Union</label>
+            </value>
+            <value>
+                <fullName>GDL – Law of Tort</fullName>
+                <default>false</default>
+                <label>GDL – Law of Tort</label>
+            </value>
+            <value>
+                <fullName>LPC – Advanced Commercial Litigation</fullName>
+                <default>false</default>
+                <label>LPC – Advanced Commercial Litigation</label>
+            </value>
+            <value>
+                <fullName>LPC – Advanced Commercial Property</fullName>
+                <default>false</default>
+                <label>LPC – Advanced Commercial Property</label>
+            </value>
+            <value>
+                <fullName>LPC – Advanced Criminal Litigation</fullName>
+                <default>false</default>
+                <label>LPC – Advanced Criminal Litigation</label>
+            </value>
+            <value>
+                <fullName>LPC - Corporate Finance</fullName>
+                <default>false</default>
+                <label>LPC - Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>LPC - Debt Finance</fullName>
+                <default>false</default>
+                <label>LPC - Debt Finance</label>
+            </value>
+            <value>
+                <fullName>LPC - Employment Law</fullName>
+                <default>false</default>
+                <label>LPC - Employment Law</label>
+            </value>
+            <value>
+                <fullName>LPC - Equity Finance</fullName>
+                <default>false</default>
+                <label>LPC - Equity Finance</label>
+            </value>
+            <value>
+                <fullName>LPC - Family Law</fullName>
+                <default>false</default>
+                <label>LPC - Family Law</label>
+            </value>
+            <value>
+                <fullName>LPC - Immigration Law</fullName>
+                <default>false</default>
+                <label>LPC - Immigration Law</label>
+            </value>
+            <value>
+                <fullName>LPC – Insurance Law</fullName>
+                <default>false</default>
+                <label>LPC – Insurance Law</label>
+            </value>
+            <value>
+                <fullName>LPC – Intellectual Property and Commerc</fullName>
+                <default>false</default>
+                <label>LPC – Intellectual Property and Commerc</label>
+            </value>
+            <value>
+                <fullName>LPC – Media and Entertainment Law</fullName>
+                <default>false</default>
+                <label>LPC – Media and Entertainment Law</label>
+            </value>
+            <value>
+                <fullName>LPC – Personal Injury and Clinical Negl</fullName>
+                <default>false</default>
+                <label>LPC – Personal Injury and Clinical Negl</label>
+            </value>
+            <value>
+                <fullName>LPC – Private Acquisitions</fullName>
+                <default>false</default>
+                <label>LPC – Private Acquisitions</label>
+            </value>
+            <value>
+                <fullName>LPC – Private Client (Wills,Probate...)</fullName>
+                <default>false</default>
+                <label>LPC – Private Client (Wills,Probate...)</label>
+            </value>
+            <value>
+                <fullName>LPC – Stage 1</fullName>
+                <default>false</default>
+                <label>LPC – Stage 1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

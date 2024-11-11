@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Next steps: Arrange your application review call</title>
+    <style type="text/css">
+      body {
+        font-family: "MorePro Regular", arial, helvetica, sans-serif;
+        font-size: 15px;
+        background-color: #fff;
+        color: #3c3c3b;
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: none;
+      }
+      p {
+        margin: 1em 0;
+        line-height: 150%;
+        font-family: "MorePro Regular", arial, helvetica, sans-serif;
+      }
+      table td {
+        border-collapse: collapse;
+      }
+      img {
+        outline: 0;
+      }
+      a img {
+        border: none;
+      }
+      @font-face {
+        font-family: "GT Walsheim Regular";
+        font-style: normal;
+        font-weight: normal;
+        src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/GT-Walsheim-Regular.woff2)
+          format("woff2");
+      }
+      @font-face {
+        font-family: "GT Walsheim Bold";
+        font-style: normal;
+        font-weight: bold;
+        src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/GT-Walsheim-Bold.woff2)
+          format("woff2");
+      }
+      @font-face {
+        font-family: "MorePro Regular";
+        font-style: normal;
+        font-weight: normal;
+        src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/372FB9_1_0.woff2)
+          format("woff2");
+      }
+      @font-face {
+        font-family: "MorePro Bold";
+        font-style: normal;
+        font-weight: bold;
+        src: url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/fonts/372FB9_0_0.woff2)
+          format("woff2");
+      }
+      @media only screen and (max-width: 480px) {
+        .mobile-hidden {
+          display: none !important;
+        }
+        img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        .header img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        .responsive-td {
+          width: 100% !important;
+          display: block !important;
+          padding: 0 !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+        body,
+        .tb_properties {
+          font-size: 15px !important;
+          font-family: "MorePro Regular", arial, helvetica, sans-serif !important;
+          color: #3c3c3b !important;
+          line-height: 1.5 !important;
+          padding: 0 !important;
+        }
+        .buttonstyles {
+          font-family: GT Walsheim Bold, arial, helvetica, sans-serif !important;
+          font-size: 16px !important;
+          color: #fff !important;
+          text-align: left;
+          text-decoration: none;
+          display: block;
+          background-color: #3763ac;
+          border: 1px solid #3763ac;
+          padding: 10px 30px;
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+        }
+        h1 {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+          color: #202020;
+          line-height: 1;
+        }
+        h2 {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 17px;
+          color: #202020;
+          line-height: 1.5;
+        }
+        h3 {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          color: #202020;
+          line-height: 1;
+        }
+        p {
+          color: #3c3c3b;
+          font-family: "MorePro Regular", Arial, Helvetica, sans-serif;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 1.5;
+        }
+        a:not(.buttonstyles) {
+          line-height: 1 !important;
+        }
+        .mobile-hidden {
+          display: none !important;
+        }
+        .responsive-td {
+          width: 100% !important;
+          display: block !important;
+          padding: 0 !important;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+        }
+        .mobile-hidden {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      border="0"
+      class="tb_properties"
+      style="background-color: #f9f7f7"
+      cellspacing="0"
+      cellpadding="0"
+      bgcolor="#f9f7f7"
+      width="600"
+      align="center"
+    >
+      <!-- Header area, with logo -->
+      <tr>
+        <td
+          align="center"
+          valign="top"
+          style="
+            background-color: #3c3c3b;
+            border: 10px solid #3c3c3b;
+            min-width: 100%;
+            padding: 1px;
+          "
+          width="100%"
+          class="header responsive-td"
+          colspan="3"
+        >
+          <a
+            href="https://www.bpp.com/?utm_source=Direct_Apps&utm_medium=Email"
+            title="BPP"
+          >
+            <img
+              src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/bd6c2287-bf68-427f-869d-05f0e9c07204.png"
+              alt="BPP"
+              height="30"
+              width="60"
+              style="
+                display: block;
+                width: 60px;
+                height: 30px;
+                padding: 0;
+                text-align: center;
+              "
+            />
+          </a>
+        </td>
+      </tr>
+      <!-- Main content of email  -->
+      <tr>
+        <!-- Left hand spotty block column, note image is within additional table as this allows it to be hidden on mobile -->
+        <td
+          valign="top"
+          style="width: 15%; padding-right: 6px"
+          class="responsive-td stylingblock-content-wrapper mobile-hidden"
+        >
+          <table
+            width="100%"
+            style="background-color: transparent; min-width: 100%"
+            class="stylingblock-content-wrapper mobile-hidden"
+          >
+            <tr>
+              <td
+                style="padding: 8px 2px 0 8px"
+                align="center"
+                class="stylingblock-content-wrapper mobile-hidden"
+              >
+                <img
+                  alt="BPP spots background"
+                  src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/1/17012634-81d9-4d07-bcc6-69388e80807d.png"
+                  width="67"
+                  style="
+                    display: block;
+                    padding: 0;
+                    text-align: center;
+                    height: auto;
+                    width: 100%;
+                    border: 0;
+                  "
+                />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <!-- Main Content area, email content goes here -->
+        <td
+          class="responsive-td stylingblock-content-wrapper"
+          valign="top"
+          style="
+            width: 74%;
+            padding: 55px 30px 10px;
+            background-color: transparent;
+          "
+        >
+          <p>Dear {!Case.Contact},</p>
+          <p>
+            Thank you for your application to join an apprenticeship with BPP.
+          </p>
+          <p>
+          As part of the onboarding process and adherence to the Apprenticeship funding rules and criteria, we require you to book
+          a review call with a member of our Apprenticeship team. 
+          </p>
+          <h4>What you need to do next</h4>
+          <p>You now need to set up a quick 15 minute video call to:</p>
+          <ul>
+            <li>Review the information you've entered in your application</li>
+            <li>Check your ID documents</li>
+          </ul>
+           Book your application review call      
+        <a
+href="https://outlook.office365.com/owa/calendar/BPPApplicationReviewCall@BPPSERVICESLIMITED.onmicrosoft.com/bookings/"
+                >here</a
+              > 
+
+          <p>
+           Important: You must arrange this call before you can start your apprenticeship programme.
+            Ideally you need to attend with your line manager, but if you cannot align your diaries 
+            then we can continue with you and send any documentation to your line manager for agreement
+            once the call has taken place. If you are attending the call with your line manager, please 
+            forward them the call invite.
+          </p>
+
+          <h4>Preparing for your call</h4>
+          <p>
+            After you've chosen a time, you just need to prepare a few things
+            for your meeting:
+          </p>
+          <ul>
+            <li>
+              The call will be on Microsoft Teams. You can download Teams for
+              free
+              <a
+                href="https://www.microsoft.com/en-gb/microsoft-teams/download-app"
+                >here</a
+              >
+            </li>
+            <li>
+              Make sure you've signed in to your
+              <a href="https://www.bpp.com/account">BPP Hub account</a>
+            </li>
+            <li>
+              Check your learning plan
+              <a
+                href="https://www.bpp.com/my/help-support/learning-support/apprenticeship-learning-plan"
+                >here</a
+              >
+              before the call
+            </li>
+            <li>
+              For identity verification, have your camera on during the call
+            </li>
+            <li>
+              Have your passport, driver's licence, or any photo ID for
+              verification
+            </li>
+          </ul>
+
+          <h4>If you need support</h4>
+          <ul>
+            <li>Call 03300 603 443</li>
+            <li>
+              Email
+              <a href="mailto:apprenticeshiponboarding@bpp.com"
+                >apprenticeshiponboarding@bpp.com</a
+              >
+            </li>
+          </ul>
+          <p>Kind regards,<br>
+          BPP Professional Apprenticeships</p>
+        </td>
+        <!-- Right hand spotty block column, note image is within table as this allows it to be hidden on mobile -->
+        <td
+          valign="top"
+          style="width: 11%; padding: 99px 0 0 6px"
+          class="responsive-td stylingblock-content-wrapper mobile-hidden"
+        >
+          <table
+            width="100%"
+            style="background-color: transparent; min-width: 100%"
+            class="stylingblock-content-wrapper mobile-hidden"
+          >
+            <tr>
+              <td
+                class="stylingblock-content-wrapper mobile-hidden"
+                align="center"
+              >
+                <img
+                  alt="BPP spots background"
+                  src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/1/75ec3032-63a6-4548-a34b-7162f64f33bf.png"
+                  width="51"
+                  style="
+                    display: block;
+                    padding: 0;
+                    text-align: center;
+                    height: auto;
+                    width: 100%;
+                    border: 0;
+                  "
+                />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- Footer slot, Social Media icons are embedded within another table, will look at improving this in future -->
+      <tr>
+        <td
+          align="center"
+          class="header responsive-td"
+          valign="top"
+          style="
+            background-color: #3c3c3b;
+            border: 10px solid #3c3c3b;
+            min-width: 100%;
+            padding: 1px;
+          "
+          width="100%"
+          colspan="3"
+        >
+          <table
+            cellspacing="0"
+            cellpadding="0"
+            style="
+              width: 100%;
+              padding: 25px 0 5px;
+              border-top: 1px solid #3c3c3b;
+              border-right: 99px solid #3c3c3b;
+              border-bottom: 1px solid #3c3c3b;
+              border-left: 99px solid #3c3c3b;
+            "
+          >
+            <tr>
+              <td
+                valign="top"
+                style="width: 25%; padding: 0"
+                align="center"
+                class="stylingblock-content-wrapper"
+              >
+                <a
+                  href="https://www.linkedin.com/company/bpp-professional-education/"
+                  title="LinkedIn"
+                >
+                  <img
+                    src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/27d9a805-72bf-439a-b161-efd78d57006d.png"
+                    alt="LinkedIn"
+                    height="20"
+                    width="20"
+                    style="
+                      display: block;
+                      padding: 0;
+                      text-align: center;
+                      height: 20px;
+                      width: 20px;
+                      border: 0;
+                    "
+                  />
+                </a>
+              </td>
+              <td
+                valign="top"
+                style="width: 25%; padding: 0"
+                align="center"
+                class="stylingblock-content-wrapper"
+              >
+                <a href="https://twitter.com/BPPGroup" title="Twitter">
+                  <img
+                    src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/d9ac1ad2-1fc8-4436-a7b3-a445612b972d.png"
+                    alt="Twitter"
+                    height="20"
+                    width="20"
+                    style="
+                      display: block;
+                      padding: 0;
+                      text-align: center;
+                      height: 20px;
+                      width: 20px;
+                      border: 0;
+                    "
+                  />
+                </a>
+              </td>
+              <td
+                valign="top"
+                style="width: 25%; padding: 0"
+                align="center"
+                class="stylingblock-content-wrapper"
+              >
+                <a
+                  href="https://www.facebook.com/BPP/?ref=br_rs"
+                  title="Facebook"
+                >
+                  <img
+                    src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/973d3544-8b9f-4639-b871-560b7fd36127.png"
+                    alt="Facebook"
+                    height="20"
+                    width="20"
+                    style="
+                      display: block;
+                      padding: 0;
+                      text-align: center;
+                      height: 20px;
+                      width: 20px;
+                      border: 0;
+                    "
+                  />
+                </a>
+              </td>
+              <td
+                valign="top"
+                style="width: 25%; padding: 0"
+                align="center"
+                class="stylingblock-content-wrapper"
+              >
+                <a
+                  href="https://www.instagram.com/bpp_group/"
+                  title="Instagram"
+                >
+                  <img
+                    src="http://image.cloud.bpp.com/lib/fe5b15707c6201787217/m/2/444cd69a-4d43-430b-87d7-aba83df35a0a.png"
+                    alt="Instagram"
+                    height="20"
+                    width="20"
+                    style="
+                      display: block;
+                      padding: 0;
+                      text-align: center;
+                      height: 20px;
+                      width: 20px;
+                      border: 0;
+                    "
+                  />
+                </a>
+              </td>
+            </tr>
+          </table>
+          <h3
+            class="footer-text"
+            style="
+              color: #d0d0d0 !important;
+              font-family: 'GT Walsheim Regular', arial, helvetica, sans-serif !important;
+              font-size: 11px;
+              font-style: normal;
+              font-weight: normal;
+              line-height: 150%;
+              text-align: center;
+            "
+          >
+            BPP Holdings Limited 2023 - Part of TDR Capital LLP<br />
+            BPP House, Aldine Place, 142-144 Uxbridge Road, W12 8AA, Greater
+            London, registered in England and Wales under company number
+            01245304
+            <br />
+            <br />
+            <a
+              href="https://www.bpp.com/privacy"
+              style="
+                color: #d0d0d0;
+                text-decoration: underline;
+                font-weight: normal;
+                line-height: 100%;
+              "
+              title="Privacy Policy"
+              >Privacy Policy</a
+            >
+          </h3>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

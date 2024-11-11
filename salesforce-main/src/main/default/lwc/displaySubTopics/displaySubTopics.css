@@ -1,0 +1,12 @@
+.title {
+  font-size: x-large; 
+  border-top: 1px solid black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.col{
+  text-decoration: none;
+  font-size: medium;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(55, 99, 172);
+}

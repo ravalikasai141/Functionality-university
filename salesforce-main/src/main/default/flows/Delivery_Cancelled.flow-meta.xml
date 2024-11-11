@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <constants>
+        <name>varFailureMessage</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Unable to complete the process of cancelling this delivery record</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>varIneligibleMessage</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>This delivery record is Ineligible for cancellation</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Requested function = &apos;StockDeallocation&apos; - run either stock allocation or stock allocation process</description>
+        <name>varRequestedFunction</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>StockDeallocation</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>varStockErrorMessage</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>There is no stock management record available. Unable to attempt stock deallocation. Delivery cannot be cancelled with stock allocated to it</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>varSuccessMessage</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>This delivery record has successfully been cancelled</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>varUnexpectedErrorMessage</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>The has been an error with the cancellation process. Please contact your administrator.</stringValue>
+        </value>
+    </constants>
+    <description>Request for delivery to be cancelled</description>
+    <formulas>
+        <description>Outcome of stock allocation attempt to user</description>
+        <name>fxOutcomeMessage</name>
+        <dataType>String</dataType>
+        <expression>Case ( {!varResponse},
+&apos;Success&apos;, {!varSuccessMessage},
+&apos;Failure&apos;, {!varFailureMessage},
+&apos;Ineligible&apos;, {!varIneligibleMessage},
+&apos;StockError&apos;, {!varStockErrorMessage},
+{!varUnexpectedErrorMessage} &amp; &quot; &quot; &amp; {!varResponse})</expression>
+    </formulas>
+    <interviewLabel>Delivery - Cancelled {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Delivery - Cancelled</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <runInMode>DefaultMode</runInMode>
+    <screens>
+        <description>Flow has finished running</description>
+        <name>Flow_Completed</name>
+        <label>Flow_Completed</label>
+        <locationX>176</locationX>
+        <locationY>397</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Display_Outcome_Message</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!fxOutcomeMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Display_Ineligible_Message</name>
+            <fieldText>&lt;p&gt;{!varIneligibleReason}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>varResponse</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Ineligible</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Run_Delivery_Status_Updates_Cancel</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Runs process to cancel delivery &amp; make any required updates</description>
+        <name>Run_Delivery_Status_Updates_Cancel</name>
+        <label>Run Delivery Status Updates - Cancel</label>
+        <locationX>176</locationX>
+        <locationY>217</locationY>
+        <connector>
+            <targetReference>Flow_Completed</targetReference>
+        </connector>
+        <flowName>Delivery_Status_Updates</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varDesiredStatus</name>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varIneligibleReason</assignToReference>
+            <name>varIneligibleReason</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varResponse</assignToReference>
+            <name>varResponse</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Reason delivery record is ineligible for stock deallocation</description>
+        <name>varIneligibleReason</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Response from StockDeallocation whether attempt to deallocate stock was successful</description>
+        <name>varResponse</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

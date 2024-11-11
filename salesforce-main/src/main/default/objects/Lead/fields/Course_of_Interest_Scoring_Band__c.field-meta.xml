@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_of_Interest_Scoring_Band__c</fullName>
+    <description>The Course of Interest values are banded so they can then be given a score</description>
+    <externalId>false</externalId>
+    <label>Course of Interest Scoring Band</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

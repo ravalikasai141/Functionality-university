@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Email_Invalid</fullName>
+    <active>true</active>
+    <description>For student accounts if preferred email is set then address it is set to must be populated.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Student_Account&apos;,
+
+(TEXT(Preferred_Email__pc)=&apos;Personal&apos; &amp;&amp; Personal_Email__pc=null) ||
+(TEXT(Preferred_Email__pc)=&apos;Work&apos; &amp;&amp; Work_Email__pc=null) ||
+(TEXT(Preferred_Email__pc)=&apos;BPP&apos; &amp;&amp; BPP_Email__pc=null) ||
+(TEXT(Preferred_Email__pc)=&apos;Other&apos; &amp;&amp; Other_Email__pc=null)
+)</errorConditionFormula>
+    <errorDisplayField>Preferred_Email__pc</errorDisplayField>
+    <errorMessage>The selected preferred email address is not present.  Please select a valid email address.</errorMessage>
+</ValidationRule>

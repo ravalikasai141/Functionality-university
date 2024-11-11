@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Reason_SELT_Not_Required__c</fullName>
+    <description>This field reduces risk for UKVI audits. Also improves visibility of processes being followed and managed effectively.</description>
+    <externalId>false</externalId>
+    <label>Reason SELT Not Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Higher Education Institute (HEI) has made assessment</fullName>
+                <default>false</default>
+                <label>Higher Education Institute (HEI) has made assessment</label>
+            </value>
+            <value>
+                <fullName>Migrant from majority English speaking country</fullName>
+                <default>false</default>
+                <label>Migrant from majority English speaking country</label>
+            </value>
+            <value>
+                <fullName>Migrant has met required English level in a previous successful visa application</fullName>
+                <default>false</default>
+                <label>Migrant has met required English level in a previous successful visa application</label>
+            </value>
+            <value>
+                <fullName>Migrant holds degree from majority English speaking country</fullName>
+                <default>false</default>
+                <label>Migrant holds degree from majority English speaking country</label>
+            </value>
+            <value>
+                <fullName>Migrant holds GSCE, A Levels or Scottish Higher qualification in English studied in the UK whilst under 18</fullName>
+                <default>false</default>
+                <label>Migrant holds GSCE, A Levels or Scottish Higher qualification in English studied in the UK whilst under 18</label>
+            </value>
+            <value>
+                <fullName>Migrant to apply as Gifted student</fullName>
+                <default>false</default>
+                <label>Migrant to apply as Gifted student</label>
+            </value>
+            <value>
+                <fullName>Study abroad programme as part of USA HEI degree</fullName>
+                <default>false</default>
+                <label>Study abroad programme as part of USA HEI degree</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Request_Task__c</fullName>
+    <description>Boolean field that holds a TRUE value if the task is a Contact Request task.</description>
+    <externalId>false</externalId>
+    <formula>RecordType.Name = &quot;Contact Request&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Request Task?</label>
+    <type>Checkbox</type>
+</CustomField>

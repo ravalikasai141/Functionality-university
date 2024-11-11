@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comment_Origination_Code_Display__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( BNR_Comment_Origination_Code__c , 
+&quot;AD&quot;,&quot;Admissions&quot;,
+&quot;FS&quot;,&quot;Faculty Services&quot;, 
+&quot;ALUM&quot;,&quot;Alumni Affairs&quot;,  
+&quot;SS&quot;,&quot;Student Services&quot;, 
+&quot;ORC&quot;,&quot;Office of Regs &amp; Compliance&quot;, 
+&quot;STR&quot;,&quot;Student Records Office&quot;, 
+&quot;EXA&quot;,&quot;Exams &amp; Assessments&quot;, 
+&quot;VISA&quot;,&quot;Visa Compliance&quot;, 
+&quot;INTA&quot;,&quot;International Admissions&quot;, 
+&quot;GRAD&quot;,&quot;Graduation Team&quot;, 
+&quot;LST&quot;,&quot;Learning Support Team&quot;, 
+&quot;MIT&quot;,&quot;Management Information Team&quot;, 
+&quot;MRK&quot;,&quot;Marking&quot;, 
+&quot;VLE&quot;,&quot;Virtual Learning Environment&quot;, 
+&quot;ARS&quot;,&quot;AR System&quot;, 
+&quot;ECO&quot;,&quot;Ecommerce&quot;, 
+&quot;SMC&quot;,&quot;Student Management Centre&quot;, 
+&quot;&quot; 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Comment Origination Code Display</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

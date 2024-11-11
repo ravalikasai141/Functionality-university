@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Recognised_Date__c</fullName>
+    <description>If the booking line is for an item being delivered to centre the value is derived from the instance start date. If it is being delivered to student or is an LM order it matches the dispatch date.</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+NOT( ISBLANK(Booking_Line__c))
+ &amp;&amp;
+NOT( ISBLANK(Delivered_to_BPP_Address__c)),
+Booking_Line__r.Instance_Start_Date__c ,
+Dispatched_Date__c
+)</formula>
+    <label>Revenue Recognised Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Apprentice Application template for feeding back any notes from the prior review call</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Application Review Call Notes</name>
+    <style>none</style>
+    <subject>Application Review Call Notes</subject>
+    <textOnly>Dear {!Case.Contact},
+
+The form attached notes the key points discussed in the application review call. Please keep this safe for future reference.
+
+Line managers, if you were not able to attend the meeting, please review sign and upload this form to the link provided
+
+Reviewer – Do not record any safeguarding or learning support details on this form – please use appropriate internal forms.
+
+Kind regards,
+BPP Professional Apprenticeships
+
+BPP Holdings Limited 2023 - Part of TDR Capital LLP
+BPP House, Aldine Place, 142-144 Uxbridge Road, W12 8AA, Greater London, registered in England and Wales under company number 01245304
+
+Privacy Policy</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_BPP_Review_To_Application</fullName>
+    <active>true</active>
+    <description>User cannot regress an application backward from BPP Review to Application stage.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName , &quot;Application&quot; ),
+ISCHANGED(StageName),
+ISPICKVAL(PRIORVALUE(StageName), &quot;BPP Review&quot; ),
+RecordType.DeveloperName=&quot;Apprentice_Application&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>You cannot regress the application from BPP Review to Application stage.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Of_Contract__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Of Contract</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Contract</fullName>
+                <default>false</default>
+                <label>No Contract</label>
+            </value>
+            <value>
+                <fullName>Rolling Contract</fullName>
+                <default>false</default>
+                <label>Rolling Contract</label>
+            </value>
+            <value>
+                <fullName>Fixed Length Contract</fullName>
+                <default>false</default>
+                <label>Fixed Length Contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

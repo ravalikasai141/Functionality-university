@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_To_Address__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Order account address to be used as core delivery address for bookings on this order</description>
+    <externalId>false</externalId>
+    <label>Bill To Address</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The address does not belong to the account on the order.</errorMessage>
+        <filterItems>
+            <field>Address__c.Student__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <infoMessage>Select an address for the account to be used as the billing address</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Address__c</referenceTo>
+    <relationshipLabel>Orders - Billing</relationshipLabel>
+    <relationshipName>Orders_Billing</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

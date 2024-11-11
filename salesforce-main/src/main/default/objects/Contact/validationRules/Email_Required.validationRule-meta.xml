@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Required</fullName>
+    <active>true</active>
+    <description>For Training Managers at least one email address must be populated and a preferred option selected.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Training_Manager&apos;,
+OR(
+TEXT(Preferred_Email__c) = NULL,
+AND(
+Personal_Email__c=NULL,
+Work_Email__c=NULL,
+BPP_Email__c=NULL,
+Other_Email__c=NULL
+)))</errorConditionFormula>
+    <errorDisplayField>Preferred_Email__c</errorDisplayField>
+    <errorMessage>You have not entered an email address / no preferred email has been selected. Please enter at least one email address and ensure a preferred email is selected.</errorMessage>
+</ValidationRule>

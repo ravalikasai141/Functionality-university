@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <description>Clean all phone number fields (UK mobile numbers only) into E.164 (+44) format</description>
+        <name>Assign_Clean_Phone_Numbers</name>
+        <label>Assign Clean Phone Numbers</label>
+        <locationX>446</locationX>
+        <locationY>158</locationY>
+        <assignmentItems>
+            <assignToReference>varHomePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCleanHomePhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varMobilePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCleanMobilePhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varWorkPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCleanWorkPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOtherPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCleanOtherPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Preferred_Values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Populate Mobile field with the master Phone field value</description>
+        <name>Populate_Mobile_Field</name>
+        <label>Populate Mobile Field</label>
+        <locationX>314</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>varMobilePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Customer_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assigns the master email address &amp; phone number for the customer record into variables as calculated from the selected preference</description>
+        <name>Set_Preferred_Values</name>
+        <label>Set Preferred Values</label>
+        <locationX>446</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>varEmail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCalcPreferredEmailValue</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxCalcPreferredPhoneValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Preferred_Phone_UK_Mobile_Number</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Which object has launched the flow</description>
+        <name>Customer_Type</name>
+        <label>Customer Type</label>
+        <locationX>446</locationX>
+        <locationY>734</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Student_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varObjectTrigger</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>StudentAccount</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Student_Contact_Details</targetReference>
+            </connector>
+            <label>Student Account</label>
+        </rules>
+        <rules>
+            <name>Business_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varObjectTrigger</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Business Contact</label>
+        </rules>
+        <rules>
+            <name>Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varObjectTrigger</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lead_Contact_Details</targetReference>
+            </connector>
+            <label>Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the preferred phone number a UK mobile number? Has this been provided in a filed other than the &apos;Mobile&apos; field</description>
+        <name>Preferred_Phone_UK_Mobile_Number</name>
+        <label>Preferred Phone = UK Mobile Number</label>
+        <locationX>446</locationX>
+        <locationY>398</locationY>
+        <defaultConnector>
+            <targetReference>Customer_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>UK_Mobile</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varPreferredPhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Mobile</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varPhone</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>+447</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Mobile_Field</targetReference>
+            </connector>
+            <label>UK Mobile</label>
+        </rules>
+    </decisions>
+    <description>Flow that updates the master email &amp; phone fields according to the set preference</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Uses varPreferredEmail to select the correct email value</description>
+        <name>fxCalcPreferredEmailValue</name>
+        <dataType>String</dataType>
+        <expression>CASE({!varPreferredEmail},
+&apos;Personal&apos;, {!varPersonalEmail}, 
+&apos;Work&apos;, {!varWorkEmail}, 
+&apos;BPP&apos;, {!varBPPEmail}, 
+&apos;Other&apos;, {!varOtherEmail}, 
+&apos;&apos;, &apos;&apos;, 
+{!varEmail} )</expression>
+    </formulas>
+    <formulas>
+        <description>Uses varPreferredPhone to select the correct phone number value</description>
+        <name>fxCalcPreferredPhoneValue</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!varPreferredPhone}, 
+&apos;Home&apos;, {!varHomePhone}, 
+&apos;Mobile&apos;, {!varMobilePhone}, 
+&apos;Work&apos;, {!varWorkPhone}, 
+&apos;Other&apos;, {!varOtherPhone}, 
+&apos;&apos;,&apos;&apos;,
+{!varPhone} )</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans customer&apos;s home UK phone number into the E.164 (+44) format</description>
+        <name>fxCleanHomePhone</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!varHomePhone},2),
+&quot;+4&quot;, {!varHomePhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!varHomePhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!varHomePhone},Len({!varHomePhone})-1), 
+{!varHomePhone})</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans customer&apos;s mobile UK phone number into the E.164 (+44) format</description>
+        <name>fxCleanMobilePhone</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!varMobilePhone},2),
+&quot;+4&quot;, {!varMobilePhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!varMobilePhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!varMobilePhone},Len({!varMobilePhone})-1), 
+{!varMobilePhone})</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans customer&apos;s other UK phone number into the E.164 (+44) format</description>
+        <name>fxCleanOtherPhone</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!varOtherPhone},2),
+&quot;+4&quot;, {!varOtherPhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!varOtherPhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!varOtherPhone},Len({!varOtherPhone})-1), 
+{!varOtherPhone})</expression>
+    </formulas>
+    <formulas>
+        <description>Cleans customer&apos;s work UK phone number into the E.164 (+44) format</description>
+        <name>fxCleanWorkPhone</name>
+        <dataType>String</dataType>
+        <expression>CASE(LEFT({!varWorkPhone},2),
+&quot;+4&quot;, {!varWorkPhone}, 
+&quot;44&quot;, &quot;+&quot; &amp; {!varWorkPhone}, 
+&quot;07&quot;, &quot;+44&quot; &amp; Right({!varWorkPhone},Len({!varWorkPhone})-1), 
+{!varWorkPhone})</expression>
+    </formulas>
+    <interviewLabel>Update Cus {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Customer Contact Details Updated</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Lead_Contact_Details</name>
+        <label>Update Lead Contact Details</label>
+        <locationX>578</locationX>
+        <locationY>854</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>varEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Home_Phone__c</field>
+            <value>
+                <elementReference>varHomePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_Bypass_Duplicate_Check__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MobilePhone</field>
+            <value>
+                <elementReference>varMobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Other_Email__c</field>
+            <value>
+                <elementReference>varOtherEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Personal_Email__c</field>
+            <value>
+                <elementReference>varPersonalEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>varPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Preferred_Email__c</field>
+            <value>
+                <elementReference>varPreferredEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Preferred_Phone__c</field>
+            <value>
+                <elementReference>varPreferredPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Email__c</field>
+            <value>
+                <elementReference>varWorkEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Phone__c</field>
+            <value>
+                <elementReference>varWorkPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Student_Contact_Details</name>
+        <label>Update Student Contact Details</label>
+        <locationX>50</locationX>
+        <locationY>854</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Bypass_Duplicate_Check__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BPP_Email__pc</field>
+            <value>
+                <elementReference>varBPPEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Other_Email__pc</field>
+            <value>
+                <elementReference>varOtherEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonEmail</field>
+            <value>
+                <elementReference>varEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonHomePhone</field>
+            <value>
+                <elementReference>varHomePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonMobilePhone</field>
+            <value>
+                <elementReference>varMobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PersonOtherPhone</field>
+            <value>
+                <elementReference>varOtherPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Personal_Email__pc</field>
+            <value>
+                <elementReference>varPersonalEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>varPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Preferred_Email__pc</field>
+            <value>
+                <elementReference>varPreferredEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Preferred_Phone__pc</field>
+            <value>
+                <elementReference>varPreferredPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Email__pc</field>
+            <value>
+                <elementReference>varWorkEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Phone__pc</field>
+            <value>
+                <elementReference>varWorkPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assign_Clean_Phone_Numbers</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Id of record that triggered the flow</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s BPP email</description>
+        <name>varBPPEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Master Email on the customer record</description>
+        <name>varEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s home phone number</description>
+        <name>varHomePhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s mobile number</description>
+        <name>varMobilePhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Object that has triggered the flow to run, passed in by the parent flow when launching</description>
+        <name>varObjectTrigger</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Another email option for the customer</description>
+        <name>varOtherEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Another phone number for the customer</description>
+        <name>varOtherPhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s personal email</description>
+        <name>varPersonalEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Master Phone on the customer record</description>
+        <name>varPhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s preferred email</description>
+        <name>varPreferredEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s preferred phone</description>
+        <name>varPreferredPhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>customer&apos;s work email</description>
+        <name>varWorkEmail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Customer&apos;s work phone</description>
+        <name>varWorkPhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_Application</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit Application</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/apex.js&quot;)}
+
+var nullFieldMsg = &quot;&quot;;
+
+if ({!Account.AR_Account_Status_Code__c == &apos;FinancialHoldApplied&apos;}) {
+alert(&quot;Student is on Financial Hold. Application cannot be submitted.&quot;);
+}
+else {
+
+if({!ISBLANK(Account.Primary_Nationality__pc)}){
+nullFieldMsg += &quot;Student Primary Nationality is Required\n&quot;;
+}
+var ag = &quot;{!Account.Age__pc}&quot;;
+if(ag == &apos;&apos;)
+{
+nullFieldMsg += &quot;Student Date of Birth is Required\n&quot;;
+}
+
+//check for active address on student record
+var qresult= sforce.connection.query(&quot;Select Id, Active__c,type__c From Address__c where Active__c = true and Student__c=&apos;{!Opportunity.AccountId}&apos;&quot;);
+if( qresult.size==0){
+nullFieldMsg += &quot;At least One Active Address is Required\n&quot;;
+}
+
+												  
+
+if({!Opportunity.BNR_Level_Code_Text__c == &quot;PQ&quot;})
+{
+if ({!ISPICKVAL(Account.Account_Type__c,&quot;&quot;)}) {
+nullFieldMsg += &quot;Account Type is Required\n&quot;;
+}
+if ({!ISBLANK(Account.VAT_Code__pc)}) {
+nullFieldMsg += &quot;VAT Code is Required\n&quot;;
+}
+if ({!ISBLANK(Account.Phone)}) {
+nullFieldMsg += &quot;At least One Phone is Required\n&quot;;
+}
+if ({!ISBLANK(Account.PersonEmail)}) {
+nullFieldMsg += &quot;At least One Email is Required\n&quot;;
+}
+}
+if((ag != &apos;&apos;) &amp;&amp; ({!Opportunity.BNR_Level_Code_Text__c != &quot;PQ&quot;})) {
+
+if(ag &lt; 17) {
+nullFieldMsg += &quot;Student must be at least 17 years old\n&quot;;
+}
+}
+
+if({!Opportunity.BNR_Level_Code_Text__c != &quot;PQ&quot;})
+{
+if({!ISBLANK(Account.Country_of_Permanent_Address__c)}){
+nullFieldMsg += &quot;Country of Permanent Address is Required\n&quot;;
+}
+}
+if ({!ISBLANK(Account.PS_Profile_Services_ID__pc)}) {
+nullFieldMsg += &quot;The related Account does not have a Profile ID. A Profile ID is required to submit an application.\n&quot;;
+}
+if ({!ISPICKVAL(Account.Student_Type__pc,&quot;&quot;)}) {
+nullFieldMsg += &quot;Student Type is Required\n&quot;;
+}
+if ({!ISPICKVAL(Account.Legal_Entity__c,&quot;&quot;)}) {
+nullFieldMsg += &quot;Legal Entity is Required\n&quot;;
+}
+
+var sresult= sforce.connection.query(&quot;Select Id, Active__c, Student__c From Sponsorship__c where Active__c = true and Student__c =&apos;{!Opportunity.AccountId}&apos; and Opportunity__c=&apos;{!Opportunity.Id}&apos;&quot;);
+if(
+(sresult.size == 0) &amp;&amp; ({!NOT(OR(ISPICKVAL(Opportunity.Sponsorship_Level__c,&quot;&quot;),ISPICKVAL(Opportunity.Sponsorship_Level__c,&quot;None&quot;)) &amp;&amp; ISBLANK(Opportunity.Sponsorship_Percentage__c) &amp;&amp; ISBLANK(Opportunity.Sponsorship_Amount__c))})
+){
+nullFieldMsg += &quot;An Active Sponsorship record on Account should exist if Sponsorship level is Partial or Full\n&quot;;
+}
+if (nullFieldMsg.length &gt; 0) {
+alert(&quot;Required Fields not all entered.\n\n&quot; + nullFieldMsg);
+}
+else {
+if ({!OR(Opportunity.Stage_Text__c == &apos;Accepted - Conditional Firm&apos;,
+Opportunity.Stage_Text__c == &apos;Accepted - Unconditional Firm&apos;,
+Opportunity.Stage_Text__c == &apos;Accepted - Pmt Received&apos;,
+Opportunity.Stage_Text__c == &apos;Transferred&apos;,
+Opportunity.Stage_Text__c == &apos;Deferred Entry&apos;)}) {
+
+var result = sforce.apex.execute(&quot;BNR_SubmitApplication&quot;,&quot;Submit&quot;, {id:&quot;{!Opportunity.Id}&quot;});
+if (result != &quot;Application Submitted Successfully&quot;)
+alert(&quot;Error submitting to Banner:\n\n&quot; + result);
+else{
+//document.location.reload(true);
+
+//call UpdateSISPerson
+var result_updatesisperson = sforce.apex.execute(&quot;UpdateSISPerson&quot;,&quot;PersonInformation&quot;, {accountId:&quot;{!Opportunity.AccountId}&quot;, opportunityId:&quot;{!Opportunity.Id}&quot;});
+if (result_updatesisperson != &quot;Success&quot;)
+alert(&quot;Error updating SIS Banner:\n\n&quot; + result_updatesisperson);
+else
+document.location.reload(true);
+}
+}
+else {
+alert(&quot;Submit Application Failed because the Status is not valid.&quot;);
+}
+}
+
+}</url>
+</WebLink>

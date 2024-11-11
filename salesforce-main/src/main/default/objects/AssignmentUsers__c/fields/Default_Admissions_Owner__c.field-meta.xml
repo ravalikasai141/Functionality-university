@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Admissions_Owner__c</fullName>
+    <description>Id of Admissions user records will be assigned to. This will trigger the round robin assignment</description>
+    <externalId>false</externalId>
+    <label>Default Admissions Owner</label>
+    <length>15</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

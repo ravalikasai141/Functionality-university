@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staging_PK__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team.  5/11/11
+
+Staging ID was once used as part of a nightly process to push in data from external systems.
+
+This process was disabled and subsequently these fields have been removed on other objects.</description>
+    <externalId>true</externalId>
+    <label>[REMOVE] Staging PK</label>
+    <length>50</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

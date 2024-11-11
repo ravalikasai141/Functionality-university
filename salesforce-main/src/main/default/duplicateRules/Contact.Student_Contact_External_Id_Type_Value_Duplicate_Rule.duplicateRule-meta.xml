@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Allow</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText>Use one of these records?</alertText>
+    <description>Student Contact External Id Type &amp; Value Duplicate Rule</description>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>DeveloperName</field>
+            <operation>notEqual</operation>
+            <value>Marketing_Cloud</value>
+            <sortOrder>1</sortOrder>
+            <table>UserRole</table>
+        </duplicateRuleFilterItems>
+        <duplicateRuleFilterItems>
+            <field>DeveloperName</field>
+            <operation>notEqual</operation>
+            <value>System_API</value>
+            <sortOrder>2</sortOrder>
+            <table>UserRole</table>
+        </duplicateRuleFilterItems>
+        <duplicateRuleFilterItems>
+            <field>Contact_Bypass_Duplicate_Check__c</field>
+            <operation>equals</operation>
+            <value>false</value>
+            <sortOrder>3</sortOrder>
+            <table>Contact</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>Contact</matchRuleSObjectType>
+        <matchingRule>Student_Contact_External_Id_Type_Value_Matching_Rule</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Student Contact External Id Type &amp; Value Duplicate Rule</masterLabel>
+    <operationsOnInsert>Alert</operationsOnInsert>
+    <operationsOnInsert>Report</operationsOnInsert>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
+    <operationsOnUpdate>Report</operationsOnUpdate>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>3</sortOrder>
+</DuplicateRule>

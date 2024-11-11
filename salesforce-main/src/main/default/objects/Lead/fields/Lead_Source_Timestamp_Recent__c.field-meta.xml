@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_Timestamp_Recent__c</fullName>
+    <description>This field has been introduced due to the integration with Eloqua. This has prompted a change in business process for Leads - only 1 unique (email) Lead is allowed. This field has been added to compliment the Lead Source Timestamp - containing the original lead source timestamp value, this field will be updated with the most recent lead source timestamp information.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the most recent lead source date and time from when the lead was submitted or when the event took place</inlineHelpText>
+    <label>Lead Source Timestamp - Recent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

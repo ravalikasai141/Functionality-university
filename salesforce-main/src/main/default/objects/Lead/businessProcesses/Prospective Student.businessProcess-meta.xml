@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospective Student</fullName>
+    <description>Prospective Student Leads</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Engaged</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Establishing Contact</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Existing account</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>No Further Action</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Nurturing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Re-engaged</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Shop</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

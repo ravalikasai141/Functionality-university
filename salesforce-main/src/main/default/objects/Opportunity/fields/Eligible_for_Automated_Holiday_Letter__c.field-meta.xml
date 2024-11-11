@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligible_for_Automated_Holiday_Letter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If the &apos;Eligible for Automated Holiday Letter&apos; check box is ticked on the Opportunity Object and a student requests a Holiday Letter via the student query form, then the auto case flow should send the holiday letter automatically.</description>
+    <externalId>false</externalId>
+    <label>Eligible for Automated Holiday Letter</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

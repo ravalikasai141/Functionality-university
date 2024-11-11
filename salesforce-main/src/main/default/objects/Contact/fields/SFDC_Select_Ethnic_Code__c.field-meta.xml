@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Select_Ethnic_Code__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is only visible for the System Administrator profile.</inlineHelpText>
+    <label>Ethnicity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>White</fullName>
+                <default>false</default>
+                <label>White</label>
+            </value>
+            <value>
+                <fullName>Irish Traveller</fullName>
+                <default>false</default>
+                <label>Irish Traveller</label>
+            </value>
+            <value>
+                <fullName>Black/Black British-Caribbean</fullName>
+                <default>false</default>
+                <label>Black/Black British-Caribbean</label>
+            </value>
+            <value>
+                <fullName>Black/Black British-African</fullName>
+                <default>false</default>
+                <label>Black/Black British-African</label>
+            </value>
+            <value>
+                <fullName>Other Black background</fullName>
+                <default>false</default>
+                <label>Other Black background</label>
+            </value>
+            <value>
+                <fullName>Asian/Asian British-Indian</fullName>
+                <default>false</default>
+                <label>Asian/Asian British-Indian</label>
+            </value>
+            <value>
+                <fullName>Asian/Asian British-Pakistani</fullName>
+                <default>false</default>
+                <label>Asian/Asian British-Pakistani</label>
+            </value>
+            <value>
+                <fullName>Asian/Asian Brit-Bangladeshi</fullName>
+                <default>false</default>
+                <label>Asian/Asian Brit-Bangladeshi</label>
+            </value>
+            <value>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+                <label>Chinese</label>
+            </value>
+            <value>
+                <fullName>Other Asian background</fullName>
+                <default>false</default>
+                <label>Other Asian background</label>
+            </value>
+            <value>
+                <fullName>Mixed-White &amp; Black Caribbean</fullName>
+                <default>false</default>
+                <label>Mixed-White &amp; Black Caribbean</label>
+            </value>
+            <value>
+                <fullName>Mixed-White and Black African</fullName>
+                <default>false</default>
+                <label>Mixed-White and Black African</label>
+            </value>
+            <value>
+                <fullName>Mixed-White and Asian</fullName>
+                <default>false</default>
+                <label>Mixed-White and Asian</label>
+            </value>
+            <value>
+                <fullName>Other mixed background</fullName>
+                <default>false</default>
+                <label>Other mixed background</label>
+            </value>
+            <value>
+                <fullName>Other ethnic background</fullName>
+                <default>false</default>
+                <label>Other ethnic background</label>
+            </value>
+            <value>
+                <fullName>I do not wish to declare</fullName>
+                <default>false</default>
+                <label>I do not wish to declare</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

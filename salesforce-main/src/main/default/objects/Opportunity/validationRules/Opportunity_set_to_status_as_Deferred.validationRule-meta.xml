@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_set_to_status_as_Deferred</fullName>
+    <active>false</active>
+    <description>When an Opportunity is set to Deferred as a Status then Deferred On, Deferred To, and Deferral Reason fields as mandatory.</description>
+    <errorConditionFormula>OR(
+AND(ISPickval( StageName ,&apos;Deferred Entry&apos;),Ispickval( BPP_Deferral_Reason__c ,&apos;&apos;)), 
+AND(ISPickval( StageName ,&apos;Deferred Entry&apos;), ISBLANK( BPP_Deferred_To__c )),
+AND(ISPickval( StageName ,&apos;Deferred Entry&apos;), ISBLANK( BPP_Deferred_On__c ))
+)</errorConditionFormula>
+    <errorMessage>Please enter the following mandatory fields : Deferred On, Deferred To and Deferral Reason
+as you have selected status as &apos;Deferred Entry&apos;</errorMessage>
+</ValidationRule>

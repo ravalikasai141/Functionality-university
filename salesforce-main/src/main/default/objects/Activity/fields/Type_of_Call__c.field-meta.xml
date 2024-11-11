@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Call__c</fullName>
+    <description>Dependant to Type of Activity Field
+
+Indicates the type of call.  Validation ensures this field is populated when activity of type call is placed (for admissions team only).</description>
+    <externalId>false</externalId>
+    <label>Type of Call</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(In) V2V</fullName>
+                <default>false</default>
+                <label>(In) V2V</label>
+            </value>
+            <value>
+                <fullName>(Out) V2V</fullName>
+                <default>false</default>
+                <label>(Out) V2V</label>
+            </value>
+            <value>
+                <fullName>(Out) LVM</fullName>
+                <default>false</default>
+                <label>(Out) LVM</label>
+            </value>
+            <value>
+                <fullName>(Out) No Answer</fullName>
+                <default>false</default>
+                <label>(Out) No Answer</label>
+            </value>
+            <value>
+                <fullName>(Out) Invalid #</fullName>
+                <default>false</default>
+                <label>(Out) Invalid #</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

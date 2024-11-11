@@ -1,0 +1,87 @@
+<template>
+    <lightning-modal-header label="Review Dates"></lightning-modal-header>
+    <lightning-modal-body>
+        <p class="slds-m-vertical_medium">
+            The following changes will be made following this update, please review then click confirm to apply these
+            changes.
+        </p>
+        <div class="slds-grid slds-grid_align-center slds-gutters slds-p-horizontal_xx-large">
+            <div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+                <div class="slds-box">
+                    <lightning-card variant="Narrow" icon-name="standard:opportunity">
+                        <div slot="title">
+                            Application
+                            <div class="slds-text-title">
+                                <lightning-formatted-url
+                                    value={opportunityLink}
+                                    label={opportunityName}
+                                ></lightning-formatted-url>
+                            </div>
+                        </div>
+                        <div class="slds-p-horizontal_medium">
+                            <div class="slds-form-element slds-m-vertical_medium">
+                                <label class="slds-form-element__label slds-text-title">Application Start Date</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" disabled class="slds-input" value={currentStartDate} />
+                                </div>
+                            </div>
+                            <div class="slds-form-element slds-m-vertical_medium">
+                                <label class="slds-form-element__label slds-text-title">Application End Date</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" disabled class="slds-input" value={currentEndDate} />
+                                </div>
+                            </div>
+                        </div>
+                    </lightning-card>
+                </div>
+            </div>
+            <div class="slds-col slds-grow-none slds-align_absolute-center">
+                <lightning-icon icon-name="utility:back" size="large"> </lightning-icon>
+            </div>
+            <div class="slds-col slds-p-horizontal_medium slds-size_1-of-2">
+                <div class="slds-box">
+                    <lightning-card variant="Narrow" icon-name="standard:product">
+                        <div slot="title">
+                            Programme
+                            <div class="slds-text-title">
+                                <lightning-formatted-url
+                                    value={productLink}
+                                    label={productName}
+                                ></lightning-formatted-url>
+                            </div>
+                        </div>
+
+                        <div class="slds-p-horizontal_medium">
+                            <div class="slds-form-element slds-m-vertical_medium">
+                                <label class="slds-form-element__label slds-text-title">Product Start Date</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" disabled class="slds-input" value={newStartDate} />
+                                </div>
+                            </div>
+                            <div class="slds-form-element slds-m-vertical_medium">
+                                <label class="slds-form-element__label slds-text-title">Product End Date</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" disabled class="slds-input" value={newEndDate} />
+                                </div>
+                            </div>
+                        </div>
+                    </lightning-card>
+                </div>
+            </div>
+        </div>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <div class="slds-m-vertical_small">
+            <div class="slds-clearfix">
+                <div class="slds-float--right">
+                    <lightning-button
+                        onclick={handleCancel}
+                        class="slds-m-right_small"
+                        label="Cancel"
+                    ></lightning-button>
+                    <lightning-button onclick={handleConfirm} variant="brand" label="Confirm"></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-modal-footer>
+</template>

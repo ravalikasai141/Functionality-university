@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_Title_Recent__c</fullName>
+    <description>This field has been introduced due to the integration with Eloqua. This has prompted a change in business process for Leads - only 1 unique (email) Lead is allowed. This field has been added to compliment the Lead Source Title - containing the original lead source title value, this field will be updated with the most recent lead source title information.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the most recent lead source title such as the webpage or event</inlineHelpText>
+    <label>Lead Source Title - Recent</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

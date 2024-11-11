@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Reason_for_External_Refusal__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for External Refusal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>--Please Select --</fullName>
+                <default>false</default>
+                <label>--Please Select --</label>
+            </value>
+            <value>
+                <fullName>English</fullName>
+                <default>false</default>
+                <label>English</label>
+            </value>
+            <value>
+                <fullName>Credibility</fullName>
+                <default>false</default>
+                <label>Credibility</label>
+            </value>
+            <value>
+                <fullName>Deception</fullName>
+                <default>false</default>
+                <label>Deception</label>
+            </value>
+            <value>
+                <fullName>Non-Genuine</fullName>
+                <default>false</default>
+                <label>Non-Genuine</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>TB Requirements</fullName>
+                <default>false</default>
+                <label>TB Requirements</label>
+            </value>
+            <value>
+                <fullName>Compliance Documents</fullName>
+                <default>false</default>
+                <label>Compliance Documents</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

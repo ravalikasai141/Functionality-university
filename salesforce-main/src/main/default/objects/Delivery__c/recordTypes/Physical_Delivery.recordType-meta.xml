@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Physical_Delivery</fullName>
+    <active>true</active>
+    <description>Records that contain items requiring a physical dispatch</description>
+    <label>Physical Delivery</label>
+    <picklistValues>
+        <picklist>Delivery_Status__c</picklist>
+        <values>
+            <fullName>Awaiting Allocation</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispatched</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready for Fulfilment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent for Fulfilment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Admissions_STYPE_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Admissions STYPE Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0~ Undeclared</fullName>
+                <default>false</default>
+                <label>0~ Undeclared</label>
+            </value>
+            <value>
+                <fullName>N~ New</fullName>
+                <default>false</default>
+                <label>N~ New</label>
+            </value>
+            <value>
+                <fullName>R~ Returning</fullName>
+                <default>false</default>
+                <label>R~ Returning</label>
+            </value>
+            <value>
+                <fullName>C~ Continuing</fullName>
+                <default>false</default>
+                <label>C~ Continuing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

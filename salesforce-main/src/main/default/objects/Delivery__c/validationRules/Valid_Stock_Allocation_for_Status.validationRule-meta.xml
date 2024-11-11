@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Stock_Allocation_for_Status</fullName>
+    <active>true</active>
+    <description>Ensures that a status can only be changed if the correct stock allocation is valid for the new status</description>
+    <errorConditionFormula>AND( RecordType.Name = &apos;Physical Delivery&apos;,
+OR(
+ AND( Stock_Allocated__c = TRUE,
+ ISPICKVAL(Delivery_Status__c , &apos;On Hold&apos;) || 
+ ISPICKVAL(Delivery_Status__c , &apos;Awaiting Allocation&apos;) || 
+ ISPICKVAL(Delivery_Status__c , &apos;Cancelled&apos;)),
+ AND( Stock_Allocated__c = FALSE,
+ ISPICKVAL(Delivery_Status__c , &apos;Ready for Fulfilment&apos;) ||
+ ISPICKVAL(Delivery_Status__c , &apos;Sent for Fulfilment&apos;))
+))</errorConditionFormula>
+    <errorDisplayField>Delivery_Status__c</errorDisplayField>
+    <errorMessage>This status is not valid for the current state of stock allocation</errorMessage>
+</ValidationRule>

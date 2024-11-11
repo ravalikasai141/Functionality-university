@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regenerate_Sales_Order</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Regenerate Sales Order</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/apex.js&quot;)} 
+
+var nullFieldMsg = &quot;&quot;; 
+
+//if ({!NOT(ISBLANK(Account.PS_Profile_Services_ID__pc ))}) { 
+//nullFieldMsg += &quot;Profile ID already exists\n&quot;; 
+//} 
+
+if(nullFieldMsg.length &gt; 0) { 
+alert(nullFieldMsg); 
+} 
+else { 
+var result = sforce.apex.execute(&quot;CreateSalesOrder&quot;, &quot;SalesOrderInfo&quot;, {opportunityId:&quot;{!Opportunity.Id}&quot;}); 
+if(result != &quot;Success&quot;) 
+alert(result); 
+else 
+document.location.reload(true); 
+}</url>
+</WebLink>

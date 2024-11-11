@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Electronically Supplied service</fullName>
+        <default>false</default>
+        <label>Electronically Supplied service</label>
+    </customValue>
+    <customValue>
+        <fullName>Exempt Product</fullName>
+        <default>false</default>
+        <label>Exempt Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Non UK Classroom Courses</fullName>
+        <default>false</default>
+        <label>Non UK Classroom Courses</label>
+    </customValue>
+    <customValue>
+        <fullName>Normal Standard Rated Product</fullName>
+        <default>false</default>
+        <label>Normal Standard Rated Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Outside the Scope</fullName>
+        <default>false</default>
+        <label>Product Outside the Scope</label>
+    </customValue>
+    <customValue>
+        <fullName>Royalties and Licence Fees</fullName>
+        <default>false</default>
+        <label>Royalties and Licence Fees</label>
+    </customValue>
+    <customValue>
+        <fullName>UK Classroom Courses</fullName>
+        <default>false</default>
+        <label>UK Classroom Courses</label>
+    </customValue>
+    <customValue>
+        <fullName>Virtual Campus Product</fullName>
+        <default>false</default>
+        <label>Virtual Campus Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Zero Rated Product</fullName>
+        <default>false</default>
+        <label>Zero Rated Product</label>
+    </customValue>
+    <customValue>
+        <fullName>Distance CD Rom / Calculators</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Distance CD Rom / Calculators</label>
+    </customValue>
+    <customValue>
+        <fullName>Classroom CD Rom / Calculators</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Classroom CD Rom / Calculators</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax at 17.5% for credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tax at 17.5% for credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax at 15% for credits</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tax at 15% for credits</label>
+    </customValue>
+    <customValue>
+        <fullName>Supply Electronically Supplied Service</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Supply Electronically Supplied Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Learning Media CD Rom / Calculators</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Learning Media CD Rom / Calculators</label>
+    </customValue>
+    <description>List of tax rule categorisations that drive mapping to tax rules on quote line.</description>
+    <masterLabel>Product Tax Categories</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

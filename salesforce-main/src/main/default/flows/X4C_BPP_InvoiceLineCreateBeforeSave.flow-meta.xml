@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <description>Set charge date to invoice date to force correct finance period.</description>
+        <name>Set_Charge_Date_to_Invoice_Date</name>
+        <label>Set Charge Date to Invoice Date</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.blng__ChargeDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.blng__Invoice__r.blng__InvoiceDate__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <formulas>
+        <description>The first of the month in which the invoice&apos;s invoice date falls.</description>
+        <name>InvoiceMonth1st</name>
+        <dataType>Date</dataType>
+        <expression>DATE(YEAR({!$Record.blng__Invoice__r.blng__InvoiceDate__c}), MONTH({!$Record.blng__Invoice__r.blng__InvoiceDate__c}),1)</expression>
+    </formulas>
+    <interviewLabel>BPP {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>4C_BPP InvoiceLineCreateBeforeSave</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Charge_Date_to_Invoice_Date</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>blng__ChargeType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Usage</stringValue>
+            </value>
+        </filters>
+        <object>blng__InvoiceLine__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Start date of period into which this line should be allocated.</description>
+        <name>TargetStartDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

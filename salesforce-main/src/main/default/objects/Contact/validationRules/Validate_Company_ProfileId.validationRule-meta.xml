@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Company_ProfileId</fullName>
+    <active>true</active>
+    <errorConditionFormula>If(OR(ISBLANK(AccountId), Active__c = false), false, If( ISBLANK(Account.Profile_Company_ID__c), true, false))</errorConditionFormula>
+    <errorMessage>Profile Company Id is required on company Account</errorMessage>
+</ValidationRule>

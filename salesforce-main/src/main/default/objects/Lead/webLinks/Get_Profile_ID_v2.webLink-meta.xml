@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Get_Profile_ID_v2</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Get Profile ID</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/apex.js&quot;)} 
+
+var nullFieldMsg = &quot;&quot;; 
+
+var counter = 0; 
+
+if ({!NOT(ISBLANK(Lead.PS_Profile_Services_ID__c ))}) { 
+nullFieldMsg += &quot;Profile ID already exists\n&quot;; 
+} 
+
+if (nullFieldMsg.length &gt; 0) { 
+alert(nullFieldMsg); 
+} 
+else { 
+var result = sforce.apex.execute(&quot;ProfileIntegrations_v2&quot;,&quot;ProfileLeadInt_v2&quot;, {LeadId:&quot;{!Lead.Id}&quot;}); 
+if (result != &quot;Success&quot;) 
+alert(result); 
+else 
+document.location.reload(true); 
+}</url>
+</WebLink>

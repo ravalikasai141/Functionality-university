@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Edit, Save and Cancel buttons for interacting with multiple Display Field Set components on a Lightning Page</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Display Field Set Buttons</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+</LightningComponentBundle>

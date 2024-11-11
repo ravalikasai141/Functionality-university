@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market_Insight__c</fullName>
+    <description>During your conversation, did you collect any market insight? If so, please note it down here. (Market insight is anything that&apos;s useful to BPP&apos;s wider business, and could include legislation that&apos;s affecting the client&apos;s sector, information about their competitors, or news and current affairs that the client mentions in conversations)</description>
+    <externalId>false</externalId>
+    <label>Market Insight</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

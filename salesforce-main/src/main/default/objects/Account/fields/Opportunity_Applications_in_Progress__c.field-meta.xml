@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Applications_in_Progress__c</fullName>
+    <description>Calculates number of applications in progress (includes conditional acceptances from UCAS).  Influences student status field.</description>
+    <externalId>false</externalId>
+    <label>Opportunity Applications in Progress</label>
+    <summaryFilterItems>
+        <field>Opportunity.StageName</field>
+        <operation>equals</operation>
+        <value>Application, Review, Conditional Offer, Accepted - Unconditional Firm, Accepted - Unconditional Insurance</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_This_One__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To be checked to indicate main account if duplicates are present.
+
+Legacy field for BD to indicate record of use prior to data cleansing.</description>
+    <externalId>false</externalId>
+    <label>Use This One</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

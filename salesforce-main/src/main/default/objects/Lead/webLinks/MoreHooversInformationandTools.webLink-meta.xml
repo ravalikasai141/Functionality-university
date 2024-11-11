@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MoreHooversInformationandTools</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>More Hoover&apos;s Information and Tools</masterLabel>
+    <openType>noSidebar</openType>
+    <protected>false</protected>
+    <url>https://secure.hoovers.com/subscribe/sfdc/company/tools.xhtml?sfsid={!API_Session_ID}&amp;sfurl={!API_Partner_Server_URL_70}</url>
+</WebLink>

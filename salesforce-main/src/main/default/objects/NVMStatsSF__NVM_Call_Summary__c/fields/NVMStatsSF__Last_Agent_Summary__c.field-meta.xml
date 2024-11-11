@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Last_Agent_Summary__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Link to Agent Summary for the last agent to contribute an event to this Call</inlineHelpText>
+    <label>Last Agent&apos;s Calls this Day</label>
+    <referenceTo>NVMStatsSF__NVM_Agent_Summary__c</referenceTo>
+    <relationshipLabel>Call Summaries</relationshipLabel>
+    <relationshipName>NVM_Call_Summaries</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

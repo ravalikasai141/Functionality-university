@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Assignment_Number__c</fullName>
+    <description>This field can be removed as its functionality has been migrated to an apex code solution.
+
+Its function was to determine a round robin record assignment number which was then used to determine account ownership via workflow under certain conditions.</description>
+    <externalId>false</externalId>
+    <formula>CASE( Student_Type__c ,
+
+&quot;Domestic&quot;, &quot;D&quot;&amp;TEXT(MOD(VALUE(MID ( SFID__c , 3,16)),9)+1),
+&quot;International&quot;, &quot;I&quot;&amp;TEXT(MOD(VALUE(MID ( SFID__c , 3,16)),3)+1),
+&quot;Missing Student Type&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>[REMOVE] Record Assignment Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

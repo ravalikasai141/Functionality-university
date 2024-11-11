@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAS_Visa_Documents__c</fullName>
+    <description>The following documents must be collected before a CAS can be issued for VISA application.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The following documents must be collected before a CAS can be issued for VISA application.</inlineHelpText>
+    <label>CAS Visa Documents</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Passport copy</fullName>
+                <default>false</default>
+                <label>Passport copy</label>
+            </value>
+            <value>
+                <fullName>Education Documents</fullName>
+                <default>false</default>
+                <label>Education Documents</label>
+            </value>
+            <value>
+                <fullName>English Language Certificate</fullName>
+                <default>false</default>
+                <label>English Language Certificate</label>
+            </value>
+            <value>
+                <fullName>Bank statements</fullName>
+                <default>false</default>
+                <label>Bank statements</label>
+            </value>
+            <value>
+                <fullName>Visa</fullName>
+                <default>false</default>
+                <label>Visa</label>
+            </value>
+            <value>
+                <fullName>Acceptance and intention</fullName>
+                <default>false</default>
+                <label>Acceptance and intention</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

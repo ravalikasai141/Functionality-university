@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Apprentice Application template for requesting a review - Nursing only</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Application review call – Line Manager requested – Nursing only</name>
+    <style>none</style>
+    <subject>Next steps: Arrange your application review call</subject>
+    <textOnly>Next steps: Arrange your application review call
+
+Dear {!Case.Contact},
+
+Thank you for your application to join an apprenticeship with BPP.
+
+As part of the onboarding process and adherence to the Apprenticeship funding rules and criteria, we require you to book a review call with a member of our Apprenticeship team.
+
+What you need to do next
+
+You now need to set up a quick 15 minute video call to:
+
+Review the information you&apos;ve entered in your application
+Check your ID documents
+
+Book your application review call here.
+
+Important: You must arrange this call before you can start your apprenticeship programme. Ideally you need to attend with your line manager, but if you cannot align your diaries then we can continue with you and send any documentation to your line manager for agreement once the call has taken place. If you are attending the call with your line manager, please forward them the call invite.
+
+Preparing for your call
+
+After you&apos;ve chosen a time, you just need to prepare a few things for your meeting:
+
+The call will be on Microsoft Teams. You can download Teams for free here
+Make sure you&apos;ve signed in to your BPP Hub account
+Check your learning plan here before the call
+For identity verification, have your camera on during the call
+Have your passport, driver&apos;s licence, or any photo ID for verification
+
+If you need support
+
+Call 03300 603 443
+Email apprenticeshiponboarding@bpp.com
+
+Kind regards,
+BPP Professional Apprenticeships
+
+BPP Holdings Limited 2023 - Part of TDR Capital LLP
+BPP House, Aldine Place, 142-144 Uxbridge Road, W12 8AA, Greater London, registered in England and Wales under company number 01245304
+
+Privacy Policy</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

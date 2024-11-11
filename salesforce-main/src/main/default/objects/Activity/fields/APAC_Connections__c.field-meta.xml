@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APAC_Connections__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do you think the client would be willing to connect you with colleagues in APAC?</description>
+    <externalId>false</externalId>
+    <label>APAC Connections</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Phone_Invalid</fullName>
+    <active>true</active>
+    <description>For Training Manager records, if a preferred phone is set; then that number must be populated on the Training Manager records.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Training_Manager&apos;,
+
+(TEXT(Preferred_Phone__c )=&apos;Home&apos; &amp;&amp; HomePhone =null) ||
+(TEXT(Preferred_Phone__c )=&apos;Work&apos; &amp;&amp; Work_Phone__c =null) ||
+(TEXT(Preferred_Phone__c )=&apos;Mobile&apos; &amp;&amp; MobilePhone =null) ||
+(TEXT(Preferred_Phone__c )=&apos;Other&apos; &amp;&amp; OtherPhone=null)
+)</errorConditionFormula>
+    <errorDisplayField>Preferred_Phone__c</errorDisplayField>
+    <errorMessage>The selected preferred phone number is not present.  Please select a valid phone number.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Microsite_Eligible__c</fullName>
+    <description>If &quot;Yes&quot; then the opportunity can be accessed by the microsite.  Any other value indicates the reason that the opportunity is not eligible for microsite use.</description>
+    <externalId>false</externalId>
+    <formula>/* IF( CloseDate &lt; TODAY(), &quot;No - Offer Expired&quot;, */
+
+  IF( TEXT(StageName) &lt;&gt; &quot;Conditional Offer&quot; &amp;&amp; TEXT(StageName) &lt;&gt; &quot;Unconditional Offer&quot;, &quot;No - Not in Offer Status&quot;,
+    IF( LEN(TEXT(Mode__c)) = 0, &quot;No - Mode Required&quot;,
+      IF( LEN(TEXT(Location__c)) = 0, &quot;No - Location Required&quot;,
+        IF( ISNULL( Account.MS_Date_of_Birth__c ), &quot;No - Date of Birth Required&quot;,
+          IF( Programme_Application__r.Microsite_Enabled__c = TRUE, &quot;Yes&quot;, &quot;No - Programme not Microsite Enabled&quot;
+
+)))))
+
+
+/*
+)
+*/
+
+/* Offer Expiry Removed per Kate Hayes 3-23-11; John Coppedge */</formula>
+    <inlineHelpText>Can the student accept this offer on the Microsite?</inlineHelpText>
+    <label>Microsite Eligible</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

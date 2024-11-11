@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_Prices_Editable_by_Default__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>By default can prices be edited for the account on the quote</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sets the List Prices Editable? field on the quote</inlineHelpText>
+    <label>List Prices Editable by Default?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

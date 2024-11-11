@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_20_Character_EC_Mobile_Number</fullName>
+    <active>true</active>
+    <description>Limits the character count of the Emergency Contact Mobile Number field to 20 characters.</description>
+    <errorConditionFormula>LEN(Emergency_Contact_Mobile__pc) &gt; 20</errorConditionFormula>
+    <errorDisplayField>Emergency_Contact_Mobile__pc</errorDisplayField>
+    <errorMessage>Maximum Length for Emergency Contact Mobile is 20 characters</errorMessage>
+</ValidationRule>

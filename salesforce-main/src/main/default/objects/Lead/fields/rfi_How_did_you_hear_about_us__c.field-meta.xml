@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_How_did_you_hear_about_us__c</fullName>
+    <externalId>false</externalId>
+    <label>How did you hear about us?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Internet Search</fullName>
+                <default>false</default>
+                <label>Internet Search</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>In the News</fullName>
+                <default>false</default>
+                <label>In the News</label>
+            </value>
+            <value>
+                <fullName>Via a Professional Body</fullName>
+                <default>false</default>
+                <label>Via a Professional Body</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>Friend Family Colleague</fullName>
+                <default>false</default>
+                <label>Friend Family Colleague</label>
+            </value>
+            <value>
+                <fullName>You are a former student</fullName>
+                <default>false</default>
+                <label>You are a former student</label>
+            </value>
+            <value>
+                <fullName>University or School</fullName>
+                <default>false</default>
+                <label>University or School</label>
+            </value>
+            <value>
+                <fullName>British Council/Education UK</fullName>
+                <default>false</default>
+                <label>British Council/Education UK</label>
+            </value>
+            <value>
+                <fullName>Social Network</fullName>
+                <default>false</default>
+                <label>Social Network</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

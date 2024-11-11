@@ -1,0 +1,33 @@
+<template>
+    <div class={fieldBackground}>
+        <div class="slds-p-horizontal_small">
+            <div class="slds-grid">
+                <div class={fieldStyling}>
+                    <lightning-input
+                        label={label}
+                        value={answer}
+                        class="slds-form-element_readonly"
+                        readonly
+                    ></lightning-input>
+                </div>
+                <template if:false={hidebutton}>
+                    <div class="slds-col slds-size_1-of-8 slds-m-top_large slds-m-left_medium">
+                        <lightning-button-icon
+                            icon-name={commentIcon}
+                            alternative-text="comment"
+                            variant="border-filled"
+                            title="comment"
+                            onclick={handleShowComment}
+                        ></lightning-button-icon>
+                    </div>
+                </template>
+            </div>
+            <template if:true={showComment}>
+                <lightning-input
+                    class="slds-m-top_small slds-p-bottom_x-small slds-size_7-of-8"
+                    variant="label-hidden"
+                ></lightning-input>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Date_Required_when_Offer_Extended</fullName>
+    <active>false</active>
+    <description>This validation rule ensures that the offer date is populated when an opportunity reaches stage &quot;Conditional Offer&quot; or &quot;Unconditional Offer&quot;.</description>
+    <errorConditionFormula>(TEXT( StageName ) == &quot;Conditional Offer&quot; || 
+  TEXT( StageName ) == &quot;Unconditional Offer&quot;) &amp;&amp;
+ISBLANK( Offer_Date__c )</errorConditionFormula>
+    <errorDisplayField>Offer_Date__c</errorDisplayField>
+    <errorMessage>Offer Date is required when an opportunity is either &quot;Conditional Offer&quot; or &quot;Unconditional Offer&quot;.</errorMessage>
+</ValidationRule>

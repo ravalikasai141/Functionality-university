@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apprentice_Application_Stage_Progression</fullName>
+    <active>false</active>
+    <description>User cannot manually move Status from BPP Review to Line Manager Review, this must be done by the Sub stage value.</description>
+    <errorConditionFormula>AND (
+ISCHANGED(StageName),
+ISPICKVAL(StageName, &quot;Line Manager Review&quot; ),
+ISPICKVAL(PRIORVALUE(StageName), &quot;BPP Review&quot; ),
+NOT(ISCHANGED(Bypass_Validation_Rule__c)),
+RecordType.DeveloperName=&quot;Apprentice_Application&quot;
+)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>You cannot manually move Status from BPP Review to Line Manager Review, this must be done by the Sub stage value.</errorMessage>
+</ValidationRule>

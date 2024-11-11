@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organisational_Capability_Timeframe__c</fullName>
+    <description>If yes*, when might they be interested?
+
+*Did you discuss organisational capability mapping with the client?</description>
+    <externalId>false</externalId>
+    <label>Organisational Capability Timeframe</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Organisational_Capability_Mapping__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Next 0-3 months</fullName>
+                <default>false</default>
+                <label>Next 0-3 months</label>
+            </value>
+            <value>
+                <fullName>Next 4-6 months</fullName>
+                <default>false</default>
+                <label>Next 4-6 months</label>
+            </value>
+            <value>
+                <fullName>Next 7-12 months</fullName>
+                <default>false</default>
+                <label>Next 7-12 months</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Next 0-3 months</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Next 4-6 months</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Next 7-12 months</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

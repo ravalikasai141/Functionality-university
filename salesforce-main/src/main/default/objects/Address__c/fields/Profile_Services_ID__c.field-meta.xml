@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile_Services_ID__c</fullName>
+    <description>Pulls the Profile Id value from either the related Account or Contact. Useful for avoiding multiple unnecessary SOQL calls in the AddressTrigger.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+				NOT(ISBLANK(Student__r.PS_Profile_Services_ID__pc)),
+				Student__r.PS_Profile_Services_ID__pc,
+				IF(
+								NOT(ISBLANK(Training_Manager__r.PS_Profile_Services_ID__c)),
+								Training_Manager__r.PS_Profile_Services_ID__c,
+								NULL
+				)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Profile Services ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

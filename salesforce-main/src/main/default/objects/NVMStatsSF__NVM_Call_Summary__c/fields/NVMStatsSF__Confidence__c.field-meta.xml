@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Confidence__c</fullName>
+    <defaultValue>&quot;Unknown&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Transcription Confidence</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Transcription Confidence</inlineHelpText>
+    <label>Confidence</label>
+    <length>10</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

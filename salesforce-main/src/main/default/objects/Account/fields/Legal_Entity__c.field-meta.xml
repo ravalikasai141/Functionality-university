@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Entity__c</fullName>
+    <externalId>false</externalId>
+    <label>Legal Entity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>UC~COL</fullName>
+                <default>false</default>
+                <label>UC~COL</label>
+            </value>
+            <value>
+                <fullName>UC~WEB</fullName>
+                <default>false</default>
+                <label>UC~WEB</label>
+            </value>
+            <value>
+                <fullName>LEGAL~CEU</fullName>
+                <default>false</default>
+                <label>LEGAL~CEU</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

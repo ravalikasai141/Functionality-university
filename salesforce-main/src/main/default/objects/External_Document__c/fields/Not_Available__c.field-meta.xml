@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Available__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tracks whether the document has been flagged as uploaded or not</description>
+    <externalId>false</externalId>
+    <label>Not Available</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

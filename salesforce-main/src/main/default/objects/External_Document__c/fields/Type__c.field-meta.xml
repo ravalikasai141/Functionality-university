@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EDUCATION_HISTORY</fullName>
+                <default>false</default>
+                <label>Education History</label>
+            </value>
+            <value>
+                <fullName>GENERAL</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Name Changed</fullName>
+                <default>false</default>
+                <label>Name Changed</label>
+            </value>
+            <value>
+                <fullName>Application Pack</fullName>
+                <default>false</default>
+                <label>Application Pack</label>
+            </value>
+            <value>
+                <fullName>letter</fullName>
+                <default>false</default>
+                <label>Letter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Date__c</fullName>
+    <description>Date that the offer is extended via email to the student.  Manually populated via admissions for single offers / salesforce team or lead upload template for mass updates.
+
+Blank offer date indicates an offer has not yet been sent.</description>
+    <externalId>false</externalId>
+    <label>Offer Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

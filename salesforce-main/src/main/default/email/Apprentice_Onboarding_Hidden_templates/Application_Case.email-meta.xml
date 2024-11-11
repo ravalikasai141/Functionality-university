@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Application Case template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Application_Case</name>
+    <style>none</style>
+    <subject>Application_Case</subject>
+    <textOnly>Application Case Email
+
+{EMAIL_BODY} {CASE_THREAD}
+
+BPP Holdings Limited 2023 - Part of TDR Capital LLP
+BPP House, Aldine Place, 142-144 Uxbridge Road, W12 8AA, Greater London, registered in England and Wales under company number 01245304
+
+Privacy Policy</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

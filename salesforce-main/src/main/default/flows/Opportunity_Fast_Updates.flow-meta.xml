@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <description>Set Client value from the related line manager record</description>
+        <name>Set_Client</name>
+        <label>Set Client</label>
+        <locationX>248</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Client__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Line_Manager__r.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_Reason_Code_Changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set opportunity to auto close, which will then reject the quote (resulting in the opportunity moving to closed/lost)</description>
+        <name>Set_Opportunity_To_Auto_Close</name>
+        <label>Set Opportunity To Auto Close</label>
+        <locationX>50</locationX>
+        <locationY>1703</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Auto_Close__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Set the Quote Pricebook Id on the opportunity</description>
+        <name>Set_Quote_Pricebook</name>
+        <label>Set Quote Pricebook</label>
+        <locationX>248</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SBQQ__QuotePricebookId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Label.Standard_Price_Book_ID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Line_Manager_Changed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>When Reason Code is changed then set the Reason Code Last Modified Date value to the current date</description>
+        <name>Set_Reason_Code_Last_Modified_Date</name>
+        <label>Set Reason Code Last Modified Date</label>
+        <locationX>248</locationX>
+        <locationY>995</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Reason_Code_Last_Modified_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_1st_payment_Reason_for_non_payment_Been_Updated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>When 1st payment: Reason for non payment is changed then set the Reason for non payment: Last Modified value to the current date/time</description>
+        <name>Set_Reason_for_non_payment_Last_Modified</name>
+        <label>Set Reason for non payment: Last Modified</label>
+        <locationX>248</locationX>
+        <locationY>1295</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Reason_for_non_payment_Last_Modified__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Ecommerce_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Has the opportunity been created by ecommerce?</description>
+        <name>Ecommerce_Opportunity</name>
+        <label>Ecommerce Opportunity?</label>
+        <locationX>380</locationX>
+        <locationY>1487</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ecommerce</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Record_Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>eCommerce</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Ecommerce_Opportunity_Open</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Ecommerce</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the 1st payment: Reason for non payment field been set to a different value?</description>
+        <name>Has_1st_payment_Reason_for_non_payment_Been_Updated</name>
+        <label>Has 1st payment: Reason for non payment Been Updated?</label>
+        <locationX>380</locationX>
+        <locationY>1187</locationY>
+        <defaultConnector>
+            <targetReference>Ecommerce_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_1st_Payment_Non_Payment_Reason_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.X1st_payment_Reason_for_non_payment__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.X1st_payment_Reason_for_non_payment__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Reason_for_non_payment_Last_Modified</targetReference>
+            </connector>
+            <label>Yes, 1st Payment Non-Payment Reason Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the Reason Code field been set to a different value?</description>
+        <name>Has_Reason_Code_Changed</name>
+        <label>Has Reason Code Changed?</label>
+        <locationX>380</locationX>
+        <locationY>887</locationY>
+        <defaultConnector>
+            <targetReference>Has_1st_payment_Reason_for_non_payment_Been_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Reason_Code_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reason_Code__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Reason_Code__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reason_Code__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>No reason code</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Reason_Code__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Set_Reason_Code_Last_Modified_Date</targetReference>
+            </connector>
+            <label>Yes, Reason Code Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the opportunity created by ecommerce still open or has it been completed - does it have an active quote associated to it?</description>
+        <name>Is_Ecommerce_Opportunity_Open</name>
+        <label>Is Ecommerce Opportunity Open?</label>
+        <locationX>182</locationX>
+        <locationY>1595</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Open_Ecommerce_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Opportunity_To_Auto_Close</targetReference>
+            </connector>
+            <label>Open Ecommerce Opportunity</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the opportunity line manager been changed?</description>
+        <name>Line_Manager_Changed</name>
+        <label>Line Manager Changed?</label>
+        <locationX>380</locationX>
+        <locationY>587</locationY>
+        <defaultConnector>
+            <targetReference>Has_Reason_Code_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Line_Manager_Change</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Line_Manager__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Line_Manager__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Client</targetReference>
+            </connector>
+            <label>Line Manager Change</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Opportunity is created</description>
+        <name>New_Opportunity</name>
+        <label>New Opportunity?</label>
+        <locationX>380</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Line_Manager_Changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Quote_Pricebook</targetReference>
+            </connector>
+            <label>New</label>
+        </rules>
+    </decisions>
+    <description>Opportunity updates (context: before creation/update)</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity Fast Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Fast Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_Opportunity</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Domestic Business</fullName>
+        <default>false</default>
+        <label>Domestic Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Customer</fullName>
+        <default>false</default>
+        <label>Domestic Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Exempt Business</fullName>
+        <default>false</default>
+        <label>Exempt Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Rest of World Business</fullName>
+        <default>false</default>
+        <label>Rest of World Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Rest of World Customer</fullName>
+        <default>false</default>
+        <label>Rest of World Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>UK VAT Applicable</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>UK VAT Applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>University College Outside of the Scope</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>University College Outside of the Scope</label>
+    </customValue>
+    <customValue>
+        <fullName>University College</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>University College</label>
+    </customValue>
+    <customValue>
+        <fullName>Exempt Supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Exempt Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>rest of World Supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>rest of World Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>Exempt Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Exempt Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Learning Skills Council Funded</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Learning Skills Council Funded</label>
+    </customValue>
+    <customValue>
+        <fullName>Domestic Supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Domestic Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>Outside the scope Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outside the scope Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Outside the scope Supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outside the scope Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>Outside the scope Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outside the scope Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>EU Non Registered Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EU Non Registered Business</label>
+    </customValue>
+    <customValue>
+        <fullName>EU Registered Business</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EU Registered Business</label>
+    </customValue>
+    <customValue>
+        <fullName>EU Non Registered Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EU Non Registered Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>EU Registered Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EU Registered Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>EU VAT Registered Supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EU VAT Registered Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>EU Non Registered Supplier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EU Non Registered Supplier</label>
+    </customValue>
+    <description>List of tax rule categorisations that drive mapping to tax rules on quote line.</description>
+    <masterLabel>Account Tax Categories</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

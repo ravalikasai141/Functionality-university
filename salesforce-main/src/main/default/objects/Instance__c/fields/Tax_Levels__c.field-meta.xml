@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Levels__c</fullName>
+    <description>The tax level for the instance that will be pushed from product factory</description>
+    <externalId>false</externalId>
+    <label>Tax Levels</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ZER</fullName>
+                <default>false</default>
+                <label>ZER</label>
+            </value>
+            <value>
+                <fullName>UKC</fullName>
+                <default>false</default>
+                <label>UKC</label>
+            </value>
+            <value>
+                <fullName>OSS</fullName>
+                <default>false</default>
+                <label>OSS</label>
+            </value>
+            <value>
+                <fullName>NOR</fullName>
+                <default>false</default>
+                <label>NOR</label>
+            </value>
+            <value>
+                <fullName>EXO</fullName>
+                <default>false</default>
+                <label>EXO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Courier__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Company responsible for delivering items</description>
+    <externalId>false</externalId>
+    <label>Courier</label>
+    <referenceTo>Courier__c</referenceTo>
+    <relationshipLabel>Requested Deliveries</relationshipLabel>
+    <relationshipName>Requested_Deliveries</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

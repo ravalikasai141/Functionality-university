@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubStatus_to_be_mandatory_If_BD_Oppo</fullName>
+    <active>true</active>
+    <description>Dynamic BD Opportunity Sub Statuses to be mandatory for only BD opportunity</description>
+    <errorConditionFormula>RecordType.DeveloperName = &apos;Business_Development&apos; &amp;&amp; ISPICKVAL(BPP_Sub_Status__c ,&apos;&apos;) &amp;&amp; DateValue(CreatedDate) &gt; Date(2022,06,28)</errorConditionFormula>
+    <errorDisplayField>BPP_Sub_Status__c</errorDisplayField>
+    <errorMessage>Please select the appropriate Sub Status</errorMessage>
+</ValidationRule>

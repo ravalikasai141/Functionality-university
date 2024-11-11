@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_SMS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Originally a BD field but added to student pages as well.  Indicates an SMS opt out.</description>
+    <externalId>false</externalId>
+    <label>No SMS</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

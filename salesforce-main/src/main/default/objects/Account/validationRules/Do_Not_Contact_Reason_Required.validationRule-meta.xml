@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Contact_Reason_Required</fullName>
+    <active>true</active>
+    <description>If the DO NOT CONTACT field is populated then a reason must be stipulated.</description>
+    <errorConditionFormula>AND(
+DO_NOT_CONTACT__pc = TRUE,
+ISBLANK(TEXT( Do_Not_Contact_Reason__pc ))
+)</errorConditionFormula>
+    <errorDisplayField>Do_Not_Contact_Reason__pc</errorDisplayField>
+    <errorMessage>A Do Not Contact Reason must be entered when record is in a Do Not Contact state.</errorMessage>
+</ValidationRule>

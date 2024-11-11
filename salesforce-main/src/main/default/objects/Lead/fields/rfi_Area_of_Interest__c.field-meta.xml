@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rfi_Area_of_Interest__c</fullName>
+    <description>this is the select list for rfi</description>
+    <externalId>false</externalId>
+    <label>Area of Interest - RFI</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>rfi_Are_you_EU_UK__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accommodation</fullName>
+                <default>false</default>
+                <label>Accommodation</label>
+            </value>
+            <value>
+                <fullName>Accountancy</fullName>
+                <default>false</default>
+                <label>Accountancy</label>
+            </value>
+            <value>
+                <fullName>Administration and Company Secretarial</fullName>
+                <default>false</default>
+                <label>Administration and Company Secretarial</label>
+            </value>
+            <value>
+                <fullName>Alumni services and events</fullName>
+                <default>false</default>
+                <label>Alumni services and events</label>
+            </value>
+            <value>
+                <fullName>Apprenticeships</fullName>
+                <default>false</default>
+                <label>Apprenticeships</label>
+            </value>
+            <value>
+                <fullName>Banking and Finance</fullName>
+                <default>false</default>
+                <label>Banking and Finance</label>
+            </value>
+            <value>
+                <fullName>Books and learning materials</fullName>
+                <default>false</default>
+                <label>Books and learning materials</label>
+            </value>
+            <value>
+                <fullName>Business and Management</fullName>
+                <default>false</default>
+                <label>Business and Management</label>
+            </value>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Careers service</fullName>
+                <default>false</default>
+                <label>Careers service</label>
+            </value>
+            <value>
+                <fullName>Clubs and societies</fullName>
+                <default>false</default>
+                <label>Clubs and societies</label>
+            </value>
+            <value>
+                <fullName>Courses</fullName>
+                <default>false</default>
+                <label>Courses</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Foundation Courses</fullName>
+                <default>false</default>
+                <label>Foundation Courses</label>
+            </value>
+            <value>
+                <fullName>Graduation</fullName>
+                <default>false</default>
+                <label>Graduation</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>Law</fullName>
+                <default>false</default>
+                <label>Law</label>
+            </value>
+            <value>
+                <fullName>Leadership and Personal Development</fullName>
+                <default>false</default>
+                <label>Leadership and Personal Development</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Management and Leadership</fullName>
+                <default>false</default>
+                <label>Management and Leadership</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Open days and education events</fullName>
+                <default>false</default>
+                <label>Open days and education events</label>
+            </value>
+            <value>
+                <fullName>Pre-Masters Courses</fullName>
+                <default>false</default>
+                <label>Pre-Masters Courses</label>
+            </value>
+            <value>
+                <fullName>Preparatory English</fullName>
+                <default>false</default>
+                <label>Preparatory English</label>
+            </value>
+            <value>
+                <fullName>Probono</fullName>
+                <default>false</default>
+                <label>Probono</label>
+            </value>
+            <value>
+                <fullName>Retail Distribution Review</fullName>
+                <default>false</default>
+                <label>Retail Distribution Review</label>
+            </value>
+            <value>
+                <fullName>Secondary education (MPW)</fullName>
+                <default>false</default>
+                <label>Secondary education (MPW)</label>
+            </value>
+            <value>
+                <fullName>Student finance (loans and scholarships)</fullName>
+                <default>false</default>
+                <label>Student finance (loans and scholarships)</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Accountancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Administration and Company Secretarial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Apprenticeships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Banking and Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Business and Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Business Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Financial Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Foundation Courses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Human Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Insolvency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Leadership and Personal Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Management and Leadership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Pre-Masters Courses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Preparatory English</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Retail Distribution Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Student</controllingFieldValue>
+            <valueName>Tax</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

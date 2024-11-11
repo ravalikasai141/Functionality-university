@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Index_must_be_positive</fullName>
+    <active>true</active>
+    <description>Index value must be greater than 0</description>
+    <errorConditionFormula>Index__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Index__c</errorDisplayField>
+    <errorMessage>Index value must be greater than 0</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This document is used for Milpark Case Management service console application</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Service Console Logo</name>
+    <public>true</public>
+</Document>

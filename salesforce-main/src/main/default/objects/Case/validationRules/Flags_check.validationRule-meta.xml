@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flags_check</fullName>
+    <active>true</active>
+    <description>This validation rule is used to check whether the confidential, Escalate, Urgent flags are  changed once the case is closed.</description>
+    <errorConditionFormula>AND(
+    OR($Profile.Name =&apos;Cloud Support Specialist&apos;,
+          $Profile.Name =&apos;Cloud Support Manager&apos;),
+    OR( PRIORVALUE(Urgent__c) != Urgent__c,
+          PRIORVALUE(IsEscalated) != IsEscalated, 
+            PRIORVALUE(Confidential__c) != Confidential__c),
+    ISPICKVAL(Status,&apos;Closed&apos;))</errorConditionFormula>
+    <errorMessage>Once Case is closed, Flags cannot be changed.</errorMessage>
+</ValidationRule>

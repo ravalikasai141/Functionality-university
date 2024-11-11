@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Status</fullName>
+    <active>true</active>
+    <description>User can only update status from Uploaded to Reviewed, no other combination.</description>
+    <errorConditionFormula>AND(
+  /* If the Status has been changed by a user who cannot bypass validation rules */
+  ISCHANGED(Status__c),
+  $Profile.Name != &apos;System Administrator&apos;,
+  $UserRole.DeveloperName != &apos;System_API&apos;,
+  OR(
+    /* Status was not &quot;Uploaded&quot; */
+    NOT(ISPICKVAL(PRIORVALUE(Status__c), &apos;Uploaded&apos;)),
+    /* Status was changed from uploaded to anything other than &quot;Reviewed&quot; */
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Uploaded&apos;),
+      NOT(ISPICKVAL(Status__c, &apos;Reviewed&apos;))
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>This status option is automated and can&apos;t be set manually</errorMessage>
+</ValidationRule>

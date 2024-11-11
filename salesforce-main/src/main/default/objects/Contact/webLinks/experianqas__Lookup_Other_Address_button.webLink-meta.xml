@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>experianqas__Lookup_Other_Address_button</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Lookup Other Address</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/resource/1252330725000/experianqas__PopupHelperJS&quot;)}
+QASDisplayPopup({ id: &quot;{!Contact.Id}&quot;, touchpoint: &quot;ContactOtherAddress&quot;});</url>
+</WebLink>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_CS_Internal_department</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Customer_Service&quot;,
+DATEVALUE(CreatedDate) &gt;=  date(2020,02,25),
+ISPICKVAL( Status, &quot;In Progress&quot;),
+ISBLANK(TEXT(Internal_department__c))
+)</errorConditionFormula>
+    <errorDisplayField>Internal_department__c</errorDisplayField>
+    <errorMessage>Please select Internal Department for In Progress status</errorMessage>
+</ValidationRule>

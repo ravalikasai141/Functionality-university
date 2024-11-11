@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Instance__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The instance this booking is for</description>
+    <externalId>false</externalId>
+    <label>Instance</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Instance__c.BPP_Instance_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Instance__c</referenceTo>
+    <relationshipLabel>Bookings</relationshipLabel>
+    <relationshipName>Bookings</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

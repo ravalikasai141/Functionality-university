@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nearest_Relevant_BPP_Office__c</fullName>
+    <externalId>false</externalId>
+    <label>Nearest/Relevant BPP Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Birmingham</fullName>
+                <default>false</default>
+                <label>Birmingham</label>
+            </value>
+            <value>
+                <fullName>Bristol</fullName>
+                <default>false</default>
+                <label>Bristol</label>
+            </value>
+            <value>
+                <fullName>Cambridge</fullName>
+                <default>false</default>
+                <label>Cambridge</label>
+            </value>
+            <value>
+                <fullName>Cardiff</fullName>
+                <default>false</default>
+                <label>Cardiff</label>
+            </value>
+            <value>
+                <fullName>Croydon</fullName>
+                <default>false</default>
+                <label>Croydon</label>
+            </value>
+            <value>
+                <fullName>Glasgow</fullName>
+                <default>false</default>
+                <label>Glasgow</label>
+            </value>
+            <value>
+                <fullName>Leeds</fullName>
+                <default>false</default>
+                <label>Leeds</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>London - Kings Cross</fullName>
+                <default>false</default>
+                <label>London - Kings Cross</label>
+            </value>
+            <value>
+                <fullName>London - Liverpool Street</fullName>
+                <default>false</default>
+                <label>London - Liverpool Street</label>
+            </value>
+            <value>
+                <fullName>London - Procter Street</fullName>
+                <default>false</default>
+                <label>London - Procter Street</label>
+            </value>
+            <value>
+                <fullName>London - Shepherds Bush</fullName>
+                <default>false</default>
+                <label>London - Shepherds Bush</label>
+            </value>
+            <value>
+                <fullName>London - Waterloo</fullName>
+                <default>false</default>
+                <label>London - Waterloo</label>
+            </value>
+            <value>
+                <fullName>Luton</fullName>
+                <default>false</default>
+                <label>Luton</label>
+            </value>
+            <value>
+                <fullName>Maidstone</fullName>
+                <default>false</default>
+                <label>Maidstone</label>
+            </value>
+            <value>
+                <fullName>Manchester</fullName>
+                <default>false</default>
+                <label>Manchester</label>
+            </value>
+            <value>
+                <fullName>Milton Keynes</fullName>
+                <default>false</default>
+                <label>Milton Keynes</label>
+            </value>
+            <value>
+                <fullName>Newcastle upon Tyne</fullName>
+                <default>false</default>
+                <label>Newcastle upon Tyne</label>
+            </value>
+            <value>
+                <fullName>Nottingham</fullName>
+                <default>false</default>
+                <label>Nottingham</label>
+            </value>
+            <value>
+                <fullName>Reading</fullName>
+                <default>false</default>
+                <label>Reading</label>
+            </value>
+            <value>
+                <fullName>Southampton</fullName>
+                <default>false</default>
+                <label>Southampton</label>
+            </value>
+            <value>
+                <fullName>Channel - Guernsey</fullName>
+                <default>false</default>
+                <label>Channel - Guernsey</label>
+            </value>
+            <value>
+                <fullName>Channel - Jersey</fullName>
+                <default>false</default>
+                <label>Channel - Jersey</label>
+            </value>
+            <value>
+                <fullName>China - Beijing</fullName>
+                <default>false</default>
+                <label>China - Beijing</label>
+            </value>
+            <value>
+                <fullName>China - Shanghai</fullName>
+                <default>false</default>
+                <label>China - Shanghai</label>
+            </value>
+            <value>
+                <fullName>Czech Republic - Prague</fullName>
+                <default>false</default>
+                <label>Czech Republic - Prague</label>
+            </value>
+            <value>
+                <fullName>Ireland - Dublin</fullName>
+                <default>false</default>
+                <label>Ireland - Dublin</label>
+            </value>
+            <value>
+                <fullName>Ireland - Limmerick</fullName>
+                <default>false</default>
+                <label>Ireland - Limmerick</label>
+            </value>
+            <value>
+                <fullName>Hungary - Budapest</fullName>
+                <default>false</default>
+                <label>Hungary - Budapest</label>
+            </value>
+            <value>
+                <fullName>Malta - Ta&apos; Xbiex</fullName>
+                <default>false</default>
+                <label>Malta - Ta&apos; Xbiex</label>
+            </value>
+            <value>
+                <fullName>Netherlands - Amsterdam</fullName>
+                <default>false</default>
+                <label>Netherlands - Amsterdam</label>
+            </value>
+            <value>
+                <fullName>Poland - Warsaw</fullName>
+                <default>false</default>
+                <label>Poland - Warsaw</label>
+            </value>
+            <value>
+                <fullName>Romania - Bucharest</fullName>
+                <default>false</default>
+                <label>Romania - Bucharest</label>
+            </value>
+            <value>
+                <fullName>Slovakia - Bratislava</fullName>
+                <default>false</default>
+                <label>Slovakia - Bratislava</label>
+            </value>
+            <value>
+                <fullName>USA - Weatogue CT</fullName>
+                <default>false</default>
+                <label>USA - Weatogue CT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

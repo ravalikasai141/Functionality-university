@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Deferrals_CMS_Auto_Reply</name>
+        <label>Deferrals CMS Auto Reply</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <actionName>Case.Case_Deferrals_CMS_Auto_Reply</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>Is_Email_Populated</name>
+        <label>Is Email Populated?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SuppliedEmail</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Deferrals_CMS_Auto_Reply</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>When selecting query type &apos;Assessments&apos; AND sub query type &apos;I would like to defer my assessment or request an extension&apos; and submitting my query, an automatic email reply is received with a direct link to the deferral form AND gives me succinct instructions for attaching and returning the form with evidence as well as expectations for the timeframe for a confirmation/denial of the request is being sent to the user.</description>
+    <interviewLabel>Deferrals CMS Auto Reply {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Deferrals CMS Auto Reply</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Email_Populated</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Query_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Assessments</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Query_Subtype__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>I would like to defer my assessment or request an extension</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

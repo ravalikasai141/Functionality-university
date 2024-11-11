@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Address_Required</fullName>
+    <active>false</active>
+    <description>Orders must have a Deliver To Address before any bookings can be made where the order will dictate the delivery address</description>
+    <errorConditionFormula>AND(
+OR(
+Order__r.Account.IsPersonAccount = TRUE,
+AND( Order__r.Account.IsPersonAccount = FALSE,  Order__r.Deliver_Materials_to_Student__c = FALSE )
+),
+ISBLANK( Order__r.Ship_To_Address__c )
+)</errorConditionFormula>
+    <errorDisplayField>Order__c</errorDisplayField>
+    <errorMessage>This order does not have a delivery address associated with it. One must be added before the booking can be added.</errorMessage>
+</ValidationRule>

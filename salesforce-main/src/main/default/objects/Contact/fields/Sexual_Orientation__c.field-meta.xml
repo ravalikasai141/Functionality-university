@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sexual_Orientation__c</fullName>
+    <externalId>false</externalId>
+    <label>Sexual Orientation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>12~ Heterosexual or straight</fullName>
+                <default>false</default>
+                <label>12~ Heterosexual or straight</label>
+            </value>
+            <value>
+                <fullName>11~ Gay or lesbian</fullName>
+                <default>false</default>
+                <label>11~ Gay or lesbian</label>
+            </value>
+            <value>
+                <fullName>10~ Bisexual</fullName>
+                <default>false</default>
+                <label>10~ Bisexual</label>
+            </value>
+            <value>
+                <fullName>19~ Other sexual orientation</fullName>
+                <default>false</default>
+                <label>19~ Other sexual orientation</label>
+            </value>
+            <value>
+                <fullName>98~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>98~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Not_Actively_Managed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for business accounts in gold standard reporting</description>
+    <externalId>false</externalId>
+    <label>Not Actively Managed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

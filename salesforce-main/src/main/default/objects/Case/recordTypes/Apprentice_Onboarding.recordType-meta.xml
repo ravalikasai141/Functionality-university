@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apprentice_Onboarding</fullName>
+    <active>true</active>
+    <businessProcess>Apprentice Onboarding</businessProcess>
+    <description>Case management for apprenticeship onboarding</description>
+    <label>Apprentice Onboarding</label>
+    <picklistValues>
+        <picklist>Bank_Name__c</picklist>
+        <values>
+            <fullName>Barclays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clydesdale Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HSBC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Halifax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lloyds Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NatWest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nationwide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Royal Bank of Scotland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TSB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Co-Operative Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yorkshire Bank</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CS_External_Handover_Department__c</picklist>
+        <values>
+            <fullName>AAT General Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications Support %28IT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apprenticeship Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Services Manchester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Course Set Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTL LM Sales Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Support Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Key Client Team London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LM Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marking Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Materials Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE LM Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Centre Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ HOP%2FFaculty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Support Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QV Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Direct Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Examinations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni INTL Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Enrolment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLE Support Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Department__c</picklist>
+        <values>
+            <fullName>Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %26 Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IOS_Approval_Status__c</picklist>
+        <values>
+            <fullName>Finance%2FStudy Visa Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance%2FStudy Visa Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Programme Support Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Programme Support Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IOS_Form_Received__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Internal_department__c</picklist>
+        <values>
+            <fullName>AAT General Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications Support %28IT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apprenticeship Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Services Manchester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Course Set Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INTL LM Sales Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Support Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Key Client Team London</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LM Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marking Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Materials Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PD Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE LM Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Centre Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ HOP%2FFaculty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PQ Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Support Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QV Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Direct Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Examinations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni INTL Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Enrolment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uni Student Records</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VLE Support Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Query_Subtype__c</picklist>
+        <values>
+            <fullName>Authorised Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How do I access my EBook%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How do I access my results and feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How do I collect my ID card%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am in financial difficulty%2C what are my options%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am on Interruption of Studies and wish to extend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am taking an interruption of studies%2C how does that affect my payment plan and fees%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I can%27t access my forum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I can%E2%80%99t see my course within my online learning platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a different problem with my online learning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about applying for Post Study Work%2FGraduate Route Visa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about exemptions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about inviting visitors to the UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about my End Point Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about my attendance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about my balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about my submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a query about my timetable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about Pass Assurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my Oyster card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my Visa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my assessments feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my exam arrangements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my exam learning support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my graduation ceremony</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my mock%2Fassessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my results</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my review%2Fgate-way call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my student loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about my term dates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about off the job training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about the content within my material</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about the induction webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a question about the materials I have received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a registration query</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have a specialist learning need%2C which I need additional support for</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have been billed for resit assessments%2C can I check what these are%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have got a question regarding my functional skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have missing or wrong modules on Hub%2FVLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have not received my certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have some feedback about my course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have some feedback about my recent experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I have some feedback about my tutor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I haven%E2%80%99t received my log in details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need a replacement certificate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need further support with my studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need my invoice%2Freceipt to be re-sent to me</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to book further papers for my programme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to change my employer details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to change my personal details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to defer my course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to inform you about my absence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to report a problem with my Biometric Resident Permit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to reschedule my course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I need to speak to someone about a change which affects my apprenticeship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I require further support with my apprenticeship programme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I want to change my programme%2C mode or location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like a GBC confirmation letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like a copy of my transcript</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to apply for Interruption of Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to apply for an extension of my student visa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to book an appointment to discuss a query I have</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to defer my assessment or request an extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to discuss appeals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to query my most recent invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to request a Bank%2C Status or Council Tax letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to request a Schengen Travel Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to request a holiday letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to request an academic reference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to resit my exam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I would like to return my study materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%27m having technical issues preventing me from accessing my e-materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%27m having technical issues preventing me from studying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My Ebook has expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My ID card has been lost or stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My invoice address is incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My letter details are Incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPP Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspension Warning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Purchase Order wasn%E2%80%99t included in my invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>When is my next instalment due%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>When will I receive my certificate%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>When will I receive my refund%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>When will my study materials be delivered%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Where do I find my live session that is due to commence%3F</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Query_Type__c</picklist>
+        <values>
+            <fullName>Additional Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Query</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Prior Learning%2FExemptions information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Assignment__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Release_Type__c</picklist>
+        <values>
+            <fullName>BAU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaged Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>School__c</picklist>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Study_Location__c</picklist>
+        <values>
+            <fullName>Birmingham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bristol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doncaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28City%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Holborn%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Kings Cross%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Portsoken%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Shepherd%27s Bush%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>London %28Waterloo%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manchester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Status__c</picklist>
+        <values>
+            <fullName>Awaiting Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Student Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disciplinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Does not meet case criteria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Review Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresolved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Disciplinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

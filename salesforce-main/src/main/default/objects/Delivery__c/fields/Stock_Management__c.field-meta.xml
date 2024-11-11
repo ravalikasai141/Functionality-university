@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_Management__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stock management record controlling the stock allocation for this delivery</description>
+    <externalId>false</externalId>
+    <label>Stock Management</label>
+    <referenceTo>Stock_Management__c</referenceTo>
+    <relationshipLabel>Deliveries</relationshipLabel>
+    <relationshipName>StockManagement</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

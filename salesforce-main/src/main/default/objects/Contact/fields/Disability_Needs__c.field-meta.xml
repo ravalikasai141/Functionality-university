@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disability_Needs__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to indicate if student needs learning support.  This field is populated by data team on certain data loads, but the detail field (long text) is not and must be populated by BPP staff.</description>
+    <externalId>false</externalId>
+    <label>Learning Support</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <description>Have the &apos;Client Band&apos; or &apos;Client Band Potential&apos; fields been updated?</description>
+        <name>Client_Bands_Updated</name>
+        <label>Client Bands Updated</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Has_Primary_Billing_Contact_Been_Removed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Client_Bands_Were_Updated</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account_Managed__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Account_Managed__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Child_Account_Records</targetReference>
+            </connector>
+            <label>Client Bands Were Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the Primary Billing Contact been removed on the company account?</description>
+        <name>Has_Primary_Billing_Contact_Been_Removed</name>
+        <label>Has Primary Billing Contact Been Removed?</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>Has_Primary_Delivery_Contact_Been_Removed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Primary_Billing_Contact_Removed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.blng__BillToContact__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Billing_Contact_Record</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Primary Billing Contact Removed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Has the Primary Delivery Contact been removed on the company account?</description>
+        <name>Has_Primary_Delivery_Contact_Been_Removed</name>
+        <label>Has Primary Delivery Contact Been Removed?</label>
+        <locationX>182</locationX>
+        <locationY>923</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Primary_Delivery_Contact_Removed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BPP_Deliver_To_Contact__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Primary_Delivery_Contact_Record</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Primary Delivery Contact Removed</label>
+        </rules>
+    </decisions>
+    <description>Business/company account updates (context: after creation/update)</description>
+    <environments>Default</environments>
+    <interviewLabel>Company Account Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Company Account Automation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update action for all child accounts of the parent record</description>
+        <name>Update_Child_Account_Records</name>
+        <label>Update Child Account Records</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Has_Primary_Billing_Contact_Been_Removed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Managed__c</field>
+            <value>
+                <elementReference>$Record.Account_Managed__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Uncheck the Primary Billing Contact field on the related contact record that was set as the primary billing contact</description>
+        <name>Update_Primary_Billing_Contact_Record</name>
+        <label>Update Primary Billing Contact Record</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>Has_Primary_Delivery_Contact_Been_Removed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.blng__BillToContact__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Primary_Billing_Contact__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Primary_Delivery_Contact_Record</name>
+        <label>Update Primary Delivery Contact Record</label>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.BPP_Deliver_To_Contact__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Primary_Delivery_Contact__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Client_Bands_Updated</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.DeveloperName} = &quot;Business_Development_Account&quot;</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>200</triggerOrder>
+</Flow>

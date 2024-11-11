@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Recognition_Triggered__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked when call is made to Rev Rec API and used to prevent duplicate calls.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked when call is made to Rev Rec API and used to prevent duplicate calls.</inlineHelpText>
+    <label>Revenue Recognition Triggered</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

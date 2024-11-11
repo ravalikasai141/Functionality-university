@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Handover_is_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Customer_Service&quot;,
+DATEVALUE(CreatedDate) &gt;= date(2020,10,23),
+ISPICKVAL( Status, &quot;External Handover&quot;),
+ISBLANK(TEXT(CS_External_Handover_Department__c))
+)</errorConditionFormula>
+    <errorDisplayField>CS_External_Handover_Department__c</errorDisplayField>
+    <errorMessage>Please select External Department for External Handover status</errorMessage>
+</ValidationRule>

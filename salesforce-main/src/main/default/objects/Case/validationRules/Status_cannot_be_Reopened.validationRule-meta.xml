@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_cannot_be_Reopened</fullName>
+    <active>false</active>
+    <description>This validation rule is used to check whether the case is reopened.</description>
+    <errorConditionFormula>AND(
+      PRIORVALUE(IsClosed) = true ,
+      NOT(ISPICKVAL(Status,&apos;Closed&apos;))
+      )</errorConditionFormula>
+    <errorMessage>You cannot reopen the closed case.</errorMessage>
+</ValidationRule>

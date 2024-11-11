@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sector_Level_2__c</fullName>
+    <externalId>false</externalId>
+    <label>Sector Level 2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sector_Level_1__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accountancy</fullName>
+                <default>false</default>
+                <label>Accountancy</label>
+            </value>
+            <value>
+                <fullName>Aerospace &amp; Defence</fullName>
+                <default>false</default>
+                <label>Aerospace &amp; Defence</label>
+            </value>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>Broker</fullName>
+                <default>false</default>
+                <label>Broker</label>
+            </value>
+            <value>
+                <fullName>Central Bank</fullName>
+                <default>false</default>
+                <label>Central Bank</label>
+            </value>
+            <value>
+                <fullName>Charity</fullName>
+                <default>false</default>
+                <label>Charity</label>
+            </value>
+            <value>
+                <fullName>Commercial Bank</fullName>
+                <default>false</default>
+                <label>Commercial Bank</label>
+            </value>
+            <value>
+                <fullName>Committee</fullName>
+                <default>false</default>
+                <label>Committee</label>
+            </value>
+            <value>
+                <fullName>Consumer Business</fullName>
+                <default>false</default>
+                <label>Consumer Business</label>
+            </value>
+            <value>
+                <fullName>Corporate Bank</fullName>
+                <default>false</default>
+                <label>Corporate Bank</label>
+            </value>
+            <value>
+                <fullName>CPS</fullName>
+                <default>false</default>
+                <label>CPS</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Educational Establishment</fullName>
+                <default>false</default>
+                <label>Educational Establishment</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Energy, Infrastructure &amp; Utilities (EIU)</fullName>
+                <default>false</default>
+                <label>Energy, Infrastructure &amp; Utilities (EIU)</label>
+            </value>
+            <value>
+                <fullName>Exchange</fullName>
+                <default>false</default>
+                <label>Exchange</label>
+            </value>
+            <value>
+                <fullName>Government Department</fullName>
+                <default>false</default>
+                <label>Government Department</label>
+            </value>
+            <value>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+                <label>Industrial</label>
+            </value>
+            <value>
+                <fullName>Investment Bank</fullName>
+                <default>false</default>
+                <label>Investment Bank</label>
+            </value>
+            <value>
+                <fullName>Investment Management</fullName>
+                <default>false</default>
+                <label>Investment Management</label>
+            </value>
+            <value>
+                <fullName>Law Firm</fullName>
+                <default>false</default>
+                <label>Law Firm</label>
+            </value>
+            <value>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+                <label>Life Sciences</label>
+            </value>
+            <value>
+                <fullName>Local Authority</fullName>
+                <default>false</default>
+                <label>Local Authority</label>
+            </value>
+            <value>
+                <fullName>Management Consultancy</fullName>
+                <default>false</default>
+                <label>Management Consultancy</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Police</fullName>
+                <default>false</default>
+                <label>Police</label>
+            </value>
+            <value>
+                <fullName>Private Equity</fullName>
+                <default>false</default>
+                <label>Private Equity</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Regulator</fullName>
+                <default>false</default>
+                <label>Regulator</label>
+            </value>
+            <value>
+                <fullName>Securities House</fullName>
+                <default>false</default>
+                <label>Securities House</label>
+            </value>
+            <value>
+                <fullName>Stockbroker</fullName>
+                <default>false</default>
+                <label>Stockbroker</label>
+            </value>
+            <value>
+                <fullName>Technology &amp; Telco</fullName>
+                <default>false</default>
+                <label>Technology &amp; Telco</label>
+            </value>
+            <value>
+                <fullName>Transport</fullName>
+                <default>false</default>
+                <label>Transport</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Professional Firms</controllingFieldValue>
+            <valueName>Accountancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional Firms</controllingFieldValue>
+            <valueName>Law Firm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional Firms</controllingFieldValue>
+            <valueName>Management Consultancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Sector</controllingFieldValue>
+            <valueName>CPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Sector</controllingFieldValue>
+            <valueName>Government Department</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Sector</controllingFieldValue>
+            <valueName>Local Authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Sector</controllingFieldValue>
+            <valueName>Police</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Aerospace &amp; Defence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Automotive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Charity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Consumer Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Energy, Infrastructure &amp; Utilities (EIU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Life Sciences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Technology &amp; Telco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry &amp; Commerce</controllingFieldValue>
+            <valueName>Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Broker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Central Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Commercial Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Corporate Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Investment Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Investment Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Private Equity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Regulator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Securities House</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Services</controllingFieldValue>
+            <valueName>Stockbroker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Committee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Educational Establishment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Employer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIMA</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

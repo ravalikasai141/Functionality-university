@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LM_Terms_and_Conditions_Read_on__c</fullName>
+    <description>The date which the line manager read the terms and conditions</description>
+    <externalId>false</externalId>
+    <label>LM Terms and Conditions Accepted on</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

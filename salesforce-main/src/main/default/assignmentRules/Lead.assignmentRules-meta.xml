@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>BPP Standard Assignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.Lead_Subsource_Recent__c</field>
+                <operation>equals</operation>
+                <value>Lead Forensics</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>shaneang@noah_crm_bpp.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Title_Recent__c</field>
+                <operation>contains</operation>
+                <value>Malaysia</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>kirstieyeung@noah_crm_bpp.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Title_Recent__c</field>
+                <operation>contains</operation>
+                <value>Hong Kong</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>kellyreid@noah_crm_bpp.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Marketing_Media_Source__c</field>
+                <operation>equals</operation>
+                <value>Eventbrite</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Marketing_Medium__c</field>
+                <operation>equals</operation>
+                <value>PD Sales Team</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Pool</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Lead_Subsource_Recent__c</field>
+                <operation>equals</operation>
+                <value>Webinar</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Title_Recent__c</field>
+                <operation>contains</operation>
+                <value>AAT,ACCA,CIMA,CFA,ICAEW,ICAS</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Marketing_Medium__c</field>
+                <operation>equals</operation>
+                <value>PD</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Company</field>
+                <operation>notEqual</operation>
+                <value>,NULL</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>jamie-leecolgan@noah_crm_bpp.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Title_Recent__c</field>
+                <operation>notContain</operation>
+                <value>Scholarship</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Lead_Subsource_Recent__c</field>
+                <operation>notContain</operation>
+                <value>Registration</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Lead_Source_Recent__c</field>
+                <operation>notContain</operation>
+                <value>BPP RAILS</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>notEqual</operation>
+                <value>Self Registered</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

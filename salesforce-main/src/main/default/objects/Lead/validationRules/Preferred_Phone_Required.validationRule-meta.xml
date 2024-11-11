@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Phone_Required</fullName>
+    <active>true</active>
+    <description>For leads, if a phone number is populated; then preferred phone must be set.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Prospective_Student&apos;,
+
+AND( TEXT( Preferred_Phone__c ) = null,
+
+NOT( AND(
+Home_Phone__c=null,
+Work_Phone__c=null,
+MobilePhone=null,
+Parents_Guardian_Emergency_Phone__c=null,
+Fax=null
+)))
+)</errorConditionFormula>
+    <errorDisplayField>Preferred_Phone__c</errorDisplayField>
+    <errorMessage>Please select a preferred phone number.</errorMessage>
+</ValidationRule>

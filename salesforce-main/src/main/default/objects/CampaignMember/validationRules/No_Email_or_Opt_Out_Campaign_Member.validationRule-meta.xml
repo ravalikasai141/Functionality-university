@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Email_or_Opt_Out_Campaign_Member</fullName>
+    <active>true</active>
+    <description>Campaign Member cannot be added w/o an email or if opted out</description>
+    <errorConditionFormula>AND($Profile.Name = &quot;LM Standard User&quot;, 
+Campaign_Opt_Out__c = FALSE,
+
+OR(
+ISBLANK(Contact.Email),
+(Contact.HasOptedOutOfEmail)=TRUE)
+)</errorConditionFormula>
+    <errorDisplayField>Campaign_Opt_Out__c</errorDisplayField>
+    <errorMessage>Student cannot receive campaign emails because they either do not have an email address or have opted out of email communications.  Please opt them out of campaign emails in order to add this to this campaign.</errorMessage>
+</ValidationRule>

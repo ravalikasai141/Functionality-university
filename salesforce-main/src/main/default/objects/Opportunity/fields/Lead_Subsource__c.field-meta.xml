@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Subsource__c</fullName>
+    <description>Original intetion was to use this field to capture lead subsource information on this field.  This level of detail is not being captured at all and lead source is now only displayed on the student account page.</description>
+    <externalId>false</externalId>
+    <label>[REMOVE] Lead Subsource</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+                <label>Twitter</label>
+            </value>
+            <value>
+                <fullName>Youtube</fullName>
+                <default>false</default>
+                <label>Youtube</label>
+            </value>
+            <value>
+                <fullName>Linkedin</fullName>
+                <default>false</default>
+                <label>Linkedin</label>
+            </value>
+            <value>
+                <fullName>bpp.com</fullName>
+                <default>false</default>
+                <label>bpp.com</label>
+            </value>
+            <value>
+                <fullName>bpplawschool.com</fullName>
+                <default>false</default>
+                <label>bpplawschool.com</label>
+            </value>
+            <value>
+                <fullName>bppbusiness.com</fullName>
+                <default>false</default>
+                <label>bppbusiness.com</label>
+            </value>
+            <value>
+                <fullName>careerbuilder.com</fullName>
+                <default>false</default>
+                <label>careerbuilder.com</label>
+            </value>
+            <value>
+                <fullName>independent.co.uk</fullName>
+                <default>false</default>
+                <label>independent.co.uk</label>
+            </value>
+            <value>
+                <fullName>notgoingtouni.com</fullName>
+                <default>false</default>
+                <label>notgoingtouni.com</label>
+            </value>
+            <value>
+                <fullName>studentroom.co.uk</fullName>
+                <default>false</default>
+                <label>studentroom.co.uk</label>
+            </value>
+            <value>
+                <fullName>ucas.co.uk</fullName>
+                <default>false</default>
+                <label>ucas.co.uk</label>
+            </value>
+            <value>
+                <fullName>The Sunday Times</fullName>
+                <default>false</default>
+                <label>The Sunday Times</label>
+            </value>
+            <value>
+                <fullName>The Independent</fullName>
+                <default>false</default>
+                <label>The Independent</label>
+            </value>
+            <value>
+                <fullName>The Times</fullName>
+                <default>false</default>
+                <label>The Times</label>
+            </value>
+            <value>
+                <fullName>Guardian</fullName>
+                <default>false</default>
+                <label>Guardian</label>
+            </value>
+            <value>
+                <fullName>Metro</fullName>
+                <default>false</default>
+                <label>Metro</label>
+            </value>
+            <value>
+                <fullName>Evening Standard</fullName>
+                <default>false</default>
+                <label>Evening Standard</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>UCAS fairs</fullName>
+                <default>false</default>
+                <label>UCAS fairs</label>
+            </value>
+            <value>
+                <fullName>Open day</fullName>
+                <default>false</default>
+                <label>Open day</label>
+            </value>
+            <value>
+                <fullName>Radio</fullName>
+                <default>false</default>
+                <label>Radio</label>
+            </value>
+            <value>
+                <fullName>TV</fullName>
+                <default>false</default>
+                <label>TV</label>
+            </value>
+            <value>
+                <fullName>Press articles</fullName>
+                <default>false</default>
+                <label>Press articles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

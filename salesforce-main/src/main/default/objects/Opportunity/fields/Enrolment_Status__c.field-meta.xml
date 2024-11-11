@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrolment_Status__c</fullName>
+    <defaultValue>&quot;N/A&quot;</defaultValue>
+    <description>Stages to enrolment once application has been accepted</description>
+    <externalId>false</externalId>
+    <label>Enrolment Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Acceptance</fullName>
+                <default>false</default>
+                <label>Acceptance</label>
+            </value>
+            <value>
+                <fullName>Welcome</fullName>
+                <default>false</default>
+                <label>Welcome</label>
+            </value>
+            <value>
+                <fullName>Funding</fullName>
+                <default>false</default>
+                <label>Funding</label>
+            </value>
+            <value>
+                <fullName>Pre-Registration</fullName>
+                <default>false</default>
+                <label>Pre-Registration</label>
+            </value>
+            <value>
+                <fullName>Post-Registration (non-attendees)</fullName>
+                <default>false</default>
+                <label>Post-Registration (non-attendees)</label>
+            </value>
+            <value>
+                <fullName>First Instalment Paid</fullName>
+                <default>false</default>
+                <label>First Instalment Paid</label>
+            </value>
+            <value>
+                <fullName>Temporarily Registered</fullName>
+                <default>false</default>
+                <label>Temporarily Registered</label>
+            </value>
+            <value>
+                <fullName>Registered</fullName>
+                <default>false</default>
+                <label>Registered</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Application Started</controllingFieldValue>
+            <controllingFieldValue>Application in Progress</controllingFieldValue>
+            <controllingFieldValue>Shop</controllingFieldValue>
+            <controllingFieldValue>Appointment</controllingFieldValue>
+            <controllingFieldValue>No Longer Interested</controllingFieldValue>
+            <controllingFieldValue>Transferred</controllingFieldValue>
+            <controllingFieldValue>Pending Course Instance</controllingFieldValue>
+            <controllingFieldValue>Opportunity</controllingFieldValue>
+            <controllingFieldValue>Awaiting Info</controllingFieldValue>
+            <controllingFieldValue>Pursuit</controllingFieldValue>
+            <controllingFieldValue>Lapsed Application</controllingFieldValue>
+            <controllingFieldValue>Engaged - Won</controllingFieldValue>
+            <controllingFieldValue>Lapsed Acceptance</controllingFieldValue>
+            <controllingFieldValue>Lost &amp; Leaked</controllingFieldValue>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>Not Offered</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Prospecting</controllingFieldValue>
+            <controllingFieldValue>Application Received</controllingFieldValue>
+            <controllingFieldValue>UCAS Investigation</controllingFieldValue>
+            <controllingFieldValue>Registered</controllingFieldValue>
+            <controllingFieldValue>UCAS Withdrawal</controllingFieldValue>
+            <controllingFieldValue>Accepted - Pmt Pending</controllingFieldValue>
+            <controllingFieldValue>Application Pending</controllingFieldValue>
+            <controllingFieldValue>Shop Active</controllingFieldValue>
+            <controllingFieldValue>Shop Cold</controllingFieldValue>
+            <controllingFieldValue>Conditional Offer</controllingFieldValue>
+            <controllingFieldValue>Agent Application</controllingFieldValue>
+            <controllingFieldValue>Unconditional Offer</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Complete</controllingFieldValue>
+            <controllingFieldValue>Deferred Entry</controllingFieldValue>
+            <controllingFieldValue>Degree Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Lapsed Offer</controllingFieldValue>
+            <controllingFieldValue>Professional Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Qualifying</controllingFieldValue>
+            <controllingFieldValue>Scoping</controllingFieldValue>
+            <controllingFieldValue>Declined - Conditional</controllingFieldValue>
+            <controllingFieldValue>Training Needs Analysis</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Insurance</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Insurance</controllingFieldValue>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <controllingFieldValue>Appointing</controllingFieldValue>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <controllingFieldValue>Declined - Unconditional</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <valueName>Acceptance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Welcome</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <valueName>Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <valueName>Pre-Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <valueName>Post-Registration (non-attendees)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <valueName>First Instalment Paid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Temporarily Registered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Registered</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

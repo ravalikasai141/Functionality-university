@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_inform_employer_is_care_leaver_QA__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;I confirm that I am happy for BPP to inform my employer that I am a care leaver, or I have an EHC plan, in order for them to claim an additional payment:&quot; +
+BR() + BR() +
+IF(
+  Can_inform_employer_is_care_leaver__c = true,
+  &apos;Yes&apos;,
+  &apos;No&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Can inform employer is care leaver</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

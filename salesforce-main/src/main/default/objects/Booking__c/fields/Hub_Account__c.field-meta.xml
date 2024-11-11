@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hub_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Student&apos;s Hub account that will be provisioned against this booking</description>
+    <externalId>false</externalId>
+    <label>Hub Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The Hub account is not associated with the student on the booking</errorMessage>
+        <filterItems>
+            <field>Hub_Account__c.Student__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Student__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Hub_Account__c</referenceTo>
+    <relationshipLabel>Bookings</relationshipLabel>
+    <relationshipName>Bookings</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

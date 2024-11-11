@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_Permanent_Residence_Date__c</fullName>
+    <description>Student&apos;s date of permanent residency within the UK.</description>
+    <externalId>false</externalId>
+    <label>UK Permanent Residence Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

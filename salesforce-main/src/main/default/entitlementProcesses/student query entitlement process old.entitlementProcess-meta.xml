@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>false</active>
+    <businessHours>Working Week</businessHours>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <criteriaBooleanFilter>1 AND (2 OR (3 AND 4))</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Examination, Complaint (Non-Uni)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Oyster Card</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Oyster_Peak__c</field>
+            <operation>equals</operation>
+            <value>true</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Work Started</milestoneName>
+        <minutesToComplete>961</minutesToComplete>
+        <timeTriggers>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>IOS (Interruption of Studies)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IOS_Form_Received__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Work Started</milestoneName>
+        <minutesToComplete>481</minutesToComplete>
+        <timeTriggers>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND ( 2 OR ( 3 AND 4) OR ( 5 AND 6))</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Change of Student Contact Details, Debt Management, ID Card, Letter Production, Library Materials, Locker Key, My Student Status, Registration, Timetable, University Complaint, VLE Content Issue</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Reference</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>notEqual</operation>
+            <value>Confirmation of Attendance</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Oyster Card</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Oyster_Peak__c</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Work Started</milestoneName>
+        <minutesToComplete>481</minutesToComplete>
+        <timeTriggers>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Reference</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>equals</operation>
+            <value>Confirmation of Attendance</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>4801</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Email_Sent_Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Complaint (Non-Uni)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>4801</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Email_Sent_Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND ((2 AND 3) OR 4)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Oyster Card</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Oyster_Peak__c</field>
+            <operation>equals</operation>
+            <value>true</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>University Complaint</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>2401</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Email_Sent_Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Examination</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>1441</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Email_Sent_Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>IOS (Interruption of Studies)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IOS_Form_Received__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>961</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Email_Sent_Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <criteriaBooleanFilter>1 AND ( 2 OR ( 3 AND 4) OR ( 5 AND 6))</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Student Query</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Change of Student Contact Details, ID Card, Library Materials, Locker Key, My Student Status, Registration, Timetable, Letter Production, VLE Content Issue</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Reference</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Subtype__c</field>
+            <operation>notEqual</operation>
+            <value>Confirmation of Attendance</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Query_Type__c</field>
+            <operation>equals</operation>
+            <value>Oyster Card</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Oyster_Peak__c</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Student Query - Ready to Close</milestoneName>
+        <minutesToComplete>961</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Email_Sent_Case_Ready_to_Close_Milestone_Violation</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Set_Milestone_Type_CS_New</name>
+        <label>Set Milestone Type</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>MilestoneType</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>CSA Email Verification</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Milestone</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Milestone_Type_CS_RTC</name>
+        <label>Set Milestone Type</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>MilestoneType</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Customer Service - Ready to Close</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Milestone</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Milestone_Type_SQ_RTC</name>
+        <label>Set Milestone Type</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>MilestoneType</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Student Query - Ready to Close</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Milestone</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Milestone_Type_SQ_WS</name>
+        <label>Set Milestone Type</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>MilestoneType</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Student Query - Work Started</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Milestone</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Complete_Milestone</name>
+        <label>Complete Milestone</label>
+        <locationX>578</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Don&apos;t Apply</defaultConnectorLabel>
+        <rules>
+            <name>Customer_Service_New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer_Service</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Milestone_Type_CS_New</targetReference>
+            </connector>
+            <label>Customer Service - New</label>
+        </rules>
+        <rules>
+            <name>Customer_Service_Ready_to_Close</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer_Service</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready to Close</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Milestone_Type_CS_RTC</targetReference>
+            </connector>
+            <label>Customer Service - Ready to Close</label>
+        </rules>
+        <rules>
+            <name>Student_Query_In_Progress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student_Query</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Milestone_Type_SQ_WS</targetReference>
+            </connector>
+            <label>Student Query - In Progress</label>
+        </rules>
+        <rules>
+            <name>Student_Query_Ready_to_Close</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student_Query</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Ready to Close</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Milestone_Type_SQ_RTC</targetReference>
+            </connector>
+            <label>Student Query - Ready to Close</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>SQ_Milestone_Type</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!$Record.Status},
+&quot;In Progress&quot;, &quot;Student Query - Work Started&quot;,
+&quot;Ready to Close&quot;, &quot;Student Query - Ready to Close&quot;,
+&quot;&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>Case - Close Milestones {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Set Milestone To Completed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Milestone</name>
+        <label>Get Milestone</label>
+        <locationX>578</locationX>
+        <locationY>623</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Case_Milestone</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>MilestoneType</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>MilestoneType</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Case_Milestone</name>
+        <label>Update Case Milestone</label>
+        <locationX>578</locationX>
+        <locationY>731</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CaseId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MilestoneTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Milestone.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CompletionDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseMilestone</object>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Complete_Milestone</targetReference>
+        </connector>
+        <filterFormula>!ISBLANK({!$Record.EntitlementId}) &amp;&amp; ({!$Record.RecordType.DeveloperName} = &apos;Customer_Service&apos; || {!$Record.RecordType.DeveloperName} = &apos;Student_Query&apos; ) &amp;&amp; (ISCHANGED({!$Record.Status}) || ISNEW())</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>MilestoneType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

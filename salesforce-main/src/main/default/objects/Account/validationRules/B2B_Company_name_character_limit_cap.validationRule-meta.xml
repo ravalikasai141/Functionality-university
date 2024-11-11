@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2B_Company_name_character_limit_cap</fullName>
+    <active>true</active>
+    <description>Limits the number of characters that can be entered for to match the character limits in other systems.</description>
+    <errorConditionFormula>RecordType.DeveloperName   = &quot;Business_Development_Account&quot;  &amp;&amp; 
+LEN( Name )  &gt; 60</errorConditionFormula>
+    <errorDisplayField>Qualification__pc</errorDisplayField>
+    <errorMessage>The Name of this Company record must be less then 60 characters.</errorMessage>
+</ValidationRule>

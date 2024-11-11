@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Run CancelStock apex to remove shortage from the stock</description>
+        <name>Run_CancelStock</name>
+        <label>Run CancelStock</label>
+        <locationX>798</locationX>
+        <locationY>604</locationY>
+        <actionName>StockCancel</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Continue_With_Record_Update</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>idList</name>
+            <value>
+                <elementReference>fxCancelStockCollection</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>varResponse</assignToReference>
+            <name>outputString</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Ineligible</name>
+        <label>Cancellation - Ineligible</label>
+        <locationX>399</locationX>
+        <locationY>302</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ineligible</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIneligibleReason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIneligibleReason</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>On_Hold_Ineligible</name>
+        <label>On Hold Ineligible</label>
+        <locationX>1281</locationX>
+        <locationY>303</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ineligible</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIneligibleReason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxIneligibleReason</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Remove Stock Management association from delivery record</description>
+        <name>Remove_Stock_Management_Association</name>
+        <label>Remove Stock Management Association</label>
+        <locationX>963</locationX>
+        <locationY>759</locationY>
+        <assignmentItems>
+            <assignToReference>varStockManagement</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Delivery_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set varResponse as &apos;Success&apos;</description>
+        <name>Update_Successful</name>
+        <label>Update Successful</label>
+        <locationX>1207</locationX>
+        <locationY>759</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Success</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Is the delivery record currently added as a shortage on the stock record?</description>
+        <name>Added_To_Shortage</name>
+        <label>Added To Shortage?</label>
+        <locationX>1051</locationX>
+        <locationY>616</locationY>
+        <defaultConnector>
+            <targetReference>Continue_With_Record_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Shortage</defaultConnectorLabel>
+        <rules>
+            <name>Shortage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Added_To_Shortage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_CancelStock</targetReference>
+            </connector>
+            <label>Shortage</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Any actions have been completed successfully and the Delivery Status can now be updated</description>
+        <name>Continue_With_Record_Update</name>
+        <label>Continue With Record Update?</label>
+        <locationX>704</locationX>
+        <locationY>755</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Update</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Stock_Allocated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varResponse</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Success</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Remove_Stock_Management_Association</targetReference>
+            </connector>
+            <label>Yes - Update</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Does delivery record have stock currently allocated?</description>
+        <name>Currently_Stock_Allocated</name>
+        <label>Currently Stock Allocated?</label>
+        <locationX>828</locationX>
+        <locationY>446</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Stock_Allocated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Stock_Allocated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_Delivery_Stock_Management_Requests_Deallocate</targetReference>
+            </connector>
+            <label>Stock Allocated</label>
+        </rules>
+        <rules>
+            <name>No_Stock_Allocated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Stock_Allocated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Added_To_Shortage</targetReference>
+            </connector>
+            <label>No Stock Allocated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>What Delivery Status has been requested?</description>
+        <name>Desired_Delivery_Status</name>
+        <label>Desired Delivery Status?</label>
+        <locationX>831</locationX>
+        <locationY>297</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Cancelled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varDesiredStatus</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Validate_Cancellation_Request</targetReference>
+            </connector>
+            <label>Cancelled</label>
+        </rules>
+        <rules>
+            <name>On_Hold</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varDesiredStatus</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Validate</targetReference>
+            </connector>
+            <label>On Hold</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Delivery record is in a status where it can be cancelled</description>
+        <name>Validate</name>
+        <label>Validate On-Hold Request</label>
+        <locationX>1052</locationX>
+        <locationY>302</locationY>
+        <defaultConnector>
+            <targetReference>On_Hold_Ineligible</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>On Hold Ineligible</defaultConnectorLabel>
+        <rules>
+            <name>On_Hold_Valid</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (4 AND 5 AND 6)</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent for Fulfilment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dispatched</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varUpdateCancelled</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Booking_Line__r.On_Hold__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Currently_Stock_Allocated</targetReference>
+            </connector>
+            <label>On Hold Valid</label>
+        </rules>
+        <rules>
+            <name>Booking_Cancelled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Booking_Line__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Booking_Line__r.On_Hold__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>On_Hold_Ineligible</targetReference>
+            </connector>
+            <label>Booking Cancelled</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Delivery record is in a status where it can be cancelled</description>
+        <name>Validate_Cancellation_Request</name>
+        <label>Validate Cancellation Request</label>
+        <locationX>602</locationX>
+        <locationY>304</locationY>
+        <defaultConnector>
+            <targetReference>Ineligible</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Cancellation_Valid</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent for Fulfilment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dispatched</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Currently_Stock_Allocated</targetReference>
+            </connector>
+            <label>Cancellation Valid</label>
+        </rules>
+    </decisions>
+    <description>Requests for delivery status to be updated</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Variables passed into CancelStock apex as a collection</description>
+        <name>fxCancelStockCollection</name>
+        <dataType>String</dataType>
+        <expression>{!Delivery.Id} &amp; &quot;,&quot; &amp; {!Delivery.Stock_Management_Id__c}</expression>
+    </formulas>
+    <formulas>
+        <name>fxIneligibleReason</name>
+        <dataType>String</dataType>
+        <expression>IF( {!Booking_Cancelled} = True,
+&quot;The related booking line has been Cancelled, so delivery cannot be updated to &quot; &amp; {!varDesiredStatus},
+&quot;Delivery has been &quot; &amp; Text({!Delivery.Delivery_Status__c}) &amp; &quot;, so cannot be updated to &quot; &amp; {!varDesiredStatus})</expression>
+    </formulas>
+    <formulas>
+        <description>Updates Added To Shortage value to false for cancellation requests</description>
+        <name>fxShortageCalc</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( {!varDesiredStatus} = &apos;Cancelled&apos;, False, {!Delivery.Added_To_Shortage__c} )</expression>
+    </formulas>
+    <interviewLabel>Delivery Status Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Delivery Status Updates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get delivery record that triggered the process</description>
+        <name>Delivery</name>
+        <label>Delivery Record</label>
+        <locationX>840</locationX>
+        <locationY>171</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Desired_Delivery_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Delivery__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update delivery record with new Delivery Status and associated updates</description>
+        <name>Update_Delivery_Record</name>
+        <label>Update Delivery Record</label>
+        <locationX>1087</locationX>
+        <locationY>759</locationY>
+        <connector>
+            <targetReference>Update_Successful</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Delivery.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Added_To_Shortage__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Delivery_Status__c</field>
+            <value>
+                <elementReference>varDesiredStatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stock_Management__c</field>
+            <value>
+                <elementReference>varStockManagement</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Delivery__c</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>714</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Delivery</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <subflows>
+        <description>Deallocate any stock allocated to the delivery record</description>
+        <name>Run_Delivery_Stock_Management_Requests_Deallocate</name>
+        <label>Run Delivery Stock Management Requests - Deallocate</label>
+        <locationX>610</locationX>
+        <locationY>544</locationY>
+        <connector>
+            <targetReference>Continue_With_Record_Update</targetReference>
+        </connector>
+        <flowName>Delivery_Stock_Management_Requests</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varRequestedFunction</name>
+            <value>
+                <stringValue>StockDeallocation</stringValue>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varIneligibleReason</assignToReference>
+            <name>varIneligibleReason</name>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>varResponse</assignToReference>
+            <name>varResponse</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <description>Id of Delivery record to update</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The desired status requested</description>
+        <name>varDesiredStatus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Reason delivery record is ineligible for stock deallocation</description>
+        <name>varIneligibleReason</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Response from Delivery Stock Management Requests whether actions were successful</description>
+        <name>varResponse</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Value of the Stock Management field</description>
+        <name>varStockManagement</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>Delivery.Stock_Management__c</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <description>Controls whether the update should update the delivery status when it is Cancelled</description>
+        <name>varUpdateCancelled</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+</Flow>

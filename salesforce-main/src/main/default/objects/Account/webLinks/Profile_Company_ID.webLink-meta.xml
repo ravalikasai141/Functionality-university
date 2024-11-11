@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile_Company_ID</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Get Company Profile ID</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/apex.js&quot;)}
+
+var result= sforce.connection.query(&quot;Select Id, Active__c,type__c From Address__c where Active__c = true and  Student__c=&apos;{!Account.Id}&apos; and type__c=&apos;Billing&apos;&quot;);
+
+var rec = result.getArray(&quot;records&quot;);
+       
+var nullFieldMsg = &quot;&quot;; 
+var v = &apos;true&apos;;
+if( result.size==0 &amp;&amp; {!ISBLANK(Account.Profile_Company_ID__c)}){
+nullFieldMsg += &quot;Atleast One Active Billing Address is Required\n&quot;;
+} 
+if ({!NOT(ISBLANK(Account.Profile_Company_ID__c))}) {
+alert( &quot;Profile Company ID already Exits\n&quot;);
+} 
+if (nullFieldMsg.length != 0 &amp;&amp; {!ISBLANK(Account.Profile_Company_ID__c)}) {
+alert(&quot;Required Fields are missing.\n\n&quot; + nullFieldMsg);
+}
+else if( {!ISBLANK(Account.Profile_Company_ID__c)}){ 
+var result = sforce.apex.execute(&quot;CreateCompanyProfile&quot;,&quot;CompanyInformation&quot;, {id:&quot;{!Account.Id}&quot;});
+if (result != &quot;Success&quot;)
+alert(result);
+else
+document.location.reload(true);
+}</url>
+</WebLink>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Attempt to allocate stock to delivery record</description>
+        <name>Run_AllocateStock</name>
+        <label>Run AllocateStock</label>
+        <locationX>944</locationX>
+        <locationY>737</locationY>
+        <actionName>StockAllocation</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>idList</name>
+            <value>
+                <elementReference>fxAllocateStockCollection</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>varResponse</assignToReference>
+            <name>outputString</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Attempt to deallocate stock from delivery record</description>
+        <name>Run_DeallocateStock</name>
+        <label>Run DeallocateStock</label>
+        <locationX>141</locationX>
+        <locationY>742</locationY>
+        <actionName>StockDeallocation</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>idList</name>
+            <value>
+                <elementReference>fxDeallocateStockCollection</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>varResponse</assignToReference>
+            <name>outputString</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <description>Delivery record is not currently eligible for stock allocation</description>
+        <name>Ineligible</name>
+        <label>Ineligible</label>
+        <locationX>1001</locationX>
+        <locationY>295</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ineligible</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Delivery is currently in a status where the stock cannot be adjusted</description>
+        <name>Ineligible_Status</name>
+        <label>Ineligible - Status</label>
+        <locationX>52</locationX>
+        <locationY>296</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ineligible</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIneligibleReason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Delivery has been {!Delivery_Record.Delivery_Status__c}, so stock cannot be deallocated</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Delivery record does not have stock allocated</description>
+        <name>Ineligible_Stock_Allocation</name>
+        <label>Ineligible - Stock Allocation</label>
+        <locationX>50</locationX>
+        <locationY>506</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Ineligible</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIneligibleReason</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>There is no stock currently associated with this delivery record - no stock to deallocate</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>No stock exists for the product at the selected stock site</description>
+        <name>Stock_Does_Not_Exist</name>
+        <label>Stock Does Not Exist</label>
+        <locationX>536</locationX>
+        <locationY>767</locationY>
+        <assignmentItems>
+            <assignToReference>varResponse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>StockError</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Check delivery record is in a valid state to attempt allocation</description>
+        <name>Allocation_Validation</name>
+        <label>Allocation Validation</label>
+        <locationX>760</locationX>
+        <locationY>294</locationY>
+        <defaultConnector>
+            <targetReference>Ineligible</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Eligible_for_Allocation</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery_Record.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Allocation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery_Record.Delivery_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery_Record.Stock_Allocated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Initial_Allocation_Information</targetReference>
+            </connector>
+            <label>Eligible for Allocation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the delivery record in a status where stock can be deallocated?</description>
+        <name>Deallocation_Status_Validation</name>
+        <label>Deallocation Status Validation</label>
+        <locationX>278</locationX>
+        <locationY>297</locationY>
+        <defaultConnector>
+            <targetReference>Ineligible_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Valid_Deallocation_Status</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery_Record.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Sent for Fulfilment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Delivery_Record.Delivery_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Dispatched</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stock_Allocated</targetReference>
+            </connector>
+            <label>Valid Deallocation Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the request for stock to be allocated or deallocated?</description>
+        <name>Function_Requested</name>
+        <label>Function Requested?</label>
+        <locationX>522</locationX>
+        <locationY>296</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Stock_Allocation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varRequestedFunction</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>StockAllocation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Allocation_Validation</targetReference>
+            </connector>
+            <label>Stock Allocation</label>
+        </rules>
+        <rules>
+            <name>Stock_Deallocation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varRequestedFunction</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>StockDeallocation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Deallocation_Status_Validation</targetReference>
+            </connector>
+            <label>Stock Deallocation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is there a current stock allocation assigned to the delivery record?</description>
+        <name>Stock_Allocated</name>
+        <label>Stock Allocated</label>
+        <locationX>278</locationX>
+        <locationY>506</locationY>
+        <defaultConnector>
+            <targetReference>Ineligible_Stock_Allocation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Allocation</defaultConnectorLabel>
+        <rules>
+            <name>Allocated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery_Record.Stock_Allocated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stock_Management_Exists</targetReference>
+            </connector>
+            <label>Allocated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Product must have a stock management record for the selected stock site</description>
+        <name>Stock_Management_Exists</name>
+        <label>Stock Management Exists</label>
+        <locationX>528</locationX>
+        <locationY>567</locationY>
+        <defaultConnector>
+            <targetReference>Stock_Does_Not_Exist</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Stock Management Record Missing</defaultConnectorLabel>
+        <rules>
+            <name>Request_Stock_Allocation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery_Record.Stock_Management_Id__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varRequestedFunction</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>StockAllocation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_AllocateStock</targetReference>
+            </connector>
+            <label>Request Stock Allocation</label>
+        </rules>
+        <rules>
+            <name>Request_Stock_Deallocation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Delivery_Record.Stock_Management_Id__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>varRequestedFunction</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>StockDeallocation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_DeallocateStock</targetReference>
+            </connector>
+            <label>Request Stock Deallocation</label>
+        </rules>
+    </decisions>
+    <description>Stock requests made from the delivery record to the related Stock Management record - runs AllocateStock or DeallocateStock apex</description>
+    <formulas>
+        <description>Variables passed into AllocateStock apex as a collection</description>
+        <name>fxAllocateStockCollection</name>
+        <dataType>String</dataType>
+        <expression>{!Delivery_Record.Id} &amp; &quot;,&quot; &amp; {!Delivery_Record.Stock_Management_Id__c}</expression>
+    </formulas>
+    <formulas>
+        <description>Set Awaiting Allocation Date to now() if not already populated</description>
+        <name>fxAwaitingAllocationDate</name>
+        <dataType>DateTime</dataType>
+        <expression>IF( ISBLANK( {!Delivery_Record.Awaiting_Allocation_Date__c} )  , NOW() ,  {!Delivery_Record.Awaiting_Allocation_Date__c} )</expression>
+    </formulas>
+    <formulas>
+        <description>Variables passed into DeallocateStock apex as a collection</description>
+        <name>fxDeallocateStockCollection</name>
+        <dataType>String</dataType>
+        <expression>{!Delivery_Record.Id} &amp; &quot;,&quot; &amp; {!Delivery_Record.Stock_Management_Id__c}</expression>
+    </formulas>
+    <formulas>
+        <description>Increment the Allocation Attempts by 1</description>
+        <name>fxIncrementAllocationAttempts</name>
+        <dataType>Number</dataType>
+        <expression>{!Delivery_Record.Allocation_Attempts__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Delivery Stock Management Requests {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Delivery Stock Management Requests</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get delivery record that triggered the process</description>
+        <name>Delivery_Record</name>
+        <label>Delivery Record</label>
+        <locationX>527</locationX>
+        <locationY>176</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Function_Requested</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Delivery__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update allocation information before launching AllocateStock</description>
+        <name>Initial_Allocation_Information</name>
+        <label>Initial Allocation Information</label>
+        <locationX>769</locationX>
+        <locationY>477</locationY>
+        <connector>
+            <targetReference>Stock_Management_Exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Delivery_Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Allocation_Attempts__c</field>
+            <value>
+                <elementReference>fxIncrementAllocationAttempts</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Awaiting_Allocation_Date__c</field>
+            <value>
+                <elementReference>fxAwaitingAllocationDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Delivery_Status__c</field>
+            <value>
+                <stringValue>Awaiting Allocation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stock_Management__c</field>
+            <value>
+                <elementReference>Delivery_Record.Stock_Management_Id__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Delivery__c</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>401</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Delivery_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Reason delivery record is ineligible for stock allocation / deallocation</description>
+        <name>varIneligibleReason</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Is the request for stock allocation or stock deallocation</description>
+        <name>varRequestedFunction</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Response from StockAllocation whether attempt to allocate stock was successful</description>
+        <name>varResponse</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

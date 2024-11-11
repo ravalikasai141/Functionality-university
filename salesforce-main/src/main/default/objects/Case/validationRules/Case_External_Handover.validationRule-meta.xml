@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_External_Handover</fullName>
+    <active>true</active>
+    <description>Reminder of how to do external handovers.</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &quot;Student_Query&quot;, 
+ ISPICKVAL( Status, &quot;External Handover&quot;),
+ OR(
+  NOT( ISPICKVAL( PRIORVALUE( Status), &quot;In Progress&quot;)),
+  ISBLANK( External_Handover_Email__c),
+  ISBLANK( External_Handover_Full_Name__c),
+  ISBLANK( External_Handover_Department__c)
+ )
+)</errorConditionFormula>
+    <errorMessage>Before setting the status from In Progress to External Handover, an External Handover Email, Name and Department are needed</errorMessage>
+</ValidationRule>

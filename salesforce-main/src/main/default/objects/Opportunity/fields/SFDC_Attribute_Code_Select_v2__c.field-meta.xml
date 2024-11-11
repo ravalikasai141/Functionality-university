@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Attribute_Code_Select_v2__c</fullName>
+    <externalId>false</externalId>
+    <label>Attribute Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FL~ Flex</fullName>
+                <default>false</default>
+                <label>FL~ Flex</label>
+            </value>
+            <value>
+                <fullName>S1~ Year 1 / Stage 1</fullName>
+                <default>false</default>
+                <label>S1~ Year 1 / Stage 1</label>
+            </value>
+            <value>
+                <fullName>S2~ Year 2 / Stage 2</fullName>
+                <default>false</default>
+                <label>S2~ Year 2 / Stage 2</label>
+            </value>
+            <value>
+                <fullName>S3~ Year 3 / Stage 3</fullName>
+                <default>false</default>
+                <label>S3~ Year 3 / Stage 3</label>
+            </value>
+            <value>
+                <fullName>SP~ Sponsor</fullName>
+                <default>false</default>
+                <label>SP~ Sponsor</label>
+            </value>
+            <value>
+                <fullName>BLEN~ Blended</fullName>
+                <default>false</default>
+                <label>BLEN~ Blended</label>
+            </value>
+            <value>
+                <fullName>FTF~ Face to Face</fullName>
+                <default>false</default>
+                <label>FTF~ Face to Face</label>
+            </value>
+            <value>
+                <fullName>DLA~ Distance Learning Mode A</fullName>
+                <default>false</default>
+                <label>DLA~ Distance Learning Mode A</label>
+            </value>
+            <value>
+                <fullName>SUN~ Sunday</fullName>
+                <default>false</default>
+                <label>SUN~ Sunday</label>
+            </value>
+            <value>
+                <fullName>KC~ Key Client</fullName>
+                <default>false</default>
+                <label>KC~ Key Client</label>
+            </value>
+            <value>
+                <fullName>IH~ In House client</fullName>
+                <default>false</default>
+                <label>IH~ In House client</label>
+            </value>
+            <value>
+                <fullName>EXAM~ Store Exam Results</fullName>
+                <default>false</default>
+                <label>EXAM~ Store Exam Results</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

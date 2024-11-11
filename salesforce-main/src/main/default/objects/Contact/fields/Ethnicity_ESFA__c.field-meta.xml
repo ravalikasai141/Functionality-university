@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ethnicity_ESFA__c</fullName>
+    <description>Created as per JIRA 2243</description>
+    <externalId>false</externalId>
+    <label>Ethnicity (ESFA)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>31~ English / Welsh / Scottish / Northern Irish / British</fullName>
+                <default>false</default>
+                <label>31~ English / Welsh / Scottish / Northern Irish / British</label>
+            </value>
+            <value>
+                <fullName>32~ Irish</fullName>
+                <default>false</default>
+                <label>32~ Irish</label>
+            </value>
+            <value>
+                <fullName>33~ Gypsy or Irish Traveller</fullName>
+                <default>false</default>
+                <label>33~ Gypsy or Irish Traveller</label>
+            </value>
+            <value>
+                <fullName>34~ Any Other White background</fullName>
+                <default>false</default>
+                <label>34~ Any Other White background</label>
+            </value>
+            <value>
+                <fullName>35~ White and Black Caribbean</fullName>
+                <default>false</default>
+                <label>35~ White and Black Caribbean</label>
+            </value>
+            <value>
+                <fullName>36~ White and Black African</fullName>
+                <default>false</default>
+                <label>36~ White and Black African</label>
+            </value>
+            <value>
+                <fullName>37~ White and Asian</fullName>
+                <default>false</default>
+                <label>37~ White and Asian</label>
+            </value>
+            <value>
+                <fullName>38~Any Other Mixed / multiple ethnic background</fullName>
+                <default>false</default>
+                <label>38~Any Other Mixed / multiple ethnic background</label>
+            </value>
+            <value>
+                <fullName>39~ Indian</fullName>
+                <default>false</default>
+                <label>39~ Indian</label>
+            </value>
+            <value>
+                <fullName>40~ Pakistani</fullName>
+                <default>false</default>
+                <label>40~ Pakistani</label>
+            </value>
+            <value>
+                <fullName>41~ Bangladeshi</fullName>
+                <default>false</default>
+                <label>41~ Bangladeshi</label>
+            </value>
+            <value>
+                <fullName>42~ Chinese</fullName>
+                <default>false</default>
+                <label>42~ Chinese</label>
+            </value>
+            <value>
+                <fullName>43~ Any other Asian background</fullName>
+                <default>false</default>
+                <label>43~ Any other Asian background</label>
+            </value>
+            <value>
+                <fullName>44~ African</fullName>
+                <default>false</default>
+                <label>44~ African</label>
+            </value>
+            <value>
+                <fullName>45~ Caribbean</fullName>
+                <default>false</default>
+                <label>45~ Caribbean</label>
+            </value>
+            <value>
+                <fullName>46~ Any other Black / African / Caribbean background</fullName>
+                <default>false</default>
+                <label>46~ Any other Black / African / Caribbean background</label>
+            </value>
+            <value>
+                <fullName>47~ Arab</fullName>
+                <default>false</default>
+                <label>47~ Arab</label>
+            </value>
+            <value>
+                <fullName>98~ Any other ethnic group</fullName>
+                <default>false</default>
+                <label>98~ Any other ethnic group</label>
+            </value>
+            <value>
+                <fullName>99~ Prefer not to say</fullName>
+                <default>false</default>
+                <label>99~ Prefer not to say</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

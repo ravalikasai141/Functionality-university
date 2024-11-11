@@ -1,0 +1,9 @@
+<template>
+    <lightning-accordion allow-multiple-sections-open active-section-name={title}>
+        <lightning-accordion-section name={title} label={title}>
+            <div class="slds-m-vertical_medium">
+                <slot name="body"></slot>
+            </div>
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>

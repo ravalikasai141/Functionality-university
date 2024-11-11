@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Roles__c</fullName>
+    <externalId>false</externalId>
+    <label>Job Roles</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting &amp; Audit</fullName>
+                <default>false</default>
+                <label>Accounting &amp; Audit</label>
+            </value>
+            <value>
+                <fullName>Advocacy</fullName>
+                <default>false</default>
+                <label>Advocacy</label>
+            </value>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Business &amp; Finance</fullName>
+                <default>false</default>
+                <label>Business &amp; Finance</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking</fullName>
+                <default>false</default>
+                <label>Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Company Commercial</fullName>
+                <default>false</default>
+                <label>Company Commercial</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Corporate Finance</fullName>
+                <default>false</default>
+                <label>Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>Credit Analysis</fullName>
+                <default>false</default>
+                <label>Credit Analysis</label>
+            </value>
+            <value>
+                <fullName>Criminal</fullName>
+                <default>false</default>
+                <label>Criminal</label>
+            </value>
+            <value>
+                <fullName>Derivatives &amp; Trading</fullName>
+                <default>false</default>
+                <label>Derivatives &amp; Trading</label>
+            </value>
+            <value>
+                <fullName>Dispute Resolution</fullName>
+                <default>false</default>
+                <label>Dispute Resolution</label>
+            </value>
+            <value>
+                <fullName>Employment</fullName>
+                <default>false</default>
+                <label>Employment</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Essential Law for Accountants</fullName>
+                <default>false</default>
+                <label>Essential Law for Accountants</label>
+            </value>
+            <value>
+                <fullName>Family</fullName>
+                <default>false</default>
+                <label>Family</label>
+            </value>
+            <value>
+                <fullName>Financial Analysis</fullName>
+                <default>false</default>
+                <label>Financial Analysis</label>
+            </value>
+            <value>
+                <fullName>Financial Modelling</fullName>
+                <default>false</default>
+                <label>Financial Modelling</label>
+            </value>
+            <value>
+                <fullName>Financial Reporting</fullName>
+                <default>false</default>
+                <label>Financial Reporting</label>
+            </value>
+            <value>
+                <fullName>For Lawyers</fullName>
+                <default>false</default>
+                <label>For Lawyers</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>General Introductory Courses</fullName>
+                <default>false</default>
+                <label>General Introductory Courses</label>
+            </value>
+            <value>
+                <fullName>Immigration</fullName>
+                <default>false</default>
+                <label>Immigration</label>
+            </value>
+            <value>
+                <fullName>Intellectual Property</fullName>
+                <default>false</default>
+                <label>Intellectual Property</label>
+            </value>
+            <value>
+                <fullName>Interpersonal Skills</fullName>
+                <default>false</default>
+                <label>Interpersonal Skills</label>
+            </value>
+            <value>
+                <fullName>Investment Management</fullName>
+                <default>false</default>
+                <label>Investment Management</label>
+            </value>
+            <value>
+                <fullName>Law for Other Professionals</fullName>
+                <default>false</default>
+                <label>Law for Other Professionals</label>
+            </value>
+            <value>
+                <fullName>Leadership &amp; Management</fullName>
+                <default>false</default>
+                <label>Leadership &amp; Management</label>
+            </value>
+            <value>
+                <fullName>Personal Effectiveness</fullName>
+                <default>false</default>
+                <label>Personal Effectiveness</label>
+            </value>
+            <value>
+                <fullName>Personal Injury</fullName>
+                <default>false</default>
+                <label>Personal Injury</label>
+            </value>
+            <value>
+                <fullName>Private Client</fullName>
+                <default>false</default>
+                <label>Private Client</label>
+            </value>
+            <value>
+                <fullName>Property</fullName>
+                <default>false</default>
+                <label>Property</label>
+            </value>
+            <value>
+                <fullName>Regulation &amp; Compliance</fullName>
+                <default>false</default>
+                <label>Regulation &amp; Compliance</label>
+            </value>
+            <value>
+                <fullName>Specialist programmes / Career Development</fullName>
+                <default>false</default>
+                <label>Specialist programmes / Career Development</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Technical &amp; Management Skills</fullName>
+                <default>false</default>
+                <label>Technical &amp; Management Skills</label>
+            </value>
+            <value>
+                <fullName>The Carbon Market</fullName>
+                <default>false</default>
+                <label>The Carbon Market</label>
+            </value>
+            <value>
+                <fullName>Treasury &amp; Risk</fullName>
+                <default>false</default>
+                <label>Treasury &amp; Risk</label>
+            </value>
+            <value>
+                <fullName>Understanding Business</fullName>
+                <default>false</default>
+                <label>Understanding Business</label>
+            </value>
+            <value>
+                <fullName>Venture Capital and Private Equity</fullName>
+                <default>false</default>
+                <label>Venture Capital and Private Equity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

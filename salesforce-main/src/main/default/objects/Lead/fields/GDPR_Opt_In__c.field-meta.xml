@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDPR_Opt_In__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>GDPR Opt In field in line with GDPR compliance. Linked to Marketing Cloud and student preference centre. Used as initial data point for passive opt in/outs (Marketing Cloud, Direct Apps etc.) &amp; triggers workflow marketing preference actions</description>
+    <externalId>false</externalId>
+    <label>GDPR Opt In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

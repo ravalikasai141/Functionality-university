@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GoingStaleDate__c</fullName>
+    <description>The field captures the date/time when the Sub Status is updated to &apos;Going Stale&apos;.</description>
+    <externalId>false</externalId>
+    <label>GoingStaleDate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

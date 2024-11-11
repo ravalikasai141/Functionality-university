@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revenue_Recognition_Excluded__c</fullName>
+    <description>Indicates whether delivery should be excluded from revenue recognition.  If true, no Revenue Transaction will be created.</description>
+    <externalId>false</externalId>
+    <formula>OR(ISPICKVAL(Order_Product__r.Order.Booking_Type__c, &quot;Apprenticeship bookings&quot;),
+ISPICKVAL(Order_Product__r.Order.Booking_Type__c, &quot;Poland bookings&quot;),
+ISPICKVAL(Order_Product__r.Order.Booking_Type__c, &quot;Channel Island bookings&quot;),
+ISPICKVAL(Order_Product__r.Order.Booking_Type__c, &quot;Fixed Price Key Client Invoiced Off System&quot;),
+ISPICKVAL(Order_Product__r.Order.Booking_Type__c, &quot;Romania Bookings&quot;),
+ISPICKVAL(Order_Product__r.Order.Booking_Type__c, &quot;Malaysia Bookings&quot;),
+ISPICKVAL(Order_Product__r.Order.Billing_Mode__c , &quot;Billed off-system&quot;)
+)</formula>
+    <inlineHelpText>Indicates whether delivery should be excluded from revenue recognition.  If true, no Revenue Transaction will be created.</inlineHelpText>
+    <label>Revenue Recognition Excluded</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

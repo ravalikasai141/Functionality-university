@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deliver_Materials_to_Student__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Sets default order value for business accounts to specify if applicable materials will be delivered to the company or to the students on associated bookings.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifies if applicable materials will be delivered to this account or to the students on associated bookings. If checked send to student&apos;s default delivery address, unchecked use Order delivery address.This preference can be changed on each order</inlineHelpText>
+    <label>Deliver Materials to Student</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

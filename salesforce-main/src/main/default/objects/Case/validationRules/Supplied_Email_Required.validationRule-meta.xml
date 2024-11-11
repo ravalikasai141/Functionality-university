@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supplied_Email_Required</fullName>
+    <active>true</active>
+    <description>A supplied (Web) email is required for external cases submitted via Email-To-Case or Web-To-Case.</description>
+    <errorConditionFormula>$Setup.ValidationSettings__c.Case_Supplied_Email_Required__c = False &amp;&amp;
+$User.CommunityNickname = &quot;AutoSystemUser&quot; &amp;&amp;
+ISBLANK(SuppliedEmail)</errorConditionFormula>
+    <errorDisplayField>SuppliedEmail</errorDisplayField>
+    <errorMessage>This record must have a Web Email</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reason_On_Application_Oppo</fullName>
+    <active>true</active>
+    <description>&apos;Cancellation Reason&apos; to be mandatory if Status has been changed to &quot;Cancelled&quot; or &quot;Declined&quot; or &quot;Declined - Conditional&quot; or &quot;Declined - Unconditional&quot;.</description>
+    <errorConditionFormula>AND
+(
+(OR (RecordType.DeveloperName = &apos;Student_Application&apos; , RecordType.DeveloperName = &apos;Locked_Application&apos;)),
+(OR (ISCHANGED(StageName) , NOT(ISNEW()))),
+(OR (ISPICKVAL(StageName ,&apos;Cancelled&apos;) , ISPICKVAL(StageName,&apos;Declined&apos;), ISPICKVAL(StageName,&apos;Declined - Conditional&apos;), ISPICKVAL(StageName,&apos;Declined - Unconditional&apos;))),
+ISPICKVAL(BPP_Cancellation_Reason__c ,&apos;&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>BPP_Cancellation_Reason__c</errorDisplayField>
+    <errorMessage>You must choose a &quot;Cancellation Reason&quot;</errorMessage>
+</ValidationRule>

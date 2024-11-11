@@ -1,0 +1,16 @@
+<template>
+    <lightning-modal-header label={header}></lightning-modal-header>
+    <lightning-modal-body>
+        <lightning-textarea name="comment" value={previousComment} onchange={handleCommentChange}></lightning-textarea>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button
+            lwc:if={comment}
+            variant="destructive-text"
+            label="Clear"
+            class="slds-m-right_small"
+            onclick={handleClear}
+        ></lightning-button>
+        <lightning-button variant="brand" label="Save" onclick={handleOkay}></lightning-button>
+    </lightning-modal-footer>
+</template>

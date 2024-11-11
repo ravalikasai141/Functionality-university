@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Enrolment</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <role>Customer_Service_Mgmt</role>
+        <role>DomesticTeamRecordAssignment255431</role>
+        <role>Enrolment_Mgmt</role>
+        <role>Enrolment_Team</role>
+        <role>Marketing</role>
+    </sharedTo>
+</EmailFolder>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BNR_Student_Status_Display__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BNR_Student_Status_Code__c &lt;&gt; null, 
+CASE( BNR_Student_Status_Code__c, 
+&quot;AS&quot;, &quot;Active&quot;, 
+&quot;GR&quot;, &quot;Graduated&quot;, 
+&quot;IS&quot;, &quot;Inactive&quot;, 
+&quot;ND&quot;, &quot;Non-Degree Program Complete&quot;, 
+&quot;AC&quot;, &quot;Academically Complete&quot;, 
+&quot;Error - Unknown Code&quot; 
+), 
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Student Status Display</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

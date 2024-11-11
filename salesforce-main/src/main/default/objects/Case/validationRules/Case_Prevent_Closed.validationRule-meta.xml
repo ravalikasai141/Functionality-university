@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Prevent_Closed</fullName>
+    <active>true</active>
+    <description>Restrict the ability to set the case to closed, instead set to ready to close first, with an exception if it was re-opened.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;Student_Query&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(Status),
+ISPICKVAL(Status, &quot;Closed&quot;),
+NOT(ISPICKVAL(PRIORVALUE(Status), &quot;Ready to Close&quot;)),
+NOT(ISPICKVAL(PRIORVALUE(Status), &quot;Re-opened&quot;)),
+IsClosedOnCreate = False,
+NOT(ISCHANGED(Email_Closed_Alert__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Cases are restricted from being set to Closed directly, instead set to Ready to Close first. Contact your administrator if you need this case to be Closed manually. (Re-opened cases are not affected in this way.)</errorMessage>
+</ValidationRule>

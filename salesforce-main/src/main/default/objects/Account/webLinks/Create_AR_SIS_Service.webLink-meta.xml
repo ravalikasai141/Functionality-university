@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_AR_SIS_Service</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create AR/SIS Service</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/54.0/apex.js&quot;)}
+
+var nullFieldMsg = &quot;&quot;;
+var result = &quot;&quot;;
+var nullARMsg =&quot;&quot;;
+var nullSISMsg = &quot;&quot;;
+var refresh = &quot;&quot;;
+if ({!ISBLANK(Account.Profile_Company_ID__c)}) {
+alert(&quot;Profile Company ID is Required\n&quot;);
+nullSISMsg = &quot;Profile Company ID is Required&quot;;
+}
+
+else{
+nullARMsg = sforce.apex.execute(&quot;CreateCompanyARAccountService&quot;,&quot;validationRulesForAR&quot;,{id:&quot;{!Account.Id}&quot;});
+nullSISMsg = sforce.apex.execute(&quot;CreateCompanyARAccountService&quot;,&quot;validationRulesForSIS&quot;,{id:&quot;{!Account.Id}&quot;});
+if (nullARMsg != &quot;&quot;){
+if(nullSISMsg != &quot;&quot; ){
+nullARMsg += &quot;\n&quot; + nullSISMsg;
+}
+alert(nullARMsg);
+}
+else {
+result = sforce.apex.execute(&quot;CreateCompanyARAccountService&quot;,&quot;companyARAccInt&quot;,{id:&quot;{!Account.Id}&quot;});
+if (result != &quot;Application Submitted Successfully&quot;)
+alert(result);
+else
+refresh = &quot;true&quot;;
+}
+if(nullSISMsg != &quot;&quot; &amp;&amp; nullARMsg == &quot;&quot;){
+alert(nullSISMsg);
+}
+if (nullSISMsg == &quot;&quot; ){
+result = sforce.apex.execute(&quot;SISCompanyIntegrations&quot;,&quot;SISCompanyInt&quot;,{AccountId:&quot;{!Account.Id}&quot;});
+if (result != &quot;Application Submitted Successfully&quot;)
+alert(result);
+else
+refresh = &quot;true&quot;;
+}
+if(refresh == &quot;true&quot;)
+document.location.reload(true);
+}</url>
+</WebLink>

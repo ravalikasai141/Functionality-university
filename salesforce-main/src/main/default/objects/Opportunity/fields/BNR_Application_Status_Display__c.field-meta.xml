@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BNR_Application_Status_Display__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BNR_Application_Status_Code__c &lt;&gt; null,
+CASE( BNR_Application_Status_Code__c,
+&quot;AM&quot; , &quot;Admitted (Final)&quot;,
+&quot;AC&quot; , &quot;Accepted&quot;,
+&quot;AU&quot; , &quot;Accepted&quot;,
+&quot;DE&quot; , &quot;Denied&quot;,
+&quot;IN&quot; , &quot;Inactive&quot;,
+&quot;AP&quot; , &quot;Applicant&quot;,
+&quot;AA&quot; , &quot;Academically Admitted(I20)&quot;,
+&quot;WD&quot; , &quot;Withdrawal&quot;,
+&quot;Error - Unknown Code&quot;),
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Application Status Display</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

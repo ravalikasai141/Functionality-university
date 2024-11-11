@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPP_Sub_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Developer lead - written</fullName>
+                <default>false</default>
+                <label>Account Developer lead - written</label>
+            </value>
+            <value>
+                <fullName>Apprentices</fullName>
+                <default>false</default>
+                <label>Apprentices</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Awaiting Applicant Signoff</fullName>
+                <default>false</default>
+                <label>Awaiting Applicant Signoff</label>
+            </value>
+            <value>
+                <fullName>Awaiting Information</fullName>
+                <default>false</default>
+                <label>Awaiting Information</label>
+            </value>
+            <value>
+                <fullName>Bid Team lead - written</fullName>
+                <default>false</default>
+                <label>Bid Team lead - written</label>
+            </value>
+            <value>
+                <fullName>Chose Competitor</fullName>
+                <default>false</default>
+                <label>Chose Competitor</label>
+            </value>
+            <value>
+                <fullName>Commercials</fullName>
+                <default>false</default>
+                <label>Commercials</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Contracting</fullName>
+                <default>false</default>
+                <label>Contracting</label>
+            </value>
+            <value>
+                <fullName>Existing Client</fullName>
+                <default>false</default>
+                <label>Existing Client</label>
+            </value>
+            <value>
+                <fullName>Final Check In Progress</fullName>
+                <default>false</default>
+                <label>Final Check In Progress</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Internal (numbers, study method)</fullName>
+                <default>false</default>
+                <label>Internal (numbers, study method)</label>
+            </value>
+            <value>
+                <fullName>Lack of BPP time and resources</fullName>
+                <default>false</default>
+                <label>Lack of BPP time and resources</label>
+            </value>
+            <value>
+                <fullName>Lack of expertise</fullName>
+                <default>false</default>
+                <label>Lack of expertise</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>New Client</fullName>
+                <default>false</default>
+                <label>New Client</label>
+            </value>
+            <value>
+                <fullName>No Budget</fullName>
+                <default>false</default>
+                <label>No Budget</label>
+            </value>
+            <value>
+                <fullName>Non-apprentices</fullName>
+                <default>false</default>
+                <label>Non-apprentices</label>
+            </value>
+            <value>
+                <fullName>Non responsive</fullName>
+                <default>false</default>
+                <label>Non responsive</label>
+            </value>
+            <value>
+                <fullName>No training needs</fullName>
+                <default>false</default>
+                <label>No training needs</label>
+            </value>
+            <value>
+                <fullName>Not required now - future potential</fullName>
+                <default>false</default>
+                <label>Not required now - future potential</label>
+            </value>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>Organisational Capability Review</fullName>
+                <default>false</default>
+                <label>Organisational Capability Review</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pre-Approved</fullName>
+                <default>false</default>
+                <label>Pre-Approved</label>
+            </value>
+            <value>
+                <fullName>Presentation pitch /demo</fullName>
+                <default>false</default>
+                <label>Presentation pitch /demo</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Product gap</fullName>
+                <default>false</default>
+                <label>Product gap</label>
+            </value>
+            <value>
+                <fullName>Programme design</fullName>
+                <default>false</default>
+                <label>Programme design</label>
+            </value>
+            <value>
+                <fullName>Reputation/Poor experience</fullName>
+                <default>false</default>
+                <label>Reputation/Poor experience</label>
+            </value>
+            <value>
+                <fullName>School lead - written</fullName>
+                <default>false</default>
+                <label>School lead - written</label>
+            </value>
+            <value>
+                <fullName>Specific training needs analysis</fullName>
+                <default>false</default>
+                <label>Specific training needs analysis</label>
+            </value>
+            <value>
+                <fullName>Verbal</fullName>
+                <default>false</default>
+                <label>Verbal</label>
+            </value>
+            <value>
+                <fullName>Booked</fullName>
+                <default>false</default>
+                <label>Booked</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Ineligible</fullName>
+                <default>false</default>
+                <label>Ineligible</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Not eligible</fullName>
+                <default>false</default>
+                <label>Not eligible</label>
+            </value>
+            <value>
+                <fullName>Recent Activity</fullName>
+                <default>false</default>
+                <label>Recent Activity</label>
+            </value>
+            <value>
+                <fullName>Going Stale</fullName>
+                <default>false</default>
+                <label>Going Stale</label>
+            </value>
+            <value>
+                <fullName>Stale</fullName>
+                <default>false</default>
+                <label>Stale</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Application Started</controllingFieldValue>
+            <controllingFieldValue>Application in Progress</controllingFieldValue>
+            <valueName>Recent Activity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Started</controllingFieldValue>
+            <controllingFieldValue>Application in Progress</controllingFieldValue>
+            <valueName>Going Stale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Started</controllingFieldValue>
+            <controllingFieldValue>Application in Progress</controllingFieldValue>
+            <valueName>Stale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shop</controllingFieldValue>
+            <controllingFieldValue>Appointment</controllingFieldValue>
+            <controllingFieldValue>No Longer Interested</controllingFieldValue>
+            <controllingFieldValue>Transferred</controllingFieldValue>
+            <controllingFieldValue>Pending Course Instance</controllingFieldValue>
+            <controllingFieldValue>Opportunity</controllingFieldValue>
+            <controllingFieldValue>Awaiting Info</controllingFieldValue>
+            <controllingFieldValue>Pursuit</controllingFieldValue>
+            <controllingFieldValue>Lapsed Application</controllingFieldValue>
+            <controllingFieldValue>Engaged - Won</controllingFieldValue>
+            <controllingFieldValue>Lapsed Acceptance</controllingFieldValue>
+            <controllingFieldValue>Lost &amp; Leaked</controllingFieldValue>
+            <controllingFieldValue>Not Offered</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Prospecting</controllingFieldValue>
+            <controllingFieldValue>Application Received</controllingFieldValue>
+            <controllingFieldValue>UCAS Investigation</controllingFieldValue>
+            <controllingFieldValue>Registered</controllingFieldValue>
+            <controllingFieldValue>UCAS Withdrawal</controllingFieldValue>
+            <controllingFieldValue>Accepted - Pmt Pending</controllingFieldValue>
+            <controllingFieldValue>Application Pending</controllingFieldValue>
+            <controllingFieldValue>Accepted - Pmt Received</controllingFieldValue>
+            <controllingFieldValue>Shop Active</controllingFieldValue>
+            <controllingFieldValue>Shop Cold</controllingFieldValue>
+            <controllingFieldValue>Conditional Offer</controllingFieldValue>
+            <controllingFieldValue>Agent Application</controllingFieldValue>
+            <controllingFieldValue>Unconditional Offer</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <controllingFieldValue>In Progress</controllingFieldValue>
+            <controllingFieldValue>Complete</controllingFieldValue>
+            <controllingFieldValue>Deferred Entry</controllingFieldValue>
+            <controllingFieldValue>Degree Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Lapsed Offer</controllingFieldValue>
+            <controllingFieldValue>Professional Apprenticeship</controllingFieldValue>
+            <controllingFieldValue>Review</controllingFieldValue>
+            <controllingFieldValue>Scoping</controllingFieldValue>
+            <controllingFieldValue>Declined - Conditional</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Unconditional Insurance</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Firm</controllingFieldValue>
+            <controllingFieldValue>Accepted - Conditional Insurance</controllingFieldValue>
+            <controllingFieldValue>Declined - Unconditional</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <controllingFieldValue>BPP Review</controllingFieldValue>
+            <controllingFieldValue>Line Manager Review</controllingFieldValue>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>In Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Chose Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lack of BPP time and resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lack of expertise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Non responsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No training needs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not required now - future potential</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Product gap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Reputation/Poor experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Withdrawn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Ineligible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not eligible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Booked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualifying</controllingFieldValue>
+            <valueName>Existing Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualifying</controllingFieldValue>
+            <valueName>New Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualifying</controllingFieldValue>
+            <controllingFieldValue>Training Needs Analysis</controllingFieldValue>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <controllingFieldValue>Appointing</controllingFieldValue>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training Needs Analysis</controllingFieldValue>
+            <valueName>Organisational Capability Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training Needs Analysis</controllingFieldValue>
+            <controllingFieldValue>Appointing</controllingFieldValue>
+            <valueName>Programme design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training Needs Analysis</controllingFieldValue>
+            <valueName>Specific training needs analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <valueName>Account Developer lead - written</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <valueName>Bid Team lead - written</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <valueName>Presentation pitch /demo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <valueName>School lead - written</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Proposing</controllingFieldValue>
+            <valueName>Verbal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <valueName>Commercials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quoting</controllingFieldValue>
+            <valueName>Contracting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appointing</controllingFieldValue>
+            <valueName>Internal (numbers, study method)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Apprentices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Non-apprentices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BPP Review</controllingFieldValue>
+            <valueName>Awaiting Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BPP Review</controllingFieldValue>
+            <valueName>Not Started</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Line Manager Review</controllingFieldValue>
+            <valueName>Awaiting Applicant Signoff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acceptance</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

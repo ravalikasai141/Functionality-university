@@ -1,0 +1,6 @@
+.form-placeholder {
+  min-height: 100px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Bypass_Duplicate_Check__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field to be toggled during a save event. Evaluated by duplicate rules, if true then do not run duplicate rule</description>
+    <externalId>false</externalId>
+    <label>Lead Bypass Duplicate Check</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

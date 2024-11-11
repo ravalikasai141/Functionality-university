@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Language_Test_Type__c</fullName>
+    <description>Type of language test this student has taken</description>
+    <externalId>false</externalId>
+    <label>English Test Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IELTS</fullName>
+                <default>false</default>
+                <label>IELTS</label>
+            </value>
+            <value>
+                <fullName>BPP ELT</fullName>
+                <default>false</default>
+                <label>BPP ELT</label>
+            </value>
+            <value>
+                <fullName>TOEFL</fullName>
+                <default>false</default>
+                <label>TOEFL</label>
+            </value>
+            <value>
+                <fullName>PTE</fullName>
+                <default>false</default>
+                <label>PTE</label>
+            </value>
+            <value>
+                <fullName>GCSE/GCE</fullName>
+                <default>false</default>
+                <label>GCSE/GCE</label>
+            </value>
+            <value>
+                <fullName>HSSC ELT Waiver</fullName>
+                <default>false</default>
+                <label>HSSC ELT Waiver</label>
+            </value>
+            <value>
+                <fullName>Previous Sponsorship</fullName>
+                <default>false</default>
+                <label>Previous Sponsorship</label>
+            </value>
+            <value>
+                <fullName>UK Qualification</fullName>
+                <default>false</default>
+                <label>UK Qualification</label>
+            </value>
+            <value>
+                <fullName>Qualification/Nationals from Majority English speaking Country</fullName>
+                <default>false</default>
+                <label>Qualification/Nationals from Majority English speaking Country</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Oxford ELT Test</fullName>
+                <default>false</default>
+                <label>Oxford ELT Test</label>
+            </value>
+            <value>
+                <fullName>Language Cert</fullName>
+                <default>false</default>
+                <label>Language Cert</label>
+            </value>
+            <value>
+                <fullName>MOI</fullName>
+                <default>false</default>
+                <label>MOI</label>
+            </value>
+            <value>
+                <fullName>English Test Request</fullName>
+                <default>false</default>
+                <label>English Test Request</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

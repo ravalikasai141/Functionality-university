@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Account_Number_Format</fullName>
+    <active>true</active>
+    <description>Bank Account Number must only contain numerical characters</description>
+    <errorConditionFormula>AND(
+NOT( ISBLANK(  Bank_Account_Number__c )),
+NOT( REGEX( Bank_Account_Number__c , &quot;\\d+&quot; ))
+)</errorConditionFormula>
+    <errorDisplayField>Bank_Account_Number__c</errorDisplayField>
+    <errorMessage>You must enter numerical characters only</errorMessage>
+</ValidationRule>

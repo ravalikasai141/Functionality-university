@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Costs__c</fullName>
+    <description>[BD] Predates Apollo Salesforce team.  5/11/11</description>
+    <externalId>false</externalId>
+    <formula>Design_Costs__c  +  Display_Costs__c  +  Distribution_Costs__c  +  Fax_Costs__c  +  Handling_Costs__c  +  List_Costs__c  +  Print_Costs__c  +  SMS_Costs__c  +  Telemarketing_Costs__c  +  Trade_Show_Seminar_Costs__c  +  Web_Costs__c +  Email_Fulfilment_Costs__c +  Advertising_Costs__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Costs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

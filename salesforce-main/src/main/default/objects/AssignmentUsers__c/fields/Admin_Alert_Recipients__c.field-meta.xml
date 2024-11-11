@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Alert_Recipients__c</fullName>
+    <description>Id of the public group used for sending admin alerts to the core Salesforce dev/support team</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Public group - &apos;Admin Alert Recipients&apos; (15 digit Id)</inlineHelpText>
+    <label>Admin Alert Recipients</label>
+    <length>15</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_3rd_Party__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>BD field. Opt out of 3rd party communication.
+
+Not displayed on student pages as of May 11,11.</description>
+    <externalId>false</externalId>
+    <label>No 3rd Party</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

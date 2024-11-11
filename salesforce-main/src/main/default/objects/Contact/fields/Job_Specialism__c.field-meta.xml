@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Specialism__c</fullName>
+    <externalId>false</externalId>
+    <label>Job Specialism</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Job_Roles__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+                <label>Accounts</label>
+            </value>
+            <value>
+                <fullName>Acquisitions &amp; Disposals</fullName>
+                <default>false</default>
+                <label>Acquisitions &amp; Disposals</label>
+            </value>
+            <value>
+                <fullName>ADR</fullName>
+                <default>false</default>
+                <label>ADR</label>
+            </value>
+            <value>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+                <label>Advanced</label>
+            </value>
+            <value>
+                <fullName>Agency &amp; Distribution Agreements</fullName>
+                <default>false</default>
+                <label>Agency &amp; Distribution Agreements</label>
+            </value>
+            <value>
+                <fullName>Bribery &amp; Corruption</fullName>
+                <default>false</default>
+                <label>Bribery &amp; Corruption</label>
+            </value>
+            <value>
+                <fullName>Business Immigration</fullName>
+                <default>false</default>
+                <label>Business Immigration</label>
+            </value>
+            <value>
+                <fullName>Business Skills</fullName>
+                <default>false</default>
+                <label>Business Skills</label>
+            </value>
+            <value>
+                <fullName>Children - Private</fullName>
+                <default>false</default>
+                <label>Children - Private</label>
+            </value>
+            <value>
+                <fullName>Children - Public</fullName>
+                <default>false</default>
+                <label>Children - Public</label>
+            </value>
+            <value>
+                <fullName>Civil Advocacy</fullName>
+                <default>false</default>
+                <label>Civil Advocacy</label>
+            </value>
+            <value>
+                <fullName>Civil Procedure</fullName>
+                <default>false</default>
+                <label>Civil Procedure</label>
+            </value>
+            <value>
+                <fullName>Clinical Negligence</fullName>
+                <default>false</default>
+                <label>Clinical Negligence</label>
+            </value>
+            <value>
+                <fullName>Code of Conduct</fullName>
+                <default>false</default>
+                <label>Code of Conduct</label>
+            </value>
+            <value>
+                <fullName>Commercial Finance</fullName>
+                <default>false</default>
+                <label>Commercial Finance</label>
+            </value>
+            <value>
+                <fullName>Commercial Litigation</fullName>
+                <default>false</default>
+                <label>Commercial Litigation</label>
+            </value>
+            <value>
+                <fullName>Commercial Property</fullName>
+                <default>false</default>
+                <label>Commercial Property</label>
+            </value>
+            <value>
+                <fullName>Company Law</fullName>
+                <default>false</default>
+                <label>Company Law</label>
+            </value>
+            <value>
+                <fullName>Compromise Agreements</fullName>
+                <default>false</default>
+                <label>Compromise Agreements</label>
+            </value>
+            <value>
+                <fullName>Conflict of Laws</fullName>
+                <default>false</default>
+                <label>Conflict of Laws</label>
+            </value>
+            <value>
+                <fullName>Consumer Law</fullName>
+                <default>false</default>
+                <label>Consumer Law</label>
+            </value>
+            <value>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+                <label>Contracts</label>
+            </value>
+            <value>
+                <fullName>Conveyancing</fullName>
+                <default>false</default>
+                <label>Conveyancing</label>
+            </value>
+            <value>
+                <fullName>Copyright</fullName>
+                <default>false</default>
+                <label>Copyright</label>
+            </value>
+            <value>
+                <fullName>Corporate Finance</fullName>
+                <default>false</default>
+                <label>Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>Corporate Governance</fullName>
+                <default>false</default>
+                <label>Corporate Governance</label>
+            </value>
+            <value>
+                <fullName>Costs</fullName>
+                <default>false</default>
+                <label>Costs</label>
+            </value>
+            <value>
+                <fullName>Court of Protection</fullName>
+                <default>false</default>
+                <label>Court of Protection</label>
+            </value>
+            <value>
+                <fullName>Criminal Advocacy</fullName>
+                <default>false</default>
+                <label>Criminal Advocacy</label>
+            </value>
+            <value>
+                <fullName>Data Protection</fullName>
+                <default>false</default>
+                <label>Data Protection</label>
+            </value>
+            <value>
+                <fullName>Discrimination</fullName>
+                <default>false</default>
+                <label>Discrimination</label>
+            </value>
+            <value>
+                <fullName>Divorce</fullName>
+                <default>false</default>
+                <label>Divorce</label>
+            </value>
+            <value>
+                <fullName>Drafting</fullName>
+                <default>false</default>
+                <label>Drafting</label>
+            </value>
+            <value>
+                <fullName>Easements &amp; Covenants</fullName>
+                <default>false</default>
+                <label>Easements &amp; Covenants</label>
+            </value>
+            <value>
+                <fullName>E-commerce</fullName>
+                <default>false</default>
+                <label>E-commerce</label>
+            </value>
+            <value>
+                <fullName>Elderly Client</fullName>
+                <default>false</default>
+                <label>Elderly Client</label>
+            </value>
+            <value>
+                <fullName>Employers Liability</fullName>
+                <default>false</default>
+                <label>Employers Liability</label>
+            </value>
+            <value>
+                <fullName>Employment Advocacy</fullName>
+                <default>false</default>
+                <label>Employment Advocacy</label>
+            </value>
+            <value>
+                <fullName>Employment Law</fullName>
+                <default>false</default>
+                <label>Employment Law</label>
+            </value>
+            <value>
+                <fullName>Employment Tribunal Claims</fullName>
+                <default>false</default>
+                <label>Employment Tribunal Claims</label>
+            </value>
+            <value>
+                <fullName>Equality &amp; Diversity</fullName>
+                <default>false</default>
+                <label>Equality &amp; Diversity</label>
+            </value>
+            <value>
+                <fullName>Family Advocacy</fullName>
+                <default>false</default>
+                <label>Family Advocacy</label>
+            </value>
+            <value>
+                <fullName>Fatal Accidents</fullName>
+                <default>false</default>
+                <label>Fatal Accidents</label>
+            </value>
+            <value>
+                <fullName>Financial Orders</fullName>
+                <default>false</default>
+                <label>Financial Orders</label>
+            </value>
+            <value>
+                <fullName>For Accountants</fullName>
+                <default>false</default>
+                <label>For Accountants</label>
+            </value>
+            <value>
+                <fullName>For Lawyers</fullName>
+                <default>false</default>
+                <label>For Lawyers</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>IFRS</fullName>
+                <default>false</default>
+                <label>IFRS</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>Intermediate</fullName>
+                <default>false</default>
+                <label>Intermediate</label>
+            </value>
+            <value>
+                <fullName>International Agreements</fullName>
+                <default>false</default>
+                <label>International Agreements</label>
+            </value>
+            <value>
+                <fullName>International Arbitration</fullName>
+                <default>false</default>
+                <label>International Arbitration</label>
+            </value>
+            <value>
+                <fullName>Introductory</fullName>
+                <default>false</default>
+                <label>Introductory</label>
+            </value>
+            <value>
+                <fullName>IT Skills</fullName>
+                <default>false</default>
+                <label>IT Skills</label>
+            </value>
+            <value>
+                <fullName>Joint Ventures</fullName>
+                <default>false</default>
+                <label>Joint Ventures</label>
+            </value>
+            <value>
+                <fullName>Judicial Review</fullName>
+                <default>false</default>
+                <label>Judicial Review</label>
+            </value>
+            <value>
+                <fullName>Law for Accountants</fullName>
+                <default>false</default>
+                <label>Law for Accountants</label>
+            </value>
+            <value>
+                <fullName>Law for Contract Managers</fullName>
+                <default>false</default>
+                <label>Law for Contract Managers</label>
+            </value>
+            <value>
+                <fullName>Law for Financial Professionals</fullName>
+                <default>false</default>
+                <label>Law for Financial Professionals</label>
+            </value>
+            <value>
+                <fullName>Law for Marketing Professionals</fullName>
+                <default>false</default>
+                <label>Law for Marketing Professionals</label>
+            </value>
+            <value>
+                <fullName>Leases</fullName>
+                <default>false</default>
+                <label>Leases</label>
+            </value>
+            <value>
+                <fullName>Litigation Procedure</fullName>
+                <default>false</default>
+                <label>Litigation Procedure</label>
+            </value>
+            <value>
+                <fullName>Loan Agreements</fullName>
+                <default>false</default>
+                <label>Loan Agreements</label>
+            </value>
+            <value>
+                <fullName>Magistrates Courts</fullName>
+                <default>false</default>
+                <label>Magistrates Courts</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Management Accounting</fullName>
+                <default>false</default>
+                <label>Management Accounting</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>MoJ Portal</fullName>
+                <default>false</default>
+                <label>MoJ Portal</label>
+            </value>
+            <value>
+                <fullName>Money Laundering</fullName>
+                <default>false</default>
+                <label>Money Laundering</label>
+            </value>
+            <value>
+                <fullName>Occuaptional Disease</fullName>
+                <default>false</default>
+                <label>Occuaptional Disease</label>
+            </value>
+            <value>
+                <fullName>Occupiers Liability</fullName>
+                <default>false</default>
+                <label>Occupiers Liability</label>
+            </value>
+            <value>
+                <fullName>Pensions</fullName>
+                <default>false</default>
+                <label>Pensions</label>
+            </value>
+            <value>
+                <fullName>PI Law</fullName>
+                <default>false</default>
+                <label>PI Law</label>
+            </value>
+            <value>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <label>Planning</label>
+            </value>
+            <value>
+                <fullName>Police Station</fullName>
+                <default>false</default>
+                <label>Police Station</label>
+            </value>
+            <value>
+                <fullName>Prenuptial Agreements</fullName>
+                <default>false</default>
+                <label>Prenuptial Agreements</label>
+            </value>
+            <value>
+                <fullName>Prison</fullName>
+                <default>false</default>
+                <label>Prison</label>
+            </value>
+            <value>
+                <fullName>Probate</fullName>
+                <default>false</default>
+                <label>Probate</label>
+            </value>
+            <value>
+                <fullName>Quantum</fullName>
+                <default>false</default>
+                <label>Quantum</label>
+            </value>
+            <value>
+                <fullName>Remedies</fullName>
+                <default>false</default>
+                <label>Remedies</label>
+            </value>
+            <value>
+                <fullName>Residential Property</fullName>
+                <default>false</default>
+                <label>Residential Property</label>
+            </value>
+            <value>
+                <fullName>Road Traffic</fullName>
+                <default>false</default>
+                <label>Road Traffic</label>
+            </value>
+            <value>
+                <fullName>Stock Markets &amp; Flotations</fullName>
+                <default>false</default>
+                <label>Stock Markets &amp; Flotations</label>
+            </value>
+            <value>
+                <fullName>Strategic Management</fullName>
+                <default>false</default>
+                <label>Strategic Management</label>
+            </value>
+            <value>
+                <fullName>TOLATA</fullName>
+                <default>false</default>
+                <label>TOLATA</label>
+            </value>
+            <value>
+                <fullName>Trade Secrets</fullName>
+                <default>false</default>
+                <label>Trade Secrets</label>
+            </value>
+            <value>
+                <fullName>Transfer of Undertakings</fullName>
+                <default>false</default>
+                <label>Transfer of Undertakings</label>
+            </value>
+            <value>
+                <fullName>UK GAAP</fullName>
+                <default>false</default>
+                <label>UK GAAP</label>
+            </value>
+            <value>
+                <fullName>UK Immigration Law</fullName>
+                <default>false</default>
+                <label>UK Immigration Law</label>
+            </value>
+            <value>
+                <fullName>Unfair Dismissal</fullName>
+                <default>false</default>
+                <label>Unfair Dismissal</label>
+            </value>
+            <value>
+                <fullName>US GAAP</fullName>
+                <default>false</default>
+                <label>US GAAP</label>
+            </value>
+            <value>
+                <fullName>Websites</fullName>
+                <default>false</default>
+                <label>Websites</label>
+            </value>
+            <value>
+                <fullName>Wills</fullName>
+                <default>false</default>
+                <label>Wills</label>
+            </value>
+            <value>
+                <fullName>Youth Court</fullName>
+                <default>false</default>
+                <label>Youth Court</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>General Introductory Courses</controllingFieldValue>
+            <controllingFieldValue>Investment Management</controllingFieldValue>
+            <controllingFieldValue>Credit Analysis</controllingFieldValue>
+            <controllingFieldValue>Derivatives &amp; Trading</controllingFieldValue>
+            <controllingFieldValue>Regulation &amp; Compliance</controllingFieldValue>
+            <controllingFieldValue>Equities</controllingFieldValue>
+            <controllingFieldValue>Technical &amp; Management Skills</controllingFieldValue>
+            <controllingFieldValue>The Carbon Market</controllingFieldValue>
+            <controllingFieldValue>Treasury &amp; Risk</controllingFieldValue>
+            <controllingFieldValue>Financial Analysis</controllingFieldValue>
+            <controllingFieldValue>Financial Modelling</controllingFieldValue>
+            <controllingFieldValue>Accounting &amp; Audit</controllingFieldValue>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Finance</controllingFieldValue>
+            <controllingFieldValue>Venture Capital and Private Equity</controllingFieldValue>
+            <valueName>Advanced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Introductory Courses</controllingFieldValue>
+            <controllingFieldValue>Investment Management</controllingFieldValue>
+            <controllingFieldValue>Credit Analysis</controllingFieldValue>
+            <controllingFieldValue>Derivatives &amp; Trading</controllingFieldValue>
+            <controllingFieldValue>Regulation &amp; Compliance</controllingFieldValue>
+            <controllingFieldValue>Equities</controllingFieldValue>
+            <controllingFieldValue>Technical &amp; Management Skills</controllingFieldValue>
+            <controllingFieldValue>The Carbon Market</controllingFieldValue>
+            <controllingFieldValue>Treasury &amp; Risk</controllingFieldValue>
+            <controllingFieldValue>Financial Analysis</controllingFieldValue>
+            <controllingFieldValue>Financial Modelling</controllingFieldValue>
+            <controllingFieldValue>Accounting &amp; Audit</controllingFieldValue>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Finance</controllingFieldValue>
+            <controllingFieldValue>Venture Capital and Private Equity</controllingFieldValue>
+            <valueName>Intermediate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Introductory Courses</controllingFieldValue>
+            <controllingFieldValue>Investment Management</controllingFieldValue>
+            <controllingFieldValue>Credit Analysis</controllingFieldValue>
+            <controllingFieldValue>Derivatives &amp; Trading</controllingFieldValue>
+            <controllingFieldValue>Regulation &amp; Compliance</controllingFieldValue>
+            <controllingFieldValue>Equities</controllingFieldValue>
+            <controllingFieldValue>Technical &amp; Management Skills</controllingFieldValue>
+            <controllingFieldValue>The Carbon Market</controllingFieldValue>
+            <controllingFieldValue>Treasury &amp; Risk</controllingFieldValue>
+            <controllingFieldValue>Financial Analysis</controllingFieldValue>
+            <controllingFieldValue>Financial Modelling</controllingFieldValue>
+            <controllingFieldValue>Accounting &amp; Audit</controllingFieldValue>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Finance</controllingFieldValue>
+            <controllingFieldValue>Venture Capital and Private Equity</controllingFieldValue>
+            <valueName>Introductory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Immigration</controllingFieldValue>
+            <valueName>Business Immigration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Immigration</controllingFieldValue>
+            <valueName>UK Immigration Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intellectual Property</controllingFieldValue>
+            <valueName>Copyright</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intellectual Property</controllingFieldValue>
+            <valueName>Data Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intellectual Property</controllingFieldValue>
+            <valueName>Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intellectual Property</controllingFieldValue>
+            <valueName>Websites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law for Other Professionals</controllingFieldValue>
+            <valueName>Law for Accountants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law for Other Professionals</controllingFieldValue>
+            <valueName>Law for Contract Managers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law for Other Professionals</controllingFieldValue>
+            <valueName>Law for Financial Professionals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Law for Other Professionals</controllingFieldValue>
+            <valueName>Law for Marketing Professionals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Clinical Negligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>Drafting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Employers Liability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Fatal Accidents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Litigation Procedure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>MoJ Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Occuaptional Disease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Occupiers Liability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>PI Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <valueName>Quantum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Personal Injury</controllingFieldValue>
+            <controllingFieldValue>Criminal</controllingFieldValue>
+            <valueName>Road Traffic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Private Client</controllingFieldValue>
+            <valueName>Court of Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Private Client</controllingFieldValue>
+            <valueName>Elderly Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Private Client</controllingFieldValue>
+            <valueName>Probate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Private Client</controllingFieldValue>
+            <valueName>Wills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Criminal</controllingFieldValue>
+            <valueName>Magistrates Courts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Criminal</controllingFieldValue>
+            <valueName>Police Station</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Criminal</controllingFieldValue>
+            <valueName>Prison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Criminal</controllingFieldValue>
+            <valueName>Youth Court</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Commercial Property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Conveyancing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Easements &amp; Covenants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Leases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property</controllingFieldValue>
+            <valueName>Residential Property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>ADR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>Civil Procedure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>Commercial Litigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>Conflict of Laws</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>Costs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>International Arbitration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute Resolution</controllingFieldValue>
+            <valueName>Judicial Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment</controllingFieldValue>
+            <valueName>Compromise Agreements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment</controllingFieldValue>
+            <valueName>Discrimination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment</controllingFieldValue>
+            <valueName>Employment Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment</controllingFieldValue>
+            <valueName>Employment Tribunal Claims</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment</controllingFieldValue>
+            <valueName>Transfer of Undertakings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employment</controllingFieldValue>
+            <valueName>Unfair Dismissal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tax</controllingFieldValue>
+            <valueName>For Accountants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tax</controllingFieldValue>
+            <valueName>For Lawyers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family</controllingFieldValue>
+            <valueName>Children - Private</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family</controllingFieldValue>
+            <valueName>Children - Public</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family</controllingFieldValue>
+            <valueName>Divorce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family</controllingFieldValue>
+            <valueName>Financial Orders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family</controllingFieldValue>
+            <valueName>Prenuptial Agreements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family</controllingFieldValue>
+            <valueName>TOLATA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy</controllingFieldValue>
+            <valueName>Civil Advocacy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy</controllingFieldValue>
+            <valueName>Criminal Advocacy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy</controllingFieldValue>
+            <valueName>Employment Advocacy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy</controllingFieldValue>
+            <valueName>Family Advocacy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business &amp; Finance</controllingFieldValue>
+            <valueName>Business Skills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business &amp; Finance</controllingFieldValue>
+            <valueName>Corporate Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business &amp; Finance</controllingFieldValue>
+            <valueName>IT Skills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business &amp; Finance</controllingFieldValue>
+            <valueName>Management Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business &amp; Finance</controllingFieldValue>
+            <valueName>Strategic Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Acquisitions &amp; Disposals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Agency &amp; Distribution Agreements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Bribery &amp; Corruption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Commercial Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Company Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Consumer Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Contracts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Corporate Governance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>E-commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Insolvency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>International Agreements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Joint Ventures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Loan Agreements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Pensions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Remedies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Stock Markets &amp; Flotations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Company Commercial</controllingFieldValue>
+            <valueName>Trade Secrets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Code of Conduct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Equality &amp; Diversity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Money Laundering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Reporting</controllingFieldValue>
+            <valueName>IFRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Reporting</controllingFieldValue>
+            <valueName>UK GAAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Reporting</controllingFieldValue>
+            <valueName>US GAAP</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

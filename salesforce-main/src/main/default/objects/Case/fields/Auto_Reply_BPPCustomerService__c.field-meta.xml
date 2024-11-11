@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Reply_BPPCustomerService__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field gets checked by a workflow &apos;Auto Reply CSA case&apos; when a student emails to &apos;BPPCustomerServiceTeam@bpp.com&apos; instead of raising a query by webform</description>
+    <externalId>false</externalId>
+    <label>Auto Reply BPPCustomerService</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

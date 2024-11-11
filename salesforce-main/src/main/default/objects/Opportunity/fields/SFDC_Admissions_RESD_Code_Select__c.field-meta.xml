@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Admissions_RESD_Code_Select__c</fullName>
+    <description>Added for SIS Integrations.</description>
+    <externalId>false</externalId>
+    <label>Admissions RESD Code Select</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>U~ UK National</fullName>
+                <default>false</default>
+                <label>U~ UK National</label>
+            </value>
+            <value>
+                <fullName>L~ Indefinite Leave to Remain</fullName>
+                <default>false</default>
+                <label>L~ Indefinite Leave to Remain</label>
+            </value>
+            <value>
+                <fullName>R~ Right of Abode</fullName>
+                <default>false</default>
+                <label>R~ Right of Abode</label>
+            </value>
+            <value>
+                <fullName>E~ EU National</fullName>
+                <default>false</default>
+                <label>E~ EU National</label>
+            </value>
+            <value>
+                <fullName>F~ EU National Family Member</fullName>
+                <default>false</default>
+                <label>F~ EU National Family Member</label>
+            </value>
+            <value>
+                <fullName>M~ EEA Family Member</fullName>
+                <default>false</default>
+                <label>M~ EEA Family Member</label>
+            </value>
+            <value>
+                <fullName>R~ Refugee</fullName>
+                <default>false</default>
+                <label>R~ Refugee</label>
+            </value>
+            <value>
+                <fullName>B~ Refugee Family Member</fullName>
+                <default>false</default>
+                <label>B~ Refugee Family Member</label>
+            </value>
+            <value>
+                <fullName>H~ Humanitarian Protection</fullName>
+                <default>false</default>
+                <label>H~ Humanitarian Protection</label>
+            </value>
+            <value>
+                <fullName>P~ Humanitarian Protection Family</fullName>
+                <default>false</default>
+                <label>P~ Humanitarian Protection Family</label>
+            </value>
+            <value>
+                <fullName>T~ Child of a Turkish worker</fullName>
+                <default>false</default>
+                <label>T~ Child of a Turkish worker</label>
+            </value>
+            <value>
+                <fullName>C~ Child of a Swiss National</fullName>
+                <default>false</default>
+                <label>C~ Child of a Swiss National</label>
+            </value>
+            <value>
+                <fullName>A~ EEA</fullName>
+                <default>false</default>
+                <label>A~ EEA</label>
+            </value>
+            <value>
+                <fullName>O~ Non-EEA VISA  required</fullName>
+                <default>false</default>
+                <label>O~ Non-EEA VISA  required</label>
+            </value>
+            <value>
+                <fullName>V~ Non-EEA no VISA required</fullName>
+                <default>false</default>
+                <label>V~ Non-EEA no VISA required</label>
+            </value>
+            <value>
+                <fullName>G~ England</fullName>
+                <default>false</default>
+                <label>G~ England</label>
+            </value>
+            <value>
+                <fullName>S~ Scotland</fullName>
+                <default>false</default>
+                <label>S~ Scotland</label>
+            </value>
+            <value>
+                <fullName>W~ Wales</fullName>
+                <default>false</default>
+                <label>W~ Wales</label>
+            </value>
+            <value>
+                <fullName>N~ Northern Ireland</fullName>
+                <default>false</default>
+                <label>N~ Northern Ireland</label>
+            </value>
+            <value>
+                <fullName>I~ Islands (Man, Channel)</fullName>
+                <default>false</default>
+                <label>I~ Islands (Man, Channel)</label>
+            </value>
+            <value>
+                <fullName>0~ Undeclared</fullName>
+                <default>false</default>
+                <label>0~ Undeclared</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

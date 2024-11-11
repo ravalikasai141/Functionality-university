@@ -1,0 +1,4 @@
+<aura:component implements="force:hasRecordId,force:LightningQuickActionWithoutHeader">
+    <aura:attribute name="recordId" type="Id" />
+    <c:updateProductOpportunities recordId="{!v.recordId}" onclosemodal="{!c.handleCloseModal}" />
+</aura:component>

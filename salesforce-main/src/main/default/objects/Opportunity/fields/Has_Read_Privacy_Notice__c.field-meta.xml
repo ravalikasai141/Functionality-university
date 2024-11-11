@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Read_Privacy_Notice__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Part of the Apprentice Application event - indicates whether applicant has read the privacy notice.</description>
+    <externalId>false</externalId>
+    <label>Has Read Privacy Notice</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

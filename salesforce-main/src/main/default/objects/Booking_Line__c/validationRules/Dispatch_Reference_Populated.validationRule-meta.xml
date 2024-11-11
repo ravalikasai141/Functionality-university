@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dispatch_Reference_Populated</fullName>
+    <active>true</active>
+    <description>Ensures that the Dispatch Reference text field is populated when the Delivery Status picklist value &apos;Dispatched&apos; is selected.</description>
+    <errorConditionFormula>AND(
+TEXT( Delivery_Status_OLD__c ) = &apos;Dispatched&apos;,
+ISBLANK( Dispatch_Reference__c )
+)</errorConditionFormula>
+    <errorDisplayField>Dispatch_Reference__c</errorDisplayField>
+    <errorMessage>Cannot be blank if Delivery Status is set to &apos;Dispatched&apos;.</errorMessage>
+</ValidationRule>

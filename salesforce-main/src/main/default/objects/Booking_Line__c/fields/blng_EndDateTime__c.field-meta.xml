@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>blng_EndDateTime__c</fullName>
+    <description>End date of the booking line. If session this will be session date, if material this will be the instance start date. This field will be populated by the booking line code</description>
+    <externalId>false</externalId>
+    <label>End Date/Time</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

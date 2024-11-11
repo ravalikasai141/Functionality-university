@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specific_Apprenticeships_Discussed__c</fullName>
+    <description>If you discussed specific apprenticeships, which of the following apprenticeships did you discuss?</description>
+    <externalId>false</externalId>
+    <label>Specific Apprenticeships Discussed</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Actuarial Technician</fullName>
+                <default>false</default>
+                <label>Actuarial Technician</label>
+            </value>
+            <value>
+                <fullName>Actuary</fullName>
+                <default>false</default>
+                <label>Actuary</label>
+            </value>
+            <value>
+                <fullName>Assistant Accountant</fullName>
+                <default>false</default>
+                <label>Assistant Accountant</label>
+            </value>
+            <value>
+                <fullName>Professional Accounting / Taxation Technician</fullName>
+                <default>false</default>
+                <label>Professional Accounting / Taxation Technician</label>
+            </value>
+            <value>
+                <fullName>Accountancy / Taxation Professional</fullName>
+                <default>false</default>
+                <label>Accountancy / Taxation Professional</label>
+            </value>
+            <value>
+                <fullName>Business Administrator</fullName>
+                <default>false</default>
+                <label>Business Administrator</label>
+            </value>
+            <value>
+                <fullName>Associate Project Manager</fullName>
+                <default>false</default>
+                <label>Associate Project Manager</label>
+            </value>
+            <value>
+                <fullName>Investment Operations Administrator</fullName>
+                <default>false</default>
+                <label>Investment Operations Administrator</label>
+            </value>
+            <value>
+                <fullName>Investment Operations Technician</fullName>
+                <default>false</default>
+                <label>Investment Operations Technician</label>
+            </value>
+            <value>
+                <fullName>Investment Operations Specialist</fullName>
+                <default>false</default>
+                <label>Investment Operations Specialist</label>
+            </value>
+            <value>
+                <fullName>Financial Services Customer Adviser</fullName>
+                <default>false</default>
+                <label>Financial Services Customer Adviser</label>
+            </value>
+            <value>
+                <fullName>Senior Financial Services Customer Adviser</fullName>
+                <default>false</default>
+                <label>Senior Financial Services Customer Adviser</label>
+            </value>
+            <value>
+                <fullName>Insurance Practitioner</fullName>
+                <default>false</default>
+                <label>Insurance Practitioner</label>
+            </value>
+            <value>
+                <fullName>Insurance Professional</fullName>
+                <default>false</default>
+                <label>Insurance Professional</label>
+            </value>
+            <value>
+                <fullName>Senior Insurance Professional</fullName>
+                <default>false</default>
+                <label>Senior Insurance Professional</label>
+            </value>
+            <value>
+                <fullName>Compliance / Risk Officer</fullName>
+                <default>false</default>
+                <label>Compliance / Risk Officer</label>
+            </value>
+            <value>
+                <fullName>Senior Compliance / Risk Specialist</fullName>
+                <default>false</default>
+                <label>Senior Compliance / Risk Specialist</label>
+            </value>
+            <value>
+                <fullName>Financial Services Administrator</fullName>
+                <default>false</default>
+                <label>Financial Services Administrator</label>
+            </value>
+            <value>
+                <fullName>Financial Services Professional</fullName>
+                <default>false</default>
+                <label>Financial Services Professional</label>
+            </value>
+            <value>
+                <fullName>Senior Investment / Commercial Banking Professional</fullName>
+                <default>false</default>
+                <label>Senior Investment / Commercial Banking Professional</label>
+            </value>
+            <value>
+                <fullName>Mortgage Adviser</fullName>
+                <default>false</default>
+                <label>Mortgage Adviser</label>
+            </value>
+            <value>
+                <fullName>Advanced Credit Controller / Debt Collection Specialist</fullName>
+                <default>false</default>
+                <label>Advanced Credit Controller / Debt Collection Specialist</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse - Degree (NMC 2010)</fullName>
+                <default>false</default>
+                <label>Registered Nurse - Degree (NMC 2010)</label>
+            </value>
+            <value>
+                <fullName>Nursing Associate</fullName>
+                <default>false</default>
+                <label>Nursing Associate</label>
+            </value>
+            <value>
+                <fullName>HR Support</fullName>
+                <default>false</default>
+                <label>HR Support</label>
+            </value>
+            <value>
+                <fullName>HR Consultant / Partner</fullName>
+                <default>false</default>
+                <label>HR Consultant / Partner</label>
+            </value>
+            <value>
+                <fullName>Paralegal</fullName>
+                <default>false</default>
+                <label>Paralegal</label>
+            </value>
+            <value>
+                <fullName>Solicitor</fullName>
+                <default>false</default>
+                <label>Solicitor</label>
+            </value>
+            <value>
+                <fullName>Team Leader / Supervisor</fullName>
+                <default>false</default>
+                <label>Team Leader / Supervisor</label>
+            </value>
+            <value>
+                <fullName>Operations / Departmental Manager</fullName>
+                <default>false</default>
+                <label>Operations / Departmental Manager</label>
+            </value>
+            <value>
+                <fullName>Chartered Manager</fullName>
+                <default>false</default>
+                <label>Chartered Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Leader</fullName>
+                <default>false</default>
+                <label>Senior Leader</label>
+            </value>
+            <value>
+                <fullName>Improvement Leader</fullName>
+                <default>false</default>
+                <label>Improvement Leader</label>
+            </value>
+            <value>
+                <fullName>Infrastructure Technician</fullName>
+                <default>false</default>
+                <label>Infrastructure Technician</label>
+            </value>
+            <value>
+                <fullName>Network Engineer</fullName>
+                <default>false</default>
+                <label>Network Engineer</label>
+            </value>
+            <value>
+                <fullName>Data Analyst</fullName>
+                <default>false</default>
+                <label>Data Analyst</label>
+            </value>
+            <value>
+                <fullName>Software Developer</fullName>
+                <default>false</default>
+                <label>Software Developer</label>
+            </value>
+            <value>
+                <fullName>Cyber Security Technologist</fullName>
+                <default>false</default>
+                <label>Cyber Security Technologist</label>
+            </value>
+            <value>
+                <fullName>Digital and Technology Solutions Professional (Integrated Degree)</fullName>
+                <default>false</default>
+                <label>Digital and Technology Solutions Professional (Integrated Degree)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

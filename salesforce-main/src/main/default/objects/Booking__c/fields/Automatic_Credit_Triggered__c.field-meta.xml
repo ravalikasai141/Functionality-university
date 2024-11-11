@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Automatic_Credit_Triggered__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked by Flow 4C_BPP AutomatedCreditNoteProcess so 4C PB - Booking Line knows not to reverse rev rec for these booking lines.</description>
+    <externalId>false</externalId>
+    <label>Automatic Credit Triggered</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

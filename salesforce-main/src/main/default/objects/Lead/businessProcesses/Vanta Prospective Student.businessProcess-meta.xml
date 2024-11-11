@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vanta Prospective Student</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Contacted - Awaiting booking</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contacted - D%26P not available</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contacted - Information sent</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contacted - Interested but not ready to apply</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Existing account</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Forwarded</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Already booked</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Booked with competitor</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Funding restrictions</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Invalid contact details</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Not eligible %28academic%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Not eligible %28language%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Not eligible %28visa%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NFA - Request no further contact</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Shop</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Transferred</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>
